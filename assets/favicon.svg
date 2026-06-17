@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80" role="img" aria-label="Cubis.Hub">
+  <defs>
+    <linearGradient id="tg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3DDA85"/>
+      <stop offset="100%" stop-color="#2ECC71"/>
+    </linearGradient>
+  </defs>
+  <rect width="80" height="80" rx="14" fill="#1E211F"/>
+  <polygon points="18,26 40,37 40,59 18,48" fill="#3D4240"/>
+  <polygon points="62,26 62,48 40,59 40,37" fill="#6A8481"/>
+  <polygon points="40,15 62,26 40,37 18,26" fill="url(#tg)"/>
+  <line x1="40" y1="15" x2="62" y2="26" stroke="rgba(255,255,255,0.22)" stroke-width="0.8"/>
+  <line x1="40" y1="15" x2="18" y2="26" stroke="rgba(255,255,255,0.12)" stroke-width="0.8"/>
+</svg>
