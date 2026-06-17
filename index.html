@@ -103,7 +103,7 @@
   /* ════════════ HERO (dark + cubos) ════════════ */
   .hero {
     position: relative; background: var(--dark); color: var(--dark-fg);
-    overflow: hidden; padding-bottom: 96px;
+    overflow: hidden; padding-bottom: 296px;
   }
   #cube-canvas {
     position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1;
@@ -142,7 +142,7 @@
   /* Hero content — centralizado */
   .hero-grid {
     display: flex; flex-direction: column; align-items: center; text-align: center;
-    padding-top: 72px; max-width: 800px; margin: 0 auto;
+    padding-top: 122px; max-width: 800px; margin: 0 auto;
   }
   .hero h1 {
     font-size: clamp(2.6rem, 5.6vw, 4.2rem); font-weight: 800; margin: 24px 0 22px;
@@ -203,10 +203,38 @@
   .sec-head p { font-size: 1.1rem; color: var(--ink-soft); }
 
   /* Benefits */
-  .benefits { display: grid; grid-template-columns: repeat(4,1fr); gap: 22px; }
-  .benefit { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 28px 24px; box-shadow: var(--shadow-soft); transition: transform .2s ease, box-shadow .2s ease; }
-  .benefit:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
-  .benefit .ic { width: 50px; height: 50px; border-radius: 14px; display: grid; place-items: center; margin-bottom: 18px; background: linear-gradient(135deg, rgba(61,218,133,0.16), rgba(46,204,113,0.10)); }
+  .benefits { display: grid; grid-template-columns: repeat(4,1fr); gap: 22px; position: relative; }
+  .benefit {
+    background: var(--card); border-radius: var(--radius-lg); padding: 28px 24px;
+    box-shadow: var(--shadow-soft); position: relative; overflow: hidden;
+    transform-style: preserve-3d; transition: transform .25s ease, box-shadow .25s ease;
+    /* borda via gradient mask */
+    border: 1px solid transparent;
+    background-clip: padding-box;
+  }
+  /* spotlight border — pseudo element com gradiente radial centrado no cursor */
+  .benefit::before {
+    content: '';
+    position: absolute; inset: -1px; border-radius: inherit; z-index: 0;
+    background: radial-gradient(400px circle at var(--mx,50%) var(--my,50%),
+      rgba(61,218,133,0.55), rgba(46,204,113,0.15) 40%, transparent 70%);
+    opacity: 0; transition: opacity .35s ease;
+    pointer-events: none;
+  }
+  .benefit::after {
+    content: '';
+    position: absolute; inset: 1px; border-radius: calc(var(--radius-lg) - 1px);
+    background: var(--card); z-index: 1; pointer-events: none;
+  }
+  .benefit:hover::before { opacity: 1; }
+  .benefit:hover { box-shadow: 0 20px 50px -16px rgba(46,204,113,0.22), var(--shadow); }
+  .benefit > * { position: relative; z-index: 2; }
+  .benefit .ic {
+    width: 50px; height: 50px; border-radius: 14px; display: grid; place-items: center; margin-bottom: 18px;
+    background: linear-gradient(135deg, rgba(61,218,133,0.16), rgba(46,204,113,0.10));
+    transition: transform .3s ease, background .3s ease;
+  }
+  .benefit:hover .ic { transform: scale(1.12) rotate(-6deg); background: linear-gradient(135deg, rgba(61,218,133,0.28), rgba(46,204,113,0.18)); }
   .benefit .ic svg { width: 24px; height: 24px; color: var(--green-deep); }
   .benefit h3 { font-size: 1.12rem; margin-bottom: 8px; }
   .benefit p { font-size: 0.93rem; color: var(--ink-soft); }
@@ -262,20 +290,36 @@
   .integ-item .n { font-weight: 600; font-size: 0.98rem; }
   .integ-item .d { font-size: 0.84rem; color: var(--dark-muted); }
 
+  /* Pricing toggle */
+  .pricing-toggle { display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 40px; }
+  .ptoggle { display: flex; background: var(--card); border: 1px solid var(--border); border-radius: 999px; padding: 4px; gap: 4px; }
+  .ptoggle button { border: none; background: none; cursor: pointer; padding: 8px 22px; border-radius: 999px; font-size: 0.9rem; font-weight: 600; color: var(--ink-soft); transition: all .2s; }
+  .ptoggle button.active { background: var(--ink); color: #fff; }
+  .ptoggle .discount { background: rgba(46,204,113,0.15); color: var(--green-deep); font-size: 0.78rem; font-weight: 700; padding: 4px 10px; border-radius: 999px; }
+
   /* Pricing */
   .pricing { display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; align-items: stretch; }
   .plan { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 32px 28px; display: flex; flex-direction: column; position: relative; box-shadow: var(--shadow-soft); }
   .plan.featured { border-color: var(--green); box-shadow: 0 18px 50px -16px rgba(46,204,113,0.35); transform: scale(1.03); }
-  .plan .badge { position: absolute; top: -13px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, var(--green-light), var(--green)); color: #fff; font-size: 0.72rem; font-weight: 700; padding: 5px 14px; border-radius: 999px; letter-spacing: 0.03em; }
+  .plan .badge { position: absolute; top: -13px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, var(--green-light), var(--green)); color: #fff; font-size: 0.72rem; font-weight: 700; padding: 5px 14px; border-radius: 999px; letter-spacing: 0.03em; white-space: nowrap; }
   .plan .pname { font-size: 1.2rem; font-weight: 700; }
-  .plan .pdesc { font-size: 0.88rem; color: var(--ink-soft); margin: 6px 0 18px; min-height: 38px; }
-  .plan .price { font-size: 2.4rem; font-weight: 800; letter-spacing: -0.03em; }
+  .plan .pdesc { font-size: 0.88rem; color: var(--ink-soft); margin: 6px 0 18px; min-height: 32px; }
+  .plan .price { font-size: 2.4rem; font-weight: 800; letter-spacing: -0.03em; line-height: 1; }
   .plan .price small { font-size: 0.9rem; font-weight: 500; color: var(--ink-soft); }
-  .plan ul { list-style: none; margin: 22px 0; display: flex; flex-direction: column; gap: 11px; flex: 1; }
-  .plan ul li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.92rem; }
-  .plan ul li svg { width: 18px; height: 18px; color: var(--green); flex-shrink: 0; margin-top: 2px; }
+  .plan .price-annual { display: none; }
+  .plan .divider { height: 1px; background: var(--border); margin: 18px 0; }
+  .plan .limits { display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px; }
+  .plan .limits li { display: flex; align-items: center; gap: 9px; font-size: 0.88rem; color: var(--ink-soft); }
+  .plan .limits li svg { width: 16px; height: 16px; color: var(--sage); flex-shrink: 0; }
+  .plan ul { list-style: none; margin: 4px 0 22px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+  .plan ul li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.9rem; }
+  .plan ul li svg { width: 17px; height: 17px; color: var(--green); flex-shrink: 0; margin-top: 2px; }
   .plan .btn { width: 100%; }
   .pricing-note { text-align: center; margin-top: 26px; font-size: 0.88rem; color: var(--ink-soft); }
+
+  /* annual mode */
+  body.annual .price-monthly { display: none; }
+  body.annual .price-annual { display: block; }
 
   /* Final CTA */
   .finalcta { background: linear-gradient(135deg, var(--dark), var(--dark-2)); color: var(--dark-fg); border-radius: var(--radius-lg); padding: 72px 48px; text-align: center; position: relative; overflow: hidden; }
@@ -356,8 +400,7 @@
         <a href="#planos">Planos</a>
       </div>
       <div class="nav-cta">
-        <a class="nav-login" href="https://contab-ia.vercel.app/login">Entrar</a>
-        <a class="btn btn-primary btn-sm" href="https://contab-ia.vercel.app/login">Teste grátis</a>
+        <a class="btn btn-ghost btn-sm" href="https://contab-ia.vercel.app/login">Entrar</a>
       </div>
       <button class="menu-toggle" aria-label="Menu" onclick="document.querySelector('.nav-links').style.display = document.querySelector('.nav-links').style.display==='flex'?'none':'flex'">
         <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
@@ -366,10 +409,6 @@
 
     <!-- Hero content -->
     <div class="hero-grid">
-      <span class="eyebrow" style="color:var(--green-light); background:rgba(46,204,113,0.12); border-color:rgba(46,204,113,0.28)">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-        White Label · multi-escritório
-      </span>
       <h1>Gestão contábil<br><span class="accent">que realmente</span> funciona.</h1>
       <p class="lead">Atendimento por WhatsApp organizado por setor, envio de relatórios em massa, prazos fiscais e documentos — tudo em um só lugar, com automação e IA.</p>
 
@@ -407,7 +446,6 @@
 <section class="block" id="beneficios">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="eyebrow">Por que o Cubis.Hub</span>
       <h2>Tudo o que o escritório precisa, em um só lugar</h2>
       <p>Pare de pular entre WhatsApp, planilhas, e-mail e pastas. Centralize o atendimento, o envio e os prazos.</p>
     </div>
@@ -440,7 +478,6 @@
 <section class="block" id="funcionalidades" style="background:linear-gradient(180deg,#EAF3EF,var(--bg));">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="eyebrow">Funcionalidades</span>
       <h2>Feito para a rotina do escritório contábil</h2>
       <p>Cada módulo resolve uma dor real de quem atende muitos clientes todos os meses.</p>
     </div>
@@ -529,7 +566,6 @@
 <section class="block" id="como-funciona">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="eyebrow">Como funciona</span>
       <h2>Do cadastro ao envio em 3 passos</h2>
       <p>Comece hoje mesmo. Sem implantação complexa, sem treinamento longo.</p>
     </div>
@@ -557,7 +593,6 @@
 <section class="block" style="background:linear-gradient(180deg,var(--bg),#EAF3EF);">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="eyebrow">Diferenciais</span>
       <h2>Por que escolher o Cubis.Hub</h2>
     </div>
     <div class="diffs">
@@ -578,7 +613,7 @@
       <div>
         <span class="eyebrow" style="color:var(--green-light); background:rgba(46,204,113,0.12); border-color:rgba(46,204,113,0.28)">Integrações</span>
         <h2 style="margin-top:16px">Conectado ao que o escritório já usa</h2>
-        <p>WhatsApp no centro do atendimento, Google Calendar para os prazos e pagamentos automáticos via Asaas.</p>
+        <p>WhatsApp no centro do atendimento e Google Calendar para nunca perder um prazo fiscal.</p>
       </div>
       <div class="integ-list">
         <div class="integ-item">
@@ -589,10 +624,6 @@
           <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
           <div><div class="n">Google Calendar</div><div class="d">Sincronização bidirecional dos prazos fiscais</div></div>
         </div>
-        <div class="integ-item">
-          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
-          <div><div class="n">Asaas</div><div class="d">Pagamentos PIX, cartão e boleto para assinatura e add-ons</div></div>
-        </div>
       </div>
     </div>
   </div>
@@ -602,50 +633,97 @@
 <section class="block" id="planos" style="background:linear-gradient(180deg,#EAF3EF,var(--bg));">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="eyebrow">Planos</span>
       <h2>Comece grátis, escale quando precisar</h2>
       <p>Planos por assinatura, mensal ou anual com desconto. Add-ons avulsos quando você precisar de mais.</p>
     </div>
+    <!-- Toggle mensal / anual -->
+    <div class="pricing-toggle reveal">
+      <div class="ptoggle">
+        <button class="active" id="btn-mensal" onclick="setPricing('mensal')">Mensal</button>
+        <button id="btn-anual" onclick="setPricing('anual')">Anual <span class="discount">-20%</span></button>
+      </div>
+    </div>
+
     <div class="pricing">
+      <!-- Starter -->
       <div class="plan reveal">
         <div class="pname">Starter</div>
-        <div class="pdesc">Para o contador autônomo começar a organizar a operação.</div>
-        <div class="price">Sob<small> consulta</small></div>
-        <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Gestão de clientes (PF e PJ)</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> 1 instância de WhatsApp</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Envio em massa e prazos fiscais</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Período de teste incluso</li>
+        <div class="pdesc">Ideal para escritórios começando</div>
+        <div class="price price-monthly">R$ 297<small>/mês</small></div>
+        <div class="price price-annual">R$ 238<small>/mês</small></div>
+        <div class="divider"></div>
+        <ul class="limits">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> 10 créditos/mês</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> 50 disparos WhatsApp/mês</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> Até 50 clientes</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> 3 membros · 3 setores</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg> 1 instância WhatsApp</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg> 5 GB de armazenamento</li>
         </ul>
-        <a class="btn btn-outline" href="https://contab-ia.vercel.app/login">Testar grátis</a>
+        <div class="divider"></div>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Board Kanban de tarefas</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Chat WhatsApp por setor</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Disparo de relatórios em massa</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Prazos fiscais com alertas</li>
+        </ul>
+        <a class="btn btn-outline" href="https://contab-ia.vercel.app/login">Começar grátis</a>
       </div>
+
+      <!-- Pro -->
       <div class="plan featured reveal">
         <div class="badge">Mais popular</div>
         <div class="pname">Pro</div>
-        <div class="pdesc">Para escritórios em crescimento com equipe por setor.</div>
-        <div class="price">Sob<small> consulta</small></div>
+        <div class="pdesc">Para escritórios em crescimento</div>
+        <div class="price price-monthly">R$ 497<small>/mês</small></div>
+        <div class="price price-annual">R$ 398<small>/mês</small></div>
+        <div class="divider"></div>
+        <ul class="limits">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> 25 créditos/mês</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> 200 disparos WhatsApp/mês</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> Até 200 clientes</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> 10 membros · 5 setores</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg> 2 instâncias WhatsApp</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg> 20 GB de armazenamento</li>
+        </ul>
+        <div class="divider"></div>
         <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Tudo do Starter, com mais limites</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Múltiplas instâncias de WhatsApp</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Equipe por setor e papéis</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Kanban, documentos e add-ons</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Board Kanban de tarefas</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Chat WhatsApp por setor</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Disparo de relatórios em massa</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Prazos fiscais com alertas</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Integração Google Calendar</li>
         </ul>
         <a class="btn btn-primary" href="https://contab-ia.vercel.app/login">Começar agora</a>
       </div>
+
+      <!-- Enterprise -->
       <div class="plan reveal">
-        <div class="pname">Business</div>
-        <div class="pdesc">Para escritórios com grande volume e múltiplos setores.</div>
-        <div class="price">Sob<small> consulta</small></div>
-        <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Limites ampliados de clientes e disparos</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Armazenamento e créditos maiores</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> White label completo</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Suporte prioritário</li>
+        <div class="pname">Enterprise</div>
+        <div class="pdesc">Recursos ilimitados</div>
+        <div class="price price-monthly">R$ 997<small>/mês</small></div>
+        <div class="price price-annual">R$ 798<small>/mês</small></div>
+        <div class="divider"></div>
+        <ul class="limits">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> 50 créditos/mês</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> 500 disparos WhatsApp/mês</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> Até 500 clientes</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> 20 membros · 10 setores</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg> 5 instâncias WhatsApp</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg> 100 GB de armazenamento</li>
         </ul>
-        <a class="btn btn-outline" href="https://contab-ia.vercel.app/login">Falar com vendas</a>
+        <div class="divider"></div>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Board Kanban de tarefas</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Chat WhatsApp por setor</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Disparo de relatórios em massa</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Prazos fiscais com alertas</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Integração Google Calendar</li>
+        </ul>
+        <a class="btn btn-outline" href="https://contab-ia.vercel.app/login">Começar grátis</a>
       </div>
     </div>
-    <p class="pricing-note">Os valores e limites de cada plano são definidos pelo operador da plataforma e aparecem automaticamente na tela de planos. Pagamento via PIX ou cartão (parcelável).</p>
+    <p class="pricing-note">Pagamento via PIX ou cartão (parcelável). Cancele quando quiser.</p>
   </div>
 </section>
 
@@ -840,6 +918,41 @@
   resize();
   window.addEventListener('resize', resize);
   raf = requestAnimationFrame(tick);
+})();
+
+/* ════════════ Pricing toggle ════════════ */
+function setPricing(mode) {
+  var isAnual = mode === 'anual';
+  document.body.classList.toggle('annual', isAnual);
+  document.getElementById('btn-mensal').classList.toggle('active', !isAnual);
+  document.getElementById('btn-anual').classList.toggle('active', isAnual);
+}
+
+/* ════════════ Benefit cards — spotlight + 3D tilt ════════════ */
+(function () {
+  var cards = document.querySelectorAll('.benefit');
+
+  cards.forEach(function (card) {
+    card.addEventListener('mousemove', function (e) {
+      var rect = card.getBoundingClientRect();
+      var x = e.clientX - rect.left;
+      var y = e.clientY - rect.top;
+
+      // atualiza posição do spotlight (em px, relativa ao card)
+      card.style.setProperty('--mx', x + 'px');
+      card.style.setProperty('--my', y + 'px');
+
+      // tilt 3D suave
+      var cx = rect.width / 2, cy = rect.height / 2;
+      var rotY = ((x - cx) / cx) * 7;   // max ±7deg
+      var rotX = -((y - cy) / cy) * 5;  // max ±5deg
+      card.style.transform = 'perspective(800px) rotateX(' + rotX + 'deg) rotateY(' + rotY + 'deg) translateZ(4px)';
+    });
+
+    card.addEventListener('mouseleave', function () {
+      card.style.transform = 'perspective(800px) rotateX(0deg) rotateY(0deg) translateZ(0)';
+    });
+  });
 })();
 
 /* ════════════ Reveal on scroll ════════════ */
