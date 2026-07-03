@@ -200,7 +200,7 @@
   .proofbar-item:hover .bar { width: 100%; }
 
   /* �.��.��.� BENTO BENEFITS �.��.��.� */
-  .section-bento { background: var(--bg); padding: 100px 0; }
+  .section-bento { background: var(--bg); padding: 100px 0; position: relative; }
   .bento-header { margin-bottom: 52px; }
   .bento-header .blabel { font-size: 0.72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--green-deep); margin-bottom: 12px; }
   .bento-header h2 { font-size: clamp(2rem, 3.4vw, 2.8rem); font-weight: 800; letter-spacing: -0.03em; max-width: 520px; line-height: 1.1; color: var(--ink); }
@@ -308,7 +308,7 @@
   .tdot:nth-child(2){animation-delay:.2s} .tdot:nth-child(3){animation-delay:.4s}
 
   /* �.��.��.� INTEGRATIONS �.��.��.� */
-  .section-integ { background: var(--bg); padding: 100px 0; }
+  .section-integ { background: var(--bg); padding: 100px 0; position: relative; }
   .integ-header { text-align: center; margin-bottom: 52px; }
   .integ-header h2 { font-size: clamp(2rem,3.4vw,2.8rem); font-weight: 800; letter-spacing: -0.03em; margin: 12px 0 14px; }
   .integ-header p { font-size: 1.05rem; color: var(--ink-soft); }
@@ -446,7 +446,47 @@
     .hero h1 { font-size: clamp(2rem, 9vw, 2.8rem); }
     .hero p.lead { font-size: 1rem; }
     .nav-logo { height: 44px; }
+    .section-faq { padding: 64px 0; }
+    .faq-q { padding: 18px 20px; font-size: 0.96rem; }
+    .faq-a-inner { padding: 0 20px 20px; }
   }
+
+  /* �.��.��.� CONTAINER HOVER EFFECTS �.��.��.� */
+  .app-card { transition: transform .25s ease, box-shadow .25s ease; }
+  .app-card:hover { transform: translateY(-3px); box-shadow: 0 16px 32px -10px rgba(20,26,24,0.18); }
+  .fvisual-new { transition: transform .3s ease, box-shadow .3s ease; }
+  .fvisual-new:hover { transform: translateY(-4px); box-shadow: 0 32px 70px -20px rgba(20,26,24,0.2), inset 0 2px 0 rgba(46,204,113,0.1); }
+  .ai-window { transition: transform .3s ease, box-shadow .3s ease, border-color .3s; }
+  .ai-window:hover { transform: translateY(-4px); border-color: rgba(46,204,113,0.28); box-shadow: 0 54px 90px -24px rgba(0,0,0,0.55); }
+  .ai-msg .ai-bubble { transition: border-color .2s ease, background .2s ease; }
+  .ai-msg:hover .ai-bubble { border-color: rgba(46,204,113,0.28); }
+  .bento-chat { transition: transform .25s ease; }
+  .bento-card:hover .bento-chat { transform: translateY(-2px); }
+
+  /* �.��.��.� SEAM BEAM (linha verde entre seções) �.��.��.� */
+  .seam-line { position: absolute; top: 0; left: 0; right: 0; height: 1px; background: rgba(46,204,113,0.14); overflow: visible; pointer-events: none; z-index: 3; }
+  .seam-line .seam-beam { position: absolute; top: 50%; left: -16%; width: 16%; height: 6px; transform: translateY(-50%); background: linear-gradient(90deg, transparent, rgba(80,220,140,0.6) 45%, rgba(80,220,140,0.6) 55%, transparent); filter: blur(1.5px); box-shadow: 0 0 8px 1px rgba(61,218,133,0.32); animation: seam-sweep 5s ease-in-out infinite; }
+  @keyframes seam-sweep { 0%, 100% { left: -22%; } 50% { left: 100%; } }
+
+  /* �.��.��.� FAQ �.��.��.� */
+  .section-faq { background: var(--bg); padding: 100px 0; }
+  .faq-header { text-align: center; max-width: 620px; margin: 0 auto 48px; }
+  .faq-header h2 { font-size: clamp(2rem,3.4vw,2.8rem); font-weight: 800; letter-spacing: -0.03em; margin: 12px 0 14px; }
+  .faq-header p { font-size: 1.05rem; color: var(--ink-soft); }
+  .faq-list { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 14px; }
+  .faq-item { background: var(--card); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; transition: border-color .25s ease, box-shadow .25s ease; }
+  .faq-item:hover { border-color: rgba(46,204,113,0.32); }
+  .faq-item.open { border-color: rgba(46,204,113,0.4); box-shadow: 0 20px 44px -18px rgba(20,26,24,0.16); }
+  .faq-q { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 22px 26px; background: none; border: none; cursor: pointer; text-align: left; font-family: inherit; font-size: 1.02rem; font-weight: 600; color: var(--ink); }
+  .faq-q .fplus { flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; background: rgba(46,204,113,0.12); display: grid; place-items: center; position: relative; transition: transform .3s ease, background .3s ease; }
+  .faq-q .fplus::before, .faq-q .fplus::after { content:''; position: absolute; background: var(--green-deep); border-radius: 2px; transition: transform .3s ease; }
+  .faq-q .fplus::before { width: 12px; height: 2px; }
+  .faq-q .fplus::after { width: 2px; height: 12px; }
+  .faq-item.open .faq-q .fplus { background: rgba(46,204,113,0.22); transform: rotate(180deg); }
+  .faq-item.open .faq-q .fplus::after { transform: scaleY(0); }
+  .faq-a { max-height: 0; overflow: hidden; transition: max-height .35s ease, opacity .3s ease; opacity: 0; }
+  .faq-item.open .faq-a { opacity: 1; }
+  .faq-a-inner { padding: 0 26px 24px; font-size: 0.94rem; color: var(--ink-soft); line-height: 1.65; }
 </style>
 </head>
 <body>
@@ -478,6 +518,7 @@
         <a href="#como-funciona">Como funciona</a>
         <a href="#integracoes">Integrações</a>
         <a href="#planos">Planos</a>
+        <a href="#faq">FAQ</a>
       </div>
       <div class="nav-cta">
         <a class="btn btn-ghost btn-sm" href="https://contab-ia.vercel.app/login">Entrar</a>
@@ -501,7 +542,7 @@
       </div>
 
       <div class="hero-trust">
-        <span>14 dias grátis</span><span class="dot"></span>
+        <span>7 dias grátis</span><span class="dot"></span>
         <span>Sem cartão de crédito</span><span class="dot"></span>
         <span>Cancele quando quiser</span>
       </div>
@@ -539,6 +580,7 @@
 
 <!-- �.��.��.��.��.��.��.��.��.��.��.��.��.��.��.��.� Benefits BENTO �.��.��.��.��.��.��.��.��.��.��.��.��.��.��.��.� -->
 <section class="section-bento" id="beneficios">
+  <div class="seam-line"><span class="seam-beam"></span></div>
   <div class="wrap">
     <div class="bento-header reveal">
       <div class="blabel">O que você ganha</div>
@@ -649,7 +691,7 @@
       <div class="fvisual-new">
         <div class="app-card"><div class="app-card-header"><div><div class="app-card-title">DCTFWeb · 15/07</div><div class="app-card-sub">Setor Fiscal · 32 clientes</div></div><span class="app-chip chip-amber">D-3</span></div></div>
         <div class="app-card"><div class="app-card-header"><div><div class="app-card-title">eSocial · 20/07</div><div class="app-card-sub">Setor Pessoal · 18 clientes</div></div><span class="app-chip chip-green">No prazo</span></div></div>
-        <div class="app-card"><div class="app-card-header"><div><div class="app-card-title">Simples Nacional · 22/07</div><div class="app-card-sub">Sincronizado · Google Calendar</div></div><span class="app-chip chip-green">�o"</span></div></div>
+        <div class="app-card"><div class="app-card-header"><div><div class="app-card-title">Simples Nacional · 22/07</div><div class="app-card-sub">Sincronizado · Google Calendar</div></div><span class="app-chip chip-green">✓ OK</span></div></div>
       </div>
     </div>
 
@@ -670,6 +712,25 @@
           <div class="app-card"><div class="app-card-sub" style="font-weight:700;margin-bottom:7px">Em andamento</div><div class="app-card-title" style="font-size:.8rem">Folha pagamento</div></div>
         </div>
         <div class="app-card"><div class="app-card-header"><div class="app-card-title">Contrato_social.pdf · v3</div><span class="app-chip chip-green">Enviar no WA</span></div></div>
+      </div>
+    </div>
+
+    <div class="feature-row reveal">
+      <div class="ftext">
+        <div class="eyebrow-tag">Agente de IA</div>
+        <h3>Crie um agente de atendimento no WhatsApp</h3>
+        <p class="desc">Monte um agente com IA para responder dúvidas frequentes, qualificar solicitações e encaminhar para o setor certo, 24h por dia, direto no número do escritório.</p>
+        <ul class="flist-new">
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Respostas automáticas com base na sua base de clientes</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Transferência para um humano a qualquer momento</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Configuração simples, sem código</li>
+        </ul>
+      </div>
+      <div class="fvisual-new">
+        <div class="app-bubble ab-them">Oi, qual o valor da guia de julho?</div>
+        <div class="app-card"><div class="app-card-header"><div><div class="app-card-title">Agente Cubis.Hub</div><div class="app-card-sub">Respondendo automaticamente</div></div><span class="app-chip chip-green">Ativo</span></div></div>
+        <div class="app-bubble ab-us">O valor deste mês é R$ 320,00, vencimento dia 20. Quer que eu já envie a guia?</div>
+        <div class="app-card"><div class="app-card-header"><div class="app-card-title">Encaminhado para Setor Fiscal</div><span class="app-chip chip-amber">Transferido</span></div></div>
       </div>
     </div>
   </div>
@@ -705,6 +766,7 @@
 
 <!-- �.��.��.��.��.��.��.��.��.��.��.��.��.��.��.��.� IA �.��.��.��.��.��.��.��.��.��.��.��.��.��.��.��.� -->
 <section class="section-ai" id="ia">
+  <div class="seam-line"><span class="seam-beam"></span></div>
   <div class="wrap">
     <div class="ai-grid">
       <div class="ai-text reveal">
@@ -766,6 +828,7 @@
 
 <!-- �.��.��.��.��.��.��.��.��.��.��.��.��.��.��.��.� Integrations �.��.��.��.��.��.��.��.��.��.��.��.��.��.��.��.� -->
 <section class="section-integ" id="integracoes">
+  <div class="seam-line"><span class="seam-beam"></span></div>
   <div class="wrap">
     <div class="integ-header reveal">
       <span class="eyebrow">Integrações</span>
@@ -802,42 +865,52 @@
         <button class="active" id="btn-mensal" onclick="setPricing('mensal')">Mensal</button>
         <button id="btn-anual" onclick="setPricing('anual')">Anual</button>
       </div>
-      <span class="ptoggle-disc">-20% no anual</span>
+      <span class="ptoggle-disc">-10% no anual</span>
     </div>
     <div class="pricing-grid">
       <div class="plan-card reveal">
         <div class="plan-name">Essencial</div>
         <div class="plan-desc">Comece sua jornada</div>
-        <div class="plan-price price-monthly">R$ 149<small>/mês</small></div>
-        <div class="plan-price price-annual">R$ 119<small>/mês</small></div>
+        <div class="plan-price price-monthly">R$ 127<small>/mês</small></div>
+        <div class="plan-price price-annual">R$ 114<small>/mês</small></div>
         <div class="plan-divider"></div>
         <ul class="plan-limits">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Até 100 clientes</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>150 créditos/mês</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>200 disparos WhatsApp/mês</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>30 disparos/dia por número</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Até 300 clientes</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>5 membros · 5 setores</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>5 instâncias WhatsApp</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>1 GB armazenamento</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>5 instância(s) WhatsApp</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>2 GB de armazenamento</li>
         </ul>
         <div class="plan-divider"></div>
         <ul class="plan-feats">
           <li><span class="fcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Board Kanban de tarefas</li>
+          <li><span class="fcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Assistente IA</li>
           <li><span class="fcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Chat WhatsApp por setor</li>
+          <li><span class="fcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Integração Google Calendar</li>
+          <li><span class="fcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Agendamento de disparos</li>
+          <li><span class="fcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Recorrência mensal de envios</li>
+          <li><span class="fcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Envio automático para grupos</li>
         </ul>
         <a class="btn btn-outline plan-btn" href="https://contab-ia.vercel.app/login">Começar grátis</a>
       </div>
 
       <div class="plan-card feat reveal">
-        <div class="plan-badge">�o" Mais popular</div>
+        <div class="plan-badge">★ Mais popular</div>
         <div class="plan-name">Scale</div>
         <div class="plan-desc">Ideal para escritórios em crescimento</div>
-        <div class="plan-price price-monthly">R$ 479<small>/mês</small></div>
-        <div class="plan-price price-annual">R$ 383<small>/mês</small></div>
+        <div class="plan-price price-monthly">R$ 297<small>/mês</small></div>
+        <div class="plan-price price-annual">R$ 267<small>/mês</small></div>
         <div class="plan-divider"></div>
         <ul class="plan-limits">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>50 créditos IA/mês</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>500 disparos WA/mês</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>300 créditos/mês</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>600 disparos WhatsApp/mês</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>60 disparos/dia por número</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Até 500 clientes</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>5 membros · 5 setores</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>5 GB armazenamento</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>5 instância(s) WhatsApp</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>10 GB de armazenamento</li>
         </ul>
         <div class="plan-divider"></div>
         <ul class="plan-feats">
@@ -855,15 +928,17 @@
       <div class="plan-card reveal">
         <div class="plan-name">Pro</div>
         <div class="plan-desc">Para escritórios maiores</div>
-        <div class="plan-price price-monthly">R$ 797<small>/mês</small></div>
-        <div class="plan-price price-annual">R$ 638<small>/mês</small></div>
+        <div class="plan-price price-monthly">R$ 497<small>/mês</small></div>
+        <div class="plan-price price-annual">R$ 447<small>/mês</small></div>
         <div class="plan-divider"></div>
         <ul class="plan-limits">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>100 créditos IA/mês</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>1500 disparos WA/mês</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>500 créditos/mês</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>1800 disparos WhatsApp/mês</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>120 disparos/dia por número</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Até 1500 clientes</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>10 membros · 10 setores</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>5 GB armazenamento</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>10 instância(s) WhatsApp</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>30 GB de armazenamento</li>
         </ul>
         <div class="plan-divider"></div>
         <ul class="plan-feats">
@@ -882,19 +957,61 @@
   </div>
 </section>
 
+<!-- �.��.��.��.��.��.��.��.��.��.��.��.��.��.��.��.� FAQ �.��.��.��.��.��.��.��.��.��.��.��.��.��.��.��.� -->
+<section class="section-faq" id="faq">
+  <div class="wrap">
+    <div class="faq-header reveal">
+      <span class="eyebrow">Dúvidas</span>
+      <h2>Perguntas frequentes</h2>
+      <p>Não achou o que precisava? Fale com a gente antes de assinar.</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <button class="faq-q" type="button">Preciso instalar algo para usar o WhatsApp?<span class="fplus"></span></button>
+        <div class="faq-a"><div class="faq-a-inner">Não. A conexão é feita lendo um QR Code, usando o mesmo número que o escritório já utiliza no WhatsApp. Sem instalar aplicativos extras ou trocar de número.</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" type="button">O teste grátis de 7 dias pede cartão de crédito?<span class="fplus"></span></button>
+        <div class="faq-a"><div class="faq-a-inner">Não. Você cria a conta e testa todas as funcionalidades do plano por 7 dias sem informar cartão. Só é cobrado se decidir continuar.</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" type="button">Consigo migrar os clientes que já atendo hoje?<span class="fplus"></span></button>
+        <div class="faq-a"><div class="faq-a-inner">Sim. Você importa sua carteira de clientes via CSV de uma vez só e já organiza por setor, tag e responsável.</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" type="button">Os dados do escritório e dos clientes ficam seguros?<span class="fplus"></span></button>
+        <div class="faq-a"><div class="faq-a-inner">Sim. Os dados trafegam criptografados e o acesso é isolado por escritório, seguindo os princípios da LGPD. Cada usuário só vê o que tem permissão.</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" type="button">Posso trocar de plano ou cancelar quando quiser?<span class="fplus"></span></button>
+        <div class="faq-a"><div class="faq-a-inner">Sim, o upgrade, downgrade e cancelamento podem ser feitos a qualquer momento direto na plataforma, sem multa e sem burocracia.</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" type="button">Como funciona o agente de atendimento com IA?<span class="fplus"></span></button>
+        <div class="faq-a"><div class="faq-a-inner">Você configura o agente com as informações do seu escritório e ele responde dúvidas frequentes dos clientes no WhatsApp automaticamente, transferindo para um humano sempre que necessário.</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" type="button">Se eu tiver dúvidas, como falo com o suporte?<span class="fplus"></span></button>
+        <div class="faq-a"><div class="faq-a-inner">É só chamar pelo WhatsApp ou e-mail de suporte informados dentro da plataforma. Nossa equipe responde diretamente, sem robôs de atendimento no meio do caminho.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- �.��.��.��.��.��.��.��.��.��.��.��.��.��.��.��.� Final CTA �.��.��.��.��.��.��.��.��.��.��.��.��.��.��.��.� -->
 <section class="section-cta">
+  <div class="seam-line"><span class="seam-beam"></span></div>
   <div class="cta-glow"></div>
   <div class="wrap">
     <div class="cta-inner reveal">
       <h2>Organize o escritório.<br><span class="g">Atenda melhor.</span> Cresça.</h2>
-      <p>Comece grátis por 14 dias e veja como o Cubis.Hub muda a rotina do seu escritório contábil.</p>
+      <p>Comece grátis por 7 dias e veja como o Cubis.Hub muda a rotina do seu escritório contábil.</p>
       <a class="btn btn-primary" href="https://contab-ia.vercel.app/login" style="height:54px;padding:0 36px;font-size:1.02rem;">
         Criar conta grátis
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:18px;height:18px"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </a>
       <div class="cta-trust">
-        <span>14 dias grátis</span><span class="cta-sep"></span>
+        <span>7 dias grátis</span><span class="cta-sep"></span>
         <span>Sem cartão de crédito</span><span class="cta-sep"></span>
         <span>Cancele quando quiser</span>
       </div>
@@ -925,6 +1042,7 @@
           <li><a href="#funcionalidades">Funcionalidades</a></li>
           <li><a href="#integracoes">Integrações</a></li>
           <li><a href="#planos">Planos</a></li>
+          <li><a href="#faq">FAQ</a></li>
           <li><a href="https://contab-ia.vercel.app/login">Entrar</a></li>
         </ul>
       </div>
@@ -939,8 +1057,8 @@
       <div class="foot-col">
         <h5>Legal</h5>
         <ul>
-          <li><a href="#">Termos de Uso</a></li>
-          <li><a href="#">Privacidade</a></li>
+          <li><a href="termos.html">Termos de Uso</a></li>
+          <li><a href="privacidade.html">Privacidade</a></li>
         </ul>
       </div>
     </div>
@@ -1108,6 +1226,22 @@ function setPricing(mode) {
 
     card.addEventListener('mouseleave', function () {
       card.style.transform = 'perspective(800px) rotateX(0deg) rotateY(0deg) translateZ(0)';
+    });
+  });
+})();
+
+/* �.��.��.��.��.��.��.��.��.��.��.��.� FAQ accordion �.��.��.��.��.��.��.��.��.��.��.��.� */
+(function () {
+  document.querySelectorAll('.faq-item').forEach(function (item) {
+    var q = item.querySelector('.faq-q');
+    var a = item.querySelector('.faq-a');
+    q.addEventListener('click', function () {
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(function (other) {
+        if (other !== item) { other.classList.remove('open'); other.querySelector('.faq-a').style.maxHeight = null; }
+      });
+      item.classList.toggle('open', !isOpen);
+      a.style.maxHeight = !isOpen ? a.scrollHeight + 'px' : null;
     });
   });
 })();

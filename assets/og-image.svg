@@ -46,7 +46,7 @@
   <!-- Chips -->
   <g font-family="Inter, sans-serif" font-size="22" font-weight="600">
     <rect x="80" y="520" width="232" height="52" rx="26" fill="rgba(46,204,113,0.12)" stroke="rgba(46,204,113,0.3)"/>
-    <text x="112" y="553" fill="#3DDA85">✓ 14 dias grátis</text>
+    <text x="112" y="553" fill="#3DDA85">✓ 7 dias grátis</text>
     <rect x="332" y="520" width="262" height="52" rx="26" fill="rgba(46,204,113,0.12)" stroke="rgba(46,204,113,0.3)"/>
     <text x="364" y="553" fill="#3DDA85">✓ White Label real</text>
   </g>
