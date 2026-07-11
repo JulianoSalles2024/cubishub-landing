@@ -411,7 +411,15 @@
     .steps-track { grid-template-columns: 1fr; gap: 32px; }
     .steps-track::before { display: none; }
     .foot-grid-new { grid-template-columns: 1fr 1fr; }
-    .nav-links { display: none; }
+    .nav-links {
+      display: none; position: absolute; top: 100%; left: 0; right: 0;
+      flex-direction: column; align-items: stretch; gap: 0;
+      background: var(--dark); border-top: 1px solid var(--dark-border);
+      box-shadow: 0 16px 32px -12px rgba(0,0,0,0.4); padding: 8px 24px 16px; z-index: 30;
+    }
+    .nav-links.open { display: flex; }
+    .nav-links a { padding: 12px 0; border-bottom: 1px solid var(--dark-border); }
+    .nav-links a:last-child { border-bottom: none; }
     .menu-toggle { display: block; }
     .hero { padding-bottom: 160px; }
     .hero-grid { padding-top: 80px; }
@@ -452,6 +460,9 @@
     .section-faq { padding: 64px 0; }
     .faq-q { padding: 18px 20px; font-size: 0.96rem; }
     .faq-a-inner { padding: 0 20px 20px; }
+    .lead-overlay { padding: 12px; }
+    .lead-modal { padding: 28px 20px 24px; }
+    .lead-modal h3 { font-size: 1.3rem; }
   }
 
   /* �.��.��.� CONTAINER HOVER EFFECTS �.��.��.� */
@@ -575,7 +586,7 @@
           <text x="64" y="40" font-family="Inter, sans-serif" font-size="24" font-weight="700" letter-spacing="-0.025em"><tspan fill="#F0F2F1">Cubis</tspan><tspan fill="#2ECC71">.Hub</tspan></text>
         </svg>
       </a>
-      <div class="nav-links">
+      <div class="nav-links" id="navLinks" onclick="document.getElementById('navLinks').classList.remove('open')">
         <a href="#funcionalidades">Funcionalidades</a>
         <a href="#como-funciona">Como funciona</a>
         <a href="#integracoes">Integrações</a>
@@ -584,7 +595,7 @@
       <div class="nav-cta" style="display:none;">
         <a class="btn btn-ghost btn-sm" href="https://contab-ia.vercel.app/login">Entrar</a>
       </div>
-      <button class="menu-toggle" aria-label="Menu" onclick="document.querySelector('.nav-links').style.display = document.querySelector('.nav-links').style.display==='flex'?'none':'flex'">
+      <button class="menu-toggle" aria-label="Menu" onclick="event.stopPropagation(); document.getElementById('navLinks').classList.toggle('open')">
         <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
       </button>
     </nav>
