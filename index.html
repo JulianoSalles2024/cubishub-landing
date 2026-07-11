@@ -323,7 +323,7 @@
   .integ-pill { display: inline-block; margin-top: 20px; font-size: 0.71rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--green); border: 1px solid rgba(46,204,113,0.25); padding: 5px 12px; border-radius: 999px; position: relative; z-index: 2; }
 
   /* �.��.��.� PRICING �.��.��.� */
-  .section-pricing { background: linear-gradient(180deg,#EAF3EF 0%,var(--bg) 100%); padding: 100px 0; }
+  .section-pricing { background: linear-gradient(180deg,#EAF3EF 0%,var(--bg) 100%); padding: 100px 0; display: none; }
   .pricing-header { text-align: center; max-width: 600px; margin: 0 auto 20px; }
   .pricing-header h2 { font-size: clamp(2rem,3.4vw,2.8rem); font-weight: 800; letter-spacing: -0.03em; margin: 12px 0 14px; }
   .pricing-header p { font-size: 1.05rem; color: var(--ink-soft); }
@@ -490,6 +490,65 @@
   .faq-a { max-height: 0; overflow: hidden; transition: max-height .35s ease, opacity .3s ease; opacity: 0; }
   .faq-item.open .faq-a { opacity: 1; }
   .faq-a-inner { padding: 0 26px 24px; font-size: 0.94rem; color: var(--ink-soft); line-height: 1.65; }
+
+  /* ─── LEAD MODAL ─── */
+  .lead-overlay {
+    position: fixed; inset: 0; z-index: 200; display: none;
+    align-items: center; justify-content: center; padding: 20px;
+    background: rgba(20,26,24,0.55); backdrop-filter: blur(6px);
+    animation: leadFadeIn .25s ease;
+  }
+  .lead-overlay.open { display: flex; }
+  @keyframes leadFadeIn { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes leadPopIn { from { opacity: 0; transform: translateY(14px) scale(.97); } to { opacity: 1; transform: none; } }
+  .lead-modal {
+    position: relative; width: 100%; max-width: 460px;
+    background: var(--card); border-radius: var(--radius-lg); border: 1px solid var(--border);
+    box-shadow: 0 40px 90px -20px rgba(0,0,0,0.45);
+    padding: 36px 32px 30px; animation: leadPopIn .3s ease;
+  }
+  .lead-close {
+    position: absolute; top: 16px; right: 16px; width: 32px; height: 32px; border-radius: 50%;
+    background: rgba(90,116,112,0.08); border: none; cursor: pointer; display: grid; place-items: center;
+    color: var(--ink-soft); transition: background .2s, color .2s;
+  }
+  .lead-close:hover { background: rgba(90,116,112,0.16); color: var(--ink); }
+  .lead-modal .lead-eyebrow {
+    font-size: 0.72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+    color: var(--green-deep); margin-bottom: 10px;
+  }
+  .lead-modal h3 { font-size: 1.5rem; font-weight: 800; letter-spacing: -0.02em; color: var(--ink); margin-bottom: 8px; }
+  .lead-modal .lead-sub { font-size: 0.92rem; color: var(--ink-soft); margin-bottom: 26px; line-height: 1.55; }
+  .lead-field { margin-bottom: 16px; }
+  .lead-field label { display: block; font-size: 0.82rem; font-weight: 600; color: var(--ink); margin-bottom: 7px; }
+  .lead-field input {
+    width: 100%; height: 46px; border-radius: var(--radius); border: 1px solid var(--border);
+    background: #fff; padding: 0 14px; font-size: 0.94rem; font-family: inherit; color: var(--ink);
+    transition: border-color .2s, box-shadow .2s;
+  }
+  .lead-field input:focus { outline: none; border-color: var(--green); box-shadow: 0 0 0 3px rgba(46,204,113,0.14); }
+  .lead-field input.err { border-color: #E74C3C; }
+  .lead-field .lead-errmsg { font-size: 0.78rem; color: #E74C3C; margin-top: 5px; display: none; }
+  .lead-field.has-err .lead-errmsg { display: block; }
+  .lead-submit { width: 100%; height: 50px; margin-top: 6px; font-size: 0.98rem; }
+  .lead-submit[disabled] { opacity: 0.7; cursor: not-allowed; }
+  .lead-privacy { font-size: 0.76rem; color: var(--ink-soft); text-align: center; margin-top: 14px; line-height: 1.5; }
+
+  .lead-success { display: none; text-align: center; padding: 10px 0 4px; }
+  .lead-success.show { display: block; }
+  .lead-success .lead-check {
+    width: 64px; height: 64px; border-radius: 50%; background: rgba(46,204,113,0.14);
+    display: grid; place-items: center; margin: 0 auto 20px;
+  }
+  .lead-success .lead-check svg { width: 30px; height: 30px; color: var(--green-deep); }
+  .lead-success h3 { font-size: 1.35rem; }
+  .lead-success .lead-sub { margin-bottom: 22px; }
+
+  .lead-spinner {
+    width: 16px; height: 16px; border-radius: 50%; border: 2px solid rgba(255,255,255,0.4);
+    border-top-color: #fff; animation: leadSpin .7s linear infinite; display: inline-block;
+  }
+  @keyframes leadSpin { to { transform: rotate(360deg); } }
 </style>
 </head>
 <body id="top">
@@ -523,7 +582,7 @@
         <a href="#planos">Planos</a>
         <a href="#faq">FAQ</a>
       </div>
-      <div class="nav-cta">
+      <div class="nav-cta" style="display:none;">
         <a class="btn btn-ghost btn-sm" href="https://contab-ia.vercel.app/login">Entrar</a>
       </div>
       <button class="menu-toggle" aria-label="Menu" onclick="document.querySelector('.nav-links').style.display = document.querySelector('.nav-links').style.display==='flex'?'none':'flex'">
@@ -537,10 +596,10 @@
       <p class="lead">Atendimento por WhatsApp organizado por setor, envio de relatórios em massa, prazos fiscais e documentos. Tudo em um só lugar, com automação e IA.</p>
 
       <div class="hero-actions">
-        <a class="btn btn-primary" href="https://contab-ia.vercel.app/login">
+        <button type="button" class="btn btn-primary" onclick="openLeadModal()">
           Começar teste grátis
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
+        </button>
         <a class="btn btn-ghost" href="#funcionalidades">Ver funcionalidades</a>
       </div>
 
@@ -1009,10 +1068,10 @@
     <div class="cta-inner reveal">
       <h2>Organize o escritório.<br><span class="g">Atenda melhor.</span> Cresça.</h2>
       <p>Comece grátis por 7 dias e veja como o Cubis.Hub muda a rotina do seu escritório contábil.</p>
-      <a class="btn btn-primary" href="https://contab-ia.vercel.app/login" style="height:54px;padding:0 36px;font-size:1.02rem;">
+      <button type="button" class="btn btn-primary" onclick="openLeadModal()" style="height:54px;padding:0 36px;font-size:1.02rem;">
         Criar conta grátis
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:18px;height:18px"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-      </a>
+      </button>
       <div class="cta-trust">
         <span>7 dias grátis</span><span class="cta-sep"></span>
         <span>Sem cartão de crédito</span><span class="cta-sep"></span>
@@ -1078,6 +1137,53 @@
     </div>
   </div>
 </footer>
+
+<!-- ─── Lead Modal (teste grátis) ─── -->
+<div class="lead-overlay" id="leadOverlay" onclick="if(event.target===this) closeLeadModal()">
+  <div class="lead-modal" role="dialog" aria-modal="true" aria-labelledby="leadModalTitle">
+    <button type="button" class="lead-close" aria-label="Fechar" onclick="closeLeadModal()">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+
+    <div id="leadFormView">
+      <div class="lead-eyebrow">Teste grátis · 7 dias</div>
+      <h3 id="leadModalTitle">Vamos começar?</h3>
+      <p class="lead-sub">Preencha seus dados e um de nossos consultores entra em contato para ativar seu acesso.</p>
+
+      <form id="leadForm" onsubmit="submitLeadForm(event)" novalidate>
+        <div class="lead-field" id="leadFieldName">
+          <label for="leadName">Nome completo</label>
+          <input type="text" id="leadName" name="name" placeholder="Seu nome" autocomplete="name" />
+          <div class="lead-errmsg">Informe seu nome.</div>
+        </div>
+        <div class="lead-field" id="leadFieldEmail">
+          <label for="leadEmail">E-mail</label>
+          <input type="email" id="leadEmail" name="email" placeholder="voce@escritorio.com.br" autocomplete="email" />
+          <div class="lead-errmsg">Informe um e-mail válido.</div>
+        </div>
+        <div class="lead-field" id="leadFieldPhone">
+          <label for="leadPhone">Telefone / WhatsApp</label>
+          <input type="tel" id="leadPhone" name="phone" placeholder="(11) 99999-9999" autocomplete="tel" />
+          <div class="lead-errmsg">Informe um telefone válido.</div>
+        </div>
+
+        <button type="submit" class="btn btn-primary lead-submit" id="leadSubmitBtn">
+          <span id="leadSubmitLabel">Quero criar minha conta grátis</span>
+        </button>
+        <p class="lead-privacy">Sem cartão de crédito. Seus dados são usados só para contato sobre o teste grátis.</p>
+      </form>
+    </div>
+
+    <div class="lead-success" id="leadSuccessView">
+      <div class="lead-check">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <h3>Recebemos seus dados!</h3>
+      <p class="lead-sub">Um de nossos consultores vai te chamar em breve para ativar seu teste grátis de 7 dias.</p>
+      <button type="button" class="btn btn-outline" style="width:100%" onclick="closeLeadModal()">Fechar</button>
+    </div>
+  </div>
+</div>
 
 <script>
 /* �.��.��.��.��.��.��.��.��.��.��.��.� Cube Network Background (portado do componente da plataforma) �.��.��.��.��.��.��.��.��.��.��.��.� */
@@ -1264,6 +1370,88 @@ function setPricing(mode) {
     entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
   }, { threshold: 0.12 });
   els.forEach(function (e) { io.observe(e); });
+})();
+
+/* ─── Lead Modal (teste grátis) ─── */
+(function () {
+  var SUPABASE_URL = 'https://rmqskrdlmdgvoyktbngy.supabase.co';
+  var SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJtcXNrcmRsbWRndm95a3Ribmd5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA2MDk2NTIsImV4cCI6MjA5NjE4NTY1Mn0.oKT22cKawJtDZsK7FatcBJuSzd4Pe0AM9RrtL0sqRK0';
+
+  var overlay = document.getElementById('leadOverlay');
+  var formView = document.getElementById('leadFormView');
+  var successView = document.getElementById('leadSuccessView');
+  var form = document.getElementById('leadForm');
+  var submitBtn = document.getElementById('leadSubmitBtn');
+  var submitLabel = document.getElementById('leadSubmitLabel');
+
+  window.openLeadModal = function () {
+    formView.style.display = 'block';
+    successView.classList.remove('show');
+    form.reset();
+    ['leadFieldName','leadFieldEmail','leadFieldPhone'].forEach(function (id) {
+      document.getElementById(id).classList.remove('has-err');
+      document.getElementById(id).querySelector('input').classList.remove('err');
+    });
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  };
+
+  window.closeLeadModal = function () {
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+  };
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && overlay.classList.contains('open')) closeLeadModal();
+  });
+
+  function setFieldError(fieldId, hasError) {
+    var field = document.getElementById(fieldId);
+    field.classList.toggle('has-err', hasError);
+    field.querySelector('input').classList.toggle('err', hasError);
+  }
+
+  window.submitLeadForm = function (evt) {
+    evt.preventDefault();
+
+    var name = document.getElementById('leadName').value.trim();
+    var email = document.getElementById('leadEmail').value.trim();
+    var phone = document.getElementById('leadPhone').value.trim();
+
+    var nameOk = name.length >= 2;
+    var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    var phoneDigits = phone.replace(/\D/g, '');
+    var phoneOk = phoneDigits.length >= 10;
+
+    setFieldError('leadFieldName', !nameOk);
+    setFieldError('leadFieldEmail', !emailOk);
+    setFieldError('leadFieldPhone', !phoneOk);
+
+    if (!nameOk || !emailOk || !phoneOk) return;
+
+    submitBtn.disabled = true;
+    submitLabel.innerHTML = '<span class="lead-spinner"></span> Enviando...';
+
+    fetch(SUPABASE_URL + '/rest/v1/landing_leads', {
+      method: 'POST',
+      headers: {
+        'apikey': SUPABASE_ANON_KEY,
+        'Authorization': 'Bearer ' + SUPABASE_ANON_KEY,
+        'Content-Type': 'application/json',
+        'Prefer': 'return=minimal'
+      },
+      body: JSON.stringify({ name: name, email: email, phone: phone, source: 'cubishub_landing' })
+    }).then(function (res) {
+      if (!res.ok) throw new Error('request failed');
+      formView.style.display = 'none';
+      successView.classList.add('show');
+    }).catch(function () {
+      alert('Não foi possível enviar seus dados agora. Tente novamente em instantes.');
+    }).finally(function () {
+      submitBtn.disabled = false;
+      submitLabel.textContent = 'Quero criar minha conta grátis';
+    });
+  };
 })();
 </script>
 </body>
