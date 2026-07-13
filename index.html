@@ -102,7 +102,7 @@
 
   /* �.��.��.��.��.��.��.��.��.��.��.��.� HERO (dark + cubos) �.��.��.��.��.��.��.��.��.��.��.��.� */
   .hero {
-    position: relative; background: var(--dark); color: var(--dark-fg);
+    position: relative; background: #141715; color: var(--dark-fg);
     overflow: hidden; padding-bottom: 296px;
   }
   #cube-canvas {
@@ -121,7 +121,7 @@
   }
   .hero-fade {
     position: absolute; bottom: 0; left: 0; right: 0; height: 160px; z-index: 2; pointer-events: none;
-    background: linear-gradient(to bottom, transparent, var(--dark));
+    background: linear-gradient(to bottom, transparent, #141715);
   }
   .hero > .wrap { position: relative; z-index: 5; }
 
@@ -142,14 +142,13 @@
   /* Hero content �?" centralizado */
   .hero-grid {
     display: flex; flex-direction: column; align-items: center; text-align: center;
-    padding-top: 122px; max-width: 800px; margin: 0 auto;
+    padding-top: 122px; max-width: 100%; margin: 0 auto;
   }
   .hero h1 {
     font-size: clamp(40px, 7vw, 86px); font-weight: 850; letter-spacing: -.03em; margin: 24px 0 22px;
   }
   .hero h1 .accent {
-    background: linear-gradient(120deg, var(--green-light), var(--green));
-    -webkit-background-clip: text; background-clip: text; color: transparent;
+    color: #22c55e;
   }
   .hero p.lead {
     font-size: 1.2rem; color: #C3D0CC; max-width: 600px; margin: 0 auto 34px; line-height: 1.6;
