@@ -45,6 +45,10 @@
     --radius-lg:    1rem;
     --shadow:       0 10px 40px -12px rgba(20,26,24,0.18);
     --shadow-soft:  0 4px 24px -8px rgba(20,26,24,0.12);
+
+    /* Malha pontilhada (mesma do header) — escura p/ seções claras, clara p/ seções escuras */
+    --dots-light:   radial-gradient(circle, rgba(20,26,24,0.05) 1px, transparent 1px);
+    --dots-dark:    radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px);
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -145,7 +149,7 @@
     padding-top: 122px; max-width: 100%; margin: 0 auto;
   }
   .hero h1 {
-    font-size: clamp(40px, 7vw, 86px); font-weight: 850; letter-spacing: -.03em; margin: 24px 0 22px; max-width: 1200px; width: 100%;
+    font-size: clamp(40px, 7vw, 86px); font-weight: 850; letter-spacing: -.03em; margin: 24px 0 22px; max-width: none; width: min(1500px, 94vw);
   }
   .hero h1 .accent {
     color: #22c55e;
@@ -161,6 +165,26 @@
   .pill { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 999px; padding: 6px 12px; font-size: 12px; color: var(--dark-muted); font-weight: 500; }
   .pill svg { width: 13px; height: 13px; color: #22c55e; }
   .hero-tags { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 28px; }
+
+  /* Esteira tipográfica (marquee) das funcionalidades — sem caixa */
+  .hero-marquee { position: relative; width: 100%; margin-top: 34px; overflow: hidden;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+  .hero-marquee-track { display: flex; align-items: center; width: max-content; animation: heroMarquee 40s linear infinite; }
+  .hero-marquee:hover .hero-marquee-track { animation-play-state: paused; }
+  .hero-marquee-group { display: flex; align-items: center; flex-shrink: 0; }
+  .hm-item { display: inline-flex; align-items: center; padding: 0 30px; font-size: 1.12rem; font-weight: 600; letter-spacing: -0.015em; color: #AFC0BA; white-space: nowrap; transition: color .25s ease; }
+  .hero-marquee:hover .hm-item { color: #8FA49D; }
+  .hm-item:hover { color: #fff; }
+  .hm-sep { display: inline-flex; flex-shrink: 0; color: var(--green); }
+  .hm-sep svg { width: 16px; height: 16px; animation: hmSpin 9s linear infinite; }
+  .hero-marquee:hover .hm-sep svg { animation-play-state: paused; }
+  @keyframes heroMarquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @keyframes hmSpin { to { transform: rotate(360deg); } }
+  @media (prefers-reduced-motion: reduce) {
+    .hero-marquee-track { animation: none; flex-wrap: wrap; justify-content: center; }
+    .hm-sep svg { animation: none; }
+  }
   .check-row { display: flex; flex-direction: column; gap: 12px; margin-top: 30px; }
   .check-row .item { display: flex; align-items: center; gap: 11px; color: #C3D0CC; font-size: 0.96rem; }
   .check-row .ico { width: 26px; height: 26px; border-radius: 8px; background: rgba(46,204,113,0.16); display: grid; place-items: center; flex-shrink: 0; }
@@ -192,7 +216,7 @@
   .tag.wait { background: rgba(243,156,18,0.16); color: #F5B656; }
 
   /* �.��.��.� PROOFBAR �.��.��.� */
-  .proofbar { background: var(--dark); border-bottom: 1px solid var(--dark-border); }
+  .proofbar { background: var(--dots-dark) 0 0 / 26px 26px, var(--dark); border-bottom: 1px solid var(--dark-border); }
   .proofbar-grid { display: grid; grid-template-columns: repeat(4,1fr); }
   .proofbar-item { padding: 30px 28px; border-right: 1px solid var(--dark-border); position: relative; transition: background .2s; }
   .proofbar-item:last-child { border-right: none; }
@@ -204,7 +228,7 @@
   .proofbar-item:hover .bar { width: 100%; }
 
   /* �.��.��.� BENTO BENEFITS �.��.��.� */
-  .section-bento { background: var(--bg); padding: 100px 0; position: relative; }
+  .section-bento { background: var(--dots-light) 0 0 / 26px 26px, var(--bg); padding: 100px 0; position: relative; }
   .bento-header { margin-bottom: 52px; }
   .bento-header .blabel { font-size: 0.72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--green-deep); margin-bottom: 12px; }
   .bento-header h2 { font-size: clamp(2rem, 3.4vw, 2.8rem); font-weight: 800; letter-spacing: -0.03em; max-width: 520px; line-height: 1.1; color: var(--ink); }
@@ -235,7 +259,7 @@
   .bc-msg.us { background: var(--green); color: #fff; border-bottom-right-radius: 3px; align-self: flex-end; }
 
   /* �.��.��.� FEATURES �.��.��.� */
-  .section-features { background: linear-gradient(180deg,#EAF3EF 0%,var(--bg) 100%); padding: 100px 0; }
+  .section-features { background: var(--dots-light) 0 0 / 26px 26px, linear-gradient(180deg,#EAF3EF 0%,var(--bg) 100%); padding: 100px 0; }
   .features-header { text-align: center; max-width: 600px; margin: 0 auto 72px; }
   .features-header h2 { font-size: clamp(2rem,3.4vw,2.8rem); font-weight: 800; letter-spacing: -0.03em; margin: 12px 0 14px; }
   .features-header p { font-size: 1.05rem; color: var(--ink-soft); }
@@ -252,6 +276,16 @@
 
   .fvisual-new { background: linear-gradient(155deg,#fff 0%,#EAF3EF 100%); border: 1px solid var(--border); border-radius: 20px; padding: 26px; box-shadow: 0 20px 60px -20px rgba(20,26,24,0.14), inset 0 2px 0 rgba(46,204,113,0.08); min-height: 300px; display: flex; flex-direction: column; gap: 11px; position: relative; overflow: hidden; }
   .fvisual-new::before { content:''; position: absolute; top:-80px; right:-80px; width:240px; height:240px; border-radius:50%; background: radial-gradient(circle,rgba(46,204,113,0.1),transparent 70%); pointer-events:none; }
+
+  /* Video demos inside feature visuals */
+  .fvisual-new.has-video { padding: 0; }
+  .fvisual-chrome { display: flex; align-items: center; gap: 6px; padding: 14px 16px; position: relative; z-index: 2; }
+  .fvisual-chrome .d { width: 10px; height: 10px; border-radius: 50%; }
+  .fvisual-chrome .d1 { background: #E74C3C; } .fvisual-chrome .d2 { background: #F39C12; } .fvisual-chrome .d3 { background: var(--green); }
+  .fvisual-chrome .url { margin-left: 8px; font-size: 0.72rem; color: var(--ink-soft); font-family: ui-monospace, monospace; }
+  .fvisual-video-wrap { position: relative; z-index: 2; line-height: 0; background: #10130F; }
+  .fvisual-video { display: block; width: 100%; height: auto; opacity: 0; transition: opacity .4s ease; }
+  .fvisual-video.is-ready { opacity: 1; }
   .app-card { background: #fff; border: 1px solid rgba(90,116,112,0.13); border-radius: 14px; padding: 13px 15px; box-shadow: 0 2px 10px -3px rgba(20,26,24,0.07); position: relative; z-index: 2; }
   .app-card-header { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
   .app-card-title { font-size: 0.85rem; font-weight: 600; color: var(--ink); }
@@ -267,7 +301,7 @@
   .ab-us { background: var(--green); color: #fff; border-bottom-right-radius: 3px; align-self: flex-end; max-width: 75%; }
 
   /* �.��.��.� HOW IT WORKS �.��.��.� */
-  .section-steps { background: var(--bg); padding: 100px 0; overflow: hidden; }
+  .section-steps { background: var(--dots-light) 0 0 / 26px 26px, var(--bg); padding: 100px 0; overflow: hidden; }
   .steps-header { text-align: center; max-width: 560px; margin: 0 auto 64px; }
   .steps-header h2 { font-size: clamp(2rem,3.4vw,2.8rem); font-weight: 800; letter-spacing: -0.03em; margin: 12px 0 14px; }
   .steps-header p { font-size: 1.05rem; color: var(--ink-soft); }
@@ -281,7 +315,7 @@
   .step-new p { font-size: 0.92rem; color: var(--ink-soft); line-height: 1.6; }
 
   /* �.��.��.� IA SECTION �.��.��.� */
-  .section-ai { background: var(--dark); padding: 100px 0; position: relative; overflow: hidden; }
+  .section-ai { background: var(--dots-dark) 0 0 / 26px 26px, var(--dark); padding: 100px 0; position: relative; overflow: hidden; }
   .section-ai::before { content:''; position:absolute; top:-200px; left:50%; transform:translateX(-50%); width:800px; height:800px; border-radius:50%; background: radial-gradient(circle,rgba(46,204,113,0.07),transparent 60%); pointer-events:none; }
   .ai-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
   .ai-text .alabel { font-size: 0.72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--green); margin-bottom: 16px; }
@@ -292,6 +326,9 @@
   .ai-tag:hover { border-color: var(--green); color: var(--green-light); background: rgba(46,204,113,0.06); }
   .ai-tag.hi { border-color: rgba(46,204,113,0.4); color: var(--green-light); background: rgba(46,204,113,0.08); }
   .ai-window { background: var(--dark-2); border: 1px solid var(--dark-border); border-radius: 20px; overflow: hidden; box-shadow: 0 40px 80px -20px rgba(0,0,0,0.5); }
+  .ai-window.has-video { max-width: 400px; margin: 0 auto; }
+  .ai-window .fvisual-video { width: 100%; height: auto; display: block; opacity: 0; transition: opacity .4s ease; background: #10130F; }
+  .ai-window .fvisual-video.is-ready { opacity: 1; }
   .ai-topbar { background: var(--dark-3); border-bottom: 1px solid var(--dark-border); padding: 13px 18px; display: flex; align-items: center; gap: 12px; }
   .ai-dots { display: flex; gap: 6px; }
   .ai-dot { width: 11px; height: 11px; border-radius: 50%; }
@@ -312,10 +349,11 @@
   .tdot:nth-child(2){animation-delay:.2s} .tdot:nth-child(3){animation-delay:.4s}
 
   /* �.��.��.� INTEGRATIONS �.��.��.� */
-  .section-integ { background: var(--bg); padding: 100px 0; position: relative; }
+  .section-integ { background: var(--dots-light) 0 0 / 26px 26px, var(--bg); padding: 100px 0; position: relative; }
   .integ-header { text-align: center; margin-bottom: 52px; }
   .integ-header h2 { font-size: clamp(2rem,3.4vw,2.8rem); font-weight: 800; letter-spacing: -0.03em; margin: 12px 0 14px; }
   .integ-header p { font-size: 1.05rem; color: var(--ink-soft); }
+  .integ-wrap { display: flex; flex-direction: column; gap: 20px; }
   .integ-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
   .integ-card { background: var(--dark); border: 1px solid var(--dark-border); border-radius: 20px; padding: 40px; position: relative; overflow: hidden; transition: border-color .3s, box-shadow .3s, transform .25s; }
   .integ-card:hover { border-color: rgba(46,204,113,0.3); box-shadow: 0 24px 60px -16px rgba(0,0,0,0.3); transform: translateY(-4px); }
@@ -325,6 +363,21 @@
   .integ-name { font-size: 1.5rem; font-weight: 800; color: var(--dark-fg); letter-spacing: -0.02em; margin-bottom: 10px; }
   .integ-desc { font-size: 0.9rem; color: var(--dark-muted); line-height: 1.6; position: relative; z-index: 2; }
   .integ-pill { display: inline-block; margin-top: 20px; font-size: 0.71rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--green); border: 1px solid rgba(46,204,113,0.25); padding: 5px 12px; border-radius: 999px; position: relative; z-index: 2; }
+
+  /* Featured integration (Meta / WhatsApp Cloud API) */
+  .integ-featured { background: linear-gradient(135deg, #1B2C22 0%, var(--dark) 65%); border: 1px solid rgba(46,204,113,0.4); border-radius: 24px; padding: 44px 46px; position: relative; overflow: hidden; box-shadow: 0 30px 80px -24px rgba(46,204,113,0.22); }
+  .integ-featured::before { content:''; position:absolute; top:-140px; right:-100px; width:340px; height:340px; border-radius:50%; background: radial-gradient(circle,rgba(46,204,113,0.16),transparent 70%); pointer-events:none; }
+  .integ-featured::after { content:''; position:absolute; inset:0; border-radius:24px; box-shadow: inset 0 0 0 1px rgba(46,204,113,0.08); pointer-events:none; }
+  .integ-badge { display: inline-flex; align-items: center; gap: 6px; background: linear-gradient(135deg,var(--green-light),var(--green)); color: #08130D; font-size: 0.72rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; padding: 7px 14px 7px 12px; border-radius: 999px; position: relative; z-index: 2; }
+  .integ-badge svg { width: 13px; height: 13px; }
+  .integ-featured-top { display: flex; align-items: center; gap: 22px; margin-bottom: 22px; flex-wrap: wrap; position: relative; z-index: 2; }
+  .integ-featured .integ-icon { margin-bottom: 0; width: 60px; height: 60px; background: rgba(46,204,113,0.2); }
+  .integ-featured .integ-icon svg { width: 30px; height: 30px; }
+  .integ-featured .integ-name { font-size: clamp(1.5rem, 2.4vw, 1.9rem); margin-bottom: 0; }
+  .integ-featured .integ-desc { max-width: 620px; font-size: 0.98rem; }
+  .integ-perks { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; position: relative; z-index: 2; }
+  .integ-perk { display: flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.045); border: 1px solid rgba(46,204,113,0.22); border-radius: 12px; padding: 10px 14px; font-size: 0.85rem; color: var(--dark-fg); font-weight: 500; }
+  .integ-perk svg { width: 16px; height: 16px; color: var(--green-light); flex-shrink: 0; }
 
   /* �.��.��.� PRICING �.��.��.� */
   .section-pricing { background: linear-gradient(180deg,#EAF3EF 0%,var(--bg) 100%); padding: 100px 0; display: none; }
@@ -397,6 +450,10 @@
   .reveal { opacity: 0; transform: translateY(20px); transition: opacity .6s ease, transform .6s ease; }
   .reveal.in { opacity: 1; transform: none; }
 
+  /* Vapor reveal do headline — esconde o texto (mantém layout/SEO) enquanto o canvas monta as partículas */
+  .hero h1.vaporizing, .hero h1.vaporizing * { color: transparent !important; }
+  .hero h1 canvas.vapor-canvas { position: absolute; left: 0; top: 0; pointer-events: none; }
+
   /* �.��.��.� RESPONSIVE �.��.��.� */
   @media (max-width: 960px) {
     .proofbar-grid { grid-template-columns: repeat(2,1fr); }
@@ -461,6 +518,7 @@
     .hero h1 { font-size: clamp(2rem, 9vw, 2.8rem); }
     .hero p.lead { font-size: 1rem; }
     .hero-tags { display: none; }
+    .hero-marquee { margin-top: 22px; }
     .btn-mobile-only { display: inline-flex; }
     .hero-trust-mobile { display: flex; }
     .nav-logo { height: 44px; }
@@ -490,7 +548,7 @@
   @keyframes seam-sweep { 0%, 100% { left: -22%; } 50% { left: 100%; } }
 
   /* �.��.��.� FAQ �.��.��.� */
-  .section-faq { background: var(--bg); padding: 100px 0; }
+  .section-faq { background: var(--dots-light) 0 0 / 26px 26px, var(--bg); padding: 100px 0; }
   .faq-header { text-align: center; max-width: 620px; margin: 0 auto 48px; }
   .faq-header h2 { font-size: clamp(2rem,3.4vw,2.8rem); font-weight: 800; letter-spacing: -0.03em; margin: 12px 0 14px; }
   .faq-header p { font-size: 1.05rem; color: var(--ink-soft); }
@@ -584,7 +642,6 @@
       <a href="#top" aria-label="Cubis.Hub">
         <svg class="nav-logo" viewBox="0 0 210 66" role="img" aria-label="Cubis.Hub">
           <defs><linearGradient id="lg1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#3DDA85"/><stop offset="100%" stop-color="#2ECC71"/></linearGradient></defs>
-          <rect x="0" y="7" width="52" height="52" rx="10" fill="#282C29"/>
           <g transform="translate(0,7) scale(0.65)">
             <polygon points="18,26 40,37 40,59 18,48" fill="#3D4240"/>
             <polygon points="62,26 62,48 40,59 40,37" fill="#6A8481"/>
@@ -609,7 +666,7 @@
 
     <!-- Hero content -->
     <div class="hero-grid">
-      <h1>Gestão contábil <span class="accent">que realmente<br>funciona</span></h1>
+      <h1>Gestão contábil <span class="accent">que realmente funciona</span></h1>
       <p class="lead">Atendimento por WhatsApp organizado por setor, envio de relatórios em massa, prazos fiscais e documentos. Tudo em um só lugar, com automação e IA.</p>
 
       <div class="hero-actions">
@@ -620,11 +677,45 @@
         <a class="btn btn-ghost btn-mobile-only" href="#funcionalidades">Ver funcionalidades</a>
       </div>
 
-      <div class="hero-tags">
-        <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg> Atendimento por setor</span>
-        <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m22 2-7 20-4-9-9-4Z"/></svg> Disparos em massa</span>
-        <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> Prazos & cobranças</span>
-        <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8V4H8"/><rect x="4" y="8" width="16" height="12" rx="2"/><path d="M2 14h2M20 14h2M15 13v2M9 13v2"/></svg> IA embarcada</span>
+      <div class="hero-marquee" aria-label="Funcionalidades">
+        <div class="hero-marquee-track">
+          <div class="hero-marquee-group">
+            <span class="hm-item">Atendimento por setor</span>
+            <span class="hm-sep"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.4 4.6 2.4 6.6 7 7-4.6.4-6.6 2.4-7 7-.4-4.6-2.4-6.6-7-7 4.6-.4 6.6-2.4 7-7Z"/></svg></span>
+            <span class="hm-item">Disparos em massa</span>
+            <span class="hm-sep"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.4 4.6 2.4 6.6 7 7-4.6.4-6.6 2.4-7 7-.4-4.6-2.4-6.6-7-7 4.6-.4 6.6-2.4 7-7Z"/></svg></span>
+            <span class="hm-item">WhatsApp oficial (Meta)</span>
+            <span class="hm-sep"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.4 4.6 2.4 6.6 7 7-4.6.4-6.6 2.4-7 7-.4-4.6-2.4-6.6-7-7 4.6-.4 6.6-2.4 7-7Z"/></svg></span>
+            <span class="hm-item">Prazos &amp; cobranças</span>
+            <span class="hm-sep"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.4 4.6 2.4 6.6 7 7-4.6.4-6.6 2.4-7 7-.4-4.6-2.4-6.6-7-7 4.6-.4 6.6-2.4 7-7Z"/></svg></span>
+            <span class="hm-item">IA embarcada</span>
+            <span class="hm-sep"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.4 4.6 2.4 6.6 7 7-4.6.4-6.6 2.4-7 7-.4-4.6-2.4-6.6-7-7 4.6-.4 6.6-2.4 7-7Z"/></svg></span>
+            <span class="hm-item">Kanban de tarefas</span>
+            <span class="hm-sep"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.4 4.6 2.4 6.6 7 7-4.6.4-6.6 2.4-7 7-.4-4.6-2.4-6.6-7-7 4.6-.4 6.6-2.4 7-7Z"/></svg></span>
+            <span class="hm-item">Documentos por cliente</span>
+            <span class="hm-sep"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.4 4.6 2.4 6.6 7 7-4.6.4-6.6 2.4-7 7-.4-4.6-2.4-6.6-7-7 4.6-.4 6.6-2.4 7-7Z"/></svg></span>
+            <span class="hm-item">Google Calendar</span>
+            <span class="hm-sep"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.4 4.6 2.4 6.6 7 7-4.6.4-6.6 2.4-7 7-.4-4.6-2.4-6.6-7-7 4.6-.4 6.6-2.4 7-7Z"/></svg></span>
+          </div>
+          <div class="hero-marquee-group" aria-hidden="true">
+            <span class="hm-item">Atendimento por setor</span>
+            <span class="hm-sep"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.4 4.6 2.4 6.6 7 7-4.6.4-6.6 2.4-7 7-.4-4.6-2.4-6.6-7-7 4.6-.4 6.6-2.4 7-7Z"/></svg></span>
+            <span class="hm-item">Disparos em massa</span>
+            <span class="hm-sep"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.4 4.6 2.4 6.6 7 7-4.6.4-6.6 2.4-7 7-.4-4.6-2.4-6.6-7-7 4.6-.4 6.6-2.4 7-7Z"/></svg></span>
+            <span class="hm-item">WhatsApp oficial (Meta)</span>
+            <span class="hm-sep"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.4 4.6 2.4 6.6 7 7-4.6.4-6.6 2.4-7 7-.4-4.6-2.4-6.6-7-7 4.6-.4 6.6-2.4 7-7Z"/></svg></span>
+            <span class="hm-item">Prazos &amp; cobranças</span>
+            <span class="hm-sep"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.4 4.6 2.4 6.6 7 7-4.6.4-6.6 2.4-7 7-.4-4.6-2.4-6.6-7-7 4.6-.4 6.6-2.4 7-7Z"/></svg></span>
+            <span class="hm-item">IA embarcada</span>
+            <span class="hm-sep"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.4 4.6 2.4 6.6 7 7-4.6.4-6.6 2.4-7 7-.4-4.6-2.4-6.6-7-7 4.6-.4 6.6-2.4 7-7Z"/></svg></span>
+            <span class="hm-item">Kanban de tarefas</span>
+            <span class="hm-sep"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.4 4.6 2.4 6.6 7 7-4.6.4-6.6 2.4-7 7-.4-4.6-2.4-6.6-7-7 4.6-.4 6.6-2.4 7-7Z"/></svg></span>
+            <span class="hm-item">Documentos por cliente</span>
+            <span class="hm-sep"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.4 4.6 2.4 6.6 7 7-4.6.4-6.6 2.4-7 7-.4-4.6-2.4-6.6-7-7 4.6-.4 6.6-2.4 7-7Z"/></svg></span>
+            <span class="hm-item">Google Calendar</span>
+            <span class="hm-sep"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.4 4.6 2.4 6.6 7 7-4.6.4-6.6 2.4-7 7-.4-4.6-2.4-6.6-7-7 4.6-.4 6.6-2.4 7-7Z"/></svg></span>
+          </div>
+        </div>
       </div>
 
       <div class="hero-trust-mobile">
@@ -710,7 +801,6 @@
 <section class="section-features" id="funcionalidades">
   <div class="wrap">
     <div class="features-header reveal">
-      <span class="eyebrow">Funcionalidades</span>
       <h2>Feito para a rotina contábil</h2>
       <p>Cada módulo resolve uma dor real de quem atende muitos clientes todo mês.</p>
     </div>
@@ -726,15 +816,10 @@
           <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Iniciar conversa direto do cadastro do cliente</li>
         </ul>
       </div>
-      <div class="fvisual-new">
-        <div class="app-bubble ab-them">Bom dia! Já saiu a guia deste mês?</div>
-        <div class="app-bubble ab-us">Acabei de enviar aqui no WhatsApp</div>
-        <div class="app-card">
-          <div class="app-card-header"><div><div class="app-card-title">Conversa transferida</div><div class="app-card-sub">Transferida por Rafael &middot; agora</div></div><span class="app-chip chip-blue">Fiscal &rarr; Pessoal</span></div>
-        </div>
-        <div class="app-card">
-          <div class="app-card-header"><div class="app-card-title">12 conversas abertas</div><span class="app-chip chip-green">Online</span></div>
-          <div class="app-progress"><div class="app-progress-fill" style="width:73%"></div></div>
+      <div class="fvisual-new has-video">
+        <div class="fvisual-chrome"><span class="d d1"></span><span class="d d2"></span><span class="d d3"></span><span class="url">app.cubishub.com.br/whatsapp</span></div>
+        <div class="fvisual-video-wrap">
+          <video class="fvisual-video" data-src="videos/chat.mp4" muted loop playsinline preload="none"></video>
         </div>
       </div>
     </div>
@@ -750,16 +835,10 @@
           <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Agendamento, rascunhos e disparo para grupos</li>
         </ul>
       </div>
-      <div class="fvisual-new">
-        <div class="app-card">
-          <div class="app-card-header"><div><div class="app-card-title">Lote: DAS competência 06/2026</div><div class="app-card-sub">186 clientes · 186 arquivos associados</div></div><span class="app-chip chip-green">Pronto</span></div>
-        </div>
-        <div class="app-card">
-          <div class="app-card-header"><div class="app-card-title">Progresso do disparo</div><div class="app-card-sub">182 / 186</div></div>
-          <div class="app-progress"><div class="app-progress-fill" style="width:98%"></div></div>
-        </div>
-        <div class="app-card">
-          <div class="app-card-header"><div class="app-card-title">Agendado para 05/07 · 08:00</div><span class="app-chip chip-amber">Agendado</span></div>
+      <div class="fvisual-new has-video">
+        <div class="fvisual-chrome"><span class="d d1"></span><span class="d d2"></span><span class="d d3"></span><span class="url">app.cubishub.com.br/envio</span></div>
+        <div class="fvisual-video-wrap">
+          <video class="fvisual-video" data-src="videos/envio.mp4" muted loop playsinline preload="none"></video>
         </div>
       </div>
     </div>
@@ -775,10 +854,11 @@
           <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Sincronização bidirecional com Google Calendar</li>
         </ul>
       </div>
-      <div class="fvisual-new">
-        <div class="app-card"><div class="app-card-header"><div><div class="app-card-title">DCTFWeb · 15/07</div><div class="app-card-sub">Setor Fiscal · 32 clientes</div></div><span class="app-chip chip-amber">D-3</span></div></div>
-        <div class="app-card"><div class="app-card-header"><div><div class="app-card-title">eSocial · 20/07</div><div class="app-card-sub">Setor Pessoal · 18 clientes</div></div><span class="app-chip chip-green">No prazo</span></div></div>
-        <div class="app-card"><div class="app-card-header"><div><div class="app-card-title">Simples Nacional · 22/07</div><div class="app-card-sub">Sincronizado · Google Calendar</div></div><span class="app-chip chip-green">✓ OK</span></div></div>
+      <div class="fvisual-new has-video">
+        <div class="fvisual-chrome"><span class="d d1"></span><span class="d d2"></span><span class="d d3"></span><span class="url">app.cubishub.com.br/prazos</span></div>
+        <div class="fvisual-video-wrap">
+          <video class="fvisual-video" data-src="videos/deadlines.mp4" muted loop playsinline preload="none"></video>
+        </div>
       </div>
     </div>
 
@@ -793,16 +873,34 @@
           <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Envio direto via WhatsApp a partir do documento</li>
         </ul>
       </div>
-      <div class="fvisual-new">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
-          <div class="app-card"><div class="app-card-sub" style="font-weight:700;margin-bottom:7px">A fazer</div><div class="app-card-title" style="font-size:.8rem">Apurar Simples · 12</div></div>
-          <div class="app-card"><div class="app-card-sub" style="font-weight:700;margin-bottom:7px">Em andamento</div><div class="app-card-title" style="font-size:.8rem">Folha pagamento</div></div>
+      <div class="fvisual-new has-video">
+        <div class="fvisual-chrome"><span class="d d1"></span><span class="d d2"></span><span class="d d3"></span><span class="url">app.cubishub.com.br/board</span></div>
+        <div class="fvisual-video-wrap">
+          <video class="fvisual-video" data-src="videos/board.mp4" muted loop playsinline preload="none"></video>
         </div>
-        <div class="app-card"><div class="app-card-header"><div class="app-card-title">Contrato_social.pdf · v3</div><span class="app-chip chip-green">Enviar no WA</span></div></div>
       </div>
     </div>
 
     <div class="feature-row reveal">
+      <div class="ftext">
+        <div class="eyebrow-tag">Clientes</div>
+        <h3>Cadastro completo, sem trabalho manual</h3>
+        <p class="desc">Consulta automática de CNPJ, importação em massa via CSV e organização em grupos para facilitar disparos e atendimento.</p>
+        <ul class="flist-new">
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Consulta automática de dados por CNPJ</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Importação em massa via CSV</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Grupos para disparo e organização da carteira</li>
+        </ul>
+      </div>
+      <div class="fvisual-new has-video">
+        <div class="fvisual-chrome"><span class="d d1"></span><span class="d d2"></span><span class="d d3"></span><span class="url">app.cubishub.com.br/clientes</span></div>
+        <div class="fvisual-video-wrap">
+          <video class="fvisual-video" data-src="videos/clientes.mp4" muted loop playsinline preload="none"></video>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature-row rev reveal">
       <div class="ftext">
         <div class="eyebrow-tag">Agente de IA</div>
         <h3>Crie um agente de atendimento no WhatsApp</h3>
@@ -813,11 +911,11 @@
           <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Configuração simples, sem código</li>
         </ul>
       </div>
-      <div class="fvisual-new">
-        <div class="app-bubble ab-them">Oi, qual o valor da guia de julho?</div>
-        <div class="app-card"><div class="app-card-header"><div><div class="app-card-title">Agente Cubis.Hub</div><div class="app-card-sub">Respondendo automaticamente</div></div><span class="app-chip chip-green">Ativo</span></div></div>
-        <div class="app-bubble ab-us">O valor deste mês é R$ 320,00, vencimento dia 20. Quer que eu já envie a guia?</div>
-        <div class="app-card"><div class="app-card-header"><div class="app-card-title">Encaminhado para Setor Fiscal</div><span class="app-chip chip-amber">Transferido</span></div></div>
+      <div class="fvisual-new has-video">
+        <div class="fvisual-chrome"><span class="d d1"></span><span class="d d2"></span><span class="d d3"></span><span class="url">app.cubishub.com.br/agente-ia</span></div>
+        <div class="fvisual-video-wrap">
+          <video class="fvisual-video" data-src="videos/agent.mp4" muted loop playsinline preload="none"></video>
+        </div>
       </div>
     </div>
   </div>
@@ -827,7 +925,6 @@
 <section class="section-steps" id="como-funciona">
   <div class="wrap">
     <div class="steps-header reveal">
-      <span class="eyebrow">Como funciona</span>
       <h2>Do cadastro ao envio em 3 passos</h2>
       <p>Comece hoje. Sem implantação complexa, sem treinamento longo.</p>
     </div>
@@ -875,39 +972,12 @@
           <span class="ai-tag">Faturamento escritório</span>
         </div>
       </div>
-      <div class="ai-window reveal">
+      <div class="ai-window has-video reveal">
         <div class="ai-topbar">
           <div class="ai-dots"><div class="ai-dot r"></div><div class="ai-dot y"></div><div class="ai-dot g"></div></div>
           <div class="ai-dotlabel">Assistente Cubis.Hub</div>
         </div>
-        <div class="ai-body">
-          <div class="ai-msg">
-            <div class="ai-av u">RA</div>
-            <div class="ai-bubble">Qual o status de compliance da Mendes Participações?</div>
-          </div>
-          <div class="ai-msg">
-            <div class="ai-av a">IA</div>
-            <div class="ai-bubble a">
-              <strong>Mendes Participações LTDA</strong> - CNPJ 12.345.678/0001-99<br>
-              Situação: <strong>Ativa</strong> · Simples Nacional: Optante
-              <div class="ai-results">
-                <span class="air">&#10003; Sem irregularidades</span>
-                <span class="air">3 prazos próximos</span>
-                <span class="air">Score 92/100</span>
-              </div>
-            </div>
-          </div>
-          <div class="ai-msg">
-            <div class="ai-av u">RA</div>
-            <div class="ai-bubble">Compare Simples vs Lucro Presumido para ela</div>
-          </div>
-          <div class="ai-msg">
-            <div class="ai-av a">IA</div>
-            <div class="ai-bubble a" style="display:flex;align-items:center;gap:2px">
-              <span class="tdot"></span><span class="tdot"></span><span class="tdot"></span>
-            </div>
-          </div>
-        </div>
+        <video class="fvisual-video" data-src="videos/assistente-ia.mp4" muted loop playsinline preload="none"></video>
       </div>
     </div>
   </div>
@@ -918,22 +988,36 @@
   <div class="seam-line"><span class="seam-beam"></span></div>
   <div class="wrap">
     <div class="integ-header reveal">
-      <span class="eyebrow">Integrações</span>
       <h2>Conectado ao que você já usa</h2>
-      <p>WhatsApp no centro do atendimento e Google Calendar para nunca perder um prazo.</p>
+      <p>Conexão oficial e direta com a Meta para disparos, além do WhatsApp via QR Code e Google Calendar para os prazos.</p>
     </div>
-    <div class="integ-cards">
-      <div class="integ-card reveal">
-        <div class="integ-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></div>
-        <div class="integ-name">WhatsApp</div>
-        <div class="integ-desc">Instâncias dedicadas por escritório. Atendimento por setor e disparos em massa com rastreamento completo de cada envio.</div>
-        <div class="integ-pill">Atendimento + Disparo</div>
+    <div class="integ-wrap">
+      <div class="integ-featured reveal">
+        <div class="integ-featured-top">
+          <div class="integ-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></div>
+          <div class="integ-name">WhatsApp Cloud API, direto com a Meta</div>
+        </div>
+        <div class="integ-desc">Conexão oficial com a API da Meta, sem depender só de QR Code. Número verificado, disparo em maior volume e sem o risco de banimento comum em soluções não-oficiais.</div>
+        <div class="integ-perks">
+          <span class="integ-perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 6v6c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10V6l-8-4Z"/><path d="m9 12 2 2 4-4"/></svg>Número oficial verificado</span>
+          <span class="integ-perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 6v6c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10V6l-8-4Z"/></svg>Sem risco de banimento</span>
+          <span class="integ-perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 9h8M8 13h5"/></svg>Templates aprovados pela Meta</span>
+          <span class="integ-perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>Maior volume de disparo</span>
+        </div>
       </div>
-      <div class="integ-card reveal">
-        <div class="integ-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
-        <div class="integ-name">Google Calendar</div>
-        <div class="integ-desc">Sincronização bidirecional dos prazos fiscais. Crie, edite e visualize obrigações direto no Calendar do escritório.</div>
-        <div class="integ-pill">Sincronização bidirecional</div>
+      <div class="integ-cards">
+        <div class="integ-card reveal">
+          <div class="integ-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M7 20h10M9 16v4M15 16v4"/><path d="M8 8h.01M8 11h.01M12 8h4M12 11h4"/></svg></div>
+          <div class="integ-name">WhatsApp via QR Code</div>
+          <div class="integ-desc">Conecte um número próprio ou dedicado do escritório em minutos, sem burocracia. Atendimento por setor e disparos com rastreamento completo de cada envio.</div>
+          <div class="integ-pill">Atendimento + Disparo</div>
+        </div>
+        <div class="integ-card reveal">
+          <div class="integ-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+          <div class="integ-name">Google Calendar</div>
+          <div class="integ-desc">Sincronização bidirecional dos prazos fiscais. Crie, edite e visualize obrigações direto no Calendar do escritório.</div>
+          <div class="integ-pill">Sincronização bidirecional</div>
+        </div>
       </div>
     </div>
   </div>
@@ -1048,7 +1132,6 @@
 <section class="section-faq" id="faq">
   <div class="wrap">
     <div class="faq-header reveal">
-      <span class="eyebrow">Dúvidas</span>
       <h2>Perguntas frequentes</h2>
       <p>Não achou o que precisava? Fale com a gente antes de assinar.</p>
     </div>
@@ -1114,7 +1197,6 @@
         <a href="#top" aria-label="Voltar ao topo">
           <svg class="flogo" viewBox="0 0 210 66" role="img" aria-label="Cubis.Hub">
             <defs><linearGradient id="lg2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#3DDA85"/><stop offset="100%" stop-color="#2ECC71"/></linearGradient></defs>
-            <rect x="0" y="7" width="52" height="52" rx="10" fill="#282C29"/>
             <g transform="translate(0,7) scale(0.65)">
               <polygon points="18,26 40,37 40,59 18,48" fill="#3D4240"/>
               <polygon points="62,26 62,48 40,59 40,37" fill="#6A8481"/>
@@ -1136,7 +1218,6 @@
           <li><a href="#funcionalidades">Funcionalidades</a></li>
           <li><a href="#integracoes">Integrações</a></li>
           <li><a href="#faq">FAQ</a></li>
-          <li><a href="https://contab-ia.vercel.app/login">Entrar</a></li>
         </ul>
       </div>
       <div class="foot-col">
@@ -1394,6 +1475,202 @@ function setPricing(mode) {
     entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
   }, { threshold: 0.12 });
   els.forEach(function (e) { io.observe(e); });
+})();
+
+/* �.��.��.��.��.��.��.��.��.��.��.��.� Vapor reveal do headline (efeito de partículas, uma vez no load) �.��.��.��.��.��.��.��.��.��.��.��.� */
+(function () {
+  var h1 = document.querySelector('.hero h1');
+  if (!h1 || !window.requestAnimationFrame || !document.fonts) return;
+  // Respeita quem pediu menos animação: mantém o texto nítido, sem efeito.
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  var running = false;
+  function trigger() {
+    if (running) return;
+    running = true;
+    // pequeno atraso pra garantir layout final estável
+    requestAnimationFrame(function () { try { run(); } catch (e) { running = false; /* fail-safe: texto normal */ } });
+  }
+
+  document.fonts.ready.then(function () {
+    // Re-dispara o efeito toda vez que o headline volta pra viewport (sem loop contínuo).
+    if (!('IntersectionObserver' in window)) { trigger(); return; }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.isIntersecting) trigger(); });
+    }, { threshold: 0.45 });
+    io.observe(h1);
+  });
+
+  function run() {
+    // limpa qualquer canvas remanescente de uma execução anterior
+    var old = h1.querySelector('canvas.vapor-canvas');
+    if (old) old.parentNode.removeChild(old);
+    var rect = h1.getBoundingClientRect();
+    var w = Math.ceil(rect.width), h = Math.ceil(rect.height);
+    if (w < 20 || h < 20) { running = false; return; }
+
+    var cs = getComputedStyle(h1);
+    var fontSize = parseFloat(cs.fontSize);
+    var fontWeight = cs.fontWeight || '800';
+    var fontFamily = cs.fontFamily || 'Inter, sans-serif';
+    var lineHeight = parseFloat(cs.lineHeight);
+    if (!lineHeight || isNaN(lineHeight)) lineHeight = fontSize * 1.12;
+    var baseColor = cs.color;
+    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+    /* ── 1. Lê o texto do DOM preservando cor e quebras (edit-safe) ── */
+    var WORD = 0, SPACE = 1, BREAK = 2;
+    var tokens = [];
+    function pushText(text, color) {
+      var parts = text.split(/(\s+)/);
+      for (var i = 0; i < parts.length; i++) {
+        if (parts[i] === '') continue;
+        if (/^\s+$/.test(parts[i])) tokens.push({ k: SPACE });
+        else tokens.push({ k: WORD, t: parts[i], c: color });
+      }
+    }
+    Array.prototype.forEach.call(h1.childNodes, function (node) {
+      if (node.nodeType === 3) { pushText(node.nodeValue, baseColor); return; }
+      if (node.nodeType === 1) {
+        var col = getComputedStyle(node).color;
+        Array.prototype.forEach.call(node.childNodes, function (c) {
+          if (c.nodeType === 3) pushText(c.nodeValue, col);
+          else if (c.nodeType === 1 && c.tagName === 'BR') tokens.push({ k: BREAK });
+        });
+      }
+    });
+    if (!tokens.length) { running = false; return; }
+
+    /* ── 2. Canvas offscreen para amostrar os pixels do texto ── */
+    var oc = document.createElement('canvas');
+    oc.width = w * dpr; oc.height = h * dpr;
+    var octx = oc.getContext('2d');
+    octx.scale(dpr, dpr);
+    octx.textBaseline = 'top';
+    octx.font = fontWeight + ' ' + fontSize + 'px ' + fontFamily;
+    try { octx.letterSpacing = cs.letterSpacing; } catch (e) {}
+    var spaceW = octx.measureText(' ').width;
+
+    // Quebra de linha respeitando a largura real + o <br> forçado
+    function strOf(arr) { var s = ''; for (var i = 0; i < arr.length; i++) s += arr[i].k === SPACE ? ' ' : arr[i].t; return s.trim(); }
+    var lines = [], cur = [];
+    for (var i = 0; i < tokens.length; i++) {
+      var tk = tokens[i];
+      if (tk.k === BREAK) { lines.push(cur); cur = []; continue; }
+      if (tk.k === SPACE) { if (cur.length) cur.push(tk); continue; }
+      var test = cur.concat([tk]);
+      if (octx.measureText(strOf(test)).width > w && cur.length) { lines.push(cur); cur = [tk]; }
+      else cur = test;
+    }
+    if (cur.length) lines.push(cur);
+
+    var totalH = lines.length * lineHeight;
+    var startY = (h - totalH) / 2;
+    lines.forEach(function (line, li) {
+      var toks = line.slice();
+      while (toks.length && toks[0].k === SPACE) toks.shift();
+      while (toks.length && toks[toks.length - 1].k === SPACE) toks.pop();
+      var lw = octx.measureText(strOf(toks)).width;
+      var x = (w - lw) / 2;
+      var y = startY + li * lineHeight + (lineHeight - fontSize) / 2;
+      toks.forEach(function (t2) {
+        if (t2.k === SPACE) { x += spaceW; return; }
+        octx.fillStyle = t2.c;
+        octx.fillText(t2.t, x, y);
+        x += octx.measureText(t2.t).width;
+      });
+    });
+
+    /* ── 3. Amostra em partículas ── */
+    var data = octx.getImageData(0, 0, oc.width, oc.height).data;
+    var step = Math.max(1, Math.round(dpr));
+    var particles = [];
+    for (var py = 0; py < oc.height; py += step) {
+      for (var px = 0; px < oc.width; px += step) {
+        var idx = (py * oc.width + px) * 4;
+        var alpha = data[idx + 3];
+        if (alpha > 45) {
+          particles.push({
+            tx: px / dpr, ty: py / dpr,
+            r: data[idx], g: data[idx + 1], b: data[idx + 2], a: alpha / 255,
+          });
+        }
+      }
+    }
+    if (!particles.length) { running = false; return; }
+
+    /* ── 4. Canvas visível por cima do H1, texto real fica invisível ── */
+    var cv = document.createElement('canvas');
+    cv.className = 'vapor-canvas';
+    cv.width = oc.width; cv.height = oc.height;
+    cv.style.width = w + 'px'; cv.style.height = h + 'px';
+    if (getComputedStyle(h1).position === 'static') h1.style.position = 'relative';
+    h1.classList.add('vaporizing');
+    h1.appendChild(cv);
+    var ctx = cv.getContext('2d');
+    ctx.scale(dpr, dpr);
+
+    // Estado inicial: partículas espalhadas + transparentes; entram da esquerda p/ direita
+    var spread = fontSize * 0.85;
+    for (var k = 0; k < particles.length; k++) {
+      var p = particles[k];
+      p.sx = p.tx + (Math.random() - 0.5) * spread * 2.2;
+      p.sy = p.ty + (Math.random() - 0.5) * spread;
+      p.delay = (p.tx / w) * 360;   // stagger esquerda→direita
+      p.dur = 620;
+    }
+
+    var t0 = performance.now();
+    var LIFE = 360 + 620 + 120;
+    function tick(now) {
+      var t = now - t0;
+      ctx.clearRect(0, 0, w, h);
+      for (var j = 0; j < particles.length; j++) {
+        var q = particles[j];
+        var lt = t - q.delay;
+        var prog = lt <= 0 ? 0 : lt >= q.dur ? 1 : lt / q.dur;
+        var e = 1 - Math.pow(1 - prog, 3); // easeOutCubic
+        var al = q.a * e;
+        if (al <= 0.012) continue;
+        ctx.fillStyle = 'rgba(' + q.r + ',' + q.g + ',' + q.b + ',' + al + ')';
+        ctx.fillRect(q.sx + (q.tx - q.sx) * e, q.sy + (q.ty - q.sy) * e, 1, 1);
+      }
+      if (t < LIFE) requestAnimationFrame(tick);
+      else { h1.classList.remove('vaporizing'); if (cv.parentNode) cv.parentNode.removeChild(cv); running = false; }
+    }
+    requestAnimationFrame(tick);
+  }
+})();
+
+/* �.��.��.��.��.��.��.��.��.��.��.��.� Lazy-load & autoplay dos vídeos de demonstração �.��.��.��.��.��.��.��.��.��.��.��.� */
+(function () {
+  var videos = document.querySelectorAll('video[data-src]');
+  if (!videos.length) return;
+  function reveal(v) { v.classList.add('is-ready'); }
+  function activate(v) {
+    if (v.dataset.activated) return;
+    v.dataset.activated = '1';
+    if (!v.src) v.src = v.getAttribute('data-src');
+    // Revela em qualquer sinal de que há imagem pronta — evita ficar preso em opacity:0
+    ['loadeddata', 'canplay', 'playing'].forEach(function (ev) {
+      v.addEventListener(ev, function () { reveal(v); });
+    });
+    v.load();
+    // Se já estiver pronto (cache/localhost rápido), revela na hora
+    if (v.readyState >= 2) reveal(v);
+    var p = v.play();
+    // Autoplay bloqueado? Mostra mesmo assim (o 1º frame já é conteúdo)
+    if (p && p.catch) p.catch(function () { reveal(v); });
+    // Rede de segurança final
+    setTimeout(function () { if (v.readyState >= 2) reveal(v); }, 1500);
+  }
+  if (!('IntersectionObserver' in window)) { videos.forEach(activate); return; }
+  var vio = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) {
+      if (en.isIntersecting) { activate(en.target); vio.unobserve(en.target); }
+    });
+  }, { threshold: 0.2, rootMargin: '300px 0px' });
+  videos.forEach(function (v) { vio.observe(v); });
 })();
 
 /* ─── Lead Modal (teste grátis) ─── */
