@@ -1,0 +1,41 @@
+# Cubis.Hub
+
+> Cubis.Hub é uma plataforma white label de gestão contábil que centraliza atendimento por WhatsApp, envio de relatórios em massa, prazos fiscais e documentos para escritórios de contabilidade no Brasil.
+
+Cubis.Hub resolve a rotina operacional de escritórios contábeis que atendem uma carteira grande de clientes todo mês: comunicação espalhada em vários números de WhatsApp, envio manual de guias e relatórios, prazos fiscais perdidos e documentos desorganizados. A plataforma reúne tudo em um único painel, com automação e um assistente de IA embarcado.
+
+## O que é
+
+- Software SaaS (web) para escritórios de contabilidade, sob o domínio app.cubishub.com.br
+- Modelo de assinatura mensal ou anual, com teste grátis de 7 dias, sem cartão de crédito
+
+## Para quem
+
+- Escritórios de contabilidade e contadores autônomos no Brasil que atendem uma carteira de clientes pessoa jurídica e/ou pessoa física
+- Equipes que precisam organizar atendimento por setor (fiscal, pessoal, societário, financeiro) e enviar comunicados/relatórios recorrentes em massa
+
+## O que entregamos
+
+- **Atendimento por WhatsApp organizado por setor**: central integrada com WhatsApp Cloud API oficial (Meta) e conexão via QR Code, conversas roteadas por setor, transferência entre times, histórico completo
+- **Disparo em massa de relatórios e guias**: associação automática de arquivo por nome do cliente, mensagens com variáveis, agendamento, rascunhos e envio para grupos
+- **Prazos fiscais**: calendário com templates recorrentes, alertas automáticos D-7/D-3/D-1, sincronização bidirecional com Google Calendar
+- **Documentos organizados**: repositório por cliente, categorias, versionamento, envio direto pelo WhatsApp a partir do arquivo
+- **Kanban de tarefas**: quadro configurável para a operação interna do escritório, com checklists, comentários e responsáveis
+- **Cadastro de clientes**: consulta automática de dados por CNPJ, importação em massa via CSV, organização em grupos
+- **Agente de IA para atendimento**: agente configurável sem código para responder dúvidas frequentes no WhatsApp do escritório, 24h, com transferência para humano a qualquer momento
+- **Assistente de IA interno (copiloto contábil)**: consultas em linguagem natural sobre clientes, Simples Nacional, prazos fiscais, simulação tributária, correção IPCA/SELIC, reforma tributária, NF-e/NFS-e, NCM/CFOP, score de risco e faturamento do escritório
+
+## Diferenciais
+
+- Plataforma única para toda a operação do escritório (não é só um disparador de mensagens)
+- Envio da carteira inteira em minutos, não horas
+- Zero prazos perdidos com alertas automáticos
+- Conexão oficial com a Meta para WhatsApp, além de integração com Google Calendar
+
+## Páginas
+
+- Site: https://cubishub.com.br
+- Aplicação: https://app.cubishub.com.br
+- Login: https://contab-ia.vercel.app/login
+- Política de Privacidade: /privacidade.html
+- Termos de Uso: /termos.html
