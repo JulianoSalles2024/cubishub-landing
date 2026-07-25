@@ -470,6 +470,24 @@
   .cta-sep { width: 4px; height: 4px; border-radius: 50%; background: var(--dark-border); }
 
   /* �.��.��.� FOOTER �.��.��.� */
+  /* �.��.��.� INTEGRACAO GOOGLE (transparencia de dados) �.��.��.� */
+  .section-gdata { background: var(--dark-2); border-top: 1px solid var(--dark-border); padding: 76px 0; }
+  .gdata-head { max-width: 760px; margin: 0 auto 36px; text-align: center; }
+  .gdata-head .glabel { font-size: 0.72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--green); margin-bottom: 12px; }
+  .gdata-head h2 { font-size: clamp(1.6rem, 2.6vw, 2.1rem); font-weight: 800; letter-spacing: -0.02em; color: var(--dark-fg); margin-bottom: 14px; }
+  .gdata-head p { font-size: 1rem; color: var(--dark-muted); line-height: 1.7; }
+  .gdata-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 940px; margin: 0 auto; }
+  .gdata-card { background: var(--dark-3); border: 1px solid var(--dark-border); border-radius: var(--radius-lg); padding: 26px 24px; }
+  .gdata-card h3 { font-size: 1.05rem; font-weight: 700; color: var(--dark-fg); margin-bottom: 10px; }
+  .gdata-card p { font-size: 0.92rem; color: var(--dark-muted); line-height: 1.7; }
+  .gdata-foot { max-width: 940px; margin: 24px auto 0; text-align: center; font-size: 0.9rem; color: var(--dark-muted); line-height: 1.7; }
+  .gdata-foot a { color: var(--green); text-decoration: none; }
+  .gdata-foot a:hover { text-decoration: underline; }
+  @media (max-width: 760px) {
+    .section-gdata { padding: 56px 0; }
+    .gdata-grid { grid-template-columns: 1fr; }
+  }
+
   .footer-new { background: var(--dark-2); border-top: 1px solid var(--dark-border); color: var(--dark-muted); padding: 64px 0 32px; }
   .foot-grid-new { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
   .foot-brand .flogo { height: 38px; margin-bottom: 16px; display: block; }
@@ -1229,6 +1247,34 @@
   </div>
 </section>
 
+<!-- Integracao com o Google: transparencia sobre uso de dados do usuario -->
+<section class="section-gdata" id="dados-google">
+  <div class="wrap">
+    <div class="gdata-head">
+      <div class="glabel">Integração com sua Conta do Google</div>
+      <h2>Por que pedimos acesso, e o que fazemos com ele</h2>
+      <p>O Cubis.Hub oferece duas integrações <strong>opcionais</strong> com o Google. Nenhuma delas é necessária para usar a plataforma, e você escolhe se quer conectar.</p>
+    </div>
+
+    <div class="gdata-grid">
+      <div class="gdata-card">
+        <h3>Google Agenda</h3>
+        <p>Ao conectar, criamos um evento para cada prazo fiscal cadastrado no Cubis.Hub, atualizamos quando a data muda e removemos quando o prazo é excluído. Também lemos os eventos do calendário escolhido para identificar quando um evento foi apagado diretamente no Google Agenda, mantendo os prazos sincronizados nos dois lados. Acessamos apenas o calendário que você seleciona ao conectar.</p>
+      </div>
+      <div class="gdata-card">
+        <h3>Gmail</h3>
+        <p>Ao conectar, enviamos a partir do seu próprio endereço os documentos e relatórios que você dispara pela plataforma — guias, balancetes e avisos de honorários. Isso melhora a entrega e a confiança do cliente, que recebe do e-mail do escritório. Nunca lemos, listamos, alteramos nem apagamos mensagens da sua caixa de entrada.</p>
+      </div>
+    </div>
+
+    <p class="gdata-foot">
+      Você pode desconectar a qualquer momento em Configurações &rsaquo; Canais.
+      Detalhes sobre tratamento de dados na nossa
+      <a href="https://cubishub.com.br/privacidade.html">Política de Privacidade</a>.
+    </p>
+  </div>
+</section>
+
 <!-- �.��.��.��.��.��.��.��.��.��.��.��.��.��.��.��.� Footer �.��.��.��.��.��.��.��.��.��.��.��.��.��.��.��.� -->
 <footer class="footer-new">
   <div class="wrap">
@@ -1271,8 +1317,8 @@
       <div class="foot-col">
         <h5>Legal</h5>
         <ul>
-          <li><a href="termos.html">Termos de Uso</a></li>
-          <li><a href="privacidade.html">Privacidade</a></li>
+          <li><a href="https://cubishub.com.br/termos.html">Termos de Uso</a></li>
+          <li><a href="https://cubishub.com.br/privacidade.html">Privacidade</a></li>
         </ul>
       </div>
     </div>
