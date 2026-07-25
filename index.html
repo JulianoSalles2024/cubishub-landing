@@ -79,6 +79,13 @@
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
+  /* Texto lido por rastreadores e leitores de tela, invisível na tela */
+  .sr-only {
+    position: absolute; width: 1px; height: 1px;
+    padding: 0; margin: -1px; overflow: hidden;
+    clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+  }
+
   html { scroll-behavior: smooth; overflow-x: hidden; }
 
   body {
@@ -667,6 +674,7 @@
     <!-- Nav -->
     <nav class="topbar">
       <a href="#top" aria-label="Cubis.Hub">
+        <span class="sr-only">Cubis.Hub — gestão contábil para escritórios de contabilidade</span>
         <svg class="nav-logo" viewBox="0 0 210 66" role="img" aria-label="Cubis.Hub">
           <defs><linearGradient id="lg1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#3DDA85"/><stop offset="100%" stop-color="#2ECC71"/></linearGradient></defs>
           <g transform="translate(0,7) scale(0.65)">
