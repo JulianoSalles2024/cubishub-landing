@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Cubis.Hub | Gestão contábil que realmente funciona</title>
-<meta name="description" content="Atendimento por WhatsApp, envio de relatórios em massa, prazos fiscais e documentos. A plataforma white label para escritórios de contabilidade." />
+<title>Cubis.Hub | O escritório contábil inteiro em uma tela só</title>
+<meta name="description" content="Atendimento por WhatsApp, envio de relatórios para toda a carteira de clientes do escritório, prazos fiscais e documentos. A plataforma white label para escritórios de contabilidade." />
 <link rel="canonical" href="https://cubishub.com.br/" />
 <meta name="google-site-verification" content="qyxFXVbZ046ZMRCxJ17a0ruOamdpgJodCg41jpuW8jw" />
 
@@ -12,8 +12,8 @@
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Cubis.Hub" />
 <meta property="og:url" content="https://cubishub.com.br/" />
-<meta property="og:title" content="Cubis.Hub | Gestão contábil que realmente funciona" />
-<meta property="og:description" content="WhatsApp por setor, disparo de relatórios em massa e prazos fiscais com alerta inteligente. Tudo em um lugar." />
+<meta property="og:title" content="Cubis.Hub | O escritório contábil inteiro em uma tela só" />
+<meta property="og:description" content="WhatsApp por setor, envio de relatórios para a carteira de clientes do escritório e prazos fiscais com alerta inteligente. Tudo em um lugar." />
 <meta property="og:image" content="assets/og-image.svg" />
 <meta name="twitter:card" content="summary_large_image" />
 
@@ -26,7 +26,7 @@
   "name": "Cubis.Hub",
   "url": "https://cubishub.com.br/",
   "logo": "https://cubishub.com.br/assets/favicon.svg",
-  "description": "Plataforma white label de gestão contábil com atendimento por WhatsApp, envio de relatórios em massa, prazos fiscais e documentos para escritórios de contabilidade."
+  "description": "Plataforma white label de gestão contábil com atendimento por WhatsApp, envio de relatórios para a carteira de clientes do próprio escritório, prazos fiscais e documentos para escritórios de contabilidade."
 }
 </script>
 <script type="application/ld+json">
@@ -36,7 +36,7 @@
   "name": "Cubis.Hub",
   "applicationCategory": "BusinessApplication",
   "operatingSystem": "Web",
-  "description": "Gestão contábil que centraliza atendimento por WhatsApp organizado por setor, disparo de relatórios em massa, prazos fiscais com alertas automáticos e documentos por cliente, com assistente de IA embarcado.",
+  "description": "Gestão contábil que centraliza atendimento por WhatsApp organizado por setor, envio de relatórios em lote para os clientes contratantes do escritório, prazos fiscais com alertas automáticos e documentos por cliente, com assistente de IA embarcado.",
   "url": "https://cubishub.com.br/"
 }
 </script>
@@ -351,6 +351,55 @@
   .step-new h3 { font-size: 1.08rem; font-weight: 700; margin-bottom: 10px; letter-spacing: -0.02em; }
   .step-new p { font-size: 0.92rem; color: var(--ink-soft); line-height: 1.6; }
 
+  /* ─── TRABALHO PRONTO (IA embarcada) ─── */
+  .section-work { background: var(--dots-dark) 0 0 / 26px 26px, var(--dark); padding: 100px 0 20px; position: relative; overflow: hidden; }
+  .section-work::before { content:''; position:absolute; top:-260px; right:-160px; width:760px; height:760px; border-radius:50%; background: radial-gradient(circle,rgba(46,204,113,0.09),transparent 62%); pointer-events:none; }
+  .work-header { max-width: 660px; margin: 0 auto 60px; text-align: center; position: relative; z-index: 2; }
+  .work-header .alabel { font-size: 0.72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--green); margin-bottom: 16px; }
+  .work-header h2 { font-size: clamp(2rem,3.4vw,2.9rem); font-weight: 800; letter-spacing: -0.03em; color: var(--dark-fg); line-height: 1.1; margin-bottom: 16px; }
+  .work-header p { font-size: 1.02rem; color: var(--dark-muted); line-height: 1.65; }
+
+  /* Linhas abertas — sem card, sem moldura. O mascote flutua no fundo da seção. */
+  .wrow { display: grid; grid-template-columns: 1fr 0.92fr; gap: 80px; align-items: center; position: relative; z-index: 2; padding: 44px 0; }
+  .wrow + .wrow { border-top: 1px solid rgba(255,255,255,0.055); }
+  .wrow.rev .wtext { order: 2; }
+  .wtag { display: inline-block; font-size: 0.71rem; font-weight: 700; letter-spacing: .11em; text-transform: uppercase; color: var(--green); border-left: 3px solid var(--green); padding-left: 10px; margin-bottom: 18px; }
+  .wtext h3 { font-size: clamp(1.5rem,2.5vw,2.1rem); font-weight: 700; color: var(--dark-fg); letter-spacing: -0.025em; line-height: 1.16; margin-bottom: 14px; }
+  .wtext p { font-size: 1rem; color: var(--dark-muted); line-height: 1.68; }
+  .wlist { list-style: none; margin-top: 22px; display: flex; flex-direction: column; gap: 11px; }
+  .wlist li { display: flex; gap: 10px; align-items: flex-start; font-size: 0.93rem; color: var(--dark-fg); opacity: .92; line-height: 1.5; }
+  .wlist .chk { width: 18px; height: 18px; border-radius: 6px; background: rgba(46,204,113,0.14); color: var(--green); display: grid; place-items: center; flex-shrink: 0; margin-top: 2px; }
+  .wlist .chk svg { width: 11px; height: 11px; }
+
+  /* Arte com fundo transparente: nenhuma caixa, só o brilho da própria peça */
+  .wart { display: grid; place-items: center; }
+  .wart img { width: 100%; max-width: 430px; height: auto; display: block; filter: drop-shadow(0 26px 46px rgba(0,0,0,0.5)); animation: float-soft 7s ease-in-out infinite; }
+  .wart.wide img { max-width: 520px; }
+  @keyframes float-soft { 0%,100% { transform: translateY(-7px); } 50% { transform: translateY(7px); } }
+  @media (prefers-reduced-motion: reduce) { .wart img { animation: none; } }
+
+  .agent-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+  .agent-chip { padding: 7px 13px; border-radius: 999px; font-size: 0.78rem; font-weight: 500; color: var(--dark-fg); opacity: .9; border: 1px solid var(--dark-border); background: rgba(255,255,255,0.03); transition: all .2s; }
+  .agent-chip:hover { border-color: var(--green); color: var(--green-light); background: rgba(46,204,113,0.07); }
+  .agent-chip.hi { border-color: rgba(46,204,113,0.42); color: var(--green-light); background: rgba(46,204,113,0.09); font-weight: 600; }
+
+  /* Fluxo "arquivo → leitura → mensagem" */
+  .readflow { display: flex; flex-direction: column; gap: 10px; margin-top: 24px; }
+  .rf-step { display: flex; align-items: center; gap: 12px; padding: 13px 16px; border-radius: 12px; background: rgba(255,255,255,0.035); border: 1px solid var(--dark-border); font-size: 0.87rem; color: var(--dark-fg); line-height: 1.5; }
+  .rf-step code { display: inline-block; margin-top: 3px; }
+  .rf-step .rf-n { width: 22px; height: 22px; border-radius: 7px; background: rgba(46,204,113,0.16); color: var(--green); display: grid; place-items: center; font-size: 0.7rem; font-weight: 800; flex-shrink: 0; }
+  .rf-step.done { border-color: rgba(46,204,113,0.34); background: rgba(46,204,113,0.07); }
+  .rf-step code { font-family: ui-monospace,monospace; font-size: 0.8rem; color: var(--green-light); }
+
+  @media (max-width: 900px) {
+    .section-work { padding: 68px 0 12px; }
+    .work-header { margin-bottom: 34px; }
+    .wrow { grid-template-columns: 1fr; gap: 28px; padding: 34px 0; }
+    .wrow .wart { order: -1; }
+    .wrow.rev .wtext { order: 0; }
+    .wart img, .wart.wide img { max-width: 290px; }
+  }
+
   /* �.��.��.� IA SECTION �.��.��.� */
   .section-ai { background: var(--dots-dark) 0 0 / 26px 26px, var(--dark); padding: 100px 0; position: relative; overflow: hidden; }
   .section-ai::before { content:''; position:absolute; top:-200px; left:50%; transform:translateX(-50%); width:800px; height:800px; border-radius:50%; background: radial-gradient(circle,rgba(46,204,113,0.07),transparent 60%); pointer-events:none; }
@@ -458,6 +507,9 @@
   .pricing-note { text-align: center; margin-top: 26px; font-size: 0.86rem; color: var(--ink-soft); }
 
   /* �.��.��.� CTA �.��.��.� */
+  .cta-mascote { width: 190px; margin: 0 auto 22px; }
+  .cta-mascote img { width: 100%; height: auto; display: block; -webkit-mask-image: radial-gradient(ellipse 64% 64% at 50% 48%, #000 28%, transparent 88%); mask-image: radial-gradient(ellipse 64% 64% at 50% 48%, #000 28%, transparent 88%); }
+  @media (max-width: 900px) { .cta-mascote { width: 140px; margin-bottom: 14px; } }
   .section-cta { background: var(--dark); padding: 120px 0; position: relative; overflow: hidden; }
   .section-cta::before { content:''; position:absolute; inset:0; background-image: radial-gradient(circle,rgba(255,255,255,0.025) 1px,transparent 1px); background-size:32px 32px; pointer-events:none; }
   @keyframes pglow { 0%,100%{opacity:.55;transform:translateX(-50%) scale(1)} 50%{opacity:.9;transform:translateX(-50%) scale(1.06)} }
@@ -476,16 +528,30 @@
   .gdata-head .glabel { font-size: 0.72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--green); margin-bottom: 12px; }
   .gdata-head h2 { font-size: clamp(1.6rem, 2.6vw, 2.1rem); font-weight: 800; letter-spacing: -0.02em; color: var(--dark-fg); margin-bottom: 14px; }
   .gdata-head p { font-size: 1rem; color: var(--dark-muted); line-height: 1.7; }
-  .gdata-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 940px; margin: 0 auto; }
-  .gdata-card { background: var(--dark-3); border: 1px solid var(--dark-border); border-radius: var(--radius-lg); padding: 26px 24px; }
-  .gdata-card h3 { font-size: 1.05rem; font-weight: 700; color: var(--dark-fg); margin-bottom: 10px; }
-  .gdata-card p { font-size: 0.92rem; color: var(--dark-muted); line-height: 1.7; }
-  .gdata-foot { max-width: 940px; margin: 24px auto 0; text-align: center; font-size: 0.9rem; color: var(--dark-muted); line-height: 1.7; }
+  .gdata-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; max-width: 980px; margin: 0 auto; }
+  .gdata-card { position: relative; }
+  .gdata-card + .gdata-card::before { content: ''; position: absolute; left: -36px; top: 4px; bottom: 4px; width: 1px; background: rgba(255,255,255,0.06); }
+  .gdata-top { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+  .gdata-ico { width: 38px; height: 38px; border-radius: 11px; display: grid; place-items: center; background: rgba(46,204,113,0.11); border: 1px solid rgba(46,204,113,0.22); flex-shrink: 0; }
+  .gdata-ico svg { width: 19px; height: 19px; stroke: var(--green); fill: none; stroke-width: 2; }
+  .gdata-card h3 { font-size: 1.12rem; font-weight: 700; color: var(--dark-fg); letter-spacing: -0.01em; }
+  .gdata-scope { font-family: ui-monospace,monospace; font-size: 0.72rem; color: var(--green-light); opacity: .85; }
+  .gdata-lead { font-size: 0.95rem; color: var(--dark-fg); opacity: .9; line-height: 1.6; margin: 14px 0 18px; }
+  .gdata-do { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 18px; }
+  .gdata-do li { display: flex; gap: 10px; align-items: flex-start; font-size: 0.88rem; color: var(--dark-muted); line-height: 1.55; }
+  .gdata-do .mk { width: 17px; height: 17px; border-radius: 5px; display: grid; place-items: center; flex-shrink: 0; margin-top: 2px; font-size: 0.7rem; font-weight: 800; }
+  .gdata-do .mk.yes { background: rgba(46,204,113,0.15); color: var(--green); }
+  .gdata-never { border-top: 1px solid var(--dark-border); padding-top: 16px; display: flex; gap: 10px; align-items: flex-start; }
+  .gdata-never .mk { width: 17px; height: 17px; border-radius: 5px; display: grid; place-items: center; flex-shrink: 0; margin-top: 2px; background: rgba(231,76,60,0.14); color: #E7776C; font-size: 0.72rem; font-weight: 800; }
+  .gdata-never p { font-size: 0.86rem; color: var(--dark-muted); line-height: 1.55; }
+  .gdata-never strong { color: var(--dark-fg); font-weight: 600; }
+  .gdata-foot { max-width: 980px; margin: 26px auto 0; text-align: center; font-size: 0.88rem; color: var(--dark-muted); line-height: 1.7; }
   .gdata-foot a { color: var(--green); text-decoration: none; }
   .gdata-foot a:hover { text-decoration: underline; }
   @media (max-width: 760px) {
     .section-gdata { padding: 56px 0; }
-    .gdata-grid { grid-template-columns: 1fr; }
+    .gdata-grid { grid-template-columns: 1fr; gap: 38px; }
+    .gdata-card + .gdata-card::before { left: 0; right: 0; top: -19px; bottom: auto; width: auto; height: 1px; }
   }
 
   .footer-new { background: var(--dark-2); border-top: 1px solid var(--dark-border); color: var(--dark-muted); padding: 64px 0 32px; }
@@ -710,6 +776,7 @@
       </a>
       <div class="nav-links" id="navLinks" onclick="document.getElementById('navLinks').classList.remove('open')">
         <a href="#funcionalidades">Funcionalidades</a>
+        <a href="#ia-trabalho">IA</a>
         <a href="#como-funciona">Como funciona</a>
         <a href="#integracoes">Integrações</a>
         <a href="#faq">FAQ</a>
@@ -725,8 +792,8 @@
     <!-- Hero content -->
     <div class="hero-grid">
       <div class="hero-brand">Cubis.Hub</div>
-      <h1>Gestão contábil <span class="accent">que realmente funciona</span></h1>
-      <p class="lead">Atendimento por WhatsApp organizado por setor, envio de relatórios em massa, prazos fiscais e documentos. Tudo em um só lugar, com automação e IA.</p>
+      <h1>O escritório inteiro <span class="accent">em uma tela só</span></h1>
+      <p class="lead">A IA lê as guias, acha o cliente de cada uma e escreve a mensagem. Você confere e envia para a carteira toda — em minutos, não em tardes.</p>
 
       <div class="hero-actions">
         <button type="button" class="btn btn-primary" onclick="openLeadModal()">
@@ -741,7 +808,7 @@
           <div class="hero-marquee-group">
             <span class="hm-item">Atendimento por setor</span>
             <span class="hm-sep"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.4 4.6 2.4 6.6 7 7-4.6.4-6.6 2.4-7 7-.4-4.6-2.4-6.6-7-7 4.6-.4 6.6-2.4 7-7Z"/></svg></span>
-            <span class="hm-item">Disparos em massa</span>
+            <span class="hm-item">Envio em lote</span>
             <span class="hm-sep"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.4 4.6 2.4 6.6 7 7-4.6.4-6.6 2.4-7 7-.4-4.6-2.4-6.6-7-7 4.6-.4 6.6-2.4 7-7Z"/></svg></span>
             <span class="hm-item">WhatsApp oficial (Meta)</span>
             <span class="hm-sep"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.4 4.6 2.4 6.6 7 7-4.6.4-6.6 2.4-7 7-.4-4.6-2.4-6.6-7-7 4.6-.4 6.6-2.4 7-7Z"/></svg></span>
@@ -752,6 +819,12 @@
             <span class="hm-item">Kanban de tarefas</span>
             <span class="hm-sep"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.4 4.6 2.4 6.6 7 7-4.6.4-6.6 2.4-7 7-.4-4.6-2.4-6.6-7-7 4.6-.4 6.6-2.4 7-7Z"/></svg></span>
             <span class="hm-item">Documentos por cliente</span>
+            <span class="hm-sep"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.4 4.6 2.4 6.6 7 7-4.6.4-6.6 2.4-7 7-.4-4.6-2.4-6.6-7-7 4.6-.4 6.6-2.4 7-7Z"/></svg></span>
+            <span class="hm-item">Agentes especializados</span>
+            <span class="hm-sep"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.4 4.6 2.4 6.6 7 7-4.6.4-6.6 2.4-7 7-.4-4.6-2.4-6.6-7-7 4.6-.4 6.6-2.4 7-7Z"/></svg></span>
+            <span class="hm-item">Leitura automática de guias</span>
+            <span class="hm-sep"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.4 4.6 2.4 6.6 7 7-4.6.4-6.6 2.4-7 7-.4-4.6-2.4-6.6-7-7 4.6-.4 6.6-2.4 7-7Z"/></svg></span>
+            <span class="hm-item">Mural &amp; mapa mental</span>
             <span class="hm-sep"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.4 4.6 2.4 6.6 7 7-4.6.4-6.6 2.4-7 7-.4-4.6-2.4-6.6-7-7 4.6-.4 6.6-2.4 7-7Z"/></svg></span>
             <span class="hm-item">Google Calendar</span>
             <span class="hm-sep"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.4 4.6 2.4 6.6 7 7-4.6.4-6.6 2.4-7 7-.4-4.6-2.4-6.6-7-7 4.6-.4 6.6-2.4 7-7Z"/></svg></span>
@@ -759,7 +832,7 @@
           <div class="hero-marquee-group" aria-hidden="true">
             <span class="hm-item">Atendimento por setor</span>
             <span class="hm-sep"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.4 4.6 2.4 6.6 7 7-4.6.4-6.6 2.4-7 7-.4-4.6-2.4-6.6-7-7 4.6-.4 6.6-2.4 7-7Z"/></svg></span>
-            <span class="hm-item">Disparos em massa</span>
+            <span class="hm-item">Envio em lote</span>
             <span class="hm-sep"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.4 4.6 2.4 6.6 7 7-4.6.4-6.6 2.4-7 7-.4-4.6-2.4-6.6-7-7 4.6-.4 6.6-2.4 7-7Z"/></svg></span>
             <span class="hm-item">WhatsApp oficial (Meta)</span>
             <span class="hm-sep"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.4 4.6 2.4 6.6 7 7-4.6.4-6.6 2.4-7 7-.4-4.6-2.4-6.6-7-7 4.6-.4 6.6-2.4 7-7Z"/></svg></span>
@@ -770,6 +843,12 @@
             <span class="hm-item">Kanban de tarefas</span>
             <span class="hm-sep"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.4 4.6 2.4 6.6 7 7-4.6.4-6.6 2.4-7 7-.4-4.6-2.4-6.6-7-7 4.6-.4 6.6-2.4 7-7Z"/></svg></span>
             <span class="hm-item">Documentos por cliente</span>
+            <span class="hm-sep"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.4 4.6 2.4 6.6 7 7-4.6.4-6.6 2.4-7 7-.4-4.6-2.4-6.6-7-7 4.6-.4 6.6-2.4 7-7Z"/></svg></span>
+            <span class="hm-item">Agentes especializados</span>
+            <span class="hm-sep"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.4 4.6 2.4 6.6 7 7-4.6.4-6.6 2.4-7 7-.4-4.6-2.4-6.6-7-7 4.6-.4 6.6-2.4 7-7Z"/></svg></span>
+            <span class="hm-item">Leitura automática de guias</span>
+            <span class="hm-sep"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.4 4.6 2.4 6.6 7 7-4.6.4-6.6 2.4-7 7-.4-4.6-2.4-6.6-7-7 4.6-.4 6.6-2.4 7-7Z"/></svg></span>
+            <span class="hm-item">Mural &amp; mapa mental</span>
             <span class="hm-sep"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.4 4.6 2.4 6.6 7 7-4.6.4-6.6 2.4-7 7-.4-4.6-2.4-6.6-7-7 4.6-.4 6.6-2.4 7-7Z"/></svg></span>
             <span class="hm-item">Google Calendar</span>
             <span class="hm-sep"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.4 4.6 2.4 6.6 7 7-4.6.4-6.6 2.4-7 7-.4-4.6-2.4-6.6-7-7 4.6-.4 6.6-2.4 7-7Z"/></svg></span>
@@ -803,7 +882,7 @@
       </div>
       <div class="proofbar-item reveal">
         <div class="num">WA <span class="acc">+ IA</span></div>
-        <div class="cap">atendimento por setor e disparo em massa</div>
+        <div class="cap">atendimento e envio, no automático</div>
         <div class="bar"></div>
       </div>
       <div class="proofbar-item reveal">
@@ -837,8 +916,8 @@
       <div class="bento-card b2 reveal">
         <span class="bento-num">02</span>
         <div class="bento-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></div>
-        <div class="bento-title">Disparo em massa</div>
-        <div class="bento-desc">Envie relatórios para toda a carteira em minutos, com associação automática por nome do cliente.</div>
+        <div class="bento-title">Todos os clientes de uma vez</div>
+        <div class="bento-desc">Envie a guia de todo mundo em minutos, com o arquivo achando sozinho o cliente dono dele.</div>
       </div>
       <div class="bento-card b3 reveal">
         <span class="bento-num">03</span>
@@ -885,13 +964,14 @@
 
     <div class="feature-row rev reveal">
       <div class="ftext">
-        <div class="eyebrow-tag">Envio em massa</div>
+        <div class="eyebrow-tag">Envio em lote</div>
         <h3>Relatórios mensais de todos em minutos</h3>
-        <p class="desc">Arraste os arquivos, deixe a associação automática cruzar com cada cliente e dispare. Agende para depois ou salve como rascunho.</p>
+        <p class="desc">Arraste os arquivos, deixe a associação automática cruzar com cada cliente da sua carteira e envie. Agende para depois ou salve como rascunho. O envio é sempre para clientes do próprio escritório.</p>
         <ul class="flist-new">
           <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Associação automática arquivo &rarr; cliente por nome</li>
           <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Mensagem com variáveis ({{nome}}, {{escritório}})</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Agendamento, rascunhos e disparo para grupos</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Envio para grupos de WhatsApp, não só para contatos</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Agendamento, rascunhos e recorrência mensal</li>
         </ul>
       </div>
       <div class="fvisual-new has-video">
@@ -925,11 +1005,12 @@
       <div class="ftext">
         <div class="eyebrow-tag">Operação &amp; Documentos</div>
         <h3>O fluxo do escritório sob controle</h3>
-        <p class="desc">Quadro Kanban configurável para as tarefas da equipe e um repositório de documentos por cliente, pronto para envio.</p>
+        <p class="desc">Quadro Kanban configurável, checklist etapa por etapa e a rotina do mês que se recria sozinha. Mais o mural de notas e o mapa mental para desenhar os processos do escritório.</p>
         <ul class="flist-new">
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Kanban com checklists, comentários e responsáveis</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Documentos por categoria com versionamento</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Envio direto via WhatsApp a partir do documento</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Checklist por tarefa, para acompanhar etapa por etapa</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Tarefas recorrentes que renascem todo mês, sem recriar nada</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Mural de notas para o dia a dia e mapa mental para os processos</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Documentos por categoria, com versionamento e envio em um clique</li>
         </ul>
       </div>
       <div class="fvisual-new has-video">
@@ -944,10 +1025,10 @@
       <div class="ftext">
         <div class="eyebrow-tag">Clientes</div>
         <h3>Cadastro completo, sem trabalho manual</h3>
-        <p class="desc">Consulta automática de CNPJ, importação em massa via CSV e organização em grupos para facilitar disparos e atendimento.</p>
+        <p class="desc">Consulta automática de CNPJ, importação em lote via CSV e organização em grupos para facilitar os envios e o atendimento.</p>
         <ul class="flist-new">
           <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Consulta automática de dados por CNPJ</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Importação em massa via CSV</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Importação em lote via CSV</li>
           <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Grupos para disparo e organização da carteira</li>
         </ul>
       </div>
@@ -1000,14 +1081,74 @@
       </div>
       <div class="step-new reveal">
         <div class="step-num-wrap"><span class="step-n">03</span></div>
-        <h3>Atenda e dispare</h3>
-        <p>Receba mensagens por setor, envie relatórios em massa e deixe os prazos no automático.</p>
+        <h3>Atenda e envie</h3>
+        <p>Receba mensagens por setor, envie relatórios para toda a carteira e deixe os prazos no automático.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- �.��.��.��.��.��.��.��.��.��.��.��.��.��.��.��.� IA �.��.��.��.��.��.��.��.��.��.��.��.��.��.��.��.� -->
+<section class="section-work" id="ia-trabalho">
+  <div class="wrap">
+    <div class="work-header reveal">
+      <div class="alabel">IA embarcada</div>
+      <h2>Boa parte do trabalho já está feita quando você senta</h2>
+      <p>Não é um chat que responde pergunta. É a plataforma lendo, organizando e escrevendo por você — e devolvendo pronto para conferir.</p>
+    </div>
+
+    <div class="work-rows">
+
+      <div class="wrow reveal">
+        <div class="wtext">
+          <div class="wtag">Leitura automática</div>
+          <h3>Você sobe a guia. Ela sai lida, vinculada e com a mensagem escrita.</h3>
+          <p>Arraste o lote de guias e pare por aí. A plataforma abre cada arquivo, entende o que é, acha o cliente dono dela e monta o texto do envio — com vencimento, competência e valor no lugar certo.</p>
+          <div class="readflow">
+            <div class="rf-step"><span class="rf-n">1</span> Lê o PDF, mesmo escaneado, e identifica o tipo de guia</div>
+            <div class="rf-step"><span class="rf-n">2</span> Extrai vencimento, competência e valor</div>
+            <div class="rf-step"><span class="rf-n">3</span> Encontra o cliente pelo CNPJ, pelo nome ou pelo arquivo</div>
+            <div class="rf-step done"><span class="rf-n">4</span><span>Entrega a mensagem pronta:<br><code>Segue o DAS de julho/2026 — vence dia 20</code></span></div>
+          </div>
+        </div>
+        <div class="wart"><img src="assets/mascote-documentos.webp" alt="Mascote do Cubis.Hub apontando para documentos organizados" loading="lazy" width="620" height="507" /></div>
+      </div>
+
+      <div class="wrow rev reveal">
+        <div class="wtext">
+          <div class="wtag">Agentes de IA</div>
+          <h3>Um especialista por assunto — e os seus, do jeito que você atende</h3>
+          <p>Cinco agentes prontos para a dúvida que aparece no meio do atendimento, com a fonte citada em vez de achismo. E você cria os do seu escritório, com as suas regras e o seu tom, sem código e sem esperar release.</p>
+          <div class="agent-chips">
+            <span class="agent-chip">Reforma Tributária</span>
+            <span class="agent-chip">Classificação Fiscal</span>
+            <span class="agent-chip">Simples Nacional e Fator R</span>
+            <span class="agent-chip">Departamento Pessoal</span>
+            <span class="agent-chip">Atendimento ao Cliente</span>
+            <span class="agent-chip hi">+ os seus</span>
+          </div>
+        </div>
+        <div class="wart wide"><img src="assets/mascote-ia.webp" alt="Mascote do Cubis.Hub ligando o WhatsApp à inteligência artificial" loading="lazy" width="760" height="397" /></div>
+      </div>
+
+      <div class="wrow reveal">
+        <div class="wtext">
+          <div class="wtag">Gestão e conversas</div>
+          <h3>O escritório inteiro resumido, sem você montar planilha</h3>
+          <p>A IA varre o painel — tarefas, prazos, envios e a carga de cada membro — e devolve um relatório pronto para o dono ler. E quando um atendimento troca de setor, ela escreve o resumo do que já foi tratado: quem recebe entra sabendo do assunto.</p>
+          <ul class="wlist">
+            <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Relatório de gestão gerado a partir do próprio painel</li>
+            <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Resumo automático quando a conversa muda de setor</li>
+            <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Texto, áudio, imagem e documento na mesma conversa</li>
+          </ul>
+        </div>
+        <div class="wart"><img src="assets/mascote-relatorio.webp" alt="Mascote do Cubis.Hub comemorando sobre um painel de relatórios" loading="lazy" width="618" height="724" /></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <section class="section-ai" id="ia">
   <div class="seam-line"><span class="seam-beam"></span></div>
   <div class="wrap">
@@ -1233,6 +1374,7 @@
   <div class="cta-glow"></div>
   <div class="wrap">
     <div class="cta-inner reveal">
+      <div class="cta-mascote"><img src="assets/mascote-ok.webp" alt="Mascote do Cubis.Hub ao lado de um arquivo organizado" loading="lazy" width="640" height="627" /></div>
       <h2>Organize o escritório.<br><span class="g">Atenda melhor.</span> Cresça.</h2>
       <p>Comece grátis por 7 dias e veja como o Cubis.Hub muda a rotina do seu escritório contábil.</p>
       <button type="button" class="btn btn-primary" onclick="openLeadModal()" style="height:54px;padding:0 36px;font-size:1.02rem;">
@@ -1253,18 +1395,49 @@
   <div class="wrap">
     <div class="gdata-head">
       <div class="glabel">Integração com sua Conta do Google</div>
-      <h2>Por que pedimos acesso, e o que fazemos com ele</h2>
-      <p>O Cubis.Hub oferece duas integrações <strong>opcionais</strong> com o Google. Nenhuma delas é necessária para usar a plataforma, e você escolhe se quer conectar.</p>
+      <h2>Exatamente o que fazemos com o seu Google</h2>
+      <p>Duas integrações <strong>opcionais</strong>. Nenhuma é necessária para usar a plataforma, e nada acontece se você não conectar.</p>
     </div>
 
     <div class="gdata-grid">
       <div class="gdata-card">
-        <h3>Google Agenda</h3>
-        <p>Ao conectar, criamos um evento para cada prazo fiscal cadastrado no Cubis.Hub, atualizamos quando a data muda e removemos quando o prazo é excluído. Também lemos os eventos do calendário escolhido para identificar quando um evento foi apagado diretamente no Google Agenda, mantendo os prazos sincronizados nos dois lados. Acessamos apenas o calendário que você seleciona ao conectar.</p>
+        <div class="gdata-top">
+          <span class="gdata-ico"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span>
+          <div>
+            <h3>Google Agenda</h3>
+            <span class="gdata-scope">calendar</span>
+          </div>
+        </div>
+        <p class="gdata-lead">Seus prazos fiscais aparecem na agenda que você já usa, e os dois lados ficam iguais.</p>
+        <ul class="gdata-do">
+          <li><span class="mk yes">✓</span>Criamos um evento para cada prazo cadastrado</li>
+          <li><span class="mk yes">✓</span>Atualizamos quando a data muda e removemos quando o prazo é excluído</li>
+          <li><span class="mk yes">✓</span>Consultamos esses eventos para saber se você apagou algum direto no Google Agenda — e aí o prazo sai do Cubis.Hub também</li>
+        </ul>
+        <div class="gdata-never">
+          <span class="mk">✕</span>
+          <p>Acessamos <strong>apenas o calendário que você escolhe</strong> ao conectar. Não lemos compromissos pessoais, nem eventos que não tenham sido criados por nós.</p>
+        </div>
       </div>
+
       <div class="gdata-card">
-        <h3>Gmail</h3>
-        <p>Ao conectar, enviamos a partir do seu próprio endereço os documentos e relatórios que você dispara pela plataforma — guias, balancetes e avisos de honorários. Isso melhora a entrega e a confiança do cliente, que recebe do e-mail do escritório. Nunca lemos, listamos, alteramos nem apagamos mensagens da sua caixa de entrada.</p>
+        <div class="gdata-top">
+          <span class="gdata-ico"><svg viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
+          <div>
+            <h3>Gmail</h3>
+            <span class="gdata-scope">gmail.send</span>
+          </div>
+        </div>
+        <p class="gdata-lead">Os documentos saem do endereço do seu escritório, não de um remetente genérico.</p>
+        <ul class="gdata-do">
+          <li><span class="mk yes">✓</span>Enviamos guias, balancetes e avisos de honorários que você dispara pela plataforma</li>
+          <li><span class="mk yes">✓</span>O destinatário é sempre um cliente cadastrado na carteira do escritório</li>
+          <li><span class="mk yes">✓</span>Usamos só o endpoint de envio, disparado por ação sua</li>
+        </ul>
+        <div class="gdata-never">
+          <span class="mk">✕</span>
+          <p><strong>Nunca lemos, listamos, pesquisamos, alteramos nem apagamos</strong> mensagens da sua caixa. Não pedimos nenhuma permissão que torne isso possível.</p>
+        </div>
       </div>
     </div>
 
