@@ -16,11 +16,16 @@ Cubis.Hub resolve a rotina operacional de escritórios contábeis que atendem um
 
 ## O que entregamos
 
-- **Atendimento por WhatsApp organizado por setor**: central integrada com WhatsApp Cloud API oficial (Meta) e conexão via QR Code, conversas roteadas por setor, transferência entre times, histórico completo
-- **Envio em lote de relatórios e guias**: destinatários são sempre clientes cadastrados na carteira do próprio escritório; associação automática de arquivo por nome do cliente, mensagens com variáveis, agendamento, rascunhos e envio para grupos
+- **Leitura automática de documentos com IA**: o escritório sobe as guias em lote e a plataforma lê cada arquivo (inclusive PDF escaneado, via OCR), identifica o tipo de documento, extrai vencimento, competência e valor, encontra o cliente dono do arquivo por CNPJ, nome ou nome do arquivo, e monta a mensagem de envio pronta para conferência
+- **Atendimento por WhatsApp organizado por setor**: central integrada com WhatsApp Cloud API oficial (Meta) e conexão via QR Code, conversas roteadas por setor, histórico completo, texto/áudio/imagem/documento na mesma conversa, e transferência entre times com resumo automático da conversa gerado por IA
+- **Envio em lote de relatórios e guias**: destinatários são sempre clientes cadastrados na carteira do próprio escritório; associação automática de arquivo por nome do cliente, mensagens com variáveis, agendamento, rascunhos, recorrência mensal e envio para grupos de WhatsApp
+- **Agentes de IA especializados**: cinco agentes publicados para as dúvidas do dia a dia contábil — Reforma Tributária (IBS, CBS, CST, cClassTrib), Classificação Fiscal (NCM, CFOP, CEST, DIFAL), Simples Nacional e Fator R, Departamento Pessoal (convenção coletiva, jornada, rescisão, eSocial) e Atendimento ao Cliente
+- **Agentes próprios do escritório**: cada escritório cria seus próprios agentes, com instruções, tom e conhecimento próprios, sem código, disponíveis para toda a equipe, com custo por uso visível no painel
+- **Relatório de gestão com IA**: a IA percorre o painel — tarefas, prazos, envios e carga de trabalho por membro — e gera um relatório de gestão para o administrador do escritório
 - **Prazos fiscais**: calendário com templates recorrentes, alertas automáticos D-7/D-3/D-1, sincronização bidirecional com Google Calendar
 - **Documentos organizados**: repositório por cliente, categorias, versionamento, envio direto pelo WhatsApp a partir do arquivo
-- **Kanban de tarefas**: quadro configurável para a operação interna do escritório, com checklists, comentários e responsáveis
+- **Kanban de tarefas**: quadro configurável para a operação interna, com checklist etapa por etapa, comentários, responsáveis e tarefas recorrentes que se recriam a cada período sem precisar cadastrar de novo
+- **Mural de notas e mapa mental**: mural de anotações para a rotina do dia a dia e mapa mental para desenhar os processos do escritório, ambos dentro do quadro de tarefas
 - **Cadastro de clientes**: consulta automática de dados por CNPJ, importação em lote via CSV, organização em grupos
 - **Agente de IA para atendimento**: agente configurável sem código para responder dúvidas frequentes no WhatsApp do escritório, 24h, com transferência para humano a qualquer momento
 - **Assistente de IA interno (copiloto contábil)**: consultas em linguagem natural sobre clientes, Simples Nacional, prazos fiscais, simulação tributária, correção IPCA/SELIC, reforma tributária, NF-e/NFS-e, NCM/CFOP, score de risco e faturamento do escritório
@@ -28,6 +33,8 @@ Cubis.Hub resolve a rotina operacional de escritórios contábeis que atendem um
 ## Diferenciais
 
 - Plataforma única para toda a operação do escritório (não é só um disparador de mensagens)
+- A IA não é apenas um chat: ela lê os documentos, vincula ao cliente e escreve a mensagem antes do usuário pedir
+- Agentes de IA especializados na rotina contábil brasileira, além de agentes criados pelo próprio escritório
 - Envio da carteira inteira em minutos, não horas
 - Zero prazos perdidos com alertas automáticos
 - Conexão oficial com a Meta para WhatsApp, além de integração com Google Calendar
@@ -36,6 +43,6 @@ Cubis.Hub resolve a rotina operacional de escritórios contábeis que atendem um
 
 - Site: https://cubishub.com.br
 - Aplicação: https://app.cubishub.com.br
-- Login: https://contab-ia.vercel.app/login
+- Login: https://app.cubishub.com.br/login
 - Política de Privacidade: /privacidade.html
 - Termos de Uso: /termos.html
