@@ -167,7 +167,10 @@
     display: flex; align-items: center; justify-content: space-between;
     padding: 22px 0; position: relative; z-index: 20;
   }
-  .nav-logo { height: 54px; width: auto; display: block; }
+  .nav-logo { height: 40px; width: auto; display: block; }
+  .brand-mark { display: flex; align-items: center; gap: 10px; }
+  .brand-mark-text { font-family: 'Inter', sans-serif; font-size: 24px; font-weight: 700; letter-spacing: -0.025em; color: #F0F2F1; }
+  .brand-mark-text .hub { color: #2ECC71; }
   .nav-links { display: flex; align-items: center; gap: 30px; }
   .nav-links a { font-size: 0.9rem; color: var(--dark-muted); font-weight: 500; transition: color .2s; }
   .nav-links a:hover { color: var(--dark-fg); }
@@ -181,12 +184,8 @@
     display: flex; flex-direction: column; align-items: center; text-align: center;
     padding-top: 122px; max-width: 100%; margin: 0 auto;
   }
-  .hero-brand {
-    font-size: 0.8rem; font-weight: 700; letter-spacing: .2em;
-    text-transform: uppercase; color: var(--green); margin-bottom: 4px;
-  }
   .hero h1 {
-    font-size: clamp(40px, 7vw, 86px); font-weight: 850; letter-spacing: -.03em; margin: 24px 0 22px; max-width: none; width: min(1500px, 94vw);
+    font-size: clamp(40px, 7vw, 86px); font-weight: 850; letter-spacing: -.03em; margin: 44px 0 22px; max-width: none; width: min(1500px, 94vw);
   }
   .hero h1 .accent {
     color: #22c55e;
@@ -440,24 +439,30 @@
   .integ-header h2 { font-size: clamp(2rem,3.4vw,2.8rem); font-weight: 800; letter-spacing: -0.03em; margin: 12px 0 14px; }
   .integ-header p { font-size: 1.05rem; color: var(--ink-soft); }
   .integ-wrap { display: flex; flex-direction: column; gap: 20px; }
-  .integ-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-  .integ-card { background: var(--dark); border: 1px solid var(--dark-border); border-radius: 20px; padding: 40px; position: relative; overflow: hidden; transition: border-color .3s, box-shadow .3s, transform .25s; }
+  .integ-card { background: var(--dots-dark) 0 0 / 22px 22px, var(--dark); border: 1px solid var(--dark-border); border-top: 2px solid rgba(46,204,113,0.35); border-radius: 20px; padding: 36px 40px; position: relative; overflow: hidden; transition: border-color .3s, box-shadow .3s, transform .25s; }
   .integ-card:hover { border-color: rgba(46,204,113,0.3); box-shadow: 0 24px 60px -16px rgba(0,0,0,0.3); transform: translateY(-4px); }
-  .integ-card::before { content:''; position:absolute; bottom:-80px; right:-80px; width:240px; height:240px; border-radius:50%; background: radial-gradient(circle,rgba(46,204,113,0.1),transparent 70%); pointer-events:none; }
-  .integ-icon { width: 56px; height: 56px; border-radius: 16px; background: rgba(46,204,113,0.14); display: grid; place-items: center; margin-bottom: 24px; }
+  .integ-icon { width: 56px; height: 56px; border-radius: 16px; background: rgba(46,204,113,0.14); box-shadow: 0 0 0 1px rgba(46,204,113,0.18), 0 8px 24px -8px rgba(46,204,113,0.35); display: grid; place-items: center; margin-bottom: 24px; flex-shrink: 0; }
   .integ-icon svg { width: 28px; height: 28px; color: var(--green-light); }
   .integ-name { font-size: 1.5rem; font-weight: 800; color: var(--dark-fg); letter-spacing: -0.02em; margin-bottom: 10px; }
   .integ-desc { font-size: 0.9rem; color: var(--dark-muted); line-height: 1.6; position: relative; z-index: 2; }
   .integ-pill { display: inline-block; margin-top: 20px; font-size: 0.71rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--green); border: 1px solid rgba(46,204,113,0.25); padding: 5px 12px; border-radius: 999px; position: relative; z-index: 2; }
+  .integ-card-row { display: flex; align-items: center; gap: 28px; }
+  .integ-card-row .integ-icon { margin-bottom: 0; }
+  .integ-card-row .integ-card-body { flex: 1; min-width: 0; }
+  .integ-card-row .integ-name { margin-bottom: 6px; }
+  .integ-card-row .integ-pill { margin-top: 0; flex-shrink: 0; white-space: nowrap; }
+  @media (max-width: 640px) {
+    .integ-card-row { flex-direction: column; align-items: flex-start; gap: 18px; }
+    .integ-card-row .integ-pill { margin-left: 0; }
+  }
 
   /* Featured integration (Meta / WhatsApp Cloud API) */
-  .integ-featured { background: linear-gradient(135deg, #1B2C22 0%, var(--dark) 65%); border: 1px solid rgba(46,204,113,0.4); border-radius: 24px; padding: 44px 46px; position: relative; overflow: hidden; box-shadow: 0 30px 80px -24px rgba(46,204,113,0.22); }
-  .integ-featured::before { content:''; position:absolute; top:-140px; right:-100px; width:340px; height:340px; border-radius:50%; background: radial-gradient(circle,rgba(46,204,113,0.16),transparent 70%); pointer-events:none; }
+  .integ-featured { background: var(--dots-dark) 0 0 / 22px 22px, linear-gradient(135deg, #1B2C22 0%, var(--dark) 65%); border: 1px solid rgba(46,204,113,0.4); border-top: 2px solid rgba(46,204,113,0.6); border-radius: 24px; padding: 44px 46px; position: relative; overflow: hidden; box-shadow: 0 30px 80px -24px rgba(46,204,113,0.22); }
   .integ-featured::after { content:''; position:absolute; inset:0; border-radius:24px; box-shadow: inset 0 0 0 1px rgba(46,204,113,0.08); pointer-events:none; }
   .integ-badge { display: inline-flex; align-items: center; gap: 6px; background: linear-gradient(135deg,var(--green-light),var(--green)); color: #08130D; font-size: 0.72rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; padding: 7px 14px 7px 12px; border-radius: 999px; position: relative; z-index: 2; }
   .integ-badge svg { width: 13px; height: 13px; }
   .integ-featured-top { display: flex; align-items: center; gap: 22px; margin-bottom: 22px; flex-wrap: wrap; position: relative; z-index: 2; }
-  .integ-featured .integ-icon { margin-bottom: 0; width: 60px; height: 60px; background: rgba(46,204,113,0.2); }
+  .integ-featured .integ-icon { margin-bottom: 0; width: 60px; height: 60px; background: rgba(46,204,113,0.2); box-shadow: 0 0 0 1px rgba(46,204,113,0.25), 0 10px 28px -10px rgba(46,204,113,0.45); }
   .integ-featured .integ-icon svg { width: 30px; height: 30px; }
   .integ-featured .integ-name { font-size: clamp(1.5rem, 2.4vw, 1.9rem); margin-bottom: 0; }
   .integ-featured .integ-desc { max-width: 620px; font-size: 0.98rem; }
@@ -506,10 +511,7 @@
   .plan-btn { width: 100%; }
   .pricing-note { text-align: center; margin-top: 26px; font-size: 0.86rem; color: var(--ink-soft); }
 
-  /* �.��.��.� CTA �.��.��.� */
-  .cta-mascote { width: 190px; margin: 0 auto 22px; }
-  .cta-mascote img { width: 100%; height: auto; display: block; -webkit-mask-image: radial-gradient(ellipse 64% 64% at 50% 48%, #000 28%, transparent 88%); mask-image: radial-gradient(ellipse 64% 64% at 50% 48%, #000 28%, transparent 88%); }
-  @media (max-width: 900px) { .cta-mascote { width: 140px; margin-bottom: 14px; } }
+  /* ─── CTA ─── */
   .section-cta { background: var(--dark); padding: 120px 0; position: relative; overflow: hidden; }
   .section-cta::before { content:''; position:absolute; inset:0; background-image: radial-gradient(circle,rgba(255,255,255,0.025) 1px,transparent 1px); background-size:32px 32px; pointer-events:none; }
   @keyframes pglow { 0%,100%{opacity:.55;transform:translateX(-50%) scale(1)} 50%{opacity:.9;transform:translateX(-50%) scale(1.06)} }
@@ -521,42 +523,12 @@
   .cta-trust { display: flex; align-items: center; justify-content: center; gap: 14px; flex-wrap: wrap; color: var(--dark-muted); font-size: 0.86rem; margin-top: 20px; }
   .cta-sep { width: 4px; height: 4px; border-radius: 50%; background: var(--dark-border); }
 
-  /* �.��.��.� FOOTER �.��.��.� */
-  /* �.��.��.� INTEGRACAO GOOGLE (transparencia de dados) �.��.��.� */
-  .section-gdata { background: var(--dark-2); border-top: 1px solid var(--dark-border); padding: 76px 0; }
-  .gdata-head { max-width: 760px; margin: 0 auto 36px; text-align: center; }
-  .gdata-head .glabel { font-size: 0.72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--green); margin-bottom: 12px; }
-  .gdata-head h2 { font-size: clamp(1.6rem, 2.6vw, 2.1rem); font-weight: 800; letter-spacing: -0.02em; color: var(--dark-fg); margin-bottom: 14px; }
-  .gdata-head p { font-size: 1rem; color: var(--dark-muted); line-height: 1.7; }
-  .gdata-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; max-width: 980px; margin: 0 auto; }
-  .gdata-card { position: relative; }
-  .gdata-card + .gdata-card::before { content: ''; position: absolute; left: -36px; top: 4px; bottom: 4px; width: 1px; background: rgba(255,255,255,0.06); }
-  .gdata-top { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
-  .gdata-ico { width: 38px; height: 38px; border-radius: 11px; display: grid; place-items: center; background: rgba(46,204,113,0.11); border: 1px solid rgba(46,204,113,0.22); flex-shrink: 0; }
-  .gdata-ico svg { width: 19px; height: 19px; stroke: var(--green); fill: none; stroke-width: 2; }
-  .gdata-card h3 { font-size: 1.12rem; font-weight: 700; color: var(--dark-fg); letter-spacing: -0.01em; }
-  .gdata-scope { font-family: ui-monospace,monospace; font-size: 0.72rem; color: var(--green-light); opacity: .85; }
-  .gdata-lead { font-size: 0.95rem; color: var(--dark-fg); opacity: .9; line-height: 1.6; margin: 14px 0 18px; }
-  .gdata-do { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 18px; }
-  .gdata-do li { display: flex; gap: 10px; align-items: flex-start; font-size: 0.88rem; color: var(--dark-muted); line-height: 1.55; }
-  .gdata-do .mk { width: 17px; height: 17px; border-radius: 5px; display: grid; place-items: center; flex-shrink: 0; margin-top: 2px; font-size: 0.7rem; font-weight: 800; }
-  .gdata-do .mk.yes { background: rgba(46,204,113,0.15); color: var(--green); }
-  .gdata-never { border-top: 1px solid var(--dark-border); padding-top: 16px; display: flex; gap: 10px; align-items: flex-start; }
-  .gdata-never .mk { width: 17px; height: 17px; border-radius: 5px; display: grid; place-items: center; flex-shrink: 0; margin-top: 2px; background: rgba(231,76,60,0.14); color: #E7776C; font-size: 0.72rem; font-weight: 800; }
-  .gdata-never p { font-size: 0.86rem; color: var(--dark-muted); line-height: 1.55; }
-  .gdata-never strong { color: var(--dark-fg); font-weight: 600; }
-  .gdata-foot { max-width: 980px; margin: 26px auto 0; text-align: center; font-size: 0.88rem; color: var(--dark-muted); line-height: 1.7; }
-  .gdata-foot a { color: var(--green); text-decoration: none; }
-  .gdata-foot a:hover { text-decoration: underline; }
-  @media (max-width: 760px) {
-    .section-gdata { padding: 56px 0; }
-    .gdata-grid { grid-template-columns: 1fr; gap: 38px; }
-    .gdata-card + .gdata-card::before { left: 0; right: 0; top: -19px; bottom: auto; width: auto; height: 1px; }
-  }
-
+  /* ─── FOOTER ─── */
   .footer-new { background: var(--dark-2); border-top: 1px solid var(--dark-border); color: var(--dark-muted); padding: 64px 0 32px; }
   .foot-grid-new { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
-  .foot-brand .flogo { height: 38px; margin-bottom: 16px; display: block; }
+  .foot-brand .flogo { height: 28px; width: auto; display: block; }
+  .foot-brand .brand-mark { margin-bottom: 16px; }
+  .foot-brand .brand-mark-text { font-size: 20px; }
   .foot-about { font-size: 0.88rem; color: var(--dark-muted); max-width: 260px; line-height: 1.65; }
   .foot-col h5 { font-size: 0.74rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--dark-fg); margin-bottom: 18px; }
   .foot-col ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
@@ -586,7 +558,6 @@
     .feature-row,.feature-row.rev { grid-template-columns: 1fr; gap: 32px; }
     .feature-row.rev .ftext { order: 0; }
     .ai-grid { grid-template-columns: 1fr; gap: 48px; }
-    .integ-cards { grid-template-columns: 1fr; }
     .pricing-grid { grid-template-columns: 1fr; }
     .plan-card.feat { transform: none; }
     .plan-card.feat:hover { transform: translateY(-3px); }
@@ -643,7 +614,7 @@
     .hero-marquee { margin-top: 22px; }
     .btn-mobile-only { display: inline-flex; }
     .hero-trust-mobile { display: flex; }
-    .nav-logo { height: 44px; }
+    .nav-logo { height: 32px; }
     .section-faq { padding: 64px 0; }
     .faq-q { padding: 18px 20px; font-size: 0.96rem; }
     .faq-a-inner { padding: 0 20px 20px; }
@@ -762,17 +733,10 @@
   <div class="wrap">
     <!-- Nav -->
     <nav class="topbar">
-      <a href="#top" aria-label="Cubis.Hub">
+      <a href="#top" aria-label="Cubis.Hub" class="brand-mark">
         <span class="sr-only">Cubis.Hub, gestão contábil para escritórios de contabilidade</span>
-        <svg class="nav-logo" viewBox="0 0 210 66" role="img" aria-label="Cubis.Hub">
-          <defs><linearGradient id="lg1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#3DDA85"/><stop offset="100%" stop-color="#2ECC71"/></linearGradient></defs>
-          <g transform="translate(0,7) scale(0.65)">
-            <polygon points="18,26 40,37 40,59 18,48" fill="#3D4240"/>
-            <polygon points="62,26 62,48 40,59 40,37" fill="#6A8481"/>
-            <polygon points="40,15 62,26 40,37 18,26" fill="url(#lg1)"/>
-          </g>
-          <text x="64" y="40" font-family="Inter, sans-serif" font-size="24" font-weight="700" letter-spacing="-0.025em"><tspan fill="#F0F2F1">Cubis</tspan><tspan fill="#2ECC71">.Hub</tspan></text>
-        </svg>
+        <img class="nav-logo" src="assets/logo-cube.webp" alt="" width="605" height="582" />
+        <span class="brand-mark-text">Cubis<span class="hub">.Hub</span></span>
       </a>
       <div class="nav-links" id="navLinks" onclick="document.getElementById('navLinks').classList.remove('open')">
         <a href="#funcionalidades">Funcionalidades</a>
@@ -791,7 +755,6 @@
 
     <!-- Hero content -->
     <div class="hero-grid">
-      <div class="hero-brand">Cubis.Hub</div>
       <h1>O escritório inteiro <span class="accent">em uma tela só</span></h1>
       <p class="lead">A IA lê as guias, acha o cliente de cada uma e escreve a mensagem. Você confere e envia para a carteira toda em minutos, não em tardes.</p>
 
@@ -910,7 +873,7 @@
         <div class="bento-desc">Central integrada com conversas organizadas por setor, transferência entre times e histórico completo em tempo real.</div>
         <div class="bento-chat">
           <div class="bc-msg them">Boa tarde! Já saiu a guia do DAS?</div>
-          <div class="bc-msg us">Ja enviei aqui no WhatsApp</div>
+          <div class="bc-msg us">Já enviei aqui no WhatsApp</div>
         </div>
       </div>
       <div class="bento-card b2 reveal">
@@ -1046,7 +1009,7 @@
         <h3>Crie um agente de atendimento no WhatsApp</h3>
         <p class="desc">Monte um agente com IA para responder dúvidas frequentes, qualificar solicitações e encaminhar para o setor certo, 24h por dia, direto no número do escritório.</p>
         <ul class="flist-new">
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Respostas automáticas com base na sua base de clientes</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Respostas automáticas com base no que você configurar para o seu escritório</li>
           <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Transferência para um humano a qualquer momento</li>
           <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Configuração simples, sem código</li>
         </ul>
@@ -1128,7 +1091,7 @@
             <span class="agent-chip hi">+ os seus</span>
           </div>
         </div>
-        <div class="wart wide"><img src="assets/mascote-ia.webp" alt="Mascote do Cubis.Hub ligando o WhatsApp à inteligência artificial" loading="lazy" width="760" height="397" /></div>
+        <div class="wart wide"><img src="assets/mascote-ia.webp" alt="Mascote do Cubis.Hub conectado a uma rede de agentes de IA" loading="lazy" width="710" height="576" /></div>
       </div>
 
       <div class="wrow reveal">
@@ -1189,7 +1152,7 @@
   <div class="wrap">
     <div class="integ-header reveal">
       <h2>Conectado ao que você já usa</h2>
-      <p>Conexão oficial e direta com a Meta para disparos, além do WhatsApp via QR Code e Google Calendar para os prazos.</p>
+      <p>Conexão oficial e direta com a Meta para disparos, além do WhatsApp via QR Code para quem já tem número próprio.</p>
     </div>
     <div class="integ-wrap">
       <div class="integ-featured reveal">
@@ -1205,19 +1168,13 @@
           <span class="integ-perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>Maior volume de disparo</span>
         </div>
       </div>
-      <div class="integ-cards">
-        <div class="integ-card reveal">
-          <div class="integ-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M7 20h10M9 16v4M15 16v4"/><path d="M8 8h.01M8 11h.01M12 8h4M12 11h4"/></svg></div>
+      <div class="integ-card integ-card-row reveal">
+        <div class="integ-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M7 20h10M9 16v4M15 16v4"/><path d="M8 8h.01M8 11h.01M12 8h4M12 11h4"/></svg></div>
+        <div class="integ-card-body">
           <div class="integ-name">WhatsApp via QR Code</div>
           <div class="integ-desc">Conecte um número próprio ou dedicado do escritório em minutos, sem burocracia. Atendimento por setor e disparos com rastreamento completo de cada envio.</div>
-          <div class="integ-pill">Atendimento + Disparo</div>
         </div>
-        <div class="integ-card reveal">
-          <div class="integ-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
-          <div class="integ-name">Google Calendar</div>
-          <div class="integ-desc">Sincronização bidirecional dos prazos fiscais. Crie, edite e visualize obrigações direto no Calendar do escritório.</div>
-          <div class="integ-pill">Sincronização bidirecional</div>
-        </div>
+        <div class="integ-pill">Atendimento + Disparo</div>
       </div>
     </div>
   </div>
@@ -1342,7 +1299,7 @@
       </div>
       <div class="faq-item reveal">
         <button class="faq-q" type="button">O teste grátis de 7 dias pede cartão de crédito?<span class="fplus"></span></button>
-        <div class="faq-a"><div class="faq-a-inner">Não. Você cria a conta e testa todas as funcionalidades do plano por 7 dias sem informar cartão. Só é cobrado se decidir continuar.</div></div>
+        <div class="faq-a"><div class="faq-a-inner">Não. Você deixa seus dados, um consultor ativa seu acesso rapidamente e você testa todas as funcionalidades do plano por 7 dias sem informar cartão. Só é cobrado se decidir continuar.</div></div>
       </div>
       <div class="faq-item reveal">
         <button class="faq-q" type="button">Consigo migrar os clientes que já atendo hoje?<span class="fplus"></span></button>
@@ -1368,71 +1325,12 @@
   </div>
 </section>
 
-<!-- �.��.��.��.��.��.��.��.��.��.��.��.��.��.��.��.� Final CTA �.��.��.��.��.��.��.��.��.��.��.��.��.��.��.��.� -->
-<section class="section-gdata" id="dados-google">
-  <div class="wrap">
-    <div class="gdata-head">
-      <div class="glabel">Integração com sua Conta do Google</div>
-      <h2>Exatamente o que fazemos com o seu Google</h2>
-      <p>Duas integrações <strong>opcionais</strong>. Nenhuma é necessária para usar a plataforma, e nada acontece se você não conectar.</p>
-    </div>
-
-    <div class="gdata-grid">
-      <div class="gdata-card">
-        <div class="gdata-top">
-          <span class="gdata-ico"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span>
-          <div>
-            <h3>Google Agenda</h3>
-            <span class="gdata-scope">calendar</span>
-          </div>
-        </div>
-        <p class="gdata-lead">Seus prazos fiscais aparecem na agenda que você já usa, e os dois lados ficam iguais.</p>
-        <ul class="gdata-do">
-          <li><span class="mk yes">✓</span>Criamos um evento para cada prazo cadastrado</li>
-          <li><span class="mk yes">✓</span>Atualizamos quando a data muda e removemos quando o prazo é excluído</li>
-          <li><span class="mk yes">✓</span>Consultamos esses eventos para saber se você apagou algum direto no Google Agenda. Se apagou, o prazo sai do Cubis.Hub também</li>
-        </ul>
-        <div class="gdata-never">
-          <span class="mk">✕</span>
-          <p>Acessamos <strong>apenas o calendário que você escolhe</strong> ao conectar. Não lemos compromissos pessoais, nem eventos que não tenham sido criados por nós.</p>
-        </div>
-      </div>
-
-      <div class="gdata-card">
-        <div class="gdata-top">
-          <span class="gdata-ico"><svg viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
-          <div>
-            <h3>Gmail</h3>
-            <span class="gdata-scope">gmail.send</span>
-          </div>
-        </div>
-        <p class="gdata-lead">Os documentos saem do endereço do seu escritório, não de um remetente genérico.</p>
-        <ul class="gdata-do">
-          <li><span class="mk yes">✓</span>Enviamos guias, balancetes e avisos de honorários que você dispara pela plataforma</li>
-          <li><span class="mk yes">✓</span>O destinatário é sempre um cliente cadastrado na carteira do escritório</li>
-          <li><span class="mk yes">✓</span>Usamos só o endpoint de envio, disparado por ação sua</li>
-        </ul>
-        <div class="gdata-never">
-          <span class="mk">✕</span>
-          <p><strong>Nunca lemos, listamos, pesquisamos, alteramos nem apagamos</strong> mensagens da sua caixa. Não pedimos nenhuma permissão que torne isso possível.</p>
-        </div>
-      </div>
-    </div>
-
-    <p class="gdata-foot">
-      Você pode desconectar a qualquer momento em Configurações &rsaquo; Canais.
-      Detalhes sobre tratamento de dados na nossa
-      <a href="https://cubishub.com.br/privacidade.html">Política de Privacidade</a>.
-    </p>
-  </div>
-</section>
-
+<!-- ─── Final CTA ─── -->
 <section class="section-cta">
   <div class="seam-line"><span class="seam-beam"></span></div>
   <div class="cta-glow"></div>
   <div class="wrap">
     <div class="cta-inner reveal">
-      <div class="cta-mascote"><img src="assets/mascote-ok.webp" alt="Mascote do Cubis.Hub ao lado de um arquivo organizado" loading="lazy" width="620" height="498" /></div>
       <h2>Organize o escritório.<br><span class="g">Atenda melhor.</span> Cresça.</h2>
       <p>Comece grátis por 7 dias e veja como o Cubis.Hub muda a rotina do seu escritório contábil.</p>
       <button type="button" class="btn btn-primary" onclick="openLeadModal()" style="height:54px;padding:0 36px;font-size:1.02rem;">
@@ -1456,16 +1354,9 @@
   <div class="wrap">
     <div class="foot-grid-new">
       <div class="foot-brand">
-        <a href="#top" aria-label="Voltar ao topo">
-          <svg class="flogo" viewBox="0 0 210 66" role="img" aria-label="Cubis.Hub">
-            <defs><linearGradient id="lg2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#3DDA85"/><stop offset="100%" stop-color="#2ECC71"/></linearGradient></defs>
-            <g transform="translate(0,7) scale(0.65)">
-              <polygon points="18,26 40,37 40,59 18,48" fill="#3D4240"/>
-              <polygon points="62,26 62,48 40,59 40,37" fill="#6A8481"/>
-              <polygon points="40,15 62,26 40,37 18,26" fill="url(#lg2)"/>
-            </g>
-            <text x="64" y="40" font-family="Inter, sans-serif" font-size="24" font-weight="700" letter-spacing="-0.025em"><tspan fill="#F0F2F1">Cubis</tspan><tspan fill="#2ECC71">.Hub</tspan></text>
-          </svg>
+        <a href="#top" aria-label="Voltar ao topo" class="brand-mark">
+          <img class="flogo" src="assets/logo-cube.webp" alt="" width="605" height="582" />
+          <span class="brand-mark-text">Cubis<span class="hub">.Hub</span></span>
         </a>
         <p class="foot-about">A plataforma para escritórios de contabilidade. Atendimento, envio, prazos e documentos em um só lugar.</p>
         <div class="foot-social">
@@ -1487,7 +1378,7 @@
         <ul>
           <li><a href="#como-funciona">Como funciona</a></li>
           <li><a href="#ia">Assistente IA</a></li>
-          <li><a href="#">Contato</a></li>
+          <li><a href="https://wa.me/5551985488078" target="_blank" rel="noopener noreferrer">Contato</a></li>
         </ul>
       </div>
       <div class="foot-col">
