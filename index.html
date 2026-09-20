@@ -599,6 +599,32 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
   .integ-perk { display: flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.045); border: 1px solid rgba(46,204,113,0.22); border-radius: 12px; padding: 10px 14px; font-size: 0.85rem; color: var(--dark-fg); font-weight: 500; }
   .integ-perk svg { width: 16px; height: 16px; color: var(--green-light); flex-shrink: 0; }
 
+  /* SERPRO em produção */
+  .section-serpro { background: var(--dots-light) 0 0 / 26px 26px, var(--bg); padding: 100px 0; position: relative; overflow: hidden; }
+  .serpro-header { text-align: center; max-width: 660px; margin: 0 auto 44px; }
+  .serpro-header .blabel { font-size: 0.72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--green-deep); margin-bottom: 12px; }
+  .serpro-header h2 { font-size: clamp(2rem, 3.4vw, 2.8rem); font-weight: 800; letter-spacing: -0.03em; margin: 0 0 14px; color: var(--ink); }
+  .serpro-header p { font-size: 1.05rem; color: var(--ink-soft); }
+  .serpro-count { display: inline-flex; align-items: baseline; gap: 8px; margin-top: 22px; padding: 10px 20px; border-radius: 999px; background: var(--card); border: 1px solid rgba(46,204,113,0.22); box-shadow: 0 8px 24px -12px rgba(20,26,24,0.12); }
+  .serpro-count .n { font-size: 1.6rem; font-weight: 800; color: var(--green-deep); letter-spacing: -0.03em; line-height: 1; }
+  .serpro-count .t { font-size: 0.86rem; color: var(--ink-soft); font-weight: 500; }
+  .serpro-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; }
+  .serpro-card { background: var(--card); border: 1px solid var(--border); border-radius: 18px; padding: 26px; display: flex; flex-direction: column; gap: 14px; transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+  .serpro-card:hover { transform: translateY(-4px); box-shadow: 0 20px 48px -14px rgba(20,26,24,0.14); border-color: rgba(46,204,113,0.28); }
+  .serpro-card-head { display: flex; align-items: center; gap: 12px; }
+  .serpro-icon { width: 40px; height: 40px; border-radius: 11px; background: rgba(46,204,113,0.12); display: grid; place-items: center; flex-shrink: 0; }
+  .serpro-icon svg { width: 20px; height: 20px; color: var(--green-deep); }
+  .serpro-card-title { font-size: 0.98rem; font-weight: 700; letter-spacing: -0.01em; color: var(--ink); }
+  .serpro-card-sub { font-size: 0.74rem; color: var(--ink-soft); margin-top: 2px; }
+  .serpro-list { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+  .serpro-list li { display: flex; align-items: flex-start; gap: 9px; font-size: 0.85rem; color: var(--ink); line-height: 1.5; }
+  .serpro-list li .chk { width: 17px; height: 17px; border-radius: 50%; background: rgba(46,204,113,0.14); display: grid; place-items: center; flex-shrink: 0; margin-top: 1px; }
+  .serpro-list li .chk svg { width: 9px; height: 9px; color: var(--green-deep); }
+  .serpro-note { text-align: center; margin-top: 40px; font-size: 0.88rem; color: var(--ink-soft); }
+  .serpro-note strong { color: var(--green-deep); font-weight: 700; }
+  @media (max-width: 960px) { .serpro-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 640px) { .serpro-grid { grid-template-columns: 1fr; } .serpro-card { padding: 22px 20px; } .section-serpro { padding: 64px 0; } }
+
   /* �.��.��.� PRICING �.��.��.� */
   .section-pricing { background: linear-gradient(180deg,#EAF3EF 0%,var(--bg) 100%); padding: 100px 0; }
   .pricing-header { text-align: center; max-width: 600px; margin: 0 auto 20px; }
@@ -892,6 +918,7 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
         <a href="#funcionalidades">Funcionalidades</a>
         <a href="#como-funciona">Como funciona</a>
         <a href="#fiscal">Fiscal</a>
+        <a href="#serpro">SERPRO</a>
         <a href="#ia-trabalho">IA</a>
         <a href="#integracoes">Integrações</a>
         <a href="#faq">FAQ</a>
@@ -1243,6 +1270,130 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
       </div>
 
     </div>
+  </div>
+</section>
+
+<!-- ─── SERPRO EM PRODUÇÃO ─── -->
+<section class="section-serpro" id="serpro">
+  <div class="wrap">
+    <div class="serpro-header reveal">
+      <div class="blabel">Não é roadmap</div>
+      <h2>21 integrações com a Receita Federal já rodando de verdade</h2>
+      <p>Cada linha abaixo é um serviço do Integra Contador (SERPRO) que o Cubis Hub já chama na carteira dos escritórios que usam a plataforma hoje &mdash; não uma promessa de "em breve".</p>
+      <div class="serpro-count">
+        <span class="n">21</span>
+        <span class="t">serviços oficiais do SERPRO em produção</span>
+      </div>
+    </div>
+
+    <div class="serpro-grid">
+
+      <div class="serpro-card reveal">
+        <div class="serpro-card-head">
+          <span class="serpro-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
+          <div><div class="serpro-card-title">Caixa Postal (e-CAC)</div><div class="serpro-card-sub">CAIXAPOSTAL</div></div>
+        </div>
+        <ul class="serpro-list">
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Indicador de mensagem nova (checagem gratuita)</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Listagem de mensagens da caixa postal</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Detalhe de intimações e comunicados</li>
+        </ul>
+      </div>
+
+      <div class="serpro-card reveal">
+        <div class="serpro-card-head">
+          <span class="serpro-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></span>
+          <div><div class="serpro-card-title">Simples Nacional</div><div class="serpro-card-sub">PGDAS-D</div></div>
+        </div>
+        <ul class="serpro-list">
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Última declaração entregue + recibo</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Emissão oficial do DAS</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Extrato do DAS já emitido</li>
+        </ul>
+      </div>
+
+      <div class="serpro-card reveal">
+        <div class="serpro-card-head">
+          <span class="serpro-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M4 9h16"/></svg></span>
+          <div><div class="serpro-card-title">MEI</div><div class="serpro-card-sub">PGMEI · DASN-SIMEI · CCMEI</div></div>
+        </div>
+        <ul class="serpro-list">
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Última declaração anual (DASN-SIMEI) + recibo</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Emissão do DAS do MEI (PDF e código de barras)</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Consulta de dívida ativa</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Dados cadastrais e emissão do certificado CCMEI</li>
+        </ul>
+      </div>
+
+      <div class="serpro-card reveal">
+        <div class="serpro-card-head">
+          <span class="serpro-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3v4M16 3v4M4 9h16"/><rect x="3" y="5" width="18" height="16" rx="2"/></svg></span>
+          <div><div class="serpro-card-title">DCTFWeb</div><div class="serpro-card-sub">eSocial · previdenciário</div></div>
+        </div>
+        <ul class="serpro-list">
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Recibo de transmissão da competência</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Emissão de guia (mensal e 13º salário)</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Consulta do XML da declaração em andamento</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Transmissão da declaração assinada</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Declaração completa da competência</li>
+        </ul>
+      </div>
+
+      <div class="serpro-card reveal">
+        <div class="serpro-card-head">
+          <span class="serpro-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4Z"/></svg></span>
+          <div><div class="serpro-card-title">Procuração eletrônica</div><div class="serpro-card-sub">PROCURACOES</div></div>
+        </div>
+        <ul class="serpro-list">
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Validação da procuração do e-CAC vinculada ao escritório</li>
+        </ul>
+      </div>
+
+      <div class="serpro-card reveal">
+        <div class="serpro-card-head">
+          <span class="serpro-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3h6l1 4h4v2h-2l-2 12H6L4 9H2V7h4l1-4Z"/></svg></span>
+          <div><div class="serpro-card-title">Situação fiscal</div><div class="serpro-card-sub">SITFIS</div></div>
+        </div>
+        <ul class="serpro-list">
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Relatório completo de situação fiscal em PDF</li>
+        </ul>
+      </div>
+
+      <div class="serpro-card reveal">
+        <div class="serpro-card-head">
+          <span class="serpro-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16v12H4z"/><path d="M4 10h16M8 14h2"/></svg></span>
+          <div><div class="serpro-card-title">Pagamentos</div><div class="serpro-card-sub">PagtoWeb</div></div>
+        </div>
+        <ul class="serpro-list">
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Histórico de pagamentos (DARF, DAS, GPS)</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Comprovante de arrecadação em PDF</li>
+        </ul>
+      </div>
+
+      <div class="serpro-card reveal">
+        <div class="serpro-card-head">
+          <span class="serpro-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V5a2 2 0 012-2h9l5 5v11a2 2 0 01-2 2H6a2 2 0 01-2-2Z"/><path d="M14 3v5h5"/></svg></span>
+          <div><div class="serpro-card-title">DEFIS</div><div class="serpro-card-sub">Declaração anual Simples</div></div>
+        </div>
+        <ul class="serpro-list">
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Última declaração anual entregue</li>
+        </ul>
+      </div>
+
+      <div class="serpro-card reveal">
+        <div class="serpro-card-head">
+          <span class="serpro-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l4 2"/></svg></span>
+          <div><div class="serpro-card-title">Parcelamentos</div><div class="serpro-card-sub">Simples e MEI</div></div>
+        </div>
+        <ul class="serpro-list">
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>8 modalidades (PARCSN, PARCMEI, PERT e RELP)</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Consulta de parcelas e emissão da guia</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <p class="serpro-note reveal">Tudo direto do <strong>Integra Contador (SERPRO)</strong>, com a procuração eletrônica do seu escritório no e-CAC &mdash; sem abrir sistema por cliente.</p>
   </div>
 </section>
 
