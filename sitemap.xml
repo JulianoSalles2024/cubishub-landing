@@ -2,16 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://cubishub.com.br/</loc>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://cubishub.com.br/privacidade.html</loc>
+    <lastmod>2026-08-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://cubishub.com.br/termos.html</loc>
+    <lastmod>2026-08-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
