@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9BZGKSVJ2T"></script>
+<!-- Consentimento de cookies (LGPD): nega por padrao, so libera apos aceite no banner -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  gtag('consent', 'default', {
+    'analytics_storage': 'denied',
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied'
+  });
+</script>
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9BZGKSVJ2T"></script>
+<script>
+  gtag('js', new Date());
   gtag('config', 'G-9BZGKSVJ2T');
 </script>
 
@@ -22,12 +31,31 @@ t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '1789367172482808');
-fbq('track', 'PageView');
+fbq('consent', 'revoke');
 </script>
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1789367172482808&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
+
+<!-- Aplica consentimento salvo (aceite/recusa de visita anterior) -->
+<script>
+(function () {
+  try {
+    var consent = localStorage.getItem('cubishub_cookie_consent');
+    if (consent === 'granted') {
+      gtag('consent', 'update', {
+        'analytics_storage': 'granted',
+        'ad_storage': 'granted',
+        'ad_user_data': 'granted',
+        'ad_personalization': 'granted'
+      });
+      fbq('consent', 'grant');
+      fbq('track', 'PageView');
+    }
+  } catch (e) {}
+})();
+</script>
 
 <!-- Eventos de conversao: dispara GA4 + Meta Pixel juntos, tolerando bloqueadores de ads -->
 <script>
@@ -763,6 +791,26 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
   .faq-a-inner { padding: 0 26px 24px; font-size: 0.94rem; color: var(--ink-soft); line-height: 1.65; }
 
   /* ─── LEAD MODAL ─── */
+  /* Cookie consent banner */
+  .cookie-banner {
+    position: fixed; left: 20px; right: 20px; bottom: 20px; z-index: 300;
+    max-width: 720px; margin: 0 auto;
+    background: var(--dark); color: var(--dark-fg);
+    border: 1px solid var(--dark-border); border-radius: var(--radius-lg);
+    box-shadow: 0 30px 70px -20px rgba(0,0,0,0.5);
+    padding: 22px 26px; display: none;
+    animation: leadPopIn .3s ease;
+  }
+  .cookie-banner.open { display: block; }
+  .cookie-banner p { font-size: 0.9rem; color: var(--dark-muted); line-height: 1.55; margin-bottom: 16px; }
+  .cookie-banner p a { color: var(--green-light); text-decoration: underline; }
+  .cookie-banner-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+  @media (max-width: 640px) {
+    .cookie-banner { left: 12px; right: 12px; bottom: 12px; padding: 18px 20px; }
+    .cookie-banner-actions { flex-direction: column; }
+    .cookie-banner-actions .btn { width: 100%; }
+  }
+
   .lead-overlay {
     position: fixed; inset: 0; z-index: 200; display: none;
     align-items: center; justify-content: center; padding: 20px;
@@ -1551,6 +1599,7 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
         <ul>
           <li><a href="https://cubishub.com.br/termos.html">Termos de Uso</a></li>
           <li><a href="https://cubishub.com.br/privacidade.html">Privacidade</a></li>
+          <li><a href="#" onclick="openCookiePrefs(); return false;">Preferências de cookies</a></li>
         </ul>
       </div>
     </div>
@@ -1560,6 +1609,15 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
     </div>
   </div>
 </footer>
+
+<!-- ─── Banner de cookies (LGPD) ─── -->
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Preferências de cookies">
+  <p>Usamos cookies para medir audiência e desempenho de campanhas (Google Analytics e Meta Pixel). Você pode aceitar ou recusar — sua escolha não afeta o funcionamento do site. Saiba mais na nossa <a href="https://cubishub.com.br/privacidade.html" target="_blank" rel="noopener">Política de Privacidade</a>.</p>
+  <div class="cookie-banner-actions">
+    <button type="button" class="btn btn-primary" onclick="acceptCookies()">Aceitar</button>
+    <button type="button" class="btn btn-outline" onclick="rejectCookies()">Recusar</button>
+  </div>
+</div>
 
 <!-- ─── Lead Modal (teste grátis) ─── -->
 <div class="lead-overlay" id="leadOverlay" onclick="if(event.target===this) closeLeadModal()">
@@ -2083,6 +2141,44 @@ function setPricing(mode) {
       trackConversion('select_plan', { plan_name: plan, currency: 'BRL', value: value }, 'InitiateCheckout', false);
     });
   });
+})();
+
+(function () {
+  var banner = document.getElementById('cookieBanner');
+
+  function grantConsent() {
+    gtag('consent', 'update', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'ad_user_data': 'granted',
+      'ad_personalization': 'granted'
+    });
+    fbq('consent', 'grant');
+    fbq('track', 'PageView');
+  }
+
+  window.acceptCookies = function () {
+    try { localStorage.setItem('cubishub_cookie_consent', 'granted'); } catch (e) {}
+    grantConsent();
+    banner.classList.remove('open');
+  };
+
+  window.rejectCookies = function () {
+    try { localStorage.setItem('cubishub_cookie_consent', 'denied'); } catch (e) {}
+    banner.classList.remove('open');
+  };
+
+  window.openCookiePrefs = function () {
+    banner.classList.add('open');
+  };
+
+  try {
+    if (!localStorage.getItem('cubishub_cookie_consent')) {
+      banner.classList.add('open');
+    }
+  } catch (e) {
+    banner.classList.add('open');
+  }
 })();
 </script>
 </body>
