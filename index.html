@@ -29,6 +29,20 @@ src="https://www.facebook.com/tr?id=1789367172482808&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
 
+<!-- Eventos de conversao: dispara GA4 + Meta Pixel juntos, tolerando bloqueadores de ads -->
+<script>
+function trackConversion(gaEventName, params, fbEventName, fbCustom) {
+  params = params || {};
+  try { if (typeof gtag === 'function') gtag('event', gaEventName, params); } catch (e) {}
+  try {
+    if (typeof fbq === 'function') {
+      if (fbCustom) fbq('trackCustom', fbEventName, params);
+      else fbq('track', fbEventName, params);
+    }
+  } catch (e) {}
+}
+</script>
+
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Cubis.Hub | O escritório contábil inteiro em uma tela só</title>
@@ -846,7 +860,7 @@ src="https://www.facebook.com/tr?id=1789367172482808&ev=PageView&noscript=1"
       <p class="lead">Prazo fiscal, atendimento no WhatsApp e envio de documento pra carteira inteira, sem abrir sistema por sistema nem repetir a mesma tarefa cliente por cliente.</p>
 
       <div class="hero-actions">
-        <button type="button" class="btn btn-primary" onclick="openLeadModal()">
+        <button type="button" class="btn btn-primary" onclick="openLeadModal('hero')">
           Começar teste grátis
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </button>
@@ -1356,7 +1370,7 @@ src="https://www.facebook.com/tr?id=1789367172482808&ev=PageView&noscript=1"
           <li><span class="fcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Recorrência mensal de envios</li>
           <li><span class="fcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Envio automático para grupos</li>
         </ul>
-        <a class="btn btn-outline plan-btn" href="https://app.cubishub.com.br/assinar/2e16005d-5dd2-461a-97e8-095ba10a0783">Assinar Essencial</a>
+        <a class="btn btn-outline plan-btn" href="https://app.cubishub.com.br/assinar/2e16005d-5dd2-461a-97e8-095ba10a0783" data-plan="Essencial" data-value="197">Assinar Essencial</a>
       </div>
 
       <div class="plan-card feat reveal">
@@ -1388,7 +1402,7 @@ src="https://www.facebook.com/tr?id=1789367172482808&ev=PageView&noscript=1"
           <li><span class="fcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Recorrência mensal de envios</li>
           <li><span class="fcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Envio automático para grupos</li>
         </ul>
-        <a class="btn btn-primary plan-btn" href="https://app.cubishub.com.br/assinar/685fc882-dc45-41e7-9b21-bae7c5717aad">Assinar agora</a>
+        <a class="btn btn-primary plan-btn" href="https://app.cubishub.com.br/assinar/685fc882-dc45-41e7-9b21-bae7c5717aad" data-plan="Scale" data-value="397">Assinar agora</a>
       </div>
 
       <div class="plan-card reveal">
@@ -1419,7 +1433,7 @@ src="https://www.facebook.com/tr?id=1789367172482808&ev=PageView&noscript=1"
           <li><span class="fcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Recorrência mensal de envios</li>
           <li><span class="fcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Envio automático para grupos</li>
         </ul>
-        <a class="btn btn-outline plan-btn" href="https://app.cubishub.com.br/assinar/7b611eab-5f9d-4492-bdd8-26a1a63450e6">Assinar Pro</a>
+        <a class="btn btn-outline plan-btn" href="https://app.cubishub.com.br/assinar/7b611eab-5f9d-4492-bdd8-26a1a63450e6" data-plan="Pro" data-value="697">Assinar Pro</a>
       </div>
     </div>
     <p class="pricing-note">Pagamento via PIX ou cartão, parcelável. Sem fidelidade: cancele quando quiser.</p>
@@ -1482,7 +1496,7 @@ src="https://www.facebook.com/tr?id=1789367172482808&ev=PageView&noscript=1"
     <div class="cta-inner reveal">
       <h2>Organize o escritório.<br><span class="g">Atenda melhor.</span> Cresça.</h2>
       <p>Comece grátis por 7 dias e veja como o Cubis.Hub muda a rotina do seu escritório contábil.</p>
-      <button type="button" class="btn btn-primary" onclick="openLeadModal()" style="height:54px;padding:0 36px;font-size:1.02rem;">
+      <button type="button" class="btn btn-primary" onclick="openLeadModal('final_cta')" style="height:54px;padding:0 36px;font-size:1.02rem;">
         Criar conta grátis
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:18px;height:18px"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </button>
@@ -1987,7 +2001,7 @@ function setPricing(mode) {
   var submitBtn = document.getElementById('leadSubmitBtn');
   var submitLabel = document.getElementById('leadSubmitLabel');
 
-  window.openLeadModal = function () {
+  window.openLeadModal = function (location) {
     formView.style.display = 'block';
     successView.classList.remove('show');
     form.reset();
@@ -1997,6 +2011,7 @@ function setPricing(mode) {
     });
     overlay.classList.add('open');
     document.body.style.overflow = 'hidden';
+    trackConversion('cta_click', { cta_location: location || 'unknown' }, 'CTAClick', true);
   };
 
   window.closeLeadModal = function () {
@@ -2048,6 +2063,7 @@ function setPricing(mode) {
       if (!res.ok) throw new Error('request failed');
       formView.style.display = 'none';
       successView.classList.add('show');
+      trackConversion('generate_lead', { currency: 'BRL', value: 0 }, 'Lead');
     }).catch(function () {
       alert('Não foi possível enviar seus dados agora. Tente novamente em instantes.');
     }).finally(function () {
@@ -2055,6 +2071,16 @@ function setPricing(mode) {
       submitLabel.textContent = 'Quero criar minha conta grátis';
     });
   };
+})();
+
+(function () {
+  document.querySelectorAll('.plan-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var plan = btn.getAttribute('data-plan') || 'unknown';
+      var value = parseFloat(btn.getAttribute('data-value')) || 0;
+      trackConversion('select_plan', { plan_name: plan, currency: 'BRL', value: value }, 'InitiateCheckout', false);
+    });
+  });
 })();
 </script>
 </body>
