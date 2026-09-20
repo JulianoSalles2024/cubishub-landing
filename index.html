@@ -602,12 +602,8 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
   /* SERPRO em produção */
   .section-serpro { background: var(--dots-light) 0 0 / 26px 26px, var(--bg); padding: 100px 0; position: relative; overflow: hidden; }
   .serpro-header { text-align: center; max-width: 660px; margin: 0 auto 44px; }
-  .serpro-header .blabel { font-size: 0.72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--green-deep); margin-bottom: 12px; }
   .serpro-header h2 { font-size: clamp(2rem, 3.4vw, 2.8rem); font-weight: 800; letter-spacing: -0.03em; margin: 0 0 14px; color: var(--ink); }
   .serpro-header p { font-size: 1.05rem; color: var(--ink-soft); }
-  .serpro-count { display: inline-flex; align-items: baseline; gap: 8px; margin-top: 22px; padding: 10px 20px; border-radius: 999px; background: var(--card); border: 1px solid rgba(46,204,113,0.22); box-shadow: 0 8px 24px -12px rgba(20,26,24,0.12); }
-  .serpro-count .n { font-size: 1.6rem; font-weight: 800; color: var(--green-deep); letter-spacing: -0.03em; line-height: 1; }
-  .serpro-count .t { font-size: 0.86rem; color: var(--ink-soft); font-weight: 500; }
   .serpro-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; }
   .serpro-card { background: var(--card); border: 1px solid var(--border); border-radius: 18px; padding: 26px; display: flex; flex-direction: column; gap: 14px; transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
   .serpro-card:hover { transform: translateY(-4px); box-shadow: 0 20px 48px -14px rgba(20,26,24,0.14); border-color: rgba(46,204,113,0.28); }
@@ -1277,13 +1273,8 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
 <section class="section-serpro" id="serpro">
   <div class="wrap">
     <div class="serpro-header reveal">
-      <div class="blabel">Não é roadmap</div>
       <h2>21 integrações com a Receita Federal já rodando de verdade</h2>
-      <p>Cada linha abaixo é um serviço do Integra Contador (SERPRO) que o Cubis Hub já chama na carteira dos escritórios que usam a plataforma hoje &mdash; não uma promessa de "em breve".</p>
-      <div class="serpro-count">
-        <span class="n">21</span>
-        <span class="t">serviços oficiais do SERPRO em produção</span>
-      </div>
+      <p>Cada linha abaixo é um serviço do Integra Contador (SERPRO) que o Cubis Hub já chama na carteira dos escritórios que usam a plataforma hoje, não uma promessa de "em breve".</p>
     </div>
 
     <div class="serpro-grid">
@@ -1393,7 +1384,7 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
 
     </div>
 
-    <p class="serpro-note reveal">Tudo direto do <strong>Integra Contador (SERPRO)</strong>, com a procuração eletrônica do seu escritório no e-CAC &mdash; sem abrir sistema por cliente.</p>
+    <p class="serpro-note reveal">Tudo direto do <strong>Integra Contador (SERPRO)</strong>, com a procuração eletrônica do seu escritório no e-CAC, sem abrir sistema por cliente.</p>
   </div>
 </section>
 
