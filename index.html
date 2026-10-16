@@ -532,6 +532,21 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
   .flist-new li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.94rem; color: var(--ink); }
   .flist-new li .chk { width: 20px; height: 20px; border-radius: 50%; background: rgba(46,204,113,0.14); display: grid; place-items: center; flex-shrink: 0; margin-top: 1px; }
   .flist-new li .chk svg { width: 10px; height: 10px; color: var(--green-deep); }
+  /* Soluções: grade compacta da home */
+  .sol-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .sol-card { display: flex; flex-direction: column; gap: 10px; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 22px 20px 20px; transition: transform .2s, box-shadow .2s, border-color .2s; }
+  .sol-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-soft); border-color: rgba(46,204,113,.45); }
+  .sol-card-ic { width: 40px; height: 40px; border-radius: 10px; display: grid; place-items: center; background: rgba(46,204,113,.14); color: var(--green-deep); margin-bottom: 4px; }
+  .sol-card-ic svg { width: 20px; height: 20px; }
+  .sol-card-tag { font-size: 0.72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--green-deep); }
+  .sol-card-title { font-size: 1.02rem; font-weight: 700; letter-spacing: -0.02em; line-height: 1.35; color: var(--ink); flex: 1; }
+  .sol-card-more { display: inline-flex; align-items: center; gap: 6px; font-size: 0.86rem; font-weight: 600; color: var(--green-deep); margin-top: 6px; }
+  .sol-card-more svg { width: 15px; height: 15px; transition: transform .2s; }
+  .sol-card:hover .sol-card-more svg { transform: translateX(3px); }
+  .sol-grid-foot { text-align: center; margin-top: 36px; }
+  .sol-grid-foot .btn svg { width: 16px; height: 16px; }
+  @media (max-width: 1000px) { .sol-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 520px) { .sol-grid { grid-template-columns: 1fr; } .sol-card { padding: 18px; } }
 
 
   .app-card { background: #fff; border: 1px solid rgba(90,116,112,0.13); border-radius: 14px; padding: 13px 15px; box-shadow: 0 2px 10px -3px rgba(20,26,24,0.07); position: relative; z-index: 2; }
@@ -993,7 +1008,7 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
         <span class="brand-mark-text">Cubis<span class="hub">.Hub</span></span>
       </a>
       <div class="nav-links" id="navLinks" onclick="document.getElementById('navLinks').classList.remove('open')">
-        <a href="#funcionalidades">Funcionalidades</a>
+        <a href="solucoes.html">Soluções</a>
         <a href="#como-funciona">Como funciona</a>
         <a href="#fiscal">Fiscal</a>
         <a href="#portal">Portal</a>
@@ -1141,117 +1156,57 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
       <p>Cada bloco abaixo é uma tarefa que hoje alguém do escritório faz cliente por cliente.</p>
     </div>
 
-    <div class="features-list">
-    <div class="feature-row reveal">
-      <div class="ftext">
-        <div class="eyebrow-tag">Envio em lote</div>
-        <h3>A guia de toda a carteira, inclusive nos grupos de WhatsApp</h3>
-        <p class="desc">Arraste as guias do mês de uma vez. Cada arquivo encontra o cliente dono dele e sai com uma mensagem que já chama cada um pelo nome.</p>
-        <ul class="flist-new">
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Envio direto nos grupos de WhatsApp dos clientes, não só no contato individual</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>WhatsApp, e-mail e Telegram no mesmo envio</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Agende para depois ou deixe repetindo todo mês</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Registro de cada envio, cliente por cliente</li>
-        </ul>
-      </div>
+    <div class="sol-grid">
+      <a class="sol-card reveal" href="solucoes.html#envio">
+        <span class="sol-card-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></span>
+        <span class="sol-card-tag">Envio em lote</span>
+        <span class="sol-card-title">A guia de toda a carteira, inclusive nos grupos de WhatsApp</span>
+        <span class="sol-card-more">Ver como funciona <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      </a>
+      <a class="sol-card reveal" href="solucoes.html#avisos">
+        <span class="sol-card-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg></span>
+        <span class="sol-card-tag">Aviso de vencimento</span>
+        <span class="sol-card-title">O cliente é lembrado antes de a guia vencer</span>
+        <span class="sol-card-more">Ver como funciona <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      </a>
+      <a class="sol-card reveal" href="solucoes.html#xml">
+        <span class="sol-card-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="5" rx="1"/><path d="M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg></span>
+        <span class="sol-card-tag">XML</span>
+        <span class="sol-card-title">Os XMLs do mês, já nas pastas certas</span>
+        <span class="sol-card-more">Ver como funciona <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      </a>
+      <a class="sol-card reveal" href="solucoes.html#documentos">
+        <span class="sol-card-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg></span>
+        <span class="sol-card-tag">Documentos e portal</span>
+        <span class="sol-card-title">Cada arquivo no lugar, e o cliente vê sem pedir</span>
+        <span class="sol-card-more">Ver como funciona <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      </a>
+      <a class="sol-card reveal" href="solucoes.html#atendimento">
+        <span class="sol-card-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.6 7.3L3 20.5l1.7-5.2A8.4 8.4 0 1 1 21 11.5z"/></svg></span>
+        <span class="sol-card-tag">Atendimento</span>
+        <span class="sol-card-title">WhatsApp por setor, nada se perde</span>
+        <span class="sol-card-more">Ver como funciona <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      </a>
+      <a class="sol-card reveal" href="solucoes.html#prazos">
+        <span class="sol-card-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span>
+        <span class="sol-card-tag">Prazos e tarefas</span>
+        <span class="sol-card-title">A rotina do mês se recria sozinha</span>
+        <span class="sol-card-more">Ver como funciona <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      </a>
+      <a class="sol-card reveal" href="solucoes.html#clientes">
+        <span class="sol-card-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.9"/><path d="M16 3.1a4 4 0 0 1 0 7.8"/></svg></span>
+        <span class="sol-card-tag">Clientes</span>
+        <span class="sol-card-title">Cadastro completo sem digitar</span>
+        <span class="sol-card-more">Ver como funciona <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      </a>
+      <a class="sol-card reveal" href="solucoes.html#agente">
+        <span class="sol-card-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.7l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.7l7 4a2 2 0 0 0 2 0l7-4a2 2 0 0 0 1-1.7z"/><polyline points="3.3 7 12 12 20.7 7"/><line x1="12" y1="22" x2="12" y2="12"/></svg></span>
+        <span class="sol-card-tag">Agente de IA</span>
+        <span class="sol-card-title">Um atendente no WhatsApp que entrega a guia</span>
+        <span class="sol-card-more">Ver como funciona <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      </a>
     </div>
-
-    <div class="feature-row reveal">
-      <div class="ftext">
-        <div class="eyebrow-tag">Aviso de vencimento</div>
-        <h3>O cliente é lembrado antes de a guia vencer</h3>
-        <p class="desc">Na hora do envio você marca os avisos, e a plataforma lembra o cliente sozinha no dia certo, com o vencimento lido na própria guia.</p>
-        <ul class="flist-new">
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Aviso 3 dias antes, na véspera e no dia do vencimento</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Sai de manhã cedo, a tempo de o cliente pagar</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Quem não pagou entra na régua de cobrança, por WhatsApp e e-mail</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Guia paga sai da lista quando o pagamento é confirmado</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="feature-row reveal">
-      <div class="ftext">
-        <div class="eyebrow-tag">XML</div>
-        <h3>Os XMLs do mês, já nas pastas certas</h3>
-        <p class="desc">NF-e e NFS-e emitidas e recebidas de cada cliente são capturadas e guardadas. Na hora de baixar, o ZIP já vem montado para a contabilidade.</p>
-        <ul class="flist-new">
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Pasta por mês, por cliente (com CNPJ), emitidas e recebidas, NF-e e NFS-e</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Um cliente ou a carteira inteira num ZIP só</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Análise das notas com os itens e as retenções</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Filtro das notas novas, que ainda não foram baixadas</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="feature-row reveal">
-      <div class="ftext">
-        <div class="eyebrow-tag">Documentos e portal</div>
-        <h3>Cada arquivo no lugar, e o cliente vê sem pedir</h3>
-        <p class="desc">As pastas se montam sozinhas por setor, cliente e categoria. O cliente acessa o portal dele e encontra tudo o que foi enviado.</p>
-        <ul class="flist-new">
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Pastas montadas sozinhas, sem arrastar arquivo</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Portal do cliente com guias, notas e comunicados</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>O cliente marca a guia como paga ali mesmo</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Versões guardadas e envio em um clique</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="feature-row reveal">
-      <div class="ftext">
-        <div class="eyebrow-tag">Atendimento</div>
-        <h3>WhatsApp por setor, nada se perde</h3>
-        <p class="desc">Cada conversa vai para o setor responsável. O admin assume qualquer atendimento, transfere entre setores e acompanha tudo em tempo real.</p>
-        <ul class="flist-new">
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Organização por setor e status da conversa</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Texto, imagem, áudio e documento</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Resumo automático quando a conversa troca de setor</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="feature-row reveal">
-      <div class="ftext">
-        <div class="eyebrow-tag">Prazos e tarefas</div>
-        <h3>A rotina do mês se recria sozinha</h3>
-        <p class="desc">Agenda de prazos com alerta para o setor responsável, quadro de tarefas com checklist e tarefas recorrentes que voltam todo mês.</p>
-        <ul class="flist-new">
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Alertas para a equipe antes de cada prazo</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Tarefa que se conclui sozinha quando a guia é enviada</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Sincronização com o Google Agenda</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="feature-row reveal">
-      <div class="ftext">
-        <div class="eyebrow-tag">Clientes</div>
-        <h3>Cadastro completo sem digitar</h3>
-        <p class="desc">Digite o CNPJ e o cadastro se preenche. Traga a carteira inteira por planilha e organize em grupos para os envios.</p>
-        <ul class="flist-new">
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Dados puxados direto pelo CNPJ</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Importação da carteira por planilha</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Grupos de clientes para envio e organização</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="feature-row reveal">
-      <div class="ftext">
-        <div class="eyebrow-tag">Agente de IA</div>
-        <h3>Um atendente no WhatsApp que entrega a guia</h3>
-        <p class="desc">Com o agente ativo, quando o cliente pede a guia ele procura, informa o valor e o vencimento e envia o arquivo ali mesmo. As dúvidas frequentes ele responde e o resto passa para o setor certo.</p>
-        <ul class="flist-new">
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Envia DAS, DARF, boletos e notas do próprio cliente, na conversa</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Nunca mostra documento de outro cliente nem material interno</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Responde com as regras do seu escritório</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Passa para uma pessoa a qualquer momento</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Configuração simples, sem código</li>
-        </ul>
-      </div>
-    </div>
-  </div>
+    <div class="sol-grid-foot reveal"><a class="btn btn-outline" href="solucoes.html">Ver todas as soluções <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div>
   </div>
 </section>
 
@@ -1859,7 +1814,7 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
       <div class="foot-col">
         <h5>Produto</h5>
         <ul>
-          <li><a href="#funcionalidades">Funcionalidades</a></li>
+          <li><a href="solucoes.html">Soluções</a></li>
           <li><a href="#integracoes">Integrações</a></li>
           <li><a href="#faq">FAQ</a></li>
         </ul>
