@@ -1,43 +1,48 @@
 # Cubis.Hub
 
-> Cubis.Hub é uma plataforma white label de gestão contábil que centraliza atendimento por WhatsApp, envio de relatórios para a carteira de clientes do escritório, prazos fiscais e documentos para escritórios de contabilidade no Brasil.
+> Cubis.Hub é uma plataforma para escritórios de contabilidade no Brasil que junta o módulo fiscal integrado à Receita Federal (SERPRO, Integra Contador), a emissão e o envio de guias em lote pelo WhatsApp, inclusive para grupos de clientes, o aviso de vencimento, a captura de XML de notas fiscais, um portal para o cliente e agentes de IA.
 
-Cubis.Hub resolve a rotina operacional de escritórios contábeis que atendem uma carteira grande de clientes todo mês: comunicação espalhada em vários números de WhatsApp, envio manual de guias e relatórios, prazos fiscais perdidos e documentos desorganizados. A plataforma reúne tudo em um único painel, com automação e um assistente de IA embarcado.
+O escritório contábil gasta boa parte do mês em tarefa repetida: abrir o e-CAC cliente por cliente, gerar e mandar guia uma por uma, lembrar o cliente do vencimento, juntar XML no fim do mês e reenviar documento que o cliente diz não ter recebido. O Cubis.Hub faz esse trabalho em lote, numa tela só.
 
 ## O que é
 
-- Software SaaS (web) para escritórios de contabilidade, sob o domínio app.cubishub.com.br
-- Modelo de assinatura mensal ou anual, com teste grátis de 7 dias, sem cartão de crédito
+- Software SaaS (web) para escritórios de contabilidade, em app.cubishub.com.br
+- Assinatura mensal ou anual (15% de desconto no anual), sem fidelidade
+- Teste grátis de 7 dias, sem cartão de crédito. Depois do formulário, o contato chega pelo WhatsApp para liberar o acesso; em menos de uma semana o escritório já está usando
 
 ## Para quem
 
-- Escritórios de contabilidade e contadores autônomos no Brasil que atendem uma carteira de clientes pessoa jurídica e/ou pessoa física
-- Equipes que precisam organizar atendimento por setor (fiscal, pessoal, societário, financeiro) e enviar comunicados/relatórios recorrentes aos clientes contratantes do escritório
+- Escritórios de contabilidade e contadores que atendem uma carteira de clientes do Simples Nacional, MEI e outras empresas
+- Equipes que atendem pelo WhatsApp, separadas por setor (fiscal, pessoal, societário, financeiro)
 
-## O que entregamos
+## O que a plataforma faz
 
-- **Leitura automática de documentos com IA**: o escritório sobe as guias em lote e a plataforma lê cada arquivo (inclusive PDF escaneado, via OCR), identifica o tipo de documento, extrai vencimento, competência e valor, encontra o cliente dono do arquivo por CNPJ, nome ou nome do arquivo, e monta a mensagem de envio pronta para conferência
-- **Atendimento por WhatsApp organizado por setor**: central integrada com WhatsApp Cloud API oficial (Meta) e conexão via QR Code, conversas roteadas por setor, histórico completo, texto/áudio/imagem/documento na mesma conversa, e transferência entre times com resumo automático da conversa gerado por IA
-- **Envio em lote de relatórios e guias**: destinatários são sempre clientes cadastrados na carteira do próprio escritório; associação automática de arquivo por nome do cliente, mensagens com variáveis, agendamento, rascunhos, recorrência mensal e envio para grupos de WhatsApp
-- **Agentes de IA especializados**: cinco agentes publicados para as dúvidas do dia a dia contábil: Reforma Tributária (IBS, CBS, CST, cClassTrib), Classificação Fiscal (NCM, CFOP, CEST, DIFAL), Simples Nacional e Fator R, Departamento Pessoal (convenção coletiva, jornada, rescisão, eSocial) e Atendimento ao Cliente
-- **Agentes próprios do escritório**: cada escritório cria seus próprios agentes, com instruções, tom e conhecimento próprios, sem código, disponíveis para toda a equipe, com custo por uso visível no painel
-- **Relatório de gestão com IA**: a IA percorre o painel (tarefas, prazos, envios e carga de trabalho por membro) e gera um relatório de gestão para o administrador do escritório
-- **Prazos fiscais**: calendário com templates recorrentes, alertas automáticos D-7/D-3/D-1, sincronização bidirecional com Google Calendar
-- **Documentos organizados**: repositório por cliente, categorias, versionamento, envio direto pelo WhatsApp a partir do arquivo
-- **Kanban de tarefas**: quadro configurável para a operação interna, com checklist etapa por etapa, comentários, responsáveis e tarefas recorrentes que se recriam a cada período sem precisar cadastrar de novo
-- **Mural de notas e mapa mental**: mural de anotações para a rotina do dia a dia e mapa mental para desenhar os processos do escritório, ambos dentro do quadro de tarefas
-- **Cadastro de clientes**: consulta automática de dados por CNPJ, importação em lote via CSV, organização em grupos
-- **Agente de IA para atendimento**: agente configurável sem código para responder dúvidas frequentes no WhatsApp do escritório, 24h, com transferência para humano a qualquer momento
-- **Assistente de IA interno (copiloto contábil)**: consultas em linguagem natural sobre clientes, Simples Nacional, prazos fiscais, simulação tributária, correção IPCA/SELIC, reforma tributária, NF-e/NFS-e, NCM/CFOP, score de risco e faturamento do escritório
+- **Módulo Fiscal com o SERPRO (Integra Contador)**: canal oficial, sem robô entrando no e-CAC. Usa o certificado digital do escritório e as procurações eletrônicas que os clientes deram ao escritório no e-CAC (a plataforma confere em lote quem está sem procuração). Monitor fiscal da carteira inteira, situação fiscal (SITFIS), Caixa Postal do e-CAC verificada todo dia com aviso de mensagem nova, PGDAS-D, DCTFWeb (conferência e transmissão), DEFIS, parcelamentos (PARCSN, PARCMEI, PERT, RELP), pagamentos, dívida ativa do MEI e medidor do sublimite do Simples
+- **Emissão de guias em lote**: DAS, DAS MEI, DARF, DCTFWeb e parcelamento para a carteira inteira. O usuário confere e envia
+- **Envio em lote**: o usuário arrasta as guias, cada arquivo encontra o cliente dono dele e a mensagem sai com o nome de cada um. Envio no contato e no grupo de WhatsApp do cliente, por e-mail e por Telegram; na hora, agendado ou com recorrência mensal
+- **Aviso de vencimento ao cliente**: no envio, o usuário marca avisos para 3 dias antes, véspera e o dia do vencimento, lido na própria guia; a plataforma avisa o cliente automaticamente
+- **Conferência de pagamento e cobrança**: o pagamento da guia é conferido no SERPRO; quem não pagou entra numa régua de cobrança por WhatsApp e e-mail
+- **XML de NF-e e NFS-e**: captura automática das notas emitidas e recebidas de cada cliente, ZIP organizado por mês, cliente (com CNPJ), emitidas/recebidas e NF-e/NFS-e, e análise de itens e retenções
+- **Portal do cliente**: link próprio para cada cliente, sem senha (confirmação pelos 4 últimos dígitos do WhatsApp), com guias e boletos, próximos vencimentos, código de barras, marcar guia como paga, notas fiscais (XML e PDF) e comunicados do escritório
+- **Leitura automática de documentos com IA**: lê cada guia (inclusive PDF escaneado), identifica o tipo, extrai vencimento, competência e valor, encontra o cliente pelo CNPJ, nome ou arquivo e monta a mensagem de envio
+- **Agente de IA no WhatsApp**: quando ativado, responde dúvidas frequentes, consulta as guias do próprio cliente (DAS, DARF, boletos, notas) e envia o arquivo na conversa; não vê documento de outro cliente nem material interno; passa para uma pessoa a qualquer momento
+- **Agentes especialistas**: Reforma Tributária, Classificação Fiscal, Simples Nacional e Fator R, Situação Fiscal, Guias e Obrigações, Cálculos e Correção. Consultam a carteira, a situação na Receita e os documentos antes de responder. O escritório também cria agentes próprios, sem código
+- **Assistente de IA**: perguntas em linguagem natural sobre clientes, prazos, situação fiscal, simulação do Simples, correção por IPCA e SELIC, NCM e CFOP e status dos envios
+- **Relatórios e notificações com IA**: relatório de gestão do escritório e notificações de prazo com a leitura da IA sobre o que priorizar
+- **Atendimento por WhatsApp por setor**: um número do escritório conectado por QR Code, conversas por setor, histórico, resumo automático quando a conversa troca de setor
+- **Documentos**: pastas montadas sozinhas por setor, cliente e categoria, com versões e envio em um clique
+- **Prazos e tarefas**: agenda de prazos com alerta para a equipe, board com checklist, tarefas recorrentes, tarefa concluída sozinha quando a guia é enviada e sincronização com o Google Agenda
+- **Clientes**: cadastro pelo CNPJ e importação por planilha
 
-## Diferenciais
+## Planos
 
-- Plataforma única para toda a operação do escritório (não é só um disparador de mensagens)
-- A IA não é apenas um chat: ela lê os documentos, vincula ao cliente e escreve a mensagem antes do usuário pedir
-- Agentes de IA especializados na rotina contábil brasileira, além de agentes criados pelo próprio escritório
-- Envio da carteira inteira em minutos, não horas
-- Zero prazos perdidos com alertas automáticos
-- Conexão oficial com a Meta para WhatsApp, além de integração com Google Calendar
+Todos os planos têm a plataforma inteira; muda o tamanho (clientes, equipe, números de WhatsApp, envios e créditos de IA).
+
+- Essencial: R$ 179/mês, até 300 clientes, 5 membros, 5 números de WhatsApp, 300 envios em massa/mês, 150 créditos de IA/mês
+- Scale: R$ 397/mês, até 500 clientes, 10 membros, 10 números de WhatsApp, 600 envios em massa/mês, 300 créditos de IA/mês
+- Pro: R$ 697/mês, até 1500 clientes, 20 membros, 20 números de WhatsApp, 1800 envios em massa/mês, 900 créditos de IA/mês
+
+Créditos de IA são consumidos pelo assistente, pelos agentes e pelos relatórios de IA. As consultas e emissões no SERPRO são cobradas pelo próprio SERPRO, não pelo Cubis.Hub.
 
 ## Páginas
 

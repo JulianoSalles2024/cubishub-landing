@@ -74,7 +74,7 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Cubis.Hub | O escritório contábil inteiro em uma tela só</title>
-<meta name="description" content="Atendimento por WhatsApp, envio de relatórios para toda a carteira de clientes do escritório, prazos fiscais e documentos. A plataforma white label para escritórios de contabilidade." />
+<meta name="description" content="Guias emitidas pelo SERPRO e enviadas em lote no WhatsApp, inclusive nos grupos dos clientes. Aviso de vencimento, XML, portal do cliente e agentes de IA para escritórios de contabilidade. Teste 7 dias grátis." />
 <link rel="canonical" href="https://cubishub.com.br/" />
 <meta name="google-site-verification" content="qyxFXVbZ046ZMRCxJ17a0ruOamdpgJodCg41jpuW8jw" />
 
@@ -83,14 +83,14 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
 <meta property="og:site_name" content="Cubis.Hub" />
 <meta property="og:url" content="https://cubishub.com.br/" />
 <meta property="og:title" content="Cubis.Hub | O escritório contábil inteiro em uma tela só" />
-<meta property="og:description" content="WhatsApp por setor, envio de relatórios para a carteira de clientes do escritório e prazos fiscais com alerta inteligente. Tudo em um lugar." />
+<meta property="og:description" content="Guias do SERPRO enviadas em lote no WhatsApp, inclusive nos grupos dos clientes. Aviso de vencimento, XML, portal do cliente e agentes de IA para o seu escritório contábil." />
 <meta property="og:image" content="https://cubishub.com.br/assets/og-image.png" />
 <meta property="og:image:type" content="image/png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Cubis.Hub | O escritório contábil inteiro em uma tela só" />
-<meta name="twitter:description" content="WhatsApp por setor, envio de relatórios para a carteira de clientes do escritório e prazos fiscais com alerta inteligente. Tudo em um lugar." />
+<meta name="twitter:description" content="Guias do SERPRO enviadas em lote no WhatsApp, inclusive nos grupos dos clientes. Aviso de vencimento, XML, portal do cliente e agentes de IA para o seu escritório contábil." />
 <meta name="twitter:image" content="https://cubishub.com.br/assets/og-image.png" />
 
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
@@ -112,8 +112,34 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
   "name": "Cubis.Hub",
   "applicationCategory": "BusinessApplication",
   "operatingSystem": "Web",
-  "description": "Gestão contábil que centraliza atendimento por WhatsApp organizado por setor, envio de relatórios em lote para os clientes contratantes do escritório, prazos fiscais com alertas automáticos e documentos por cliente, com assistente de IA embarcado.",
-  "url": "https://cubishub.com.br/"
+  "description": "Plataforma para escritórios de contabilidade: módulo fiscal integrado ao SERPRO (Integra Contador), emissão e envio de guias em lote pelo WhatsApp, inclusive para grupos, e-mail e Telegram, aviso de vencimento e cobrança, captura de XML de NF-e e NFS-e, portal do cliente e agentes de IA.",
+  "url": "https://cubishub.com.br/",
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "Essencial",
+      "price": "179.00",
+      "priceCurrency": "BRL",
+      "url": "https://cubishub.com.br/#planos",
+      "category": "subscription"
+    },
+    {
+      "@type": "Offer",
+      "name": "Scale",
+      "price": "397.00",
+      "priceCurrency": "BRL",
+      "url": "https://cubishub.com.br/#planos",
+      "category": "subscription"
+    },
+    {
+      "@type": "Offer",
+      "name": "Pro",
+      "price": "697.00",
+      "priceCurrency": "BRL",
+      "url": "https://cubishub.com.br/#planos",
+      "category": "subscription"
+    }
+  ]
 }
 </script>
 <script type="application/ld+json">
@@ -123,48 +149,107 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Preciso instalar algo para usar o WhatsApp?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Não. A conexão é feita lendo um QR Code, usando o mesmo número que o escritório já utiliza no WhatsApp. Sem instalar aplicativos extras ou trocar de número." }
+      "name": "Meus clientes precisam dar procuração no e-CAC?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim, para a parte fiscal. A consulta à Receita usa o certificado digital do escritório e só funciona para os clientes que deram procuração eletrônica ao escritório no e-CAC. A plataforma confere isso em lote e mostra quem ainda está sem procuração, para você pedir só a esses."
+      }
     },
     {
       "@type": "Question",
-      "name": "Como funcionam os disparos de WhatsApp?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Você dispara documentos e mensagens pra um cliente individual ou em massa pra vários de uma vez, e também pra grupos de WhatsApp. Dá pra mandar na hora, agendar pra data e horário específicos, ou deixar numa recorrência mensal/semanal automática, sem precisar entrar de novo pra reenviar todo mês." }
+      "name": "Como funciona a integração com a Receita Federal?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "É pelo Integra Contador, o canal oficial do SERPRO, sem robô entrando no e-CAC. Você vê a situação fiscal, as declarações, os parcelamentos e a Caixa Postal de cada cliente, emite guias como DAS, DAS MEI, DARF e parcelamento em lote e depois envia tudo pelo WhatsApp de uma vez."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "As consultas à Receita têm custo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "As consultas e emissões passam pelo SERPRO, e a cobrança delas é feita pelo próprio SERPRO, não pelo Cubis.Hub. A mensalidade do Cubis.Hub cobre a plataforma."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Como funciona o envio em massa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Você arrasta as guias do mês, cada arquivo encontra o cliente dono dele e a mensagem sai com o nome de cada um. Dá para enviar no contato, no grupo de WhatsApp do cliente, por e-mail e por Telegram, na hora, agendado ou repetindo todo mês. Na hora do envio você ainda marca os avisos de vencimento."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Meu número de WhatsApp pode ser bloqueado?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Os envios saem espaçados, um de cada vez, e cada plano tem um limite de envios por dia por número. As mensagens vão só para clientes do próprio escritório, que já conhecem o seu número. Isso reduz bastante o risco, mas nenhuma ferramenta que usa WhatsApp por QR Code pode garantir risco zero."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Preciso instalar algo para usar o WhatsApp?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Não. A conexão é feita lendo um QR Code, com o número que o escritório já usa. Sem aplicativo extra e sem trocar de número."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O cliente precisa instalar algo para usar o portal?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Não. Ele recebe um link, confirma com os 4 últimos dígitos do WhatsApp cadastrado e vê as guias, as notas fiscais e os comunicados pelo navegador, no celular ou no computador."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O agente de IA responde sozinho no WhatsApp?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Só se você ativar. Ligado, ele responde as dúvidas frequentes, consulta as guias do próprio cliente e envia o arquivo quando ele pede. Documento de outro cliente ou material interno ele não enxerga. A qualquer momento a conversa passa para uma pessoa da equipe."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O que são os créditos de IA do plano?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "São o que o assistente, os agentes e os relatórios de IA consomem quando trabalham para você. Cada plano traz uma quantidade por mês e o painel mostra quanto já foi usado. Consultas à Receita, envios e o resto da plataforma não gastam crédito de IA."
+      }
     },
     {
       "@type": "Question",
       "name": "O teste grátis de 7 dias pede cartão de crédito?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Não. Você deixa seus dados, um consultor ativa seu acesso rapidamente e você testa todas as funcionalidades do plano por 7 dias sem informar cartão. Só é cobrado se decidir continuar." }
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Não. Você deixa seu contato, recebe uma mensagem no WhatsApp para liberar o acesso e usa por 7 dias sem informar cartão. Só paga se decidir continuar."
+      }
     },
     {
       "@type": "Question",
-      "name": "Como funciona a integração com a Receita Federal (SERPRO)?",
-      "acceptedAnswer": { "@type": "Answer", "text": "O Cubis Hub se conecta oficialmente ao Integra Contador da SERPRO usando a procuração eletrônica do seu escritório no e-CAC. A partir daí, acompanhamos as obrigações e declarações de cada cliente automaticamente (PGDAS, DCTFWeb, parcelamentos, certidões e outras pendências), direto da fonte oficial, sem abrir o e-CAC um por um. Guias oficiais (DAS e parcelamento) já saem emitidas e prontas pra mandar pelo WhatsApp do cliente." }
-    },
-    {
-      "@type": "Question",
-      "name": "Consigo migrar os clientes que já atendo hoje?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Sim. Você importa sua carteira de clientes via CSV de uma vez só e já organiza por setor, tag e responsável." }
+      "name": "Consigo trazer os clientes que já atendo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. Importe a planilha de clientes ou digite os CNPJs: o cadastro se completa com os dados públicos da empresa e já fica separado por setor e responsável."
+      }
     },
     {
       "@type": "Question",
       "name": "Os dados do escritório e dos clientes ficam seguros?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Sim. Os dados trafegam criptografados e o acesso é isolado por escritório, seguindo os princípios da LGPD. Cada usuário só vê o que tem permissão." }
-    },
-    {
-      "@type": "Question",
-      "name": "Posso trocar de plano ou cancelar quando quiser?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Sim, o upgrade, downgrade e cancelamento podem ser feitos a qualquer momento direto na plataforma, sem multa e sem burocracia." }
-    },
-    {
-      "@type": "Question",
-      "name": "Como funciona o agente de atendimento com IA?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Você configura o agente com as informações do seu escritório e ele responde dúvidas frequentes dos clientes no WhatsApp automaticamente, transferindo para um humano sempre que necessário." }
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. Os dados trafegam criptografados, o acesso é isolado por escritório e cada usuário só vê o que tem permissão. No portal, cada cliente enxerga apenas os próprios documentos."
+      }
     },
     {
       "@type": "Question",
       "name": "Se eu tiver dúvidas, como falo com o suporte?",
-      "acceptedAnswer": { "@type": "Answer", "text": "É só chamar pelo WhatsApp ou e-mail de suporte informados dentro da plataforma. Nossa equipe responde diretamente, sem robôs de atendimento no meio do caminho." }
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "É só chamar pelo WhatsApp ou e-mail de suporte informados dentro da plataforma. Nossa equipe responde diretamente, sem robô no meio do caminho."
+      }
     }
   ]
 }
@@ -178,12 +263,12 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
     /* Brand �?" forest green / sage (espelha o design system da plataforma) */
     --green:        #2ECC71;
     --green-light:  #3DDA85;
-    --green-deep:   #1F8F52;
+    --green-deep:   #18733F;
     --sage:         #5A7470;
     --sage-light:   #6A8481;
 
     --ink:          #141A18;   /* foreground light */
-    --ink-soft:     #6B817C;   /* muted-foreground light */
+    --ink-soft:     #566B66;   /* muted-foreground light */
 
     --bg:           #F2F6F4;   /* background light */
     --card:         #FFFFFF;
@@ -253,7 +338,7 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
   .btn svg { width: 18px; height: 18px; }
   .btn-primary {
     background: linear-gradient(135deg, var(--green-light), var(--green));
-    color: #fff; box-shadow: 0 8px 24px -8px rgba(46,204,113,0.6);
+    color: #08130D; box-shadow: 0 8px 24px -8px rgba(46,204,113,0.6);
   }
   .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 14px 32px -8px rgba(46,204,113,0.7); }
   .btn-ghost {
@@ -306,6 +391,17 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
   .nav-cta { display: flex; align-items: center; gap: 14px; }
   .nav-login { font-size: 0.9rem; color: var(--dark-fg); font-weight: 500; }
   .btn-sm { height: 40px; padding: 0 18px; font-size: 0.88rem; }
+  .stickybar { position: fixed; top: 0; left: 0; right: 0; z-index: 150; background: rgba(20,23,21,0.94); border-bottom: 1px solid var(--dark-border); transform: translateY(-100%); visibility: hidden; transition: transform .35s cubic-bezier(.16,1,.3,1), visibility 0s linear .35s; }
+  .stickybar.show { transform: none; visibility: visible; transition: transform .35s cubic-bezier(.16,1,.3,1), visibility 0s; }
+  .stickybar-in { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+  .stickybar-brand { display: flex; align-items: center; gap: 8px; font-weight: 800; color: var(--dark-fg); letter-spacing: -0.02em; }
+  .stickybar-brand img { height: 26px; width: auto; }
+  .stickybar-brand .hub { color: var(--green); }
+  .stickybar-actions { display: flex; align-items: center; gap: 20px; }
+  .stickybar-link { font-size: 0.88rem; font-weight: 500; color: var(--dark-muted); }
+  .stickybar-link:hover { color: var(--dark-fg); }
+  @media (max-width: 560px) { .stickybar-link { display: none; } .stickybar-in { height: 56px; } }
+  @media (prefers-reduced-motion: reduce) { .stickybar, .stickybar.show { transition: none; } }
   .menu-toggle { display: none; background: none; border: none; color: var(--dark-fg); cursor: pointer; }
 
   /* Hero content �?" centralizado */
@@ -381,7 +477,7 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
   .tag.wait { background: rgba(243,156,18,0.16); color: #F5B656; }
 
   /* �.��.��.� PROOFBAR �.��.��.� */
-  .proofbar { background: var(--dots-dark) 0 0 / 26px 26px, var(--dark); border-bottom: 1px solid var(--dark-border); }
+  .proofbar { background: var(--dots-dark) 0 0 / 26px 26px, var(--dark); border-bottom: 1px solid var(--dark-border); position: relative; }
   .proofbar-grid { display: grid; grid-template-columns: repeat(4,1fr); }
   .proofbar-item { padding: 30px 28px; border-right: 1px solid var(--dark-border); position: relative; transition: background .2s; }
   .proofbar-item:last-child { border-right: none; }
@@ -395,62 +491,52 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
   /* �.��.��.� BENTO BENEFITS �.��.��.� */
   .section-bento { background: var(--dots-light) 0 0 / 26px 26px, var(--bg); padding: 100px 0; position: relative; overflow: hidden; }
   .bento-header { margin-bottom: 52px; }
-  .bento-header .blabel { font-size: 0.72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--green-deep); margin-bottom: 12px; }
   .bento-header h2 { font-size: clamp(2rem, 3.4vw, 2.8rem); font-weight: 800; letter-spacing: -0.03em; max-width: 520px; line-height: 1.1; color: var(--ink); }
-  .bento-grid { display: grid; grid-template-columns: repeat(12,1fr); gap: 14px; }
-  .bento-card { border-radius: 20px; padding: 30px; position: relative; overflow: hidden; display: flex; flex-direction: column; gap: 14px; transition: transform .25s ease, box-shadow .25s ease; }
-  .bento-card:hover { transform: translateY(-4px); }
-  .bento-card.b1 { grid-column: 1 / 8; background: var(--dark); color: var(--dark-fg); min-height: 300px; }
-  .bento-card.b2 { grid-column: 8 / 13; background: var(--card); border: 1px solid var(--border); }
-  .bento-card.b3 { grid-column: 1 / 6; background: var(--card); border: 1px solid var(--border); }
-  .bento-card.b4 { grid-column: 6 / 13; background: linear-gradient(135deg, rgba(46,204,113,0.07), rgba(31,143,82,0.03)); border: 1px solid rgba(46,204,113,0.18); }
-  .bento-card.b1:hover { box-shadow: 0 24px 60px -16px rgba(0,0,0,0.45); }
-  .bento-card.b2:hover, .bento-card.b3:hover { box-shadow: 0 20px 48px -12px rgba(20,26,24,0.12); }
-  .bento-card.b4:hover { box-shadow: 0 20px 48px -12px rgba(46,204,113,0.14); }
-  .bento-num { font-size: 4.5rem; font-weight: 800; letter-spacing: -0.04em; line-height: 1; opacity: .1; position: absolute; top: 16px; right: 22px; color: var(--ink); pointer-events: none; }
-  .bento-card.b1 .bento-num { color: var(--green-light); opacity: .18; }
-  .bento-card.b4 .bento-num { color: var(--green-deep); }
-  .bento-icon { width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; background: rgba(46,204,113,0.12); flex-shrink: 0; }
-  .bento-card.b1 .bento-icon { background: rgba(46,204,113,0.2); }
-  .bento-icon svg { width: 22px; height: 22px; color: var(--green-deep); }
-  .bento-card.b1 .bento-icon svg { color: var(--green-light); }
-  .bento-title { font-size: 1.15rem; font-weight: 700; letter-spacing: -0.02em; color: var(--ink); }
-  .bento-card.b1 .bento-title { color: var(--dark-fg); }
-  .bento-desc { font-size: 0.9rem; color: var(--ink-soft); line-height: 1.6; flex: 1; }
-  .bento-card.b1 .bento-desc { color: var(--dark-muted); }
-  .bento-chat { display: flex; flex-direction: column; gap: 8px; margin-top: 4px; }
-  .bc-msg { padding: 9px 13px; border-radius: 12px; font-size: 0.82rem; max-width: 80%; }
-  .bc-msg.them { background: rgba(255,255,255,0.07); color: #C3D0CC; border-bottom-left-radius: 3px; }
-  .bc-msg.us { background: var(--green); color: #fff; border-bottom-right-radius: 3px; align-self: flex-end; }
+  .bento-header { text-align: center; max-width: 640px; margin: 0 auto 44px; }
+  .bento-header p { font-size: 1.05rem; color: var(--ink-soft); margin-top: 14px; }
+  .section-portal { background: var(--dots-light) 0 0 / 26px 26px, #EAF3EF; padding: 100px 0; }
+  .portal-header { text-align: center; max-width: 680px; margin: 0 auto 48px; }
+  .portal-header h2 { font-size: clamp(2rem,3.4vw,2.8rem); font-weight: 800; letter-spacing: -0.03em; margin-bottom: 14px; }
+  .portal-header p { font-size: 1.05rem; color: var(--ink-soft); }
+  .pt-grid { display: grid; grid-template-columns: repeat(3,1fr); max-width: 980px; margin: 0 auto; background: var(--card); border: 1px solid var(--border); border-radius: 20px; }
+  .pt-col { padding: 30px 30px 32px; }
+  .pt-col + .pt-col { border-left: 1px solid var(--border); }
+  .pt-col h3 { font-size: 1.1rem; font-weight: 700; letter-spacing: -0.015em; margin-bottom: 16px; }
+  .pt-col ul { list-style: none; display: flex; flex-direction: column; gap: 11px; }
+  .pt-col li { display: flex; gap: 9px; align-items: flex-start; font-size: 0.92rem; line-height: 1.5; color: var(--ink); }
+  .pt-col li svg { width: 12px; height: 12px; color: var(--green-deep); flex-shrink: 0; margin-top: 5px; }
+  .pt-note { text-align: center; margin-top: 28px; font-size: 1rem; font-weight: 600; color: var(--ink); }
+  @media (max-width: 800px) { .pt-grid { grid-template-columns: 1fr; } .pt-col + .pt-col { border-left: none; border-top: 1px solid var(--border); } .section-portal { padding: 64px 0; } }
+  .vs { max-width: 980px; margin: 0 auto; border: 1px solid var(--border); border-radius: 20px; overflow: hidden; background: var(--card); }
+  .vs-row { display: grid; grid-template-columns: 1fr 1fr; }
+  .vs-row + .vs-row { border-top: 1px solid var(--border); }
+  .vs-old, .vs-new { display: flex; align-items: flex-start; gap: 12px; padding: 18px 26px; font-size: 0.95rem; line-height: 1.5; }
+  .vs-old { color: var(--ink-soft); }
+  .vs-new { color: var(--ink); font-weight: 600; background: rgba(46,204,113,0.06); border-left: 1px solid var(--border); }
+  .vs-head .vs-old, .vs-head .vs-new { font-size: 0.8rem; font-weight: 700; letter-spacing: .04em; padding-top: 16px; padding-bottom: 16px; }
+  .vs-head .vs-new { color: var(--green-deep); }
+  .vs-ic { width: 20px; height: 20px; border-radius: 50%; display: grid; place-items: center; flex-shrink: 0; margin-top: 1px; }
+  .vs-ic svg { width: 10px; height: 10px; }
+  .vs-old .vs-ic { background: rgba(20,26,24,0.06); color: var(--ink-soft); }
+  .vs-new .vs-ic { background: rgba(46,204,113,0.16); color: var(--green-deep); }
+  @media (max-width: 700px) { .vs-row { grid-template-columns: 1fr; } .vs-new { border-left: none; } .vs-head { display: none; } .vs-old { padding-bottom: 6px; } .vs-new { padding-top: 10px; } }
 
   /* �.��.��.� FEATURES �.��.��.� */
   .section-features { background: var(--dots-light) 0 0 / 26px 26px, linear-gradient(180deg,#EAF3EF 0%,var(--bg) 100%); padding: 100px 0; }
   .features-header { text-align: center; max-width: 600px; margin: 0 auto 72px; }
   .features-header h2 { font-size: clamp(2rem,3.4vw,2.8rem); font-weight: 800; letter-spacing: -0.03em; margin: 12px 0 14px; }
   .features-header p { font-size: 1.05rem; color: var(--ink-soft); }
-  .feature-row { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; margin-bottom: 96px; }
-  .feature-row:last-child { margin-bottom: 0; }
-  .feature-row.rev .ftext { order: 2; }
+  .features-list { display: grid; grid-template-columns: 1fr 1fr; column-gap: 72px; }
+  .feature-row { padding: 40px 0; border-top: 1px solid var(--border); }
   .eyebrow-tag { display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--green-deep); border-left: 3px solid var(--green); padding-left: 10px; margin-bottom: 20px; }
-  .ftext h3 { font-size: clamp(1.6rem,2.5vw,2.1rem); font-weight: 800; letter-spacing: -0.03em; margin-bottom: 14px; }
+  .ftext h3 { font-size: clamp(1.35rem,1.9vw,1.65rem); font-weight: 800; letter-spacing: -0.03em; margin-bottom: 14px; }
   .ftext .desc { font-size: 1rem; color: var(--ink-soft); margin-bottom: 24px; line-height: 1.65; }
   .flist-new { list-style: none; display: flex; flex-direction: column; gap: 12px; }
   .flist-new li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.94rem; color: var(--ink); }
   .flist-new li .chk { width: 20px; height: 20px; border-radius: 50%; background: rgba(46,204,113,0.14); display: grid; place-items: center; flex-shrink: 0; margin-top: 1px; }
   .flist-new li .chk svg { width: 10px; height: 10px; color: var(--green-deep); }
 
-  .fvisual-new { background: linear-gradient(155deg,#fff 0%,#EAF3EF 100%); border: 1px solid var(--border); border-radius: 20px; padding: 26px; box-shadow: 0 20px 60px -20px rgba(20,26,24,0.14), inset 0 2px 0 rgba(46,204,113,0.08); min-height: 300px; display: flex; flex-direction: column; gap: 11px; position: relative; overflow: hidden; }
-  .fvisual-new::before { content:''; position: absolute; top:-80px; right:-80px; width:240px; height:240px; border-radius:50%; background: radial-gradient(circle,rgba(46,204,113,0.1),transparent 70%); pointer-events:none; }
 
-  /* Video demos inside feature visuals */
-  .fvisual-new.has-video { padding: 0; }
-  .fvisual-chrome { display: flex; align-items: center; gap: 6px; padding: 14px 16px; position: relative; z-index: 2; }
-  .fvisual-chrome .d { width: 10px; height: 10px; border-radius: 50%; }
-  .fvisual-chrome .d1 { background: #E74C3C; } .fvisual-chrome .d2 { background: #F39C12; } .fvisual-chrome .d3 { background: var(--green); }
-  .fvisual-chrome .url { margin-left: 8px; font-size: 0.72rem; color: var(--ink-soft); font-family: ui-monospace, monospace; }
-  .fvisual-video-wrap { position: relative; z-index: 2; line-height: 0; background: #10130F; }
-  .fvisual-video { display: block; width: 100%; height: auto; opacity: 0; transition: opacity .4s ease; }
-  .fvisual-video.is-ready { opacity: 1; }
   .app-card { background: #fff; border: 1px solid rgba(90,116,112,0.13); border-radius: 14px; padding: 13px 15px; box-shadow: 0 2px 10px -3px rgba(20,26,24,0.07); position: relative; z-index: 2; }
   .app-card-header { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
   .app-card-title { font-size: 0.85rem; font-weight: 600; color: var(--ink); }
@@ -487,10 +573,11 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
   .work-header h2 { font-size: clamp(2rem,3.4vw,2.9rem); font-weight: 800; letter-spacing: -0.03em; color: var(--dark-fg); line-height: 1.1; margin-bottom: 16px; }
   .work-header p { font-size: 1.02rem; color: var(--dark-muted); line-height: 1.65; }
 
-  /* Linhas abertas — sem card, sem moldura. O mascote flutua no fundo da seção. */
-  .wrow { display: grid; grid-template-columns: 1fr 0.92fr; gap: 80px; align-items: center; position: relative; z-index: 2; padding: 44px 0; }
+  /* Linhas abertas: cabeça à esquerda, texto à direita, separadas por hairline. */
+  .wrow { display: block; position: relative; z-index: 2; padding: 44px 0; }
   .wrow + .wrow { border-top: 1px solid rgba(255,255,255,0.055); }
-  .wrow.rev .wtext { order: 2; }
+  .wtext { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 72px; align-items: start; }
+  .whead h3 { margin-bottom: 0; }
   .wtag { display: inline-block; font-size: 0.71rem; font-weight: 700; letter-spacing: .11em; text-transform: uppercase; color: var(--green); border-left: 3px solid var(--green); padding-left: 10px; margin-bottom: 18px; }
   .wtext h3 { font-size: clamp(1.5rem,2.5vw,2.1rem); font-weight: 700; color: var(--dark-fg); letter-spacing: -0.025em; line-height: 1.16; margin-bottom: 14px; }
   .wtext p { font-size: 1rem; color: var(--dark-muted); line-height: 1.68; }
@@ -500,11 +587,6 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
   .wlist .chk svg { width: 11px; height: 11px; }
 
   /* Arte com fundo transparente: nenhuma caixa, só o brilho da própria peça */
-  .wart { display: grid; place-items: center; }
-  .wart img { width: 100%; max-width: 430px; height: auto; display: block; filter: drop-shadow(0 26px 46px rgba(0,0,0,0.5)); animation: float-soft 7s ease-in-out infinite; }
-  .wart.wide img { max-width: 520px; }
-  @keyframes float-soft { 0%,100% { transform: translateY(-7px); } 50% { transform: translateY(7px); } }
-  @media (prefers-reduced-motion: reduce) { .wart img { animation: none; } }
 
   .agent-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
   .agent-chip { padding: 7px 13px; border-radius: 999px; font-size: 0.78rem; font-weight: 500; color: var(--dark-fg); opacity: .9; border: 1px solid var(--dark-border); background: rgba(255,255,255,0.03); transition: all .2s; }
@@ -522,42 +604,11 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
   @media (max-width: 900px) {
     .section-work { padding: 68px 0 12px; }
     .work-header { margin-bottom: 34px; }
-    .wrow { grid-template-columns: 1fr; gap: 28px; padding: 34px 0; }
-    .wrow .wart { order: -1; }
-    .wrow.rev .wtext { order: 0; }
-    .wart img, .wart.wide img { max-width: 290px; }
+    .wrow { padding: 34px 0; }
+    .wtext { grid-template-columns: 1fr; gap: 16px; }
   }
 
   /* �.��.��.� IA SECTION �.��.��.� */
-  .section-ai { background: var(--dots-dark) 0 0 / 26px 26px, var(--dark); padding: 100px 0; position: relative; overflow: hidden; }
-  .section-ai::before { content:''; position:absolute; top:-200px; left:50%; transform:translateX(-50%); width:800px; height:800px; border-radius:50%; background: radial-gradient(circle,rgba(46,204,113,0.07),transparent 60%); pointer-events:none; }
-  .ai-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
-  .ai-text .alabel { font-size: 0.72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--green); margin-bottom: 16px; }
-  .ai-text h2 { font-size: clamp(2.2rem,3.4vw,3rem); font-weight: 800; letter-spacing: -0.03em; color: var(--dark-fg); line-height: 1.08; margin-bottom: 18px; }
-  .ai-text p { font-size: 1rem; color: var(--dark-muted); line-height: 1.65; margin-bottom: 28px; }
-  .ai-tags { display: flex; flex-wrap: wrap; gap: 9px; }
-  .ai-tag { padding: 7px 14px; border-radius: 999px; font-size: 0.8rem; font-weight: 500; color: var(--dark-muted); border: 1px solid var(--dark-border); background: rgba(255,255,255,0.03); transition: all .2s; cursor: default; }
-  .ai-tag:hover { border-color: var(--green); color: var(--green-light); background: rgba(46,204,113,0.06); }
-  .ai-tag.hi { border-color: rgba(46,204,113,0.4); color: var(--green-light); background: rgba(46,204,113,0.08); }
-  .ai-window { background: var(--dark-2); border: 1px solid var(--dark-border); border-radius: 20px; overflow: hidden; box-shadow: 0 40px 80px -20px rgba(0,0,0,0.5); }
-  .ai-window.has-video { max-width: 400px; margin: 0 auto; }
-  .ai-window .fvisual-video { width: 100%; height: auto; display: block; opacity: 0; transition: opacity .4s ease; background: #10130F; }
-  .ai-window .fvisual-video.is-ready { opacity: 1; }
-  .ai-topbar { background: var(--dark-3); border-bottom: 1px solid var(--dark-border); padding: 13px 18px; display: flex; align-items: center; gap: 12px; }
-  .ai-dots { display: flex; gap: 6px; }
-  .ai-dot { width: 11px; height: 11px; border-radius: 50%; }
-  .ai-dot.r { background: #E74C3C; } .ai-dot.y { background: #F39C12; } .ai-dot.g { background: var(--green); }
-  .ai-dotlabel { font-size: 0.74rem; color: var(--dark-muted); font-family: ui-monospace,monospace; margin-left: 4px; }
-  .ai-body { padding: 20px 18px; display: flex; flex-direction: column; gap: 14px; }
-  .ai-msg { display: flex; gap: 10px; align-items: flex-start; }
-  .ai-av { width: 30px; height: 30px; border-radius: 8px; display: grid; place-items: center; flex-shrink: 0; font-size: 0.68rem; font-weight: 700; }
-  .ai-av.u { background: rgba(106,132,129,0.25); color: var(--dark-muted); }
-  .ai-av.a { background: linear-gradient(135deg,rgba(46,204,113,0.3),rgba(31,143,82,0.3)); color: var(--green-light); }
-  .ai-bubble { background: rgba(255,255,255,0.04); border: 1px solid var(--dark-border); border-radius: 12px; padding: 10px 14px; font-size: 0.82rem; color: var(--dark-muted); line-height: 1.5; flex: 1; }
-  .ai-bubble.a { background: rgba(46,204,113,0.06); border-color: rgba(46,204,113,0.15); color: #B4C8B8; }
-  .ai-bubble strong { color: var(--green-light); font-weight: 600; }
-  .ai-results { margin-top: 8px; padding-top: 8px; border-top: 1px solid rgba(46,204,113,0.12); display: flex; gap: 7px; flex-wrap: wrap; }
-  .air { background: rgba(46,204,113,0.1); border: 1px solid rgba(46,204,113,0.2); border-radius: 8px; padding: 4px 9px; font-size: 0.72rem; color: var(--green-light); }
   @keyframes blink { 0%,100%{opacity:.3;transform:scale(.8)} 50%{opacity:1;transform:scale(1)} }
   .tdot { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--green-light); animation: blink 1.2s ease-in-out infinite; margin-right: 3px; }
   .tdot:nth-child(2){animation-delay:.2s} .tdot:nth-child(3){animation-delay:.4s}
@@ -580,6 +631,12 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
   .integ-card-row .integ-card-body { flex: 1; min-width: 0; }
   .integ-card-row .integ-name { margin-bottom: 6px; }
   .integ-card-row .integ-pill { margin-top: 0; flex-shrink: 0; white-space: nowrap; }
+  .integ-trio { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+  .integ-trio .integ-card { padding: 30px 28px; display: flex; flex-direction: column; }
+  .integ-trio .integ-name { font-size: 1.2rem; }
+  .integ-trio .integ-pill { align-self: flex-start; margin-top: auto; }
+  .integ-trio .integ-desc { margin-bottom: 20px; }
+  @media (max-width: 900px) { .integ-trio { grid-template-columns: 1fr; } }
   @media (max-width: 640px) {
     .integ-card-row { flex-direction: column; align-items: flex-start; gap: 18px; }
     .integ-card-row .integ-pill { margin-left: 0; }
@@ -618,6 +675,31 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
   .serpro-list li .chk svg { width: 9px; height: 9px; color: var(--green-deep); }
   .serpro-note { text-align: center; margin-top: 40px; font-size: 0.88rem; color: var(--ink-soft); }
   .serpro-note strong { color: var(--green-deep); font-weight: 700; }
+  .cycle { list-style: none; display: grid; grid-template-columns: repeat(6,1fr); gap: 0; position: relative; margin: 8px 0 0; }
+  .cycle::before { content: ''; position: absolute; top: 15px; left: 0; right: 0; height: 1px; background: var(--border); }
+  .cy-step { position: relative; padding: 0 22px 0 0; display: flex; flex-direction: column; gap: 8px; }
+  .cy-n { position: relative; display: inline-grid; place-items: center; width: 31px; height: 31px; border-radius: 50%; background: var(--card); border: 1px solid rgba(46,204,113,0.45); font-family: ui-monospace,monospace; font-size: 0.72rem; font-weight: 700; color: var(--green-deep); font-variant-numeric: tabular-nums; margin-bottom: 10px; }
+  .cy-step h3 { font-size: 1.08rem; font-weight: 700; letter-spacing: -0.015em; color: var(--ink); }
+  .cy-step p { font-size: 0.88rem; line-height: 1.55; color: var(--ink); opacity: .78; }
+  .cy-who { align-self: flex-start; margin-top: 4px; font-size: 0.7rem; font-weight: 600; letter-spacing: .02em; padding: 3px 9px; border-radius: 999px; background: rgba(46,204,113,0.12); color: var(--green-deep); }
+  .cy-who.you { background: transparent; border: 1px solid var(--border); color: var(--ink); }
+  .cy-n { transition: background .3s ease, color .3s ease, border-color .3s ease, box-shadow .3s ease, transform .3s cubic-bezier(.16,1,.3,1); }
+  .cy-step h3 { transition: color .3s ease; }
+  .cy-step::after { content: ''; position: absolute; top: 15px; left: 31px; right: 0; height: 2px; margin-top: -0.5px; background: linear-gradient(90deg, var(--green), rgba(46,204,113,0)); transform: scaleX(0); transform-origin: left; transition: transform .45s cubic-bezier(.16,1,.3,1); pointer-events: none; }
+  .cy-step:hover .cy-n { background: var(--green); border-color: var(--green); color: #08130D; transform: scale(1.08); box-shadow: 0 6px 18px -4px rgba(46,204,113,0.55), 0 0 0 6px rgba(46,204,113,0.12); }
+  .cy-step:hover h3 { color: var(--green-deep); }
+  .cy-step:hover::after { transform: scaleX(1); }
+  @media (max-width: 1000px) { .cy-step::after { display: none; } }
+  @media (prefers-reduced-motion: reduce) { .cy-n, .cy-step h3, .cy-step::after { transition: none; } }
+  .serpro-more { margin-top: 56px; border-top: 1px solid var(--border); padding-top: 28px; }
+  .serpro-more summary { cursor: pointer; list-style: none; text-align: center; font-size: 0.95rem; font-weight: 600; color: var(--green-deep); }
+  .serpro-more summary::-webkit-details-marker { display: none; }
+  .serpro-more summary::after { content: ' +'; }
+  .serpro-more[open] summary::after { content: ' \2212'; }
+  .serpro-more summary:focus-visible { outline: 2px solid var(--green-deep); outline-offset: 4px; border-radius: 6px; }
+  .serpro-more[open] .serpro-grid { margin-top: 28px; }
+  @media (max-width: 1000px) { .cycle { grid-template-columns: repeat(3,1fr); row-gap: 36px; } .cycle::before { display: none; } }
+  @media (max-width: 600px) { .cycle { grid-template-columns: 1fr; row-gap: 0; } .cy-step { padding: 0 0 28px 46px; } .cy-n { position: absolute; left: 0; top: 0; } .cy-step:not(:last-child)::before { content: ''; position: absolute; left: 15px; top: 31px; bottom: 0; width: 1px; background: var(--border); } }
   @media (max-width: 960px) { .serpro-grid { grid-template-columns: 1fr 1fr; } }
   @media (max-width: 640px) { .serpro-grid { grid-template-columns: 1fr; } .serpro-card { padding: 22px 20px; } .section-serpro { padding: 64px 0; } }
 
@@ -636,7 +718,7 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
   .plan-card:hover { box-shadow: 0 20px 48px -12px rgba(20,26,24,0.12); transform: translateY(-3px); }
   .plan-card.feat { background: var(--dark); border-color: rgba(46,204,113,0.22); box-shadow: 0 24px 56px -16px rgba(46,204,113,0.18), inset 0 0 0 1px rgba(46,204,113,0.08); transform: scale(1.02); }
   .plan-card.feat:hover { transform: scale(1.02) translateY(-3px); box-shadow: 0 32px 70px -16px rgba(46,204,113,0.28), inset 0 0 0 1px rgba(46,204,113,0.12); }
-  .plan-badge { position: absolute; top:-13px; left:50%; transform:translateX(-50%); background: linear-gradient(135deg,var(--green-light),var(--green)); color:#fff; font-size:0.72rem; font-weight:700; padding:5px 16px; border-radius:999px; white-space:nowrap; letter-spacing:.02em; }
+  .plan-badge { position: absolute; top:-13px; left:50%; transform:translateX(-50%); background: linear-gradient(135deg,var(--green-light),var(--green)); color:#08130D; font-size:0.72rem; font-weight:700; padding:5px 16px; border-radius:999px; white-space:nowrap; letter-spacing:.02em; }
   .integ-badge-soon { position: absolute; top:20px; right:22px; background: rgba(245,158,11,0.16); color:#F59E0B; border:1px solid rgba(245,158,11,0.4); font-size:0.72rem; font-weight:700; padding:5px 14px; border-radius:999px; letter-spacing:.03em; z-index:3; }
   .plan-name { font-size: 1.35rem; font-weight: 800; letter-spacing: -0.02em; color: var(--ink); }
   .plan-card.feat .plan-name { color: var(--dark-fg); }
@@ -662,6 +744,16 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
   .fcheck svg { width: 10px; height: 10px; color: var(--green-deep); }
   .plan-btn { width: 100%; }
   .pricing-note { text-align: center; margin-top: 26px; font-size: 0.86rem; color: var(--ink-soft); }
+  .plan-incl { max-width: 880px; margin: 0 auto 40px; padding: 22px 28px; border: 1px solid var(--border); border-radius: 16px; background: var(--card); }
+  .plan-incl-title { font-size: 0.82rem; font-weight: 700; color: var(--ink); margin-bottom: 12px; text-align: center; }
+  .plan-incl ul { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 22px; }
+  .plan-incl li { display: flex; align-items: center; gap: 7px; font-size: 0.86rem; color: var(--ink); }
+  .plan-incl li svg { width: 12px; height: 12px; color: var(--green-deep); flex-shrink: 0; }
+  .plan-limits { flex: 1; }
+  .plan-try { margin-top: 12px; background: none; border: none; cursor: pointer; font-family: inherit; font-size: 0.86rem; font-weight: 600; color: var(--green-deep); text-decoration: underline; text-underline-offset: 3px; padding: 6px; }
+  .plan-card.feat .plan-try { color: var(--green-light); }
+  .plan-try:hover { text-decoration-thickness: 2px; }
+  .plan-try:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; border-radius: 6px; }
 
   /* ─── CTA ─── */
   .section-cta { background: var(--dark); padding: 120px 0; position: relative; overflow: hidden; }
@@ -705,11 +797,7 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
     .proofbar-item:nth-child(2) { border-right: none; }
     .proofbar-item:nth-child(3) { border-top: 1px solid var(--dark-border); border-right: 1px solid var(--dark-border); }
     .proofbar-item:nth-child(4) { border-top: 1px solid var(--dark-border); border-right: none; }
-    .bento-grid { grid-template-columns: 1fr; }
-    .bento-card.b1,.bento-card.b2,.bento-card.b3,.bento-card.b4 { grid-column: 1; }
-    .feature-row,.feature-row.rev { grid-template-columns: 1fr; gap: 32px; }
-    .feature-row.rev .ftext { order: 0; }
-    .ai-grid { grid-template-columns: 1fr; gap: 48px; }
+    .features-list { grid-template-columns: 1fr; }
     .pricing-grid { grid-template-columns: 1fr; }
     .plan-card.feat { transform: none; }
     .plan-card.feat:hover { transform: translateY(-3px); }
@@ -732,19 +820,12 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
   @media (max-width: 560px) {
     .proofbar-grid { grid-template-columns: 1fr; }
     .proofbar-item { border-right: none; border-bottom: 1px solid var(--dark-border); }
-    .section-bento,.section-features,.section-steps,.section-ai,.section-integ,.section-pricing,.section-cta { padding: 64px 0; }
-    .bento-card { padding: 22px 20px; }
-    .bento-num { font-size: 3rem; top: 12px; right: 16px; }
+    .section-bento,.section-features,.section-steps,.section-integ,.section-pricing,.section-cta { padding: 64px 0; }
     .features-header { margin-bottom: 40px; }
-    .feature-row { margin-bottom: 56px; }
-    .fvisual-new { min-height: auto; padding: 18px; }
+    .feature-row { padding: 32px 0; }
     .integ-card { padding: 28px 22px; }
     .integ-featured { padding: 28px 22px; }
     .integ-name { font-size: 1.25rem; }
-    .ai-grid { gap: 32px; }
-    .ai-text h2 { font-size: 2.4rem; }
-    .ai-tags { gap: 7px; }
-    .ai-tag { font-size: 0.76rem; padding: 6px 11px; }
     .cta-inner h2 { font-size: 2rem; }
     .section-cta .btn { width: 100%; justify-content: center; }
     .ptoggle-wrap { flex-direction: column; align-items: center; gap: 12px; }
@@ -778,19 +859,13 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
   /* �.��.��.� CONTAINER HOVER EFFECTS �.��.��.� */
   .app-card { transition: transform .25s ease, box-shadow .25s ease; }
   .app-card:hover { transform: translateY(-3px); box-shadow: 0 16px 32px -10px rgba(20,26,24,0.18); }
-  .fvisual-new { transition: transform .3s ease, box-shadow .3s ease; }
-  .fvisual-new:hover { transform: translateY(-4px); box-shadow: 0 32px 70px -20px rgba(20,26,24,0.2), inset 0 2px 0 rgba(46,204,113,0.1); }
-  .ai-window { transition: transform .3s ease, box-shadow .3s ease, border-color .3s; }
-  .ai-window:hover { transform: translateY(-4px); border-color: rgba(46,204,113,0.28); box-shadow: 0 54px 90px -24px rgba(0,0,0,0.55); }
-  .ai-msg .ai-bubble { transition: border-color .2s ease, background .2s ease; }
-  .ai-msg:hover .ai-bubble { border-color: rgba(46,204,113,0.28); }
-  .bento-chat { transition: transform .25s ease; }
-  .bento-card:hover .bento-chat { transform: translateY(-2px); }
 
   /* �.��.��.� SEAM BEAM (linha verde entre seções) �.��.��.� */
   .seam-line { position: absolute; top: 0; left: 0; right: 0; height: 1px; background: rgba(46,204,113,0.14); overflow: visible; pointer-events: none; z-index: 3; }
   .seam-line .seam-beam { position: absolute; top: 50%; left: -16%; width: 16%; height: 6px; transform: translateY(-50%); background: linear-gradient(90deg, transparent, rgba(80,220,140,0.6) 45%, rgba(80,220,140,0.6) 55%, transparent); filter: blur(1.5px); box-shadow: 0 0 8px 1px rgba(61,218,133,0.32); animation: seam-sweep 5s ease-in-out infinite; }
   @keyframes seam-sweep { 0%, 100% { left: -22%; } 50% { left: 100%; } }
+  .seam-line.soft { background: rgba(46,204,113,0.07); }
+  .seam-line.soft .seam-beam { opacity: .4; animation-duration: 10s; }
 
   /* �.��.��.� FAQ �.��.��.� */
   .section-faq { background: var(--dots-light) 0 0 / 26px 26px, var(--bg); padding: 100px 0; }
@@ -827,6 +902,10 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
   .cookie-banner p { font-size: 0.9rem; color: var(--dark-muted); line-height: 1.55; margin-bottom: 16px; }
   .cookie-banner p a { color: var(--green-light); text-decoration: underline; }
   .cookie-banner-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+  .cookie-banner .btn-outline { color: var(--dark-fg); border-color: rgba(255,255,255,0.3); }
+  .cookie-banner .btn-outline:hover { border-color: rgba(255,255,255,0.55); background: rgba(255,255,255,0.06); }
+  a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--green); outline-offset: 3px; border-radius: 6px; }
+  ::selection { background: rgba(46,204,113,0.3); color: inherit; }
   @media (max-width: 640px) {
     .cookie-banner { left: 12px; right: 12px; bottom: 12px; padding: 18px 20px; }
     .cookie-banner-actions { flex-direction: column; }
@@ -887,13 +966,22 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
   .lead-success .lead-sub { margin-bottom: 22px; }
 
   .lead-spinner {
-    width: 16px; height: 16px; border-radius: 50%; border: 2px solid rgba(255,255,255,0.4);
-    border-top-color: #fff; animation: leadSpin .7s linear infinite; display: inline-block;
+    width: 16px; height: 16px; border-radius: 50%; border: 2px solid rgba(8,19,13,0.3);
+    border-top-color: #08130D; animation: leadSpin .7s linear infinite; display: inline-block;
   }
   @keyframes leadSpin { to { transform: rotate(360deg); } }
 </style>
 </head>
 <body id="top">
+<div class="stickybar" id="stickybar">
+  <div class="wrap stickybar-in">
+    <a href="#top" class="stickybar-brand" aria-label="Voltar ao topo"><img src="assets/logo-cube.webp" alt="" width="605" height="582" />Cubis<span class="hub">.Hub</span></a>
+    <div class="stickybar-actions">
+      <a href="#planos" class="stickybar-link">Ver planos</a>
+      <button type="button" class="btn btn-primary btn-sm" onclick="openLeadModal('stickybar')">Testar 7 dias grátis</button>
+    </div>
+  </div>
+</div>
 
 <!-- �.��.��.��.��.��.��.��.��.��.��.��.��.��.��.��.� HERO �.��.��.��.��.��.��.��.��.��.��.��.��.��.��.��.� -->
 <header class="hero">
@@ -914,8 +1002,8 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
         <a href="#funcionalidades">Funcionalidades</a>
         <a href="#como-funciona">Como funciona</a>
         <a href="#fiscal">Fiscal</a>
-        <a href="#serpro">SERPRO</a>
-        <a href="#ia-trabalho">IA</a>
+        <a href="#portal">Portal</a>
+        <a href="#ia">IA</a>
         <a href="#integracoes">Integrações</a>
         <a href="#faq">FAQ</a>
       </div>
@@ -930,11 +1018,11 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
     <!-- Hero content -->
     <div class="hero-grid">
       <h1>O escritório inteiro <span class="accent">em uma tela só</span></h1>
-      <p class="lead">Prazo fiscal, atendimento no WhatsApp e envio de documento pra carteira inteira, sem abrir sistema por sistema nem repetir a mesma tarefa cliente por cliente.</p>
+      <p class="lead">Emita as guias da carteira inteira direto da Receita e envie em lote pelo WhatsApp, inclusive nos grupos dos clientes. Depois, aviso de vencimento, cobrança e XML seguem no automático.</p>
 
       <div class="hero-actions">
         <button type="button" class="btn btn-primary" onclick="openLeadModal('hero')">
-          Começar teste grátis
+          Testar 7 dias grátis
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </button>
         <a class="btn btn-ghost btn-mobile-only" href="#funcionalidades">Ver funcionalidades</a>
@@ -947,7 +1035,7 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
             <span class="hm-sep"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.4 4.6 2.4 6.6 7 7-4.6.4-6.6 2.4-7 7-.4-4.6-2.4-6.6-7-7 4.6-.4 6.6-2.4 7-7Z"/></svg></span>
             <span class="hm-item">Envio em lote</span>
             <span class="hm-sep"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.4 4.6 2.4 6.6 7 7-4.6.4-6.6 2.4-7 7-.4-4.6-2.4-6.6-7-7 4.6-.4 6.6-2.4 7-7Z"/></svg></span>
-            <span class="hm-item">WhatsApp oficial (Meta)</span>
+            <span class="hm-item">Captura de NF-e e NFS-e</span>
             <span class="hm-sep"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.4 4.6 2.4 6.6 7 7-4.6.4-6.6 2.4-7 7-.4-4.6-2.4-6.6-7-7 4.6-.4 6.6-2.4 7-7Z"/></svg></span>
             <span class="hm-item">Prazos &amp; cobranças</span>
             <span class="hm-sep"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.4 4.6 2.4 6.6 7 7-4.6.4-6.6 2.4-7 7-.4-4.6-2.4-6.6-7-7 4.6-.4 6.6-2.4 7-7Z"/></svg></span>
@@ -971,7 +1059,7 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
             <span class="hm-sep"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.4 4.6 2.4 6.6 7 7-4.6.4-6.6 2.4-7 7-.4-4.6-2.4-6.6-7-7 4.6-.4 6.6-2.4 7-7Z"/></svg></span>
             <span class="hm-item">Envio em lote</span>
             <span class="hm-sep"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.4 4.6 2.4 6.6 7 7-4.6.4-6.6 2.4-7 7-.4-4.6-2.4-6.6-7-7 4.6-.4 6.6-2.4 7-7Z"/></svg></span>
-            <span class="hm-item">WhatsApp oficial (Meta)</span>
+            <span class="hm-item">Captura de NF-e e NFS-e</span>
             <span class="hm-sep"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.4 4.6 2.4 6.6 7 7-4.6.4-6.6 2.4-7 7-.4-4.6-2.4-6.6-7-7 4.6-.4 6.6-2.4 7-7Z"/></svg></span>
             <span class="hm-item">Prazos &amp; cobranças</span>
             <span class="hm-sep"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.4 4.6 2.4 6.6 7 7-4.6.4-6.6 2.4-7 7-.4-4.6-2.4-6.6-7-7 4.6-.4 6.6-2.4 7-7Z"/></svg></span>
@@ -1005,26 +1093,27 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
 
 <!-- �.��.��.��.��.��.��.��.��.��.��.��.��.��.��.��.� Proof bar �.��.��.��.��.��.��.��.��.��.��.��.��.��.��.��.� -->
 <div class="proofbar">
+  <div class="seam-line soft"><span class="seam-beam"></span></div>
   <div class="wrap">
     <div class="proofbar-grid">
       <div class="proofbar-item reveal">
-        <div class="num"><span class="acc">1</span> plataforma</div>
-        <div class="cap">para toda a operação do escritório</div>
+        <div class="num"><span class="acc">NF-e</span> e NFS-e</div>
+        <div class="cap">capturadas sozinhas, cliente por cliente</div>
         <div class="bar"></div>
       </div>
       <div class="proofbar-item reveal">
-        <div class="num"><span class="acc">min</span>, não horas</div>
-        <div class="cap">para enviar a carteira inteira</div>
+        <div class="num">Guia <span class="acc">conferida</span></div>
+        <div class="cap">emitida, enviada no WhatsApp e com o pagamento checado no SERPRO</div>
         <div class="bar"></div>
       </div>
       <div class="proofbar-item reveal">
-        <div class="num">WA <span class="acc">+ IA</span></div>
-        <div class="cap">atendimento e envio, no automático</div>
+        <div class="num"><span class="acc">Grupos</span> também</div>
+        <div class="cap">a guia chega no grupo de WhatsApp de cada cliente</div>
         <div class="bar"></div>
       </div>
       <div class="proofbar-item reveal">
-        <div class="num"><span class="acc">0</span> prazos perdidos</div>
-        <div class="cap">alertas D-7, D-3, D-1 automáticos</div>
+        <div class="num"><span class="acc">Todo</span> dia</div>
+        <div class="cap">situação fiscal, parcelamentos e Caixa Postal verificados</div>
         <div class="bar"></div>
       </div>
     </div>
@@ -1036,38 +1125,17 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
   <div class="seam-line"><span class="seam-beam"></span></div>
   <div class="wrap">
     <div class="bento-header reveal">
-      <div class="blabel">O que você ganha</div>
-      <h2>Tudo o que o escritório precisa,<br>em um só lugar.</h2>
+      <h2>Quanto do seu mês vai em tarefa repetida?</h2>
+      <p>O trabalho que todo escritório faz cliente por cliente, e como ele fica quando a plataforma assume.</p>
     </div>
-    <div class="bento-grid">
-      <div class="bento-card b1 reveal">
-        <span class="bento-num">01</span>
-        <div class="bento-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></div>
-        <div class="bento-title">Atendimento por WhatsApp</div>
-        <div class="bento-desc">Central integrada com conversas organizadas por setor, transferência entre times e histórico completo em tempo real.</div>
-        <div class="bento-chat">
-          <div class="bc-msg them">Boa tarde! Já saiu a guia do DAS?</div>
-          <div class="bc-msg us">Já enviei aqui no WhatsApp</div>
-        </div>
-      </div>
-      <div class="bento-card b2 reveal">
-        <span class="bento-num">02</span>
-        <div class="bento-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></div>
-        <div class="bento-title">Todos os clientes de uma vez</div>
-        <div class="bento-desc">Envie a guia de todo mundo em minutos, com o arquivo achando sozinho o cliente dono dele.</div>
-      </div>
-      <div class="bento-card b3 reveal">
-        <span class="bento-num">03</span>
-        <div class="bento-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
-        <div class="bento-title">Prazos fiscais</div>
-        <div class="bento-desc">Alertas D-7, D-3, D-1 automáticos e sincronização bidirecional com o Google Calendar.</div>
-      </div>
-      <div class="bento-card b4 reveal">
-        <span class="bento-num">04</span>
-        <div class="bento-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
-        <div class="bento-title">Documentos organizados</div>
-        <div class="bento-desc">Repositório por cliente com categorias e versionamento. Envio direto pelo WhatsApp a partir do arquivo, com um clique.</div>
-      </div>
+    <div class="vs reveal">
+      <div class="vs-row vs-head"><div class="vs-old">Hoje, no seu escritório</div><div class="vs-new">Com o Cubis.Hub</div></div>
+      <div class="vs-row"><div class="vs-old"><span class="vs-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>Abrir o e-CAC de cliente em cliente para ver o que está pendente</div><div class="vs-new"><span class="vs-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>A carteira inteira num painel, puxado direto da Receita</div></div>
+      <div class="vs-row"><div class="vs-old"><span class="vs-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>Gerar guia por guia e mandar uma por uma no WhatsApp</div><div class="vs-new"><span class="vs-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>As guias saem em lote, para o contato e para o grupo de cada cliente</div></div>
+      <div class="vs-row"><div class="vs-old"><span class="vs-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>Lembrar o cliente do vencimento e correr atrás de quem não pagou</div><div class="vs-new"><span class="vs-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Aviso antes de vencer e cobrança automática para quem não pagou</div></div>
+      <div class="vs-row"><div class="vs-old"><span class="vs-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>Reenviar a guia toda vez que o cliente diz que não achou</div><div class="vs-new"><span class="vs-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>O cliente acha no portal ou pede ao agente, que envia na hora</div></div>
+      <div class="vs-row"><div class="vs-old"><span class="vs-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>Juntar os XMLs no fim do mês, pasta por pasta</div><div class="vs-new"><span class="vs-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>XML capturado sozinho e baixado num ZIP já organizado</div></div>
+      <div class="vs-row"><div class="vs-old"><span class="vs-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>Responder no WhatsApp de cada funcionário, sem saber quem atendeu</div><div class="vs-new"><span class="vs-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Um número do escritório, conversas por setor e histórico completo</div></div>
     </div>
   </div>
 </section>
@@ -1076,8 +1144,65 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
 <section class="section-features" id="funcionalidades">
   <div class="wrap">
     <div class="features-header reveal">
-      <h2>Feito para a rotina contábil</h2>
-      <p>Cada módulo resolve uma dor real de quem atende muitos clientes todo mês.</p>
+      <h2>O que sai da mão da sua equipe</h2>
+      <p>Cada bloco abaixo é uma tarefa que hoje alguém do escritório faz cliente por cliente.</p>
+    </div>
+
+    <div class="features-list">
+    <div class="feature-row reveal">
+      <div class="ftext">
+        <div class="eyebrow-tag">Envio em lote</div>
+        <h3>A guia de toda a carteira, inclusive nos grupos de WhatsApp</h3>
+        <p class="desc">Arraste as guias do mês de uma vez. Cada arquivo encontra o cliente dono dele e sai com uma mensagem que já chama cada um pelo nome.</p>
+        <ul class="flist-new">
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Envio direto nos grupos de WhatsApp dos clientes, não só no contato individual</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>WhatsApp, e-mail e Telegram no mesmo envio</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Agende para depois ou deixe repetindo todo mês</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Registro de cada envio, cliente por cliente</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="feature-row reveal">
+      <div class="ftext">
+        <div class="eyebrow-tag">Aviso de vencimento</div>
+        <h3>O cliente é lembrado antes de a guia vencer</h3>
+        <p class="desc">Na hora do envio você marca os avisos, e a plataforma lembra o cliente sozinha no dia certo, com o vencimento lido na própria guia.</p>
+        <ul class="flist-new">
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Aviso 3 dias antes, na véspera e no dia do vencimento</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Sai de manhã cedo, a tempo de o cliente pagar</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Quem não pagou entra na régua de cobrança, por WhatsApp e e-mail</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Guia paga sai da lista quando o pagamento é confirmado</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="feature-row reveal">
+      <div class="ftext">
+        <div class="eyebrow-tag">XML</div>
+        <h3>Os XMLs do mês, já nas pastas certas</h3>
+        <p class="desc">NF-e e NFS-e emitidas e recebidas de cada cliente são capturadas e guardadas. Na hora de baixar, o ZIP já vem montado para a contabilidade.</p>
+        <ul class="flist-new">
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Pasta por mês, por cliente (com CNPJ), emitidas e recebidas, NF-e e NFS-e</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Um cliente ou a carteira inteira num ZIP só</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Análise das notas com os itens e as retenções</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Filtro das notas novas, que ainda não foram baixadas</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="feature-row reveal">
+      <div class="ftext">
+        <div class="eyebrow-tag">Documentos e portal</div>
+        <h3>Cada arquivo no lugar, e o cliente vê sem pedir</h3>
+        <p class="desc">As pastas se montam sozinhas por setor, cliente e categoria. O cliente acessa o portal dele e encontra tudo o que foi enviado.</p>
+        <ul class="flist-new">
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Pastas montadas sozinhas, sem arrastar arquivo</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Portal do cliente com guias, notas e comunicados</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>O cliente marca a guia como paga ali mesmo</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Versões guardadas e envio em um clique</li>
+        </ul>
+      </div>
     </div>
 
     <div class="feature-row reveal">
@@ -1087,114 +1212,53 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
         <p class="desc">Cada conversa vai para o setor responsável. O admin assume qualquer atendimento, transfere entre setores e acompanha tudo em tempo real.</p>
         <ul class="flist-new">
           <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Organização por setor e status da conversa</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Texto, imagens, áudios e documentos</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Iniciar conversa direto do cadastro do cliente</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Texto, imagem, áudio e documento</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Resumo automático quando a conversa troca de setor</li>
         </ul>
-      </div>
-      <div class="fvisual-new has-video">
-        <div class="fvisual-chrome"><span class="d d1"></span><span class="d d2"></span><span class="d d3"></span><span class="url">app.cubishub.com.br/whatsapp</span></div>
-        <div class="fvisual-video-wrap">
-          <video class="fvisual-video" data-src="videos/chat.mp4" muted loop playsinline preload="none"></video>
-        </div>
-      </div>
-    </div>
-
-    <div class="feature-row rev reveal">
-      <div class="ftext">
-        <div class="eyebrow-tag">Envio em lote</div>
-        <h3>Relatórios mensais de todos em minutos</h3>
-        <p class="desc">Arraste os arquivos, deixe a associação automática cruzar com cada cliente da sua carteira e envie. Agende para depois ou salve como rascunho. O envio é sempre para clientes do próprio escritório.</p>
-        <ul class="flist-new">
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Associação automática arquivo &rarr; cliente por nome</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Mensagem com variáveis ({{nome}}, {{escritório}})</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Envio para grupos de WhatsApp, não só para contatos</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Agendamento, rascunhos e recorrência mensal</li>
-        </ul>
-      </div>
-      <div class="fvisual-new has-video">
-        <div class="fvisual-chrome"><span class="d d1"></span><span class="d d2"></span><span class="d d3"></span><span class="url">app.cubishub.com.br/envio</span></div>
-        <div class="fvisual-video-wrap">
-          <video class="fvisual-video" data-src="videos/envio.mp4" muted loop playsinline preload="none"></video>
-        </div>
       </div>
     </div>
 
     <div class="feature-row reveal">
       <div class="ftext">
-        <div class="eyebrow-tag">Prazos fiscais</div>
-        <h3>Nunca mais perca uma obrigação</h3>
-        <p class="desc">Calendário de prazos com templates recorrentes e alertas inteligentes para o setor responsável e o admin, antes do vencimento.</p>
+        <div class="eyebrow-tag">Prazos e tarefas</div>
+        <h3>A rotina do mês se recria sozinha</h3>
+        <p class="desc">Agenda de prazos com alerta para o setor responsável, quadro de tarefas com checklist e tarefas recorrentes que voltam todo mês.</p>
         <ul class="flist-new">
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Alertas D-7, D-3 e D-1</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Templates de prazos recorrentes</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Sincronização bidirecional com Google Calendar</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Alertas para a equipe antes de cada prazo</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Tarefa que se conclui sozinha quando a guia é enviada</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Sincronização com o Google Agenda</li>
         </ul>
-      </div>
-      <div class="fvisual-new has-video">
-        <div class="fvisual-chrome"><span class="d d1"></span><span class="d d2"></span><span class="d d3"></span><span class="url">app.cubishub.com.br/prazos</span></div>
-        <div class="fvisual-video-wrap">
-          <video class="fvisual-video" data-src="videos/deadlines.mp4" muted loop playsinline preload="none"></video>
-        </div>
-      </div>
-    </div>
-
-    <div class="feature-row rev reveal">
-      <div class="ftext">
-        <div class="eyebrow-tag">Operação &amp; Documentos</div>
-        <h3>O fluxo do escritório sob controle</h3>
-        <p class="desc">Quadro Kanban configurável, checklist etapa por etapa e a rotina do mês que se recria sozinha. Mais o mural de notas e o mapa mental para desenhar os processos do escritório.</p>
-        <ul class="flist-new">
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Checklist por tarefa, para acompanhar etapa por etapa</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Tarefas recorrentes que renascem todo mês, sem recriar nada</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Mural de notas para o dia a dia e mapa mental para os processos</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Documentos por categoria, com versionamento e envio em um clique</li>
-        </ul>
-      </div>
-      <div class="fvisual-new has-video">
-        <div class="fvisual-chrome"><span class="d d1"></span><span class="d d2"></span><span class="d d3"></span><span class="url">app.cubishub.com.br/board</span></div>
-        <div class="fvisual-video-wrap">
-          <video class="fvisual-video" data-src="videos/board.mp4" muted loop playsinline preload="none"></video>
-        </div>
       </div>
     </div>
 
     <div class="feature-row reveal">
       <div class="ftext">
         <div class="eyebrow-tag">Clientes</div>
-        <h3>Cadastro completo, sem trabalho manual</h3>
-        <p class="desc">Consulta automática de CNPJ, importação em lote via CSV e organização em grupos para facilitar os envios e o atendimento.</p>
+        <h3>Cadastro completo sem digitar</h3>
+        <p class="desc">Digite o CNPJ e o cadastro se preenche. Traga a carteira inteira por planilha e organize em grupos para os envios.</p>
         <ul class="flist-new">
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Consulta automática de dados por CNPJ</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Importação em lote via CSV</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Grupos para disparo e organização da carteira</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Dados puxados direto pelo CNPJ</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Importação da carteira por planilha</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Grupos de clientes para envio e organização</li>
         </ul>
-      </div>
-      <div class="fvisual-new has-video">
-        <div class="fvisual-chrome"><span class="d d1"></span><span class="d d2"></span><span class="d d3"></span><span class="url">app.cubishub.com.br/clientes</span></div>
-        <div class="fvisual-video-wrap">
-          <video class="fvisual-video" data-src="videos/clientes.mp4" muted loop playsinline preload="none"></video>
-        </div>
       </div>
     </div>
 
-    <div class="feature-row rev reveal">
+    <div class="feature-row reveal">
       <div class="ftext">
         <div class="eyebrow-tag">Agente de IA</div>
-        <h3>Crie um agente de atendimento no WhatsApp</h3>
-        <p class="desc">Monte um agente com IA para responder dúvidas frequentes, qualificar solicitações e encaminhar para o setor certo, 24h por dia, direto no número do escritório.</p>
+        <h3>Um atendente no WhatsApp que entrega a guia</h3>
+        <p class="desc">Com o agente ativo, quando o cliente pede a guia ele procura, informa o valor e o vencimento e envia o arquivo ali mesmo. As dúvidas frequentes ele responde e o resto passa para o setor certo.</p>
         <ul class="flist-new">
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Respostas automáticas com base no que você configurar para o seu escritório</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Transferência para um humano a qualquer momento</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Envia DAS, DARF, boletos e notas do próprio cliente, na conversa</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Nunca mostra documento de outro cliente nem material interno</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Responde com as regras do seu escritório</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Passa para uma pessoa a qualquer momento</li>
           <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Configuração simples, sem código</li>
         </ul>
       </div>
-      <div class="fvisual-new has-video">
-        <div class="fvisual-chrome"><span class="d d1"></span><span class="d d2"></span><span class="d d3"></span><span class="url">app.cubishub.com.br/agente-ia</span></div>
-        <div class="fvisual-video-wrap">
-          <video class="fvisual-video" data-src="videos/agent.mp4" muted loop playsinline preload="none"></video>
-        </div>
-      </div>
     </div>
+  </div>
   </div>
 </section>
 
@@ -1202,24 +1266,24 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
 <section class="section-steps" id="como-funciona">
   <div class="wrap">
     <div class="steps-header reveal">
-      <h2>Do cadastro ao envio em 3 passos</h2>
-      <p>Comece hoje. Sem implantação complexa, sem treinamento longo.</p>
+      <h2>Em funcionamento na primeira semana</h2>
+      <p>Sem implantação longa. Em menos de uma semana o escritório já está usando.</p>
     </div>
     <div class="steps-track">
       <div class="step-new reveal">
         <div class="step-num-wrap"><span class="step-n">01</span></div>
-        <h3>Importe sua carteira</h3>
-        <p>Suba seus clientes via CSV de uma vez e organize por setor, tag e responsável.</p>
+        <h3>Traga a carteira</h3>
+        <p>Importe a planilha de clientes ou digite os CNPJs. O cadastro se completa sozinho, já separado por setor e responsável.</p>
       </div>
       <div class="step-new reveal">
         <div class="step-num-wrap"><span class="step-n">02</span></div>
-        <h3>Conecte o WhatsApp</h3>
-        <p>Leia o QR Code, configure os setores e a identidade do seu escritório.</p>
+        <h3>Ligue a Receita e o WhatsApp</h3>
+        <p>Conecte o certificado digital do escritório e o número de WhatsApp. A plataforma confere quais clientes já deram procuração no e-CAC.</p>
       </div>
       <div class="step-new reveal">
         <div class="step-num-wrap"><span class="step-n">03</span></div>
-        <h3>Atenda e envie</h3>
-        <p>Receba mensagens por setor, envie relatórios para toda a carteira e deixe os prazos no automático.</p>
+        <h3>Rode o mês</h3>
+        <p>Emita e envie as guias em lote. Aviso de vencimento, XML e cobrança seguem rodando, e sua equipe cuida do que precisa de decisão.</p>
       </div>
     </div>
   </div>
@@ -1232,39 +1296,63 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
     <div class="work-header reveal">
       <div class="alabel">Módulo Fiscal</div>
       <h2>Simples Nacional e MEI, direto da fonte oficial</h2>
-      <p>Sem abrir o e-CAC de cliente em cliente. Sem gerar guia na mão. O Cubis Hub puxa Receita Federal e SERPRO pra dentro da sua carteira.</p>
+      <p>Sem abrir o e-CAC de cliente em cliente. Sem gerar guia na mão. O Cubis.Hub puxa Receita Federal e SERPRO pra dentro da sua carteira.</p>
     </div>
 
     <div class="work-rows">
 
       <div class="wrow reveal">
         <div class="wtext">
+          <div class="whead">
           <div class="wtag">Monitor Fiscal</div>
           <h3>Sua carteira inteira, pendência por pendência, num painel só</h3>
+          </div>
+          <div class="wbody">
           <p>Você vê a situação real de cada cliente na Receita Federal sem abrir o e-CAC um por um. PGDAS, DCTFWeb, parcelamentos, certidões e mais, tudo num painel só, puxado direto do Integra Contador (SERPRO).</p>
           <ul class="wlist">
             <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Painel único com toda a carteira</li>
             <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Clica na pendência e cai no cliente certo</li>
+            <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Medidor do sublimite do Simples de cada cliente</li>
             <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Sem abrir o e-CAC de novo</li>
           </ul>
+          </div>
         </div>
-        <div class="wart"><img src="assets/mascote-fiscal-monitor.png" alt="Mascote do Cubis.Hub apontando para o painel do Monitor Fiscal" loading="lazy" width="812" height="893" /></div>
       </div>
 
       <div class="wrow rev reveal">
         <div class="wtext">
+          <div class="whead">
           <div class="wtag">Parcelamentos</div>
-          <h3>A guia do parcelamento sai e chega sozinha</h3>
-          <p>O Cubis Hub consulta as parcelas em aberto de cada cliente, emite a guia oficial de parcelamento e manda pelo WhatsApp num cron diário. Sua equipe só entra se precisar conferir.</p>
+          <h3>A guia do parcelamento de toda a carteira em poucos cliques</h3>
+          </div>
+          <div class="wbody">
+          <p>O Cubis.Hub consulta as parcelas em aberto de cada cliente, emite a guia oficial de parcelamento. Você confere e envia pelo WhatsApp para todos de uma vez.</p>
           <ul class="wlist">
             <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Consulta as parcelas em aberto</li>
             <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Emite a guia oficial de parcelamento</li>
-            <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Manda pro cliente pelo WhatsApp, sozinho</li>
+            <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Envia pelo WhatsApp em lote</li>
           </ul>
+          </div>
         </div>
-        <div class="wart"><img src="assets/mascote-fiscal-parcelamento.png" alt="Mascote do Cubis.Hub enviando a guia de parcelamento pelo WhatsApp" loading="lazy" width="840" height="863" /></div>
       </div>
 
+
+      <div class="wrow reveal">
+        <div class="wtext">
+          <div class="whead">
+          <div class="wtag">Caixa Postal</div>
+          <h3>Mensagem da Receita não passa batida</h3>
+          </div>
+          <div class="wbody">
+          <p>A Caixa Postal do e-CAC de cada cliente é verificada todo dia. Quando chega mensagem nova, o escritório fica sabendo e lê o conteúdo sem entrar no e-CAC.</p>
+          <ul class="wlist">
+            <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>A carteira inteira verificada de uma vez</li>
+            <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Aviso de mensagem nova, com as urgentes em destaque</li>
+            <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Procurações conferidas em lote, com quem está sem</li>
+          </ul>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -1273,13 +1361,25 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
 <section class="section-serpro" id="serpro">
   <div class="wrap">
     <div class="serpro-header reveal">
-      <h2>21 integrações com a Receita Federal já rodando de verdade</h2>
-      <p>Cada linha abaixo é um serviço do Integra Contador (SERPRO) que o Cubis Hub já chama na carteira dos escritórios que usam a plataforma hoje, não uma promessa de "em breve".</p>
+      <h2>O mês fiscal do escritório, do começo ao fim</h2>
+      <p>Da nota capturada à guia paga. A plataforma faz o trabalho repetitivo direto na Receita Federal e para só onde precisa da sua decisão.</p>
     </div>
+
+    <ol class="cycle reveal">
+      <li class="cy-step"><span class="cy-n">01</span><h3>Notas</h3><p>NF-e e NFS-e de cada cliente capturadas e guardadas, com XML para baixar.</p><span class="cy-who">Automático</span></li>
+      <li class="cy-step"><span class="cy-n">02</span><h3>Entrega</h3><p>PGDAS-D acompanhado e DCTFWeb transmitida depois do checklist.</p><span class="cy-who you">Você confere</span></li>
+      <li class="cy-step"><span class="cy-n">03</span><h3>Guias</h3><p>DAS, DAS MEI, DARF, DCTFWeb e parcelamento emitidos em lote.</p><span class="cy-who you">Em lote, você aciona</span></li>
+      <li class="cy-step"><span class="cy-n">04</span><h3>Envio</h3><p>Você envia para a carteira inteira no WhatsApp e no e-mail, e a guia fica no portal do cliente.</p><span class="cy-who you">Em lote, você envia</span></li>
+      <li class="cy-step"><span class="cy-n">05</span><h3>Pagamento</h3><p>Conferido direto no SERPRO. Guia paga sai da lista sozinha.</p><span class="cy-who">Automático</span></li>
+      <li class="cy-step"><span class="cy-n">06</span><h3>Cobrança</h3><p>Quem não pagou recebe o lembrete, na régua que você definir.</p><span class="cy-who">Automático</span></li>
+    </ol>
+
+    <details class="serpro-more">
+      <summary>Ver todos os serviços da Receita que já usamos</summary>
 
     <div class="serpro-grid">
 
-      <div class="serpro-card reveal">
+      <div class="serpro-card">
         <div class="serpro-card-head">
           <span class="serpro-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
           <div><div class="serpro-card-title">Caixa Postal (e-CAC)</div><div class="serpro-card-sub">CAIXAPOSTAL</div></div>
@@ -1291,7 +1391,7 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
         </ul>
       </div>
 
-      <div class="serpro-card reveal">
+      <div class="serpro-card">
         <div class="serpro-card-head">
           <span class="serpro-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></span>
           <div><div class="serpro-card-title">Simples Nacional</div><div class="serpro-card-sub">PGDAS-D</div></div>
@@ -1303,7 +1403,7 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
         </ul>
       </div>
 
-      <div class="serpro-card reveal">
+      <div class="serpro-card">
         <div class="serpro-card-head">
           <span class="serpro-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M4 9h16"/></svg></span>
           <div><div class="serpro-card-title">MEI</div><div class="serpro-card-sub">PGMEI · DASN-SIMEI · CCMEI</div></div>
@@ -1316,7 +1416,7 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
         </ul>
       </div>
 
-      <div class="serpro-card reveal">
+      <div class="serpro-card">
         <div class="serpro-card-head">
           <span class="serpro-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3v4M16 3v4M4 9h16"/><rect x="3" y="5" width="18" height="16" rx="2"/></svg></span>
           <div><div class="serpro-card-title">DCTFWeb</div><div class="serpro-card-sub">eSocial · previdenciário</div></div>
@@ -1330,7 +1430,7 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
         </ul>
       </div>
 
-      <div class="serpro-card reveal">
+      <div class="serpro-card">
         <div class="serpro-card-head">
           <span class="serpro-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4Z"/></svg></span>
           <div><div class="serpro-card-title">Procuração eletrônica</div><div class="serpro-card-sub">PROCURACOES</div></div>
@@ -1340,7 +1440,7 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
         </ul>
       </div>
 
-      <div class="serpro-card reveal">
+      <div class="serpro-card">
         <div class="serpro-card-head">
           <span class="serpro-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3h6l1 4h4v2h-2l-2 12H6L4 9H2V7h4l1-4Z"/></svg></span>
           <div><div class="serpro-card-title">Situação fiscal</div><div class="serpro-card-sub">SITFIS</div></div>
@@ -1350,7 +1450,7 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
         </ul>
       </div>
 
-      <div class="serpro-card reveal">
+      <div class="serpro-card">
         <div class="serpro-card-head">
           <span class="serpro-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16v12H4z"/><path d="M4 10h16M8 14h2"/></svg></span>
           <div><div class="serpro-card-title">Pagamentos</div><div class="serpro-card-sub">PagtoWeb</div></div>
@@ -1361,7 +1461,7 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
         </ul>
       </div>
 
-      <div class="serpro-card reveal">
+      <div class="serpro-card">
         <div class="serpro-card-head">
           <span class="serpro-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V5a2 2 0 012-2h9l5 5v11a2 2 0 01-2 2H6a2 2 0 01-2-2Z"/><path d="M14 3v5h5"/></svg></span>
           <div><div class="serpro-card-title">DEFIS</div><div class="serpro-card-sub">Declaração anual Simples</div></div>
@@ -1371,7 +1471,7 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
         </ul>
       </div>
 
-      <div class="serpro-card reveal">
+      <div class="serpro-card">
         <div class="serpro-card-head">
           <span class="serpro-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l4 2"/></svg></span>
           <div><div class="serpro-card-title">Parcelamentos</div><div class="serpro-card-sub">Simples e MEI</div></div>
@@ -1384,12 +1484,49 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
 
     </div>
 
-    <p class="serpro-note reveal">Tudo direto do <strong>Integra Contador (SERPRO)</strong>, com a procuração eletrônica do seu escritório no e-CAC, sem abrir sistema por cliente.</p>
+    <p class="serpro-note">Tudo direto do <strong>Integra Contador (SERPRO)</strong>, com a procuração eletrônica do seu escritório no e-CAC, sem abrir sistema por cliente.</p>
+    </details>
   </div>
 </section>
 
 <!-- ─── IA ─── -->
-<section class="section-work" id="ia-trabalho">
+<section class="section-portal" id="portal">
+  <div class="wrap">
+    <div class="portal-header reveal">
+      <h2>O cliente encontra a guia sozinho, sem pedir para a sua equipe</h2>
+      <p>Cada cliente recebe um link próprio. Sem senha para esquecer: ele confirma com os 4 últimos dígitos do WhatsApp e encontra tudo o que o escritório mandou para ele.</p>
+    </div>
+    <div class="pt-grid reveal">
+      <div class="pt-col">
+        <h3>Guias e boletos</h3>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Próximos vencimentos em destaque</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Copia o código de barras e paga</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Marca a guia como paga ali mesmo</li>
+        </ul>
+      </div>
+      <div class="pt-col">
+        <h3>Notas fiscais</h3>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Emitidas e recebidas dos últimos 12 meses</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Baixa o XML e o PDF</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Busca por número ou nome</li>
+        </ul>
+      </div>
+      <div class="pt-col">
+        <h3>Comunicados</h3>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Os avisos do escritório num lugar só</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Histórico dos últimos 12 meses</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Nada perdido no meio da conversa</li>
+        </ul>
+      </div>
+    </div>
+    <p class="pt-note reveal">Menos "me manda a guia de novo" no WhatsApp da sua equipe.</p>
+  </div>
+</section>
+
+<section class="section-work" id="ia">
   <div class="wrap">
     <div class="work-header reveal">
       <div class="alabel">IA embarcada</div>
@@ -1401,83 +1538,81 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
 
       <div class="wrow reveal">
         <div class="wtext">
+          <div class="whead">
           <div class="wtag">Leitura automática</div>
           <h3>Você sobe a guia. Ela sai lida, vinculada e com a mensagem escrita.</h3>
+          </div>
+          <div class="wbody">
           <p>Arraste o lote de guias e pare por aí. A plataforma abre cada arquivo, entende o que é, acha o cliente dono dela e monta o texto do envio, com vencimento, competência e valor no lugar certo.</p>
           <div class="readflow">
             <div class="rf-step"><span class="rf-n">1</span> Lê o PDF, mesmo escaneado, e identifica o tipo de guia</div>
             <div class="rf-step"><span class="rf-n">2</span> Extrai vencimento, competência e valor</div>
             <div class="rf-step"><span class="rf-n">3</span> Encontra o cliente pelo CNPJ, pelo nome ou pelo arquivo</div>
-            <div class="rf-step done"><span class="rf-n">4</span><span>Entrega a mensagem pronta:<br><code>Segue o DAS de julho/2026. Vence dia 20.</code></span></div>
+            <div class="rf-step done"><span class="rf-n">4</span><span>Entrega a mensagem pronta:<br><code>Segue o DAS de julho/2026. Vence dia 20.</code></span>
           </div>
         </div>
-        <div class="wart"><img src="assets/mascote-documentos.webp" alt="Mascote do Cubis.Hub apontando para documentos organizados" loading="lazy" width="620" height="507" /></div>
+      </div>
+        </div>
       </div>
 
       <div class="wrow rev reveal">
         <div class="wtext">
+          <div class="whead">
           <div class="wtag">Agentes de IA</div>
-          <h3>Um especialista por assunto. E os seus, do jeito que você atende</h3>
-          <p>Agentes prontos para a dúvida que aparece no meio do atendimento, com a fonte citada em vez de achismo. E você cria os do seu escritório, com as suas regras e o seu tom, sem código e sem esperar release.</p>
+          <h3>Um especialista para cada dúvida fiscal, olhando os seus clientes</h3>
+          </div>
+          <div class="wbody">
+          <p>Antes de responder, o agente consulta a carteira do escritório, a situação de cada cliente na Receita e os documentos arquivados. E você cria os seus, escolhendo como ele se comporta e quais ferramentas usa, sem código.</p>
           <div class="agent-chips">
             <span class="agent-chip">Reforma Tributária</span>
             <span class="agent-chip">Classificação Fiscal</span>
             <span class="agent-chip">Simples Nacional e Fator R</span>
-            <span class="agent-chip">Departamento Pessoal</span>
-            <span class="agent-chip">Atendimento ao Cliente</span>
+            <span class="agent-chip">Situação Fiscal</span>
+            <span class="agent-chip">Guias e Obrigações</span>
+            <span class="agent-chip">Cálculos e Correção</span>
             <span class="agent-chip hi">+ os seus</span>
           </div>
         </div>
-        <div class="wart wide"><img src="assets/mascote-ia.webp" alt="Mascote do Cubis.Hub conectado a uma rede de agentes de IA" loading="lazy" width="710" height="576" /></div>
+      </div>
       </div>
 
       <div class="wrow reveal">
         <div class="wtext">
+          <div class="whead">
           <div class="wtag">Gestão e conversas</div>
           <h3>O escritório inteiro resumido, sem você montar planilha</h3>
+          </div>
+          <div class="wbody">
           <p>A IA varre tarefas, prazos, envios e a carga de cada membro, e devolve um relatório pronto para o dono ler. E quando um atendimento troca de setor, ela escreve o resumo do que já foi tratado: quem recebe entra sabendo do assunto.</p>
           <ul class="wlist">
             <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Relatório de gestão gerado a partir do próprio painel</li>
+            <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Notificações de prazo com a leitura da IA sobre o que fazer primeiro</li>
             <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Resumo automático quando a conversa muda de setor</li>
             <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Texto, áudio, imagem e documento na mesma conversa</li>
           </ul>
-        </div>
-        <div class="wart"><img src="assets/mascote-relatorio.webp" alt="Mascote do Cubis.Hub comemorando sobre um painel de relatórios" loading="lazy" width="618" height="724" /></div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<section class="section-ai" id="ia">
-  <div class="seam-line"><span class="seam-beam"></span></div>
-  <div class="wrap">
-    <div class="ai-grid">
-      <div class="ai-text reveal">
-        <div class="alabel">Assistente de IA</div>
-        <h2>Pergunte.<br>Receba.<br>Execute.</h2>
-        <p>Seu copiloto contábil integrado. Acesso inteligente a dados de clientes, compliance fiscal, simulações tributárias e muito mais, em linguagem natural.</p>
-        <div class="ai-tags">
-          <span class="ai-tag hi">Gestão de clientes</span>
-          <span class="ai-tag hi">Consulta CNPJ</span>
-          <span class="ai-tag">Simples Nacional</span>
-          <span class="ai-tag">Prazos fiscais</span>
-          <span class="ai-tag">Simulação tributária</span>
-          <span class="ai-tag">Correção IPCA/SELIC</span>
-          <span class="ai-tag">Reforma tributária</span>
-          <span class="ai-tag hi">Status disparos</span>
-          <span class="ai-tag">NF-e / NFS-e</span>
-          <span class="ai-tag">NCM / CFOP</span>
-          <span class="ai-tag">Score de risco</span>
-          <span class="ai-tag">Faturamento escritório</span>
+          </div>
         </div>
       </div>
-      <div class="ai-window has-video reveal">
-        <div class="ai-topbar">
-          <div class="ai-dots"><div class="ai-dot r"></div><div class="ai-dot y"></div><div class="ai-dot g"></div></div>
-          <div class="ai-dotlabel">Assistente Cubis.Hub</div>
+
+
+      <div class="wrow reveal">
+        <div class="wtext">
+          <div class="whead">
+          <div class="wtag">Assistente</div>
+          <h3>Pergunte sobre a carteira e receba a resposta com os dados reais</h3>
+          </div>
+          <div class="wbody">
+          <p>Um assistente dentro da plataforma que consulta clientes, prazos, situação fiscal e envios e responde em português, sem você abrir tela por tela.</p>
+          <div class="agent-chips">
+            <span class="agent-chip">Situação fiscal do cliente</span>
+            <span class="agent-chip">Prazos da semana</span>
+            <span class="agent-chip">Simulação do Simples</span>
+            <span class="agent-chip">Correção por IPCA e SELIC</span>
+            <span class="agent-chip">NCM e CFOP</span>
+            <span class="agent-chip">Status dos envios</span>
+          </div>
+          </div>
         </div>
-        <video class="fvisual-video" data-src="videos/assistente-ia.mp4" muted loop playsinline preload="none"></video>
       </div>
     </div>
   </div>
@@ -1489,30 +1624,40 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
   <div class="wrap">
     <div class="integ-header reveal">
       <h2>Conectado ao que você já usa</h2>
-      <p>Conexão oficial e direta com a Meta para disparos, além do WhatsApp via QR Code para quem já tem número próprio.</p>
+      <p>A Receita Federal de um lado, o WhatsApp e o e-mail do cliente do outro. O Cubis.Hub fica no meio e faz a ponte.</p>
     </div>
     <div class="integ-wrap">
       <div class="integ-featured reveal">
-        <span class="integ-badge-soon">Em breve</span>
         <div class="integ-featured-top">
-          <div class="integ-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></div>
-          <div class="integ-name">WhatsApp Cloud API, direto com a Meta</div>
+          <div class="integ-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18"/><path d="M5 21V10M9.5 21V10M14.5 21V10M19 21V10"/><path d="M12 3 3 8h18l-9-5Z"/></svg></div>
+          <div class="integ-name">Receita Federal, pelo Integra Contador (SERPRO)</div>
         </div>
-        <div class="integ-desc">Conexão oficial com a API da Meta, sem depender só de QR Code. Número verificado, disparo em maior volume e sem o risco de banimento comum em soluções não-oficiais.</div>
+        <div class="integ-desc">A fonte oficial, sem robô entrando no e-CAC. Com o certificado do escritório e as procurações que seus clientes deram no e-CAC, a plataforma consulta, emite e transmite para a carteira inteira.</div>
         <div class="integ-perks">
-          <span class="integ-perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 6v6c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10V6l-8-4Z"/><path d="m9 12 2 2 4-4"/></svg>Número oficial verificado</span>
-          <span class="integ-perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 6v6c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10V6l-8-4Z"/></svg>Sem risco de banimento</span>
-          <span class="integ-perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 9h8M8 13h5"/></svg>Templates aprovados pela Meta</span>
-          <span class="integ-perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>Maior volume de disparo</span>
+          <span class="integ-perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Dados oficiais da Receita</span>
+          <span class="integ-perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Procurações conferidas cliente por cliente</span>
+          <span class="integ-perk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Consultas e guias em lote</span>
         </div>
       </div>
-      <div class="integ-card integ-card-row reveal">
-        <div class="integ-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M7 20h10M9 16v4M15 16v4"/><path d="M8 8h.01M8 11h.01M12 8h4M12 11h4"/></svg></div>
-        <div class="integ-card-body">
-          <div class="integ-name">WhatsApp via QR Code</div>
-          <div class="integ-desc">Conecte um número próprio ou dedicado do escritório em minutos, sem burocracia. Atendimento por setor e disparos com rastreamento completo de cada envio.</div>
-        </div>
-        <div class="integ-pill">Atendimento + Disparo</div>
+      <div class="integ-trio">
+      <div class="integ-card reveal">
+        <div class="integ-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></div>
+        <div class="integ-name">WhatsApp do escritório</div>
+        <div class="integ-desc">Conecte o número que o escritório já usa lendo um QR Code. Atendimento por setor e envio com o registro de cada mensagem.</div>
+        <div class="integ-pill">Atendimento + envio</div>
+      </div>
+      <div class="integ-card reveal">
+        <div class="integ-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></div>
+        <div class="integ-name">E-mail com o seu remetente</div>
+        <div class="integ-desc">Guias e lembretes saem também por e-mail, com o endereço do próprio escritório, não o nosso.</div>
+        <div class="integ-pill">Envio + cobrança</div>
+      </div>
+      <div class="integ-card reveal">
+        <div class="integ-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+        <div class="integ-name">Google Agenda</div>
+        <div class="integ-desc">Os prazos do escritório aparecem na agenda de cada pessoa da equipe e o que muda lá volta para cá.</div>
+        <div class="integ-pill">Prazos</div>
+      </div>
       </div>
     </div>
   </div>
@@ -1523,8 +1668,8 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
   <div class="wrap">
     <div class="pricing-header reveal">
       <span class="eyebrow">Planos</span>
-      <h2>Um plano que se paga sozinho</h2>
-      <p>O tempo que sua equipe deixa de perder com tarefa repetida cobre a assinatura. Escolha o tamanho certo pro seu escritório hoje e mude quando crescer.</p>
+      <h2>A plataforma inteira em todos os planos</h2>
+      <p>O que muda de um plano para o outro é o tamanho: clientes, equipe, números de WhatsApp e volume de envio. Comece no que cabe hoje e suba quando crescer.</p>
     </div>
     <div class="ptoggle-wrap reveal">
       <div class="ptoggle-pills">
@@ -1532,6 +1677,21 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
         <button id="btn-anual" onclick="setPricing('anual')">Anual</button>
       </div>
       <span class="ptoggle-disc">-15% no anual</span>
+    </div>
+    <div class="plan-incl reveal">
+      <div class="plan-incl-title">Em todos os planos</div>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Chat de WhatsApp por setor</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Envio em lote, inclusive para grupos</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>WhatsApp, e-mail e Telegram</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Aviso de vencimento ao cliente</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Módulo Fiscal com o SERPRO</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Captura de XML de NF-e e NFS-e</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Portal do cliente</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Agente de IA no WhatsApp</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Agentes especialistas e assistente de IA</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Board, prazos e Google Agenda</li>
+      </ul>
     </div>
     <div class="pricing-grid">
       <div class="plan-card reveal">
@@ -1541,28 +1701,17 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
         <div class="plan-price price-annual">R$ 152<small>/mês</small></div>
         <div class="plan-divider"></div>
         <ul class="plan-limits">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>150 créditos/mês</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>300 disparos WhatsApp/mês</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>100 disparos/dia por número</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>150 créditos de IA/mês</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>300 envios em massa/mês</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>100 envios/dia por número</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Até 300 clientes</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>5 membros · 5 setores</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>5 instância(s) WhatsApp</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>5 números de WhatsApp conectados</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>2 GB de armazenamento</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>5 agentes de IA personalizados</li>
         </ul>
-        <div class="plan-divider"></div>
-        <ul class="plan-feats">
-          <li><span class="fcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Board Kanban de tarefas</li>
-          <li><span class="fcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Assistente IA</li>
-          <li><span class="fcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Chat WhatsApp por setor</li>
-          <li><span class="fcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Prazos fiscais e monitor tributário</li>
-          <li><span class="fcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Integração SERPRO (Receita Federal)</li>
-          <li><span class="fcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Integração Google Calendar</li>
-          <li><span class="fcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Agendamento de disparos</li>
-          <li><span class="fcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Recorrência mensal de envios</li>
-          <li><span class="fcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Envio automático para grupos</li>
-        </ul>
         <a class="btn btn-outline plan-btn" href="https://app.cubishub.com.br/assinar/2e16005d-5dd2-461a-97e8-095ba10a0783" data-plan="Essencial" data-value="179">Assinar Essencial</a>
+        <button type="button" class="plan-try" onclick="openLeadModal('plano_essencial')">ou testar 7 dias antes</button>
       </div>
 
       <div class="plan-card feat reveal">
@@ -1573,28 +1722,17 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
         <div class="plan-price price-annual">R$ 337<small>/mês</small></div>
         <div class="plan-divider"></div>
         <ul class="plan-limits">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>300 créditos/mês</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>600 disparos WhatsApp/mês</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>100 disparos/dia por número</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>300 créditos de IA/mês</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>600 envios em massa/mês</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>100 envios/dia por número</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Até 500 clientes</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>10 membros · 10 setores</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>10 instância(s) WhatsApp</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>10 números de WhatsApp conectados</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>10 GB de armazenamento</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>10 agentes de IA personalizados</li>
         </ul>
-        <div class="plan-divider"></div>
-        <ul class="plan-feats">
-          <li><span class="fcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Board Kanban de tarefas</li>
-          <li><span class="fcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Assistente IA</li>
-          <li><span class="fcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Chat WhatsApp por setor</li>
-          <li><span class="fcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Prazos fiscais e monitor tributário</li>
-          <li><span class="fcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Integração SERPRO (Receita Federal)</li>
-          <li><span class="fcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Integração Google Calendar</li>
-          <li><span class="fcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Agendamento de disparos</li>
-          <li><span class="fcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Recorrência mensal de envios</li>
-          <li><span class="fcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Envio automático para grupos</li>
-        </ul>
-        <a class="btn btn-primary plan-btn" href="https://app.cubishub.com.br/assinar/685fc882-dc45-41e7-9b21-bae7c5717aad" data-plan="Scale" data-value="397">Assinar agora</a>
+        <a class="btn btn-primary plan-btn" href="https://app.cubishub.com.br/assinar/685fc882-dc45-41e7-9b21-bae7c5717aad" data-plan="Scale" data-value="397">Assinar Scale</a>
+        <button type="button" class="plan-try" onclick="openLeadModal('plano_scale')">ou testar 7 dias antes</button>
       </div>
 
       <div class="plan-card reveal">
@@ -1604,31 +1742,20 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
         <div class="plan-price price-annual">R$ 592<small>/mês</small></div>
         <div class="plan-divider"></div>
         <ul class="plan-limits">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>900 créditos/mês</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>1800 disparos WhatsApp/mês</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>200 disparos/dia por número</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>900 créditos de IA/mês</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>1800 envios em massa/mês</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>200 envios/dia por número</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Até 1500 clientes</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>20 membros · 20 setores</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>20 instância(s) WhatsApp</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>20 números de WhatsApp conectados</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>30 GB de armazenamento</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>20 agentes de IA personalizados</li>
         </ul>
-        <div class="plan-divider"></div>
-        <ul class="plan-feats">
-          <li><span class="fcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Board Kanban de tarefas</li>
-          <li><span class="fcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Assistente IA</li>
-          <li><span class="fcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Chat WhatsApp por setor</li>
-          <li><span class="fcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Prazos fiscais e monitor tributário</li>
-          <li><span class="fcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Integração SERPRO (Receita Federal)</li>
-          <li><span class="fcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Integração Google Calendar</li>
-          <li><span class="fcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Agendamento de disparos</li>
-          <li><span class="fcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Recorrência mensal de envios</li>
-          <li><span class="fcheck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Envio automático para grupos</li>
-        </ul>
         <a class="btn btn-outline plan-btn" href="https://app.cubishub.com.br/assinar/7b611eab-5f9d-4492-bdd8-26a1a63450e6" data-plan="Pro" data-value="697">Assinar Pro</a>
+        <button type="button" class="plan-try" onclick="openLeadModal('plano_pro')">ou testar 7 dias antes</button>
       </div>
     </div>
-    <p class="pricing-note">Pagamento via PIX ou cartão, parcelável. Sem fidelidade: cancele quando quiser.</p>
+    <p class="pricing-note">Pagamento via PIX ou cartão, parcelável. Sem fidelidade: cancele quando quiser.<br>Créditos de IA são usados pelo assistente, pelos agentes e pelos relatórios de IA.</p>
   </div>
 </section>
 
@@ -1641,40 +1768,56 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
     </div>
     <div class="faq-list">
       <div class="faq-item reveal">
-        <button class="faq-q" type="button">Preciso instalar algo para usar o WhatsApp?<span class="fplus"></span></button>
-        <div class="faq-a"><div class="faq-a-inner">Não. A conexão é feita lendo um QR Code, usando o mesmo número que o escritório já utiliza no WhatsApp. Sem instalar aplicativos extras ou trocar de número.</div></div>
+        <button class="faq-q" type="button">Meus clientes precisam dar procuração no e-CAC?<span class="fplus"></span></button>
+        <div class="faq-a"><div class="faq-a-inner">Sim, para a parte fiscal. A consulta à Receita usa o certificado digital do escritório e só funciona para os clientes que deram procuração eletrônica ao escritório no e-CAC. A plataforma confere isso em lote e mostra quem ainda está sem procuração, para você pedir só a esses.</div></div>
       </div>
       <div class="faq-item reveal">
-        <button class="faq-q" type="button">Como funcionam os disparos de WhatsApp?<span class="fplus"></span></button>
-        <div class="faq-a"><div class="faq-a-inner">Você dispara documentos e mensagens pra um cliente individual ou em massa pra vários de uma vez, e também pra grupos de WhatsApp. Dá pra mandar na hora, agendar pra data e horário específicos, ou deixar numa recorrência mensal/semanal automática, sem precisar entrar de novo pra reenviar todo mês.</div></div>
+        <button class="faq-q" type="button">Como funciona a integração com a Receita Federal?<span class="fplus"></span></button>
+        <div class="faq-a"><div class="faq-a-inner">É pelo Integra Contador, o canal oficial do SERPRO, sem robô entrando no e-CAC. Você vê a situação fiscal, as declarações, os parcelamentos e a Caixa Postal de cada cliente, emite guias como DAS, DAS MEI, DARF e parcelamento em lote e depois envia tudo pelo WhatsApp de uma vez.</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" type="button">As consultas à Receita têm custo?<span class="fplus"></span></button>
+        <div class="faq-a"><div class="faq-a-inner">As consultas e emissões passam pelo SERPRO, e a cobrança delas é feita pelo próprio SERPRO, não pelo Cubis.Hub. A mensalidade do Cubis.Hub cobre a plataforma.</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" type="button">Como funciona o envio em massa?<span class="fplus"></span></button>
+        <div class="faq-a"><div class="faq-a-inner">Você arrasta as guias do mês, cada arquivo encontra o cliente dono dele e a mensagem sai com o nome de cada um. Dá para enviar no contato, no grupo de WhatsApp do cliente, por e-mail e por Telegram, na hora, agendado ou repetindo todo mês. Na hora do envio você ainda marca os avisos de vencimento.</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" type="button">Meu número de WhatsApp pode ser bloqueado?<span class="fplus"></span></button>
+        <div class="faq-a"><div class="faq-a-inner">Os envios saem espaçados, um de cada vez, e cada plano tem um limite de envios por dia por número. As mensagens vão só para clientes do próprio escritório, que já conhecem o seu número. Isso reduz bastante o risco, mas nenhuma ferramenta que usa WhatsApp por QR Code pode garantir risco zero.</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" type="button">Preciso instalar algo para usar o WhatsApp?<span class="fplus"></span></button>
+        <div class="faq-a"><div class="faq-a-inner">Não. A conexão é feita lendo um QR Code, com o número que o escritório já usa. Sem aplicativo extra e sem trocar de número.</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" type="button">O cliente precisa instalar algo para usar o portal?<span class="fplus"></span></button>
+        <div class="faq-a"><div class="faq-a-inner">Não. Ele recebe um link, confirma com os 4 últimos dígitos do WhatsApp cadastrado e vê as guias, as notas fiscais e os comunicados pelo navegador, no celular ou no computador.</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" type="button">O agente de IA responde sozinho no WhatsApp?<span class="fplus"></span></button>
+        <div class="faq-a"><div class="faq-a-inner">Só se você ativar. Ligado, ele responde as dúvidas frequentes, consulta as guias do próprio cliente e envia o arquivo quando ele pede. Documento de outro cliente ou material interno ele não enxerga. A qualquer momento a conversa passa para uma pessoa da equipe.</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" type="button">O que são os créditos de IA do plano?<span class="fplus"></span></button>
+        <div class="faq-a"><div class="faq-a-inner">São o que o assistente, os agentes e os relatórios de IA consomem quando trabalham para você. Cada plano traz uma quantidade por mês e o painel mostra quanto já foi usado. Consultas à Receita, envios e o resto da plataforma não gastam crédito de IA.</div></div>
       </div>
       <div class="faq-item reveal">
         <button class="faq-q" type="button">O teste grátis de 7 dias pede cartão de crédito?<span class="fplus"></span></button>
-        <div class="faq-a"><div class="faq-a-inner">Não. Você deixa seus dados, um consultor ativa seu acesso rapidamente e você testa todas as funcionalidades do plano por 7 dias sem informar cartão. Só é cobrado se decidir continuar.</div></div>
+        <div class="faq-a"><div class="faq-a-inner">Não. Você deixa seu contato, recebe uma mensagem no WhatsApp para liberar o acesso e usa por 7 dias sem informar cartão. Só paga se decidir continuar.</div></div>
       </div>
       <div class="faq-item reveal">
-        <button class="faq-q" type="button">Como funciona a integração com a Receita Federal (SERPRO)?<span class="fplus"></span></button>
-        <div class="faq-a"><div class="faq-a-inner">O Cubis Hub se conecta oficialmente ao Integra Contador da SERPRO usando a procuração eletrônica do seu escritório no e-CAC. A partir daí, acompanhamos as obrigações e declarações de cada cliente automaticamente (PGDAS, DCTFWeb, parcelamentos, certidões e outras pendências), direto da fonte oficial, sem abrir o e-CAC um por um. Guias oficiais (DAS e parcelamento) já saem emitidas e prontas pra mandar pelo WhatsApp do cliente.</div></div>
-      </div>
-      <div class="faq-item reveal">
-        <button class="faq-q" type="button">Consigo migrar os clientes que já atendo hoje?<span class="fplus"></span></button>
-        <div class="faq-a"><div class="faq-a-inner">Sim. Você importa sua carteira de clientes via CSV de uma vez só e já organiza por setor, tag e responsável.</div></div>
+        <button class="faq-q" type="button">Consigo trazer os clientes que já atendo?<span class="fplus"></span></button>
+        <div class="faq-a"><div class="faq-a-inner">Sim. Importe a planilha de clientes ou digite os CNPJs: o cadastro se completa com os dados públicos da empresa e já fica separado por setor e responsável.</div></div>
       </div>
       <div class="faq-item reveal">
         <button class="faq-q" type="button">Os dados do escritório e dos clientes ficam seguros?<span class="fplus"></span></button>
-        <div class="faq-a"><div class="faq-a-inner">Sim. Os dados trafegam criptografados e o acesso é isolado por escritório, seguindo os princípios da LGPD. Cada usuário só vê o que tem permissão.</div></div>
-      </div>
-      <div class="faq-item reveal">
-        <button class="faq-q" type="button">Posso trocar de plano ou cancelar quando quiser?<span class="fplus"></span></button>
-        <div class="faq-a"><div class="faq-a-inner">Sim, o upgrade, downgrade e cancelamento podem ser feitos a qualquer momento direto na plataforma, sem multa e sem burocracia.</div></div>
-      </div>
-      <div class="faq-item reveal">
-        <button class="faq-q" type="button">Como funciona o agente de atendimento com IA?<span class="fplus"></span></button>
-        <div class="faq-a"><div class="faq-a-inner">Você configura o agente com as informações do seu escritório e ele responde dúvidas frequentes dos clientes no WhatsApp automaticamente, transferindo para um humano sempre que necessário.</div></div>
+        <div class="faq-a"><div class="faq-a-inner">Sim. Os dados trafegam criptografados, o acesso é isolado por escritório e cada usuário só vê o que tem permissão. No portal, cada cliente enxerga apenas os próprios documentos.</div></div>
       </div>
       <div class="faq-item reveal">
         <button class="faq-q" type="button">Se eu tiver dúvidas, como falo com o suporte?<span class="fplus"></span></button>
-        <div class="faq-a"><div class="faq-a-inner">É só chamar pelo WhatsApp ou e-mail de suporte informados dentro da plataforma. Nossa equipe responde diretamente, sem robôs de atendimento no meio do caminho.</div></div>
+        <div class="faq-a"><div class="faq-a-inner">É só chamar pelo WhatsApp ou e-mail de suporte informados dentro da plataforma. Nossa equipe responde diretamente, sem robô no meio do caminho.</div></div>
       </div>
     </div>
   </div>
@@ -1686,10 +1829,10 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
   <div class="cta-glow"></div>
   <div class="wrap">
     <div class="cta-inner reveal">
-      <h2>Organize o escritório.<br><span class="g">Atenda melhor.</span> Cresça.</h2>
-      <p>Comece grátis por 7 dias e veja como o Cubis.Hub muda a rotina do seu escritório contábil.</p>
+      <h2>No próximo vencimento,<br><span class="g">as guias saem em lote, não uma por uma.</span></h2>
+      <p>Teste 7 dias com a carteira do seu escritório. Em menos de uma semana a equipe já está usando.</p>
       <button type="button" class="btn btn-primary" onclick="openLeadModal('final_cta')" style="height:54px;padding:0 36px;font-size:1.02rem;">
-        Criar conta grátis
+        Testar 7 dias grátis
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:18px;height:18px"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </button>
       <div class="cta-trust">
@@ -1732,7 +1875,7 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
         <h5>Empresa</h5>
         <ul>
           <li><a href="#como-funciona">Como funciona</a></li>
-          <li><a href="#ia">Assistente IA</a></li>
+          <li><a href="#ia">Inteligência artificial</a></li>
           <li><a href="https://wa.me/5551985488078" target="_blank" rel="noopener noreferrer">Contato</a></li>
         </ul>
       </div>
@@ -1754,7 +1897,7 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
 
 <!-- ─── Banner de cookies (LGPD) ─── -->
 <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Preferências de cookies">
-  <p>Usamos cookies para medir audiência e desempenho de campanhas (Google Analytics e Meta Pixel). Você pode aceitar ou recusar — sua escolha não afeta o funcionamento do site. Saiba mais na nossa <a href="https://cubishub.com.br/privacidade.html" target="_blank" rel="noopener">Política de Privacidade</a>.</p>
+  <p>Usamos cookies para medir audiência e desempenho de campanhas (Google Analytics e Meta Pixel). Você pode aceitar ou recusar. Sua escolha não afeta o funcionamento do site. Saiba mais na nossa <a href="https://cubishub.com.br/privacidade.html" target="_blank" rel="noopener">Política de Privacidade</a>.</p>
   <div class="cookie-banner-actions">
     <button type="button" class="btn btn-primary" onclick="acceptCookies()">Aceitar</button>
     <button type="button" class="btn btn-outline" onclick="rejectCookies()">Recusar</button>
@@ -1771,7 +1914,7 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
     <div id="leadFormView">
       <div class="lead-eyebrow">Teste grátis · 7 dias</div>
       <h3 id="leadModalTitle">Vamos começar?</h3>
-      <p class="lead-sub">Preencha seus dados e um de nossos consultores entra em contato para ativar seu acesso.</p>
+      <p class="lead-sub">Deixe seu contato. Em seguida você recebe uma mensagem no WhatsApp para liberar o acesso.</p>
 
       <form id="leadForm" onsubmit="submitLeadForm(event)" novalidate>
         <div class="lead-field" id="leadFieldName">
@@ -1791,7 +1934,7 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
         </div>
 
         <button type="submit" class="btn btn-primary lead-submit" id="leadSubmitBtn">
-          <span id="leadSubmitLabel">Quero criar minha conta grátis</span>
+          <span id="leadSubmitLabel">Quero meu teste de 7 dias</span>
         </button>
         <p class="lead-privacy">Sem cartão de crédito. Seus dados são usados apenas para contato sobre o teste grátis. Ao enviar, você concorda com o tratamento dos seus dados conforme a nossa <a href="https://cubishub.com.br/privacidade.html" target="_blank" rel="noopener">Política de Privacidade</a>.</p>
       </form>
@@ -1802,7 +1945,7 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
       </div>
       <h3>Recebemos seus dados!</h3>
-      <p class="lead-sub">Um de nossos consultores vai te chamar em breve para ativar seu teste grátis de 7 dias.</p>
+      <p class="lead-sub">Em instantes você recebe uma mensagem no WhatsApp para liberar seu teste grátis de 7 dias.</p>
       <button type="button" class="btn btn-outline" style="width:100%" onclick="closeLeadModal()">Fechar</button>
     </div>
   </div>
@@ -1941,33 +2084,6 @@ function setPricing(mode) {
   document.getElementById('btn-mensal').classList.toggle('active', !isAnual);
   document.getElementById('btn-anual').classList.toggle('active', isAnual);
 }
-
-/* �.��.��.��.��.��.��.��.��.��.��.��.� Benefit cards �?" spotlight + 3D tilt �.��.��.��.��.��.��.��.��.��.��.��.� */
-(function () {
-  var cards = document.querySelectorAll('.benefit');
-
-  cards.forEach(function (card) {
-    card.addEventListener('mousemove', function (e) {
-      var rect = card.getBoundingClientRect();
-      var x = e.clientX - rect.left;
-      var y = e.clientY - rect.top;
-
-      // atualiza posição do spotlight (em px, relativa ao card)
-      card.style.setProperty('--mx', x + 'px');
-      card.style.setProperty('--my', y + 'px');
-
-      // tilt 3D suave
-      var cx = rect.width / 2, cy = rect.height / 2;
-      var rotY = ((x - cx) / cx) * 7;   // max ±7deg
-      var rotX = -((y - cy) / cy) * 5;  // max ±5deg
-      card.style.transform = 'perspective(800px) rotateX(' + rotX + 'deg) rotateY(' + rotY + 'deg) translateZ(4px)';
-    });
-
-    card.addEventListener('mouseleave', function () {
-      card.style.transform = 'perspective(800px) rotateX(0deg) rotateY(0deg) translateZ(0)';
-    });
-  });
-})();
 
 /* �.��.��.��.��.��.��.��.��.��.��.��.� FAQ accordion �.��.��.��.��.��.��.��.��.��.��.��.� */
 (function () {
@@ -2160,37 +2276,6 @@ function setPricing(mode) {
   }
 })();
 
-/* �.��.��.��.��.��.��.��.��.��.��.��.� Lazy-load & autoplay dos vídeos de demonstração �.��.��.��.��.��.��.��.��.��.��.��.� */
-(function () {
-  var videos = document.querySelectorAll('video[data-src]');
-  if (!videos.length) return;
-  function reveal(v) { v.classList.add('is-ready'); }
-  function activate(v) {
-    if (v.dataset.activated) return;
-    v.dataset.activated = '1';
-    if (!v.src) v.src = v.getAttribute('data-src');
-    // Revela em qualquer sinal de que há imagem pronta — evita ficar preso em opacity:0
-    ['loadeddata', 'canplay', 'playing'].forEach(function (ev) {
-      v.addEventListener(ev, function () { reveal(v); });
-    });
-    v.load();
-    // Se já estiver pronto (cache/localhost rápido), revela na hora
-    if (v.readyState >= 2) reveal(v);
-    var p = v.play();
-    // Autoplay bloqueado? Mostra mesmo assim (o 1º frame já é conteúdo)
-    if (p && p.catch) p.catch(function () { reveal(v); });
-    // Rede de segurança final
-    setTimeout(function () { if (v.readyState >= 2) reveal(v); }, 1500);
-  }
-  if (!('IntersectionObserver' in window)) { videos.forEach(activate); return; }
-  var vio = new IntersectionObserver(function (entries) {
-    entries.forEach(function (en) {
-      if (en.isIntersecting) { activate(en.target); vio.unobserve(en.target); }
-    });
-  }, { threshold: 0.2, rootMargin: '300px 0px' });
-  videos.forEach(function (v) { vio.observe(v); });
-})();
-
 /* ─── Lead Modal (teste grátis) ─── */
 (function () {
   var SUPABASE_URL = 'https://rmqskrdlmdgvoyktbngy.supabase.co';
@@ -2270,7 +2355,7 @@ function setPricing(mode) {
       alert('Não foi possível enviar seus dados agora. Tente novamente em instantes.');
     }).finally(function () {
       submitBtn.disabled = false;
-      submitLabel.textContent = 'Quero criar minha conta grátis';
+      submitLabel.textContent = 'Quero meu teste de 7 dias';
     });
   };
 })();
@@ -2321,6 +2406,17 @@ function setPricing(mode) {
   } catch (e) {
     banner.classList.add('open');
   }
+})();
+</script>
+<script>
+/* Barra fixa: aparece quando o hero sai da tela */
+(function () {
+  var bar = document.getElementById('stickybar');
+  var hero = document.querySelector('header.hero');
+  if (!bar || !hero || !('IntersectionObserver' in window)) return;
+  new IntersectionObserver(function (e) {
+    bar.classList.toggle('show', !e[0].isIntersecting);
+  }, { rootMargin: '-80px 0px 0px 0px' }).observe(hero);
 })();
 </script>
 </body>
