@@ -381,7 +381,6 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
     display: flex; align-items: center; justify-content: space-between;
     padding: 22px 0; position: relative; z-index: 20;
   }
-  .nav-logo { height: 40px; width: auto; display: block; }
   .brand-mark { display: flex; align-items: center; gap: 10px; }
   .brand-mark-text { font-family: 'Inter', sans-serif; font-size: 24px; font-weight: 700; letter-spacing: -0.025em; color: #F0F2F1; }
   .brand-mark-text .hub { color: #2ECC71; }
@@ -395,7 +394,6 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
   .stickybar.show { transform: none; visibility: visible; transition: transform .35s cubic-bezier(.16,1,.3,1), visibility 0s; }
   .stickybar-in { display: flex; align-items: center; justify-content: space-between; height: 60px; }
   .stickybar-brand { display: flex; align-items: center; gap: 8px; font-weight: 800; color: var(--dark-fg); letter-spacing: -0.02em; }
-  .stickybar-brand img { height: 26px; width: auto; }
   .stickybar-brand .hub { color: var(--green); }
   .stickybar-actions { display: flex; align-items: center; gap: 20px; }
   .stickybar-link { font-size: 0.88rem; font-weight: 500; color: var(--dark-muted); }
@@ -845,7 +843,6 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
     .hero-tags { display: none; }
     .hero-marquee { margin-top: 22px; }
     .hero-trust-mobile { display: flex; }
-    .nav-logo { height: 32px; }
     .section-faq { padding: 64px 0; }
     .faq-q { padding: 18px 20px; font-size: 0.96rem; }
     .faq-a-inner { padding: 0 20px 20px; }
@@ -973,7 +970,7 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
 <body id="top">
 <div class="stickybar" id="stickybar">
   <div class="wrap stickybar-in">
-    <a href="#top" class="stickybar-brand" aria-label="Voltar ao topo"><img src="assets/logo-cube.webp" alt="" width="605" height="582" />Cubis<span class="hub">.Hub</span></a>
+    <a href="#top" class="stickybar-brand" aria-label="Voltar ao topo">Cubis<span class="hub">.Hub</span></a>
     <div class="stickybar-actions">
       <a href="#planos" class="stickybar-link">Ver planos</a>
       <button type="button" class="btn btn-primary btn-sm" onclick="openLeadModal('stickybar')">Testar 7 dias grátis</button>
@@ -993,7 +990,6 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
     <nav class="topbar">
       <a href="#top" aria-label="Cubis.Hub" class="brand-mark">
         <span class="sr-only">Cubis.Hub, gestão contábil para escritórios de contabilidade</span>
-        <img class="nav-logo" src="assets/logo-cube.webp" alt="" width="605" height="582" />
         <span class="brand-mark-text">Cubis<span class="hub">.Hub</span></span>
       </a>
       <div class="nav-links" id="navLinks" onclick="document.getElementById('navLinks').classList.remove('open')">
