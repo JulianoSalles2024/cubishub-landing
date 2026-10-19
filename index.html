@@ -74,7 +74,7 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Cubis.Hub | O escritório contábil inteiro em uma tela só</title>
-<meta name="description" content="Guias emitidas pelo SERPRO e enviadas em lote no WhatsApp, inclusive nos grupos dos clientes. Aviso de vencimento, XML, portal do cliente e agentes de IA para escritórios de contabilidade. Teste 7 dias grátis." />
+<meta name="description" content="Guias emitidas pelo SERPRO e enviadas em lote no WhatsApp, inclusive nos grupos dos clientes. Aviso de vencimento, XML, portal do cliente e agentes de IA para escritórios de contabilidade." />
 <link rel="canonical" href="https://cubishub.com.br/" />
 <meta name="google-site-verification" content="qyxFXVbZ046ZMRCxJ17a0ruOamdpgJodCg41jpuW8jw" />
 
@@ -217,14 +217,6 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "São o que o assistente, os agentes e os relatórios de IA consomem quando trabalham para você. Cada plano traz uma quantidade por mês e o painel mostra quanto já foi usado. Consultas à Receita, envios e o resto da plataforma não gastam crédito de IA."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "O teste grátis de 7 dias pede cartão de crédito?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Não. Você deixa seu contato, recebe uma mensagem no WhatsApp para liberar o acesso e usa por 7 dias sem informar cartão. Só paga se decidir continuar."
       }
     },
     {
@@ -747,7 +739,7 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
   .plan-incl li { display: flex; align-items: center; gap: 7px; font-size: 0.86rem; color: var(--ink); }
   .plan-incl li svg { width: 12px; height: 12px; color: var(--green-deep); flex-shrink: 0; }
   .plan-limits { flex: 1; }
-  .plan-try { margin-top: 12px; background: none; border: none; cursor: pointer; font-family: inherit; font-size: 0.86rem; font-weight: 600; color: var(--green-deep); text-decoration: underline; text-underline-offset: 3px; padding: 6px; }
+  .plan-try { display: inline-block; margin-top: 12px; background: none; border: none; cursor: pointer; font-family: inherit; font-size: 0.86rem; font-weight: 600; color: var(--green-deep); text-decoration: underline; text-underline-offset: 3px; padding: 6px; }
   .plan-card.feat .plan-try { color: var(--green-light); }
   .plan-try:hover { text-decoration-thickness: 2px; }
   .plan-try:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; border-radius: 6px; }
@@ -973,7 +965,7 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
     <a href="#top" class="stickybar-brand" aria-label="Voltar ao topo">Cubis<span class="hub">.Hub</span></a>
     <div class="stickybar-actions">
       <a href="#planos" class="stickybar-link">Ver planos</a>
-      <button type="button" class="btn btn-primary btn-sm" onclick="openLeadModal('stickybar')">Testar 7 dias grátis</button>
+      <button type="button" class="btn btn-primary btn-sm" onclick="openLeadModal('stickybar')">Agendar demonstração</button>
     </div>
   </div>
 </div>
@@ -1016,7 +1008,7 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
 
       <div class="hero-actions">
         <button type="button" class="btn btn-primary" onclick="openLeadModal('hero')">
-          Testar 7 dias grátis
+          Agendar demonstração
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </button>
       </div>
@@ -1075,8 +1067,6 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
       </div>
 
       <div class="hero-trust-mobile">
-        <span>7 dias grátis</span><span class="dot"></span>
-        <span>Sem cartão de crédito</span><span class="dot"></span>
         <span>Cancele quando quiser</span>
       </div>
 
@@ -1704,7 +1694,7 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>5 agentes de IA personalizados</li>
         </ul>
         <a class="btn btn-outline plan-btn" href="https://app.cubishub.com.br/assinar/2e16005d-5dd2-461a-97e8-095ba10a0783" data-plan="Essencial" data-value="179">Assinar Essencial</a>
-        <button type="button" class="plan-try" onclick="openLeadModal('plano_essencial')">ou testar 7 dias antes</button>
+        <a class="plan-try" href="https://app.cubishub.com.br/assinar/942e4bf8-266d-4f15-86dd-ef23e79ca5b3" data-plan="Teste 7 dias" data-value="39.9">ou testar 7 dias</a>
       </div>
 
       <div class="plan-card feat reveal">
@@ -1725,7 +1715,7 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>10 agentes de IA personalizados</li>
         </ul>
         <a class="btn btn-primary plan-btn" href="https://app.cubishub.com.br/assinar/685fc882-dc45-41e7-9b21-bae7c5717aad" data-plan="Scale" data-value="397">Assinar Scale</a>
-        <button type="button" class="plan-try" onclick="openLeadModal('plano_scale')">ou testar 7 dias antes</button>
+        <a class="plan-try" href="https://app.cubishub.com.br/assinar/942e4bf8-266d-4f15-86dd-ef23e79ca5b3" data-plan="Teste 7 dias" data-value="39.9">ou testar 7 dias</a>
       </div>
 
       <div class="plan-card reveal">
@@ -1745,7 +1735,7 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>20 agentes de IA personalizados</li>
         </ul>
         <a class="btn btn-outline plan-btn" href="https://app.cubishub.com.br/assinar/7b611eab-5f9d-4492-bdd8-26a1a63450e6" data-plan="Pro" data-value="697">Assinar Pro</a>
-        <button type="button" class="plan-try" onclick="openLeadModal('plano_pro')">ou testar 7 dias antes</button>
+        <a class="plan-try" href="https://app.cubishub.com.br/assinar/942e4bf8-266d-4f15-86dd-ef23e79ca5b3" data-plan="Teste 7 dias" data-value="39.9">ou testar 7 dias</a>
       </div>
     </div>
     <p class="pricing-note">Pagamento via PIX ou cartão, parcelável. Sem fidelidade: cancele quando quiser.<br>Créditos de IA são usados pelo assistente, pelos agentes e pelos relatórios de IA.</p>
@@ -1797,10 +1787,6 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
         <div class="faq-a"><div class="faq-a-inner">São o que o assistente, os agentes e os relatórios de IA consomem quando trabalham para você. Cada plano traz uma quantidade por mês e o painel mostra quanto já foi usado. Consultas à Receita, envios e o resto da plataforma não gastam crédito de IA.</div></div>
       </div>
       <div class="faq-item reveal">
-        <button class="faq-q" type="button">O teste grátis de 7 dias pede cartão de crédito?<span class="fplus"></span></button>
-        <div class="faq-a"><div class="faq-a-inner">Não. Você deixa seu contato, recebe uma mensagem no WhatsApp para liberar o acesso e usa por 7 dias sem informar cartão. Só paga se decidir continuar.</div></div>
-      </div>
-      <div class="faq-item reveal">
         <button class="faq-q" type="button">Consigo trazer os clientes que já atendo?<span class="fplus"></span></button>
         <div class="faq-a"><div class="faq-a-inner">Sim. Importe a planilha de clientes ou digite os CNPJs: o cadastro se completa com os dados públicos da empresa e já fica separado por setor e responsável.</div></div>
       </div>
@@ -1823,14 +1809,12 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
   <div class="wrap">
     <div class="cta-inner reveal">
       <h2>No próximo vencimento,<br><span class="g">as guias saem em lote, não uma por uma.</span></h2>
-      <p>Teste 7 dias com a carteira do seu escritório. Em menos de uma semana a equipe já está usando.</p>
+      <p>Veja na prática com a carteira do seu escritório. Em menos de uma semana a equipe já está usando.</p>
       <button type="button" class="btn btn-primary" onclick="openLeadModal('final_cta')" style="height:54px;padding:0 36px;font-size:1.02rem;">
-        Testar 7 dias grátis
+        Agendar demonstração
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:18px;height:18px"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </button>
       <div class="cta-trust">
-        <span>7 dias grátis</span><span class="cta-sep"></span>
-        <span>Sem cartão de crédito</span><span class="cta-sep"></span>
         <span>Cancele quando quiser</span>
       </div>
     </div>
@@ -1905,9 +1889,9 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
     </button>
 
     <div id="leadFormView">
-      <div class="lead-eyebrow">Teste grátis · 7 dias</div>
+      <div class="lead-eyebrow">Demonstração</div>
       <h3 id="leadModalTitle">Vamos começar?</h3>
-      <p class="lead-sub">Deixe seu contato. Em seguida você recebe uma mensagem no WhatsApp para liberar o acesso.</p>
+      <p class="lead-sub">Deixe seu contato e nossa equipe fala com você pelo WhatsApp para agendar uma demonstração.</p>
 
       <form id="leadForm" onsubmit="submitLeadForm(event)" novalidate>
         <div class="lead-field" id="leadFieldName">
@@ -1927,9 +1911,9 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
         </div>
 
         <button type="submit" class="btn btn-primary lead-submit" id="leadSubmitBtn">
-          <span id="leadSubmitLabel">Quero meu teste de 7 dias</span>
+          <span id="leadSubmitLabel">Quero agendar uma demonstração</span>
         </button>
-        <p class="lead-privacy">Sem cartão de crédito. Seus dados são usados apenas para contato sobre o teste grátis. Ao enviar, você concorda com o tratamento dos seus dados conforme a nossa <a href="https://cubishub.com.br/privacidade.html" target="_blank" rel="noopener">Política de Privacidade</a>.</p>
+        <p class="lead-privacy">Seus dados são usados apenas para contato sobre a demonstração. Ao enviar, você concorda com o tratamento dos seus dados conforme a nossa <a href="https://cubishub.com.br/privacidade.html" target="_blank" rel="noopener">Política de Privacidade</a>.</p>
       </form>
     </div>
 
@@ -1938,7 +1922,7 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
       </div>
       <h3>Recebemos seus dados!</h3>
-      <p class="lead-sub">Em instantes você recebe uma mensagem no WhatsApp para liberar seu teste grátis de 7 dias.</p>
+      <p class="lead-sub">Em breve nossa equipe entra em contato pelo WhatsApp para agendar.</p>
       <button type="button" class="btn btn-outline" style="width:100%" onclick="closeLeadModal()">Fechar</button>
     </div>
   </div>
@@ -2348,13 +2332,13 @@ function setPricing(mode) {
       alert('Não foi possível enviar seus dados agora. Tente novamente em instantes.');
     }).finally(function () {
       submitBtn.disabled = false;
-      submitLabel.textContent = 'Quero meu teste de 7 dias';
+      submitLabel.textContent = 'Quero agendar uma demonstração';
     });
   };
 })();
 
 (function () {
-  document.querySelectorAll('.plan-btn').forEach(function (btn) {
+  document.querySelectorAll('.plan-btn, .plan-try').forEach(function (btn) {
     btn.addEventListener('click', function () {
       var plan = btn.getAttribute('data-plan') || 'unknown';
       var value = parseFloat(btn.getAttribute('data-value')) || 0;
