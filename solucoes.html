@@ -342,7 +342,7 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
   .pt-col h3 { font-size: 1.1rem; font-weight: 700; letter-spacing: -0.015em; margin-bottom: 16px; }
   .pt-col ul { list-style: none; display: flex; flex-direction: column; gap: 11px; }
   .pt-col li { display: flex; gap: 9px; align-items: flex-start; font-size: 0.92rem; line-height: 1.5; color: var(--ink); }
-  .pt-col li svg { width: 12px; height: 12px; color: var(--green-deep); flex-shrink: 0; margin-top: 5px; }
+  .pt-col li svg { width: 19px; height: 19px; color: var(--green-deep); flex-shrink: 0; margin-top: 1px; }
   .pt-note { text-align: center; margin-top: 28px; font-size: 1rem; font-weight: 600; color: var(--ink); }
   @media (max-width: 800px) { .pt-grid { grid-template-columns: 1fr; } .pt-col + .pt-col { border-left: none; border-top: 1px solid var(--border); } .section-portal { padding: 64px 0; } }
   .vs { max-width: 980px; margin: 0 auto; border: 1px solid var(--border); border-radius: 20px; overflow: hidden; background: var(--card); }
@@ -356,7 +356,7 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
   .vs-ic { width: 20px; height: 20px; border-radius: 50%; display: grid; place-items: center; flex-shrink: 0; margin-top: 1px; }
   .vs-ic svg { width: 10px; height: 10px; }
   .vs-old .vs-ic { background: rgba(20,26,24,0.06); color: var(--ink-soft); }
-  .vs-new .vs-ic { background: rgba(46,204,113,0.16); color: var(--green-deep); }
+  .vs-new .vs-ic { background: none; color: var(--green-deep); width: 22px; height: 22px; }
   @media (max-width: 700px) { .vs-row { grid-template-columns: 1fr; } .vs-new { border-left: none; } .vs-head { display: none; } .vs-old { padding-bottom: 6px; } .vs-new { padding-top: 10px; } }
 
   /* �.��.��.� FEATURES �.��.��.� */
@@ -371,8 +371,8 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
   .ftext .desc { font-size: 1rem; color: var(--ink-soft); margin-bottom: 24px; line-height: 1.65; }
   .flist-new { list-style: none; display: flex; flex-direction: column; gap: 12px; }
   .flist-new li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.94rem; color: var(--ink); }
-  .flist-new li .chk { width: 20px; height: 20px; border-radius: 50%; background: rgba(46,204,113,0.14); display: grid; place-items: center; flex-shrink: 0; margin-top: 1px; }
-  .flist-new li .chk svg { width: 10px; height: 10px; color: var(--green-deep); }
+  .flist-new li .chk { width: 21px; height: 21px; display: grid; place-items: center; flex-shrink: 0; margin-top: 0; color: var(--green-deep); }
+  .flist-new li .chk svg { width: 21px; height: 21px; }
   /* Soluções: grade compacta da home */
   .sol-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
   .sol-card { display: flex; flex-direction: column; gap: 10px; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 22px 20px 20px; transition: transform .2s, box-shadow .2s, border-color .2s; }
@@ -436,8 +436,8 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
   .wtext p { font-size: 1rem; color: var(--dark-muted); line-height: 1.68; }
   .wlist { list-style: none; margin-top: 22px; display: flex; flex-direction: column; gap: 11px; }
   .wlist li { display: flex; gap: 10px; align-items: flex-start; font-size: 0.93rem; color: var(--dark-fg); opacity: .92; line-height: 1.5; }
-  .wlist .chk { width: 18px; height: 18px; border-radius: 6px; background: rgba(46,204,113,0.14); color: var(--green); display: grid; place-items: center; flex-shrink: 0; margin-top: 2px; }
-  .wlist .chk svg { width: 11px; height: 11px; }
+  .wlist .chk { width: 20px; height: 20px; color: var(--green); display: grid; place-items: center; flex-shrink: 0; margin-top: 1px; }
+  .wlist .chk svg { width: 20px; height: 20px; }
 
   /* Arte com fundo transparente: nenhuma caixa, só o brilho da própria peça */
 
@@ -507,7 +507,7 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
   .integ-featured .integ-desc { max-width: 620px; font-size: 0.98rem; }
   .integ-perks { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; position: relative; z-index: 2; }
   .integ-perk { display: flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.045); border: 1px solid rgba(46,204,113,0.22); border-radius: 12px; padding: 10px 14px; font-size: 0.85rem; color: var(--dark-fg); font-weight: 500; }
-  .integ-perk svg { width: 16px; height: 16px; color: var(--green-light); flex-shrink: 0; }
+  .integ-perk svg { width: 20px; height: 20px; color: var(--green-light); flex-shrink: 0; }
 
   /* SERPRO em produção */
   .section-serpro { background: var(--dots-light) 0 0 / 26px 26px, var(--bg); padding: 100px 0; position: relative; overflow: hidden; }
@@ -524,8 +524,8 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
   .serpro-card-sub { font-size: 0.74rem; color: var(--ink-soft); margin-top: 2px; }
   .serpro-list { list-style: none; display: flex; flex-direction: column; gap: 9px; }
   .serpro-list li { display: flex; align-items: flex-start; gap: 9px; font-size: 0.85rem; color: var(--ink); line-height: 1.5; }
-  .serpro-list li .chk { width: 17px; height: 17px; border-radius: 50%; background: rgba(46,204,113,0.14); display: grid; place-items: center; flex-shrink: 0; margin-top: 1px; }
-  .serpro-list li .chk svg { width: 9px; height: 9px; color: var(--green-deep); }
+  .serpro-list li .chk { width: 20px; height: 20px; display: grid; place-items: center; flex-shrink: 0; margin-top: 0; color: var(--green-deep); }
+  .serpro-list li .chk svg { width: 20px; height: 20px; }
   .serpro-note { text-align: center; margin-top: 40px; font-size: 0.88rem; color: var(--ink-soft); }
   .serpro-note strong { color: var(--green-deep); font-weight: 700; }
   .cycle { list-style: none; display: grid; grid-template-columns: repeat(6,1fr); gap: 0; position: relative; margin: 8px 0 0; }
@@ -871,6 +871,142 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
   @keyframes faFloat { 50% { transform: translateY(-.45em); } }
   @keyframes faBlink { 50% { opacity: 0; } }
   @media (prefers-reduced-motion: reduce) { .fa-float, .fa-input::after { animation: none; } }
+  /* Telas do sistema (tema claro real da plataforma), planas e de frente */
+  .fart.sy .fart-in { font-size: clamp(6px, 1.95cqw, 13px); }
+  .fart.sy .fart-in svg:not(.fa-wire) { width: 1.1em; height: 1.1em; }
+  .sy-scene { position: absolute; left: 3.6em; top: 2.6em; width: 46em; }
+  .sy-l { position: absolute; }
+  .sy-win { overflow: hidden; border-radius: .7em; border: 1px solid rgba(90,116,112,.24); background: #EEF2EF; box-shadow: 0 2.2em 4em -1.6em rgba(20,26,24,.38); }
+  .sy-bar { display: flex; align-items: center; gap: .4em; height: 2em; padding: 0 .8em; background: #F8FAF9; border-bottom: 1px solid rgba(90,116,112,.16); }
+  .sy-bar i { width: .55em; height: .55em; border-radius: 50%; background: rgba(90,116,112,.32); }
+  .sy-bar span { margin: 0 auto; background: rgba(90,116,112,.1); border-radius: .3em; padding: .15em 2.5em; font-size: .72em; color: #566A65; }
+  .sy-body { display: flex; }
+  .sy-side { width: 3.2em; flex-shrink: 0; display: flex; flex-direction: column; align-items: center; gap: .9em; padding: .9em 0; background: #DCE6E2; border-right: 1px solid rgba(90,116,112,.16); }
+  .sy-side .lg { width: 1.7em; height: 1.7em; border-radius: .35em; background: rgba(23,128,74,.18); display: grid; place-items: center; margin-bottom: .3em; }
+  .sy-side .lg b { width: .75em; height: .75em; transform: rotate(45deg); border: .13em solid #17804A; border-radius: .12em; }
+  .sy-side .ni { width: 1.7em; height: 1.7em; border-radius: .35em; display: grid; place-items: center; color: rgba(86,106,101,.7); }
+  .sy-side .ni.on { background: rgba(23,128,74,.16); color: #17804A; }
+  .fart.sy .sy-side svg { width: .95em; height: .95em; }
+  .sy-main { flex: 1; min-width: 0; padding: 1em; }
+  .sy-title { display: flex; align-items: center; justify-content: space-between; margin-bottom: .8em; font-size: 1.05em; font-weight: 700; }
+  .sy-kpis { display: flex; gap: .6em; margin-bottom: .8em; }
+  .sy-kpi { flex: 1; border: 1px solid rgba(90,116,112,.16); border-radius: .45em; background: #F8FAF9; padding: .6em .8em; }
+  .sy-kpi .l { font-size: .62em; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; color: #566A65; }
+  .sy-kpi .v { margin-top: .2em; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 1.35em; font-weight: 600; }
+  .sy .ok { color: #17804A; } .sy .warn { color: #B26B05; }
+  .sy .m { color: #566A65; } .sy .mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  .sy .s { font-size: .8em; } .sy .s2 { font-size: .72em; } .sy .r { text-align: right; }
+  .sy .gr { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+  .sy .b { font-weight: 600; } .sy .w8 { width: 8em; overflow: hidden; text-overflow: ellipsis; } .sy .w7 { width: 7em; } .sy .w6 { width: 6em; } .sy .w2 { width: 2em; }
+  .sy-row { display: flex; align-items: center; gap: .7em; white-space: nowrap; border-top: 1px solid rgba(90,116,112,.16); padding: .5em 0; font-size: .8em; }
+  .sy-row .fa-av { font-size: .7em; }
+  .fa-pill.info { background: rgba(56,142,214,.15); color: #1F62A0; }
+  .fa-pill.bad { background: rgba(217,48,37,.12); color: #B3261E; }
+  .fa-av.t { background: #1E9AA0; }
+  .sy-card { border-radius: .6em; border: 1px solid rgba(90,116,112,.22); background: #F8FAF9; padding: .9em; box-shadow: 0 1.8em 3.2em -1.2em rgba(20,26,24,.42); }
+  .sy-card.flat { box-shadow: none; }
+  .sy-split { display: flex; justify-content: space-between; align-items: center; gap: .5em; font-size: .8em; margin-bottom: .5em; }
+  .sy-ctitle { display: flex; align-items: center; gap: .5em; font-size: .8em; font-weight: 700; margin-bottom: .5em; }
+  .sy-kv { display: flex; justify-content: space-between; font-size: .72em; color: #566A65; margin-top: .35em; }
+  .sy-kv b { color: #1E2723; font-weight: 600; }
+  .sy-wa { background: #DDF6E6; border-radius: .6em; border-top-right-radius: .15em; padding: .7em; font-size: .8em; box-shadow: 0 1.8em 3.2em -1.2em rgba(20,26,24,.42), 0 0 0 1px rgba(46,158,94,.2); }
+  .sy-wa-f { display: flex; align-items: center; gap: .5em; background: rgba(255,255,255,.7); border-radius: .4em; padding: .45em; margin-bottom: .4em; }
+  .sy-wa .t { text-align: right; font-size: .8em; color: #566A65; margin-top: .3em; }
+  .sy-toast { display: inline-flex; align-items: center; gap: .6em; white-space: nowrap; background: #F8FAF9; border: 1px solid rgba(46,204,113,.45); border-radius: .5em; padding: .55em .8em; font-size: .8em; font-weight: 600; box-shadow: 0 1.8em 3.2em -1.2em rgba(20,26,24,.42); }
+  .sy-toast .dot { width: .55em; height: .55em; border-radius: 50%; background: #2ECC71; box-shadow: 0 0 0 .25em rgba(46,204,113,.22); }
+  .sy .dot.pulse { animation: syPulse 1.6s ease-in-out infinite; width: .5em; height: .5em; border-radius: 50%; background: #17804A; }
+  .sy-toast .chk { width: 1.4em; height: 1.4em; border-radius: 50%; background: #2ECC71; color: #0B2A17; display: grid; place-items: center; }
+  .sy-toast .chk svg { width: .9em; height: .9em; }
+  .sy-toast .mc { width: 1.8em; height: 1.8em; border-radius: 50%; background: #2ECC71; color: #0B2A17; display: grid; place-items: center; }
+  .sy-search { display: flex; align-items: center; gap: .5em; border: 1px solid rgba(90,116,112,.2); border-radius: .4em; padding: .35em .6em; margin-bottom: .4em; font-size: .75em; color: #566A65; }
+  .sy-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: .6em; }
+  .sy-col { background: rgba(90,116,112,.07); border-radius: .5em; padding: .5em; display: flex; flex-direction: column; gap: .5em; }
+  .sy-colh { display: flex; justify-content: space-between; font-size: .65em; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: #566A65; padding: 0 .2em; }
+  .sy-task { background: #F8FAF9; border: 1px solid rgba(90,116,112,.16); border-radius: .45em; padding: .6em; font-size: .75em; }
+  .sy-task .sy-split { font-size: 1em; margin-bottom: .1em; }
+  .sy-task .s2 { margin: .1em 0 .45em; }
+  .sy-ct { display: flex; align-items: center; gap: .5em; border-radius: .4em; padding: .4em; font-size: .75em; }
+  .sy-ct.on { background: rgba(90,116,112,.1); }
+  .sy-ct .fa-av { font-size: .7em; }
+  .sy-ct .un { width: 1.5em; height: 1.5em; border-radius: 50%; background: #2ECC71; color: #0B2A17; display: grid; place-items: center; font-size: .75em; font-weight: 700; }
+  .sy-conv { flex: 1; display: flex; flex-direction: column; gap: .5em; border-radius: .5em; background: rgba(255,255,255,.55); padding: .7em; font-size: .75em; }
+  .sy-conv .fa-bub { font-size: 1em; }
+  .sy-input { margin-top: auto; display: flex; align-items: center; gap: .5em; border: 1px solid rgba(90,116,112,.22); border-radius: .4em; padding: .4em .6em; color: #566A65; background: #F8FAF9; }
+  .sy-audio { display: flex; align-items: center; gap: .6em; border: 1px solid rgba(90,116,112,.22); background: #F8FAF9; border-radius: .6em; padding: .6em; box-shadow: 0 1.8em 3.2em -1.2em rgba(20,26,24,.42); }
+  .sy-audio .pl { width: 2em; height: 2em; border-radius: 50%; background: #2ECC71; color: #0B2A17; display: grid; place-items: center; flex-shrink: 0; }
+  .sy-audio .pl svg { width: .9em; height: .9em; }
+  .sy .wv { display: inline-flex; align-items: center; gap: .12em; flex: 1; height: 1.6em; }
+  .sy .wv i { width: .18em; border-radius: 99em; background: #2ECC71; }
+  .sy-phone { border: .35em solid #2B312E; border-radius: 1.8em; background: #F8FAF9; padding: .8em; box-shadow: 0 2.4em 4em -1.2em rgba(20,26,24,.5); }
+  .sy-phone .nt { width: 4em; height: .9em; border-radius: 99em; background: #2B312E; margin: 0 auto .8em; }
+  .sy-due { border: 1px solid rgba(243,156,18,.4); background: rgba(243,156,18,.1); border-radius: .5em; padding: .6em; margin-bottom: .6em; }
+  .sy-cta { margin-top: .5em; background: #2ECC71; color: #0B2A17; border-radius: .35em; padding: .35em 0; text-align: center; font-size: .65em; font-weight: 700; }
+  .sy-ic3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: .4em; }
+  .sy-ic3 span { aspect-ratio: 1; display: grid; place-items: center; border-radius: .45em; background: rgba(90,116,112,.1); color: #17804A; }
+  .sy-phone .hb { width: 4em; height: .25em; border-radius: 99em; background: rgba(90,116,112,.35); margin: .8em auto 0; }
+  .sy-chart { display: flex; align-items: flex-end; gap: .6em; height: 9.5em; }
+  .sy-chart .bc { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: .3em; height: 100%; }
+  .sy-chart .b { width: 100%; border-radius: .2em .2em 0 0; background: rgba(46,204,113,.38); }
+  .sy-chart .b.cur { background: #2ECC71; }
+  .sy-chart span { font-size: .55em; color: #566A65; }
+  .sy .lg { display: inline-block; width: .6em; height: .6em; border-radius: 50%; margin-right: .4em; }
+  .sy-chat { overflow: hidden; border-radius: .9em; border: 1px solid rgba(90,116,112,.22); background: #F8FAF9; box-shadow: 0 1.8em 3.2em -1.2em rgba(20,26,24,.42); }
+  .sy-chat-h { display: flex; align-items: center; gap: .6em; padding: .6em .8em; border-bottom: 1px solid rgba(90,116,112,.16); font-size: .85em; }
+  .sy-chat-b { display: grid; gap: .6em; padding: .8em; font-size: .75em; }
+  .sy-chat-b .q { justify-self: end; max-width: 85%; border-radius: .9em; background: #17804A; color: #fff; padding: .55em .8em; }
+  .sy-chat-b .a { max-width: 92%; border-radius: .9em; border: 1px solid rgba(90,116,112,.2); background: #fff; padding: .6em .8em; }
+  .sy-chat-b ul { margin: .35em 0 0; padding-left: 1.2em; list-style: disc; display: grid; gap: .2em; }
+  .sy-chat-f { display: flex; align-items: center; gap: .5em; padding: .6em; border-top: 1px solid rgba(90,116,112,.16); }
+  .sy-chat-f .gr { border: 1px solid rgba(90,116,112,.22); border-radius: .6em; background: #fff; padding: .5em .7em; font-size: .72em; color: #566A65; }
+  .sy-chat-f .snd { width: 2em; height: 2em; border-radius: .6em; background: #17804A; color: #fff; display: grid; place-items: center; }
+  @keyframes syPulse { 50% { opacity: .35; } }
+  /* Soluções separadas: cabeçalho próprio, telas alternadas e CTA de planos no fim de cada uma */
+  .sol-group { scroll-margin-top: 64px; padding: 24px 0 72px; }
+  .sol-group.alt { background: #fff; border-block: 1px solid var(--border); }
+  .sg-head { display: flex; align-items: flex-start; gap: 28px; max-width: 900px; padding: 56px 0 4px; }
+  .sg-n { font-size: clamp(3.4rem, 7vw, 5.4rem); font-weight: 800; letter-spacing: -0.05em; line-height: .85; color: transparent; -webkit-text-stroke: 1.5px rgba(23,128,74,.5); flex-shrink: 0; }
+  .sg-head .alabel { display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--green-deep); margin-bottom: 10px; }
+  .sg-head h2 { font-size: clamp(1.8rem, 3.4vw, 2.7rem); font-weight: 800; letter-spacing: -0.035em; line-height: 1.12; margin-bottom: 12px; }
+  .sg-head p { font-size: 1.1rem; line-height: 1.6; color: var(--ink-soft); max-width: 640px; }
+  /* Roteiro do dia: 8 passos em duas linhas, fundo claro */
+  .auto-rail { list-style: none; margin: 0; padding: 8px 0 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 44px 30px; }
+  .auto-rail li { position: relative; padding-top: 54px; }
+  .auto-rail time { position: absolute; left: 0; top: 0; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 1.45rem; font-weight: 700; letter-spacing: -0.03em; line-height: 1; color: var(--green-deep); }
+  .auto-rail li::before { content: ''; position: absolute; left: 0; right: -30px; top: 37px; height: 2px; border-radius: 2px; background: linear-gradient(90deg, rgba(46,204,113,.6), rgba(46,204,113,.2)); }
+  .auto-rail li:nth-child(4n)::before { right: auto; width: 56px; background: linear-gradient(90deg, rgba(46,204,113,.6), transparent); }
+  .auto-rail li:last-child::before { right: auto; width: 56px; }
+  .auto-rail li::after { content: ''; position: absolute; left: 0; top: 31px; width: 14px; height: 14px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 5px rgba(46,204,113,.2); }
+  .auto-rail h3 { font-size: 1.02rem; font-weight: 700; letter-spacing: -0.015em; line-height: 1.3; color: var(--ink); margin-bottom: 6px; }
+  .auto-rail p { font-size: .9rem; line-height: 1.55; color: var(--ink-soft); }
+  @media (max-width: 960px) { .auto-rail { grid-template-columns: repeat(2, 1fr); } .auto-rail li:nth-child(2n)::before { right: auto; width: 56px; background: linear-gradient(90deg, rgba(46,204,113,.6), transparent); } }
+  @media (max-width: 520px) { .auto-rail { grid-template-columns: 1fr; gap: 28px; } .auto-rail li::before { display: none; } }
+  .sg-auto { margin: 36px 0 0; }
+  .sg-auto .auto-note { color: var(--ink-soft); margin-top: 16px; text-align: left; }
+  .wa-ic { color: #25D366; }
+  .sg-body > .sol-panel { padding: 56px 0 64px; }
+  .sg-body > .sol-panel + .sol-panel { border-top: 1px dashed var(--border); }
+  .sg-body > .sol-panel:nth-child(even) { grid-template-columns: 1.15fr 1fr; }
+  .sg-body > .sol-panel:nth-child(even) .fart { order: -1; }
+  .sg-cta { display: flex; align-items: center; justify-content: space-between; gap: 28px; flex-wrap: wrap; margin-top: 8px; padding: 30px 36px; border-radius: 20px; background: var(--dark); color: var(--dark-fg); }
+  .sg-cta h3 { font-size: clamp(1.15rem, 2vw, 1.5rem); font-weight: 800; letter-spacing: -0.025em; margin-bottom: 6px; }
+  .sg-cta p { color: var(--dark-muted); font-size: .95rem; }
+  .js .sol-group:not(.on) { display: none; }
+  .sg-more { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; margin-top: 28px; }
+  .sg-more > span { font-size: .78rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-soft); }
+  .sg-more > div { display: flex; gap: 8px; flex-wrap: wrap; }
+  .sg-more a { display: inline-flex; align-items: center; gap: 7px; height: 38px; padding: 0 14px; border-radius: 10px; border: 1px solid var(--border); background: var(--card); font-size: .88rem; font-weight: 600; color: var(--ink); text-decoration: none; transition: border-color .2s, color .2s, transform .2s; }
+  .sg-more a:hover { border-color: rgba(46,204,113,.55); color: var(--green-deep); transform: translateY(-1px); }
+  .sg-more a svg { width: 14px; height: 14px; color: var(--green-deep); }
+  .sg-cta-b { display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn-line { background: transparent; color: var(--dark-fg); border: 1px solid var(--dark-border); }
+  .btn-line:hover { border-color: var(--green); color: var(--green); }
+  @media (max-width: 900px) { .sg-head { flex-direction: column; gap: 10px; padding-top: 40px; } .sg-body > .sol-panel { padding: 36px 0 44px; } .sg-cta { padding: 24px 22px; } }
+  /* Ícones originais da plataforma (duas tonalidades, formas sólidas) */
+  .pi { flex-shrink: 0; }
+  .sol-tab .pi { width: 19px; height: 19px; }
+  .fart.sy .sy-side .ni svg.pi { width: 1.2em; height: 1.2em; }
+  .fart-in svg.pi { width: 1.25em; height: 1.25em; }
+  .fart-in .sy-row svg.pi, .fart-in .fa-pill svg.pi { width: 1.15em; height: 1.15em; }
   /* Página de soluções */
   .sol-hero { position: relative; background: linear-gradient(90deg, #0a0c0b 0%, #141715 50%); color: var(--dark-fg); overflow: hidden; padding-bottom: 64px; }
   .sol-hero > .wrap { position: relative; z-index: 5; }
@@ -881,17 +1017,17 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
   .sol-head p { color: var(--dark-muted); font-size: 1.08rem; }
   .nav-links a.on { color: var(--dark-fg); }
   .sol-tabs-bar { position: sticky; top: 0; z-index: 40; background: rgba(242,246,244,.92); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); }
-  .sol-tabs { display: flex; gap: 4px; justify-content: space-between; overflow-x: auto; scrollbar-width: none; padding: 12px 0; }
+  .sol-tabs { display: flex; gap: 4px; justify-content: safe center; overflow-x: auto; scrollbar-width: none; padding: 12px 0; }
   .sol-tabs::-webkit-scrollbar { display: none; }
   .sol-tab { display: inline-flex; align-items: center; gap: 8px; flex-shrink: 0; height: 40px; padding: 0 13px; border-radius: 10px; border: 1px solid transparent; background: none; font: inherit; font-size: 0.9rem; font-weight: 600; color: var(--ink-soft); cursor: pointer; transition: background .2s, color .2s, border-color .2s; }
   .sol-tab svg { width: 17px; height: 17px; }
   .sol-tab:hover { color: var(--ink); background: rgba(90,116,112,.08); }
-  .sol-tab[aria-selected="true"] { background: var(--card); color: var(--ink); border-color: var(--border); box-shadow: 0 4px 14px -8px rgba(20,26,24,.25); }
-  .sol-tab[aria-selected="true"] svg { color: var(--green-deep); }
+  .sol-tab { text-decoration: none; }
+  .sol-tab.on, .sol-tab[aria-selected="true"] { background: var(--card); color: var(--ink); border-color: var(--border); box-shadow: 0 4px 14px -8px rgba(20,26,24,.25); }
+  .sol-tab.on svg, .sol-tab[aria-selected="true"] svg { color: var(--green-deep); }
   .sol-tab:focus-visible, .sol-next:focus-visible { outline: 2px solid var(--green-deep); outline-offset: 2px; }
   .sol-main { background: var(--dots-light) 0 0 / 26px 26px, linear-gradient(180deg,#EAF3EF 0%,var(--bg) 100%); }
   .sol-panel { display: grid; grid-template-columns: 1fr 1.15fr; gap: 64px; align-items: center; padding: 72px 0 88px; scroll-margin-top: 70px; }
-  .js .sol-panel:not(.on) { display: none; }
   .sol-panel .fart { margin-bottom: 0; box-shadow: var(--shadow); }
   .sol-panel h2 { font-size: clamp(1.7rem, 2.8vw, 2.3rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.15; margin-bottom: 16px; }
   .sol-panel .desc { font-size: 1.05rem; color: var(--ink-soft); line-height: 1.65; margin-bottom: 26px; }
@@ -902,12 +1038,21 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
   .sol-cta { background: var(--dark); color: var(--dark-fg); padding: 72px 0; text-align: center; }
   .sol-cta h2 { font-size: clamp(1.6rem, 3vw, 2.3rem); font-weight: 800; letter-spacing: -0.03em; margin-bottom: 12px; }
   .sol-cta p { color: var(--dark-muted); margin-bottom: 28px; }
+  /* Faixa "um dia da plataforma" e seções em linhas alternadas */
+  .auto-band { margin: 56px auto 0; max-width: 1080px; }
+  .auto-head { text-align: center; margin-bottom: 28px; }
+  .auto-head .alabel { display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--green); margin-bottom: 10px; }
+  .auto-head h2 { font-size: clamp(1.3rem, 2.4vw, 1.8rem); font-weight: 800; letter-spacing: -0.03em; }
+  .auto-note { text-align: center; font-size: .82rem; color: var(--dark-muted); margin-top: 18px; }
+  .sol-panel + .sol-panel { border-top: 1px solid var(--border); }
+  @media (max-width: 900px) { .sg-body > .sol-panel:nth-child(even) { grid-template-columns: 1fr; } }
   @media (max-width: 900px) {
     .sol-panel { grid-template-columns: 1fr; gap: 32px; padding: 40px 0 64px; }
     .sol-panel .fart { order: -1; }
   }
 </style>
 <script>document.documentElement.classList.add('js');</script>
+<link rel="stylesheet" href="assets/motion.css">
 </head>
 <body id="top">
 <div class="stickybar" id="stickybar" hidden>
@@ -915,7 +1060,7 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
     <a href="index.html#top" class="stickybar-brand" aria-label="Voltar ao topo">Cubis<span class="hub">.Hub</span></a>
     <div class="stickybar-actions">
       <a href="index.html#planos" class="stickybar-link">Ver planos</a>
-      <button type="button" class="btn btn-primary btn-sm" onclick="openLeadModal('stickybar')">Testar 7 dias grátis</button>
+      <button type="button" class="btn btn-primary btn-sm" onclick="openLeadModal('stickybar')">Agendar demonstração</button>
     </div>
   </div>
 </div>
@@ -948,8 +1093,8 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
     </nav>
     <div class="sol-head">
       <div class="alabel">Soluções</div>
-      <h1>Oito tarefas do mês, <span class="g">uma plataforma só</span></h1>
-      <p>Escolha uma solução para ver como ela funciona na rotina do escritório.</p>
+      <h1>A rotina do escritório, <span class="g">no automático</span></h1>
+      <p>Guia emitida, aviso enviado, cobrança feita e tarefa fechada. Você liga uma vez e a plataforma cuida do resto, todos os dias.</p>
     </div>
   </div>
 </header>
@@ -957,242 +1102,381 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
 <main class="sol-main">
   <div class="sol-tabs-bar">
     <div class="wrap">
-      <div class="sol-tabs" role="tablist" aria-label="Soluções">
-        <button type="button" class="sol-tab" role="tab" id="tab-envio" aria-controls="envio" aria-selected="true" data-slug="envio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>Envio de guias</button>
-        <button type="button" class="sol-tab" role="tab" id="tab-avisos" aria-controls="avisos" aria-selected="false" data-slug="avisos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>Avisos de vencimento</button>
-        <button type="button" class="sol-tab" role="tab" id="tab-xml" aria-controls="xml" aria-selected="false" data-slug="xml"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="5" rx="1"/><path d="M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg>XML</button>
-        <button type="button" class="sol-tab" role="tab" id="tab-documentos" aria-controls="documentos" aria-selected="false" data-slug="documentos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>Portal</button>
-        <button type="button" class="sol-tab" role="tab" id="tab-atendimento" aria-controls="atendimento" aria-selected="false" data-slug="atendimento"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.6 7.3L3 20.5l1.7-5.2A8.4 8.4 0 1 1 21 11.5z"/></svg>Atendimento</button>
-        <button type="button" class="sol-tab" role="tab" id="tab-prazos" aria-controls="prazos" aria-selected="false" data-slug="prazos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Prazos</button>
-        <button type="button" class="sol-tab" role="tab" id="tab-clientes" aria-controls="clientes" aria-selected="false" data-slug="clientes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.9"/><path d="M16 3.1a4 4 0 0 1 0 7.8"/></svg>Clientes</button>
-        <button type="button" class="sol-tab" role="tab" id="tab-agente" aria-controls="agente" aria-selected="false" data-slug="agente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.7l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.7l7 4a2 2 0 0 0 2 0l7-4a2 2 0 0 0 1-1.7z"/><polyline points="3.3 7 12 12 20.7 7"/><line x1="12" y1="22" x2="12" y2="12"/></svg>Agente de IA</button>
-      </div>
+      <nav class="sol-tabs" aria-label="Soluções">
+        <a class="sol-tab" href="#g-envio" data-slug="g-envio"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21.7 2.3L2.6 10.6c-.7.3-.7 1.3 0 1.6l7.5 2.6z" fill="currentColor" opacity=".34"/><path d="M21.7 2.3l-3.2 19.1c-.1.8-1.1 1-1.6.4l-6.8-6.6z" fill="currentColor"/></svg>Envio e avisos</a>
+        <a class="sol-tab" href="#g-fiscal" data-slug="g-fiscal"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4.6" y="11.2" width="2.5" height="6.4" rx=".7" fill="currentColor" opacity=".34"/><rect x="10.75" y="11.2" width="2.5" height="6.4" rx=".7" fill="currentColor" opacity=".34"/><rect x="16.9" y="11.2" width="2.5" height="6.4" rx=".7" fill="currentColor" opacity=".34"/><rect x="2.8" y="18.4" width="18.4" height="2.6" rx="1.1" fill="currentColor" opacity=".34"/><path d="M12 2.9 21.3 8c.5.3.4 1.1-.2 1.1H2.9c-.6 0-.7-.8-.2-1.1L12 2.9Z" fill="currentColor"/></svg>Fiscal</a>
+        <a class="sol-tab" href="#g-xml" data-slug="g-xml"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.4" y="1.8" width="13.4" height="18.6" rx="2.4" fill="currentColor" opacity=".34"/><rect x="6.2" y="6.2" width="7.8" height="1.8" rx=".9" fill="currentColor"/><rect x="6.2" y="9.8" width="7.8" height="1.8" rx=".9" fill="currentColor"/><rect x="6.2" y="13.4" width="4.8" height="1.8" rx=".9" fill="currentColor"/><circle cx="17.6" cy="17.6" r="5.1" fill="currentColor"/><path d="M15.5 17.7l1.4 1.4 2.9-3.2" stroke="currentColor" stroke-opacity=".34" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>XML e notas</a>
+        <a class="sol-tab" href="#g-tarefas" data-slug="g-tarefas"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="currentColor" opacity=".34"/><path d="M7.8 12.4l2.9 2.9 5.5-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Tarefas e prazos</a>
+        <a class="sol-tab" href="#g-automacoes" data-slug="g-automacoes"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 1.8c-3.8 0-6.7 3-6.7 6.8v3.5l-1.8 4.1c-.4.9.2 1.9 1.2 1.9h14.6c1 0 1.6-1 1.2-1.9l-1.8-4.1V8.6c0-3.8-2.9-6.8-6.7-6.8z" fill="currentColor"/><path d="M9.3 19.6h5.4c0 1.5-1.2 2.6-2.7 2.6s-2.7-1.1-2.7-2.6z" fill="currentColor" opacity=".34"/></svg>Automações</a>
+        <a class="sol-tab" href="#g-atendimento" data-slug="g-atendimento"><svg class="wa-ic" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>Atendimento e portal</a>
+        <a class="sol-tab" href="#g-ia" data-slug="g-ia"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="10.8" y="1.6" width="2.4" height="4.4" rx="1.2" fill="currentColor"/><circle cx="12" cy="2.2" r="1.9" fill="currentColor"/><rect x="3.2" y="6.4" width="17.6" height="13.8" rx="4.6" fill="currentColor" opacity=".34"/><circle cx="8.6" cy="13.2" r="1.9" fill="currentColor"/><circle cx="15.4" cy="13.2" r="1.9" fill="currentColor"/></svg>IA</a>
+      </nav>
     </div>
   </div>
-  <div class="wrap">
-    <section class="sol-panel on" id="envio" role="tabpanel" aria-labelledby="tab-envio">
+  <section class="sol-group" id="g-envio">
+    <div class="wrap">
+      <header class="sg-head">
+        <span class="sg-n" aria-hidden="true">01</span>
+        <div>
+          <div class="alabel">Envio e avisos</div>
+          <h2>Da guia pronta ao cliente avisado, em lote</h2>
+          <p>Dispare a carteira inteira de uma vez e deixe a plataforma lembrar o cliente antes de a guia vencer.</p>
+        </div>
+      </header>
+      <div class="sg-body">
+    <section class="sol-panel" id="envio">
       <div class="ftext">
         <div class="eyebrow-tag">Envio em lote</div>
         <h2>A guia de toda a carteira, inclusive nos grupos de WhatsApp</h2>
         <p class="desc">Arraste as guias do mês de uma vez. Cada arquivo encontra o cliente dono dele e sai com uma mensagem que já chama cada um pelo nome.</p>
         <ul class="flist-new">
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Envio direto nos grupos de WhatsApp dos clientes, não só no contato individual</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>WhatsApp, e-mail e Telegram no mesmo envio</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Agende para depois ou deixe repetindo todo mês</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Registro de cada envio, cliente por cliente</li>
+          <li><span class="chk"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor" opacity=".34"/><path d="M7.8 12.4l2.9 2.9 5.5-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Envio direto nos grupos de WhatsApp dos clientes, não só no contato individual</li>
+          <li><span class="chk"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor" opacity=".34"/><path d="M7.8 12.4l2.9 2.9 5.5-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>WhatsApp, e-mail e Telegram no mesmo envio</li>
+          <li><span class="chk"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor" opacity=".34"/><path d="M7.8 12.4l2.9 2.9 5.5-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Agende para depois ou deixe repetindo todo mês</li>
+          <li><span class="chk"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor" opacity=".34"/><path d="M7.8 12.4l2.9 2.9 5.5-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Registro de cada envio, cliente por cliente</li>
         </ul>
         <div class="sol-actions">
-          <button type="button" class="btn btn-primary" onclick="openLeadModal('solucao_envio')">Testar 7 dias grátis</button>
-          <button type="button" class="sol-next" data-go="avisos">Próxima: Aviso de vencimento <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+          <button type="button" class="btn btn-primary" onclick="openLeadModal('solucao_envio')">Agendar demonstração</button>
         </div>
       </div>
-      <div class="fart" role="img" aria-label="Tela de envio em lote: guias do mês saindo para contatos e grupos de WhatsApp dos clientes">
+      <div class="fart sy" role="img" aria-label="Tela de envio em lote do sistema: guias do mês saindo para contatos e grupos de WhatsApp dos clientes">
         <div class="fart-in" aria-hidden="true">
-
-          <svg class="fa-wire" viewBox="0 0 160 105" preserveAspectRatio="none"><path d="M33 42 C 42 42, 44 34, 54 34" fill="none" stroke="#2ECC71" stroke-width=".5" stroke-dasharray="1.6 1.4"/><path d="M33 58 C 42 58, 44 64, 54 64" fill="none" stroke="#2ECC71" stroke-width=".5" stroke-dasharray="1.6 1.4"/></svg>
-          <div class="fa-file fa-float" style="left:6%;top:16%;transform:rotate(-6deg)"><span class="fa-pill">PDF</span><div>DAS_julho.pdf</div><div class="fa-ln"></div><div class="fa-ln" style="width:60%"></div></div>
-          <div class="fa-file fa-float d2" style="left:9%;top:44%;transform:rotate(4deg)"><span class="fa-pill">PDF</span><div>DAS_MEI.pdf</div><div class="fa-ln"></div><div class="fa-ln" style="width:70%"></div></div>
-          <div class="fa-card" style="left:35%;top:9%;width:58%">
-            <div class="fa-title"><span class="fa-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></span>DAS julho/2026<span class="fa-pill ok">38 de 42</span></div>
-            <div class="fa-bar" style="margin-bottom:.6em"><i style="width:90%"></i></div>
-            <div class="fa-row"><span class="fa-av g">PD</span><div class="fa-grow"><b>Padaria Pão Dourado</b><span class="fa-mut">WhatsApp</span></div><span class="fa-pill ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12.5l4 4 8-9"/><path d="M10 15.5l1 1 8-9"/></svg>Entregue</span></div>
-            <div class="fa-row"><span class="fa-av b" style="font-size:.7em"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.9"/><path d="M16 3.1a4 4 0 0 1 0 7.8"/></svg></span><div class="fa-grow"><b>Grupo Auto Peças Silva</b><span class="fa-mut">grupo do cliente</span></div><span class="fa-pill ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12.5l4 4 8-9"/><path d="M10 15.5l1 1 8-9"/></svg>Entregue</span></div>
-            <div class="fa-row"><span class="fa-av p">CB</span><div class="fa-grow"><b>Clínica Bem Estar</b><span class="fa-mut">e-mail</span></div><span class="fa-pill ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Enviado</span></div>
-            <div class="fa-row"><span class="fa-av o">MR</span><div class="fa-grow"><b>Mercado Rio Verde</b><span class="fa-mut">WhatsApp</span></div><span class="fa-pill warn">Enviando</span></div>
-          </div>
-          <div class="fa-chip fa-float" style="left:6%;bottom:9%"><span class="fa-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.6 7.3L3 20.5l1.7-5.2A8.4 8.4 0 1 1 21 11.5z"/></svg></span><span class="fa-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg></span><span class="fa-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></span>3 canais, 1 envio</div>
+          <div class="sy-scene"><div class="sy-l" style="left:0;top:0;width:46em"><div class="sy-win"><div class="sy-bar"><i></i><i></i><i></i><span>app.cubishub.com.br/envio</span></div><div class="sy-body"><div class="sy-side"><span class="lg"><b></b></span><span class="ni"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><circle cx="17" cy="9" r="3" fill="currentColor" opacity=".34"/><path d="M13.4 20.5H22c.6 0 1-.5.9-1.1-.5-2.6-2.8-4.2-5.9-4.2-.9 0-1.7.1-2.4.4z" fill="currentColor" opacity=".34"/><circle cx="9.2" cy="8.2" r="3.9" fill="currentColor"/><path d="M2.2 20.5c0-3.9 3.1-6.3 7-6.3s7 2.4 7 6.3z" fill="currentColor"/></svg></span><span class="ni on"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><path d="M21.7 2.3L2.6 10.6c-.7.3-.7 1.3 0 1.6l7.5 2.6z" fill="currentColor" opacity=".34"/><path d="M21.7 2.3l-3.2 19.1c-.1.8-1.1 1-1.6.4l-6.8-6.6z" fill="currentColor"/></svg></span><span class="ni"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><rect x="2.6" y="3" width="5.4" height="18" rx="2.3" fill="currentColor" opacity=".34"/><rect x="9.3" y="3" width="5.4" height="12" rx="2.3" fill="currentColor"/><rect x="16" y="3" width="5.4" height="15.5" rx="2.3" fill="currentColor" opacity=".34"/></svg></span><span class="ni"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><rect x="2.5" y="4.5" width="19" height="17" rx="4.5" fill="currentColor" opacity=".34"/><path d="M2.5 9c0-2.5 2-4.5 4.5-4.5h10c2.5 0 4.5 2 4.5 4.5v1.2h-19z" fill="currentColor"/><rect x="6.4" y="1.8" width="2.6" height="5" rx="1.3" fill="currentColor"/><rect x="15" y="1.8" width="2.6" height="5" rx="1.3" fill="currentColor"/><circle cx="12" cy="16" r="2.6" fill="currentColor"/></svg></span><span class="ni"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><rect x="7.5" y="2.5" width="14.5" height="11.5" rx="4" fill="currentColor" opacity=".34"/><rect x="2" y="6.5" width="15" height="11.5" rx="4" fill="currentColor"/><path d="M6.4 16.6v5.2c0 .5.6.8 1 .5l4.3-3.6z" fill="currentColor"/></svg></span><span class="ni"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><rect x="4.6" y="11.2" width="2.5" height="6.4" rx=".7" fill="currentColor" opacity=".34"/><rect x="10.75" y="11.2" width="2.5" height="6.4" rx=".7" fill="currentColor" opacity=".34"/><rect x="16.9" y="11.2" width="2.5" height="6.4" rx=".7" fill="currentColor" opacity=".34"/><rect x="2.8" y="18.4" width="18.4" height="2.6" rx="1.1" fill="currentColor" opacity=".34"/><path d="M12 2.9 21.3 8c.5.3.4 1.1-.2 1.1H2.9c-.6 0-.7-.8-.2-1.1L12 2.9Z" fill="currentColor"/></svg></span><span class="ni"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><rect x="3.4" y="1.8" width="13.4" height="18.6" rx="2.4" fill="currentColor" opacity=".34"/><rect x="6.2" y="6.2" width="7.8" height="1.8" rx=".9" fill="currentColor"/><rect x="6.2" y="9.8" width="7.8" height="1.8" rx=".9" fill="currentColor"/><rect x="6.2" y="13.4" width="4.8" height="1.8" rx=".9" fill="currentColor"/><circle cx="17.6" cy="17.6" r="5.1" fill="currentColor"/><path d="M15.5 17.7l1.4 1.4 2.9-3.2" stroke="currentColor" stroke-opacity=".34" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></span><span class="ni"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><rect x="10.8" y="1.6" width="2.4" height="4.4" rx="1.2" fill="currentColor"/><circle cx="12" cy="2.2" r="1.9" fill="currentColor"/><rect x="3.2" y="6.4" width="17.6" height="13.8" rx="4.6" fill="currentColor" opacity=".34"/><circle cx="8.6" cy="13.2" r="1.9" fill="currentColor"/><circle cx="15.4" cy="13.2" r="1.9" fill="currentColor"/></svg></span><span class="ni"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><path d="M12 1.8c-3.8 0-6.7 3-6.7 6.8v3.5l-1.8 4.1c-.4.9.2 1.9 1.2 1.9h14.6c1 0 1.6-1 1.2-1.9l-1.8-4.1V8.6c0-3.8-2.9-6.8-6.7-6.8z" fill="currentColor"/><path d="M9.3 19.6h5.4c0 1.5-1.2 2.6-2.7 2.6s-2.7-1.1-2.7-2.6z" fill="currentColor" opacity=".34"/></svg></span></div><div class="sy-main"><div class="sy-title"><span>Envio de documentos</span><span class="fa-pill ok"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><path d="M21.7 2.3L2.6 10.6c-.7.3-.7 1.3 0 1.6l7.5 2.6z" fill="currentColor" opacity=".34"/><path d="M21.7 2.3l-3.2 19.1c-.1.8-1.1 1-1.6.4l-6.8-6.6z" fill="currentColor"/></svg>Disparar lote</span></div><div class="sy-kpis"><div class="sy-kpi"><div class="l">Na fila</div><div class="v ">12</div></div><div class="sy-kpi"><div class="l">Enviados</div><div class="v ok">128</div></div><div class="sy-kpi"><div class="l">Falhas</div><div class="v ">0</div></div></div><div class="sy-row "><span class="fa-av g">PD</span><span class="gr b">Padaria Pão Dourado</span><span class="w8 m">DAS 09/2026</span><span class="fa-pill info"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><circle cx="17" cy="9" r="3" fill="currentColor" opacity=".34"/><path d="M13.4 20.5H22c.6 0 1-.5.9-1.1-.5-2.6-2.8-4.2-5.9-4.2-.9 0-1.7.1-2.4.4z" fill="currentColor" opacity=".34"/><circle cx="9.2" cy="8.2" r="3.9" fill="currentColor"/><path d="M2.2 20.5c0-3.9 3.1-6.3 7-6.3s7 2.4 7 6.3z" fill="currentColor"/></svg>Grupo</span><span class="fa-pill ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12.5l4 4 8-9"/><path d="M10 15.5l1 1 8-9"/></svg>Entregue</span></div><div class="sy-row "><span class="fa-av b">MS</span><span class="gr b">Mecânica Silveira</span><span class="w8 m">FGTS 09/2026</span><span class="fa-pill "><svg class="wa-ic" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>Contato</span><span class="fa-pill ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12.5l4 4 8-9"/><path d="M10 15.5l1 1 8-9"/></svg>Entregue</span></div><div class="sy-row "><span class="fa-av o">AF</span><span class="gr b">Ateliê Flor de Lis</span><span class="w8 m">DAS 09/2026</span><span class="fa-pill info"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><circle cx="17" cy="9" r="3" fill="currentColor" opacity=".34"/><path d="M13.4 20.5H22c.6 0 1-.5.9-1.1-.5-2.6-2.8-4.2-5.9-4.2-.9 0-1.7.1-2.4.4z" fill="currentColor" opacity=".34"/><circle cx="9.2" cy="8.2" r="3.9" fill="currentColor"/><path d="M2.2 20.5c0-3.9 3.1-6.3 7-6.3s7 2.4 7 6.3z" fill="currentColor"/></svg>Grupo</span><span class="fa-pill ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12.5l4 4 8-9"/><path d="M10 15.5l1 1 8-9"/></svg>Entregue</span></div><div class="sy-row "><span class="fa-av p">TC</span><span class="gr b">TechCampo Agro</span><span class="w8 m">DCTFWeb 09/2026</span><span class="fa-pill "><svg class="wa-ic" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>Contato</span><span class="fa-pill warn"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><circle cx="12" cy="12" r="9.4" fill="currentColor" opacity=".34"/><path d="M12 6.8v5.6l3.6 2.1" stroke="currentColor" stroke-width="2.1" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Enviando</span></div></div></div></div></div><div class="sy-l" style="left:30em;top:16em;width:19em"><div class="sy-card "><div class="sy-split"><b>Lote de outubro</b><span class="mono ok">128/140</span></div><span class="fa-bar" style="display:block"><i style="width:91%"></i></span><div class="m s">Contatos e grupos de WhatsApp · 3 remetentes</div></div></div><div class="sy-l" style="left:-2em;top:19em;width:17em"><div class="sy-wa"><div class="sy-wa-f"><span style="color:#C0392B;display:flex"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><rect x="3.4" y="1.8" width="13.4" height="18.6" rx="2.4" fill="currentColor" opacity=".34"/><rect x="6.2" y="6.2" width="7.8" height="1.8" rx=".9" fill="currentColor"/><rect x="6.2" y="9.8" width="7.8" height="1.8" rx=".9" fill="currentColor"/><rect x="6.2" y="13.4" width="4.8" height="1.8" rx=".9" fill="currentColor"/><circle cx="17.6" cy="17.6" r="5.1" fill="currentColor"/><path d="M15.5 17.7l1.4 1.4 2.9-3.2" stroke="currentColor" stroke-opacity=".34" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></span><b>DAS-09-2026.pdf</b></div>Olá, Marcos! Segue o DAS de setembro, vence dia 20.<div class="t">09:14 <span style="color:#3C7FB8;display:inline-flex"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12.5l4 4 8-9"/><path d="M10 15.5l1 1 8-9"/></svg></span></div></div></div></div>
         </div>
       </div>
     </section>
-
-    <section class="sol-panel" id="avisos" role="tabpanel" aria-labelledby="tab-avisos">
+    <section class="sol-panel" id="avisos">
       <div class="ftext">
         <div class="eyebrow-tag">Aviso de vencimento</div>
         <h2>O cliente é lembrado antes de a guia vencer</h2>
         <p class="desc">Na hora do envio você marca os avisos, e a plataforma lembra o cliente sozinha no dia certo, com o vencimento lido na própria guia.</p>
         <ul class="flist-new">
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Aviso 3 dias antes, na véspera e no dia do vencimento</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Sai de manhã cedo, a tempo de o cliente pagar</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Quem não pagou entra na régua de cobrança, por WhatsApp e e-mail</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Guia paga sai da lista quando o pagamento é confirmado</li>
+          <li><span class="chk"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor" opacity=".34"/><path d="M7.8 12.4l2.9 2.9 5.5-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Aviso 3 dias antes, na véspera e no dia do vencimento</li>
+          <li><span class="chk"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor" opacity=".34"/><path d="M7.8 12.4l2.9 2.9 5.5-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Sai de manhã cedo, a tempo de o cliente pagar</li>
+          <li><span class="chk"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor" opacity=".34"/><path d="M7.8 12.4l2.9 2.9 5.5-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Quem não pagou entra na régua de cobrança, por WhatsApp e e-mail</li>
+          <li><span class="chk"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor" opacity=".34"/><path d="M7.8 12.4l2.9 2.9 5.5-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Guia paga sai da lista quando o pagamento é confirmado</li>
         </ul>
         <div class="sol-actions">
-          <button type="button" class="btn btn-primary" onclick="openLeadModal('solucao_avisos')">Testar 7 dias grátis</button>
-          <button type="button" class="sol-next" data-go="xml">Próxima: XML <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+          <button type="button" class="btn btn-primary" onclick="openLeadModal('solucao_avisos')">Agendar demonstração</button>
         </div>
       </div>
       <div class="fart" role="img" aria-label="Lembrete de vencimento chegando no WhatsApp do cliente, com a régua de avisos ao lado">
         <div class="fart-in" aria-hidden="true">
 
           <div class="fa-card" style="left:6%;top:11%;width:55%">
-            <div class="fa-title"><span class="fa-av g" style="font-size:.72em">EC</span><div>Escritório Contábil<div class="fa-mut">hoje, 07:02</div></div></div>
+            <div class="fa-title"><span class="fa-av g" style="font-size:.72em">EC</span><div>Escritório Contábil<div class="fa-mut">hoje, 09:02</div></div></div>
             <div class="fa-bub in">Bom dia, Marcos! O DAS de julho vence <b>amanhã, 20/08</b>. Valor: R$ 412,37.
-              <div class="fa-att"><span class="fa-ic" style="background:rgba(217,48,37,.12);color:#B3261E"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></span>DAS-07-2026.pdf</div>
-              <span class="fa-mut">07:02 ✓✓</span></div>
+              <div class="fa-att"><span class="fa-ic" style="background:rgba(217,48,37,.12);color:#B3261E"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><rect x="3.4" y="1.8" width="13.4" height="18.6" rx="2.4" fill="currentColor" opacity=".34"/><rect x="6.2" y="6.2" width="7.8" height="1.8" rx=".9" fill="currentColor"/><rect x="6.2" y="9.8" width="7.8" height="1.8" rx=".9" fill="currentColor"/><rect x="6.2" y="13.4" width="4.8" height="1.8" rx=".9" fill="currentColor"/><circle cx="17.6" cy="17.6" r="5.1" fill="currentColor"/><path d="M15.5 17.7l1.4 1.4 2.9-3.2" stroke="currentColor" stroke-opacity=".34" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></span>DAS-07-2026.pdf</div>
+              <span class="fa-mut">09:02 ✓✓</span></div>
           </div>
           <div class="fa-card" style="left:65%;top:17%;width:29%">
-            <div class="fa-title"><span class="fa-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg></span>Avisos</div>
+            <div class="fa-title"><span class="fa-ic"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><path d="M12 1.8c-3.8 0-6.7 3-6.7 6.8v3.5l-1.8 4.1c-.4.9.2 1.9 1.2 1.9h14.6c1 0 1.6-1 1.2-1.9l-1.8-4.1V8.6c0-3.8-2.9-6.8-6.7-6.8z" fill="currentColor"/><path d="M9.3 19.6h5.4c0 1.5-1.2 2.6-2.7 2.6s-2.7-1.1-2.7-2.6z" fill="currentColor" opacity=".34"/></svg></span>Avisos</div>
             <div class="fa-row"><div class="fa-grow">3 dias antes</div><span class="fa-pill ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></div>
             <div class="fa-row"><div class="fa-grow">Véspera</div><span class="fa-pill ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></div>
-            <div class="fa-row"><div class="fa-grow">No dia</div><span class="fa-pill">07:00</span></div>
+            <div class="fa-row"><div class="fa-grow">No dia</div><span class="fa-pill">09:00</span></div>
             <div class="fa-row"><div class="fa-grow">Cobrança</div><span class="fa-pill">se atrasar</span></div>
           </div>
           <div class="fa-chip fa-float" style="right:6%;bottom:9%"><span class="fa-dot"></span>Guia paga, confirmada no SERPRO</div>
         </div>
       </div>
     </section>
-
-    <section class="sol-panel" id="xml" role="tabpanel" aria-labelledby="tab-xml">
+      </div>
+      <div class="sg-cta">
+        <div class="sg-cta-t"><h3>Coloque o envio e os avisos para rodar na sua carteira</h3><p>Conheça os planos ou agende uma demonstração com a nossa equipe.</p></div>
+        <div class="sg-cta-b">
+          <a class="btn btn-primary" href="index.html#planos">Ver planos</a>
+          <button type="button" class="btn btn-line" onclick="openLeadModal('grupo_envio')">Agendar demonstração</button>
+        </div>
+      </div>
+      <div class="sg-more"><span>Conheça também</span><div><a href="#g-fiscal" data-go="g-fiscal">Fiscal no automático<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a><a href="#g-xml" data-go="g-xml">XML e notas<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a><a href="#g-tarefas" data-go="g-tarefas">Tarefas e prazos<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a><a href="#g-automacoes" data-go="g-automacoes">Automações e notificações<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a><a href="#g-atendimento" data-go="g-atendimento">Atendimento, portal e clientes<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a><a href="#g-ia" data-go="g-ia">Inteligência artificial<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div></div>
+    </div>
+  </section>
+  <section class="sol-group alt" id="g-fiscal">
+    <div class="wrap">
+      <header class="sg-head">
+        <span class="sg-n" aria-hidden="true">02</span>
+        <div>
+          <div class="alabel">Fiscal no automático</div>
+          <h2>Parcelamentos, DAS e Receita sem abrir portal por portal</h2>
+          <p>A plataforma confere, emite a guia e avisa. Você só acompanha o que precisa de decisão.</p>
+        </div>
+      </header>
+      <div class="sg-body">
+    <section class="sol-panel" id="parcelamentos">
+      <div class="ftext">
+        <div class="eyebrow-tag">Parcelamentos e DAS no automático</div>
+        <h2>A guia do mês sai sozinha, do parcelamento ao DAS</h2>
+        <p class="desc">Você escolhe o dia de cada cliente. A plataforma confere os pagamentos, emite a guia, agenda o envio e avisa o cliente quando há parcela em atraso.</p>
+        <ul class="flist-new">
+          <li><span class="chk"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor" opacity=".34"/><path d="M7.8 12.4l2.9 2.9 5.5-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Parcelamentos: confere os pagamentos, emite a guia do mês a partir do dia escolhido e, se o dia falhar, tenta de novo no seguinte</li>
+          <li><span class="chk"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor" opacity=".34"/><path d="M7.8 12.4l2.9 2.9 5.5-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>DAS e DCTFWeb com dia e responsável por cliente, no mesmo painel</li>
+          <li><span class="chk"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor" opacity=".34"/><path d="M7.8 12.4l2.9 2.9 5.5-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>A guia cai em Envios agendada, com reagendar, enviar agora e cancelar</li>
+          <li><span class="chk"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor" opacity=".34"/><path d="M7.8 12.4l2.9 2.9 5.5-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Aviso de parcela em atraso junto da guia, só quando a conferência é deste mês, para nunca cobrar quem já pagou</li>
+          <li><span class="chk"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor" opacity=".34"/><path d="M7.8 12.4l2.9 2.9 5.5-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Conciliação com a Receita: guia paga encerra a cobrança sozinha</li>
+        </ul>
+        <div class="sol-actions">
+          <button type="button" class="btn btn-primary" onclick="openLeadModal('solucao_parcelamentos')">Agendar demonstração</button>
+        </div>
+      </div>
+      <div class="fart" role="img" aria-label="Painel de parcelamentos no automático, com guias emitidas e envio agendado para as 10 horas">
+        <div class="fart-in" aria-hidden="true">
+          <div class="fa-card" style="left:5%;top:8%;width:60%">
+            <div class="fa-title"><span class="fa-ic"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><path d="M21 12a9 9 0 1 1-3-6.7" stroke="currentColor" stroke-width="2.6" fill="none" stroke-linecap="round" opacity=".34"/><path d="M21 2.6V8h-5.4" stroke="currentColor" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".34"/><path d="M3 12a9 9 0 0 0 15.1 6.6" stroke="currentColor" stroke-width="2.6" fill="none" stroke-linecap="round"/><path d="M3 21.4V16h5.4" stroke="currentColor" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Parcelamentos, automático<span class="fa-pill ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Ligado</span></div>
+            <div class="fa-row"><span class="fa-av g">PD</span><div class="fa-grow"><b>Padaria Pão Dourado</b><span class="fa-mut">Parcela 14 de 60 · conferida dia 5</span></div><span class="fa-pill ok">Guia emitida</span></div>
+            <div class="fa-row"><span class="fa-av b">MS</span><div class="fa-grow"><b>Mecânica Silveira</b><span class="fa-mut">Parcela 3 de 24 · conferida dia 5</span></div><span class="fa-pill ok">Guia emitida</span></div>
+            <div class="fa-row"><span class="fa-av o">AF</span><div class="fa-grow"><b>Ateliê Flor de Lis</b><span class="fa-mut">1 parcela em atraso</span></div><span class="fa-pill warn">Com aviso</span></div>
+            <div class="fa-row"><span class="fa-av p">TC</span><div class="fa-grow"><b>TechCampo Agro</b><span class="fa-mut">Emite a partir do dia 10</span></div><span class="fa-pill">Aguardando</span></div>
+          </div>
+          <div class="fa-card" style="left:60%;top:42%;width:35%">
+            <div class="fa-title"><span class="fa-ic"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><rect x="2.5" y="4.5" width="19" height="17" rx="4.5" fill="currentColor" opacity=".34"/><path d="M2.5 9c0-2.5 2-4.5 4.5-4.5h10c2.5 0 4.5 2 4.5 4.5v1.2h-19z" fill="currentColor"/><rect x="6.4" y="1.8" width="2.6" height="5" rx="1.3" fill="currentColor"/><rect x="15" y="1.8" width="2.6" height="5" rx="1.3" fill="currentColor"/><circle cx="12" cy="16" r="2.6" fill="currentColor"/></svg></span>Envio agendado</div>
+            <div class="fa-field"><span>Saída</span><span>hoje, 10:00</span></div>
+            <div class="fa-field"><span>Guias no lote</span><span>2 de 4</span></div>
+            <div class="fa-tabs" style="margin:.6em 0 0"><span class="on">Enviar agora</span><span>Reagendar</span><span>Cancelar</span></div>
+          </div>
+          <div class="fa-chip fa-float" style="left:5%;bottom:8%"><span class="fa-dot"></span>Pagamento confirmado na Receita: cobrança encerrada</div>
+          <div class="fa-chip fa-float d2" style="right:5%;top:9%"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><path d="M21.7 2.3L2.6 10.6c-.7.3-.7 1.3 0 1.6l7.5 2.6z" fill="currentColor" opacity=".34"/><path d="M21.7 2.3l-3.2 19.1c-.1.8-1.1 1-1.6.4l-6.8-6.6z" fill="currentColor"/></svg>DAS e DCTFWeb no mesmo painel</div>
+        </div>
+      </div>
+    </section>
+    <section class="sol-panel" id="fiscal">
+      <div class="ftext">
+        <div class="eyebrow-tag">Fiscal e Caixa Postal</div>
+        <h2>A pendência da Receita chega para você antes de chegar ao cliente</h2>
+        <p class="desc">A caixa postal do e-CAC é verificada todos os dias, para a carteira inteira. Intimação e risco de exclusão do Simples viram aviso no sino na mesma manhã.</p>
+        <ul class="flist-new">
+          <li><span class="chk"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor" opacity=".34"/><path d="M7.8 12.4l2.9 2.9 5.5-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Caixa Postal da carteira verificada todo dia, sem consultar cliente por cliente</li>
+          <li><span class="chk"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor" opacity=".34"/><path d="M7.8 12.4l2.9 2.9 5.5-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Intimação e exclusão do Simples avisam no sino e viram tarefa com um clique</li>
+          <li><span class="chk"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor" opacity=".34"/><path d="M7.8 12.4l2.9 2.9 5.5-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Situação fiscal, certidões, parcelamentos e sublimite do Simples num painel por cliente</li>
+          <li><span class="chk"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor" opacity=".34"/><path d="M7.8 12.4l2.9 2.9 5.5-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Procuração vencendo: você vê no painel e, se quiser, o cliente é avisado para renovar</li>
+        </ul>
+        <div class="sol-actions">
+          <button type="button" class="btn btn-primary" onclick="openLeadModal('solucao_fiscal')">Agendar demonstração</button>
+        </div>
+      </div>
+      <div class="fart sy" role="img" aria-label="Painel fiscal do sistema com situação da carteira, guias emitidas por mês e alerta de pendência">
+        <div class="fart-in" aria-hidden="true">
+          <div class="sy-scene"><div class="sy-l" style="left:0;top:0;width:46em"><div class="sy-win"><div class="sy-bar"><i></i><i></i><i></i><span>app.cubishub.com.br/fiscal</span></div><div class="sy-body"><div class="sy-side"><span class="lg"><b></b></span><span class="ni"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><circle cx="17" cy="9" r="3" fill="currentColor" opacity=".34"/><path d="M13.4 20.5H22c.6 0 1-.5.9-1.1-.5-2.6-2.8-4.2-5.9-4.2-.9 0-1.7.1-2.4.4z" fill="currentColor" opacity=".34"/><circle cx="9.2" cy="8.2" r="3.9" fill="currentColor"/><path d="M2.2 20.5c0-3.9 3.1-6.3 7-6.3s7 2.4 7 6.3z" fill="currentColor"/></svg></span><span class="ni"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><path d="M21.7 2.3L2.6 10.6c-.7.3-.7 1.3 0 1.6l7.5 2.6z" fill="currentColor" opacity=".34"/><path d="M21.7 2.3l-3.2 19.1c-.1.8-1.1 1-1.6.4l-6.8-6.6z" fill="currentColor"/></svg></span><span class="ni"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><rect x="2.6" y="3" width="5.4" height="18" rx="2.3" fill="currentColor" opacity=".34"/><rect x="9.3" y="3" width="5.4" height="12" rx="2.3" fill="currentColor"/><rect x="16" y="3" width="5.4" height="15.5" rx="2.3" fill="currentColor" opacity=".34"/></svg></span><span class="ni"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><rect x="2.5" y="4.5" width="19" height="17" rx="4.5" fill="currentColor" opacity=".34"/><path d="M2.5 9c0-2.5 2-4.5 4.5-4.5h10c2.5 0 4.5 2 4.5 4.5v1.2h-19z" fill="currentColor"/><rect x="6.4" y="1.8" width="2.6" height="5" rx="1.3" fill="currentColor"/><rect x="15" y="1.8" width="2.6" height="5" rx="1.3" fill="currentColor"/><circle cx="12" cy="16" r="2.6" fill="currentColor"/></svg></span><span class="ni"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><rect x="7.5" y="2.5" width="14.5" height="11.5" rx="4" fill="currentColor" opacity=".34"/><rect x="2" y="6.5" width="15" height="11.5" rx="4" fill="currentColor"/><path d="M6.4 16.6v5.2c0 .5.6.8 1 .5l4.3-3.6z" fill="currentColor"/></svg></span><span class="ni on"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><rect x="4.6" y="11.2" width="2.5" height="6.4" rx=".7" fill="currentColor" opacity=".34"/><rect x="10.75" y="11.2" width="2.5" height="6.4" rx=".7" fill="currentColor" opacity=".34"/><rect x="16.9" y="11.2" width="2.5" height="6.4" rx=".7" fill="currentColor" opacity=".34"/><rect x="2.8" y="18.4" width="18.4" height="2.6" rx="1.1" fill="currentColor" opacity=".34"/><path d="M12 2.9 21.3 8c.5.3.4 1.1-.2 1.1H2.9c-.6 0-.7-.8-.2-1.1L12 2.9Z" fill="currentColor"/></svg></span><span class="ni"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><rect x="3.4" y="1.8" width="13.4" height="18.6" rx="2.4" fill="currentColor" opacity=".34"/><rect x="6.2" y="6.2" width="7.8" height="1.8" rx=".9" fill="currentColor"/><rect x="6.2" y="9.8" width="7.8" height="1.8" rx=".9" fill="currentColor"/><rect x="6.2" y="13.4" width="4.8" height="1.8" rx=".9" fill="currentColor"/><circle cx="17.6" cy="17.6" r="5.1" fill="currentColor"/><path d="M15.5 17.7l1.4 1.4 2.9-3.2" stroke="currentColor" stroke-opacity=".34" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></span><span class="ni"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><rect x="10.8" y="1.6" width="2.4" height="4.4" rx="1.2" fill="currentColor"/><circle cx="12" cy="2.2" r="1.9" fill="currentColor"/><rect x="3.2" y="6.4" width="17.6" height="13.8" rx="4.6" fill="currentColor" opacity=".34"/><circle cx="8.6" cy="13.2" r="1.9" fill="currentColor"/><circle cx="15.4" cy="13.2" r="1.9" fill="currentColor"/></svg></span><span class="ni"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><path d="M12 1.8c-3.8 0-6.7 3-6.7 6.8v3.5l-1.8 4.1c-.4.9.2 1.9 1.2 1.9h14.6c1 0 1.6-1 1.2-1.9l-1.8-4.1V8.6c0-3.8-2.9-6.8-6.7-6.8z" fill="currentColor"/><path d="M9.3 19.6h5.4c0 1.5-1.2 2.6-2.7 2.6s-2.7-1.1-2.7-2.6z" fill="currentColor" opacity=".34"/></svg></span></div><div class="sy-main"><div class="sy-title"><span>Situação fiscal da carteira</span><span class="fa-pill ok"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><path d="M12 2 20.4 5.2v6.1c0 5.4-3.5 9.4-8.4 11.4-4.9-2-8.4-6-8.4-11.4V5.2Z" fill="currentColor" opacity=".34"/><path d="M8.6 12.2l2.4 2.4 4.4-4.6" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>e-CAC conectado</span></div><div class="sy-kpis"><div class="sy-kpi"><div class="l">Regulares</div><div class="v ok">212</div></div><div class="sy-kpi"><div class="l">Pendências</div><div class="v warn">18</div></div><div class="sy-kpi"><div class="l">Parcelamentos</div><div class="v ">9</div></div></div><div class="sy-card flat"><div style="font-size:.75em;font-weight:600;margin-bottom:.6em">Guias emitidas por mês</div><div class="sy-chart"><div class="bc"><div class="b" style="height:2.85em"></div><span>jan</span></div><div class="bc"><div class="b" style="height:3.90em"></div><span>fev</span></div><div class="bc"><div class="b" style="height:3.52em"></div><span>mar</span></div><div class="bc"><div class="b" style="height:4.58em"></div><span>abr</span></div><div class="bc"><div class="b" style="height:4.35em"></div><span>mai</span></div><div class="bc"><div class="b" style="height:5.25em"></div><span>jun</span></div><div class="bc"><div class="b" style="height:4.95em"></div><span>jul</span></div><div class="bc"><div class="b" style="height:5.92em"></div><span>ago</span></div><div class="bc"><div class="b" style="height:5.55em"></div><span>set</span></div><div class="bc"><div class="b cur" style="height:6.60em"></div><span>out</span></div></div></div></div></div></div></div><div class="sy-l" style="left:31em;top:18em;width:17em"><div class="sy-card "><div style="font-size:.8em;font-weight:600;margin-bottom:.6em">Declarações · setembro</div><div style="display:flex;align-items:center;gap:.9em"><svg viewBox="0 0 36 36" style="width:5em;height:5em;transform:rotate(-90deg)"><circle cx="18" cy="18" r="14" fill="none" stroke="rgba(90,116,112,.16)" stroke-width="5"/><circle cx="18" cy="18" r="14" fill="none" stroke="#2ECC71" stroke-width="5" stroke-dasharray="72 88"/><circle cx="18" cy="18" r="14" fill="none" stroke="#F39C12" stroke-width="5" stroke-dasharray="10 88" stroke-dashoffset="-72"/></svg><div class="s" style="display:grid;gap:.35em"><span><i class="lg" style="background:#2ECC71"></i>Transmitidas</span><span><i class="lg" style="background:#F39C12"></i>Pendentes</span><span class="m"><i class="lg" style="background:rgba(90,116,112,.3)"></i>Não obrigadas</span></div></div></div></div><div class="sy-l" style="left:-2em;top:24em"><div class="sy-toast"><span class="warn" style="display:flex"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><path d="M12 1.8c-3.8 0-6.7 3-6.7 6.8v3.5l-1.8 4.1c-.4.9.2 1.9 1.2 1.9h14.6c1 0 1.6-1 1.2-1.9l-1.8-4.1V8.6c0-3.8-2.9-6.8-6.7-6.8z" fill="currentColor"/><path d="M9.3 19.6h5.4c0 1.5-1.2 2.6-2.7 2.6s-2.7-1.1-2.7-2.6z" fill="currentColor" opacity=".34"/></svg></span>Mecânica Silveira · pendência no SITFIS</div></div></div>
+        </div>
+      </div>
+    </section>
+      </div>
+      <div class="sg-cta">
+        <div class="sg-cta-t"><h3>Veja o fiscal rodando sozinho na sua carteira</h3><p>Conheça os planos ou agende uma demonstração com a nossa equipe.</p></div>
+        <div class="sg-cta-b">
+          <a class="btn btn-primary" href="index.html#planos">Ver planos</a>
+          <button type="button" class="btn btn-line" onclick="openLeadModal('grupo_fiscal')">Agendar demonstração</button>
+        </div>
+      </div>
+      <div class="sg-more"><span>Conheça também</span><div><a href="#g-envio" data-go="g-envio">Envio e avisos<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a><a href="#g-xml" data-go="g-xml">XML e notas<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a><a href="#g-tarefas" data-go="g-tarefas">Tarefas e prazos<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a><a href="#g-automacoes" data-go="g-automacoes">Automações e notificações<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a><a href="#g-atendimento" data-go="g-atendimento">Atendimento, portal e clientes<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a><a href="#g-ia" data-go="g-ia">Inteligência artificial<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div></div>
+    </div>
+  </section>
+  <section class="sol-group" id="g-xml">
+    <div class="wrap">
+      <header class="sg-head">
+        <span class="sg-n" aria-hidden="true">03</span>
+        <div>
+          <div class="alabel">XML e notas</div>
+          <h2>Todas as notas do mês, capturadas e organizadas</h2>
+          <p>NF-e e NFS-e de cada cliente chegam sozinhas e saem num ZIP pronto para a contabilidade.</p>
+        </div>
+      </header>
+      <div class="sg-body">
+    <section class="sol-panel" id="xml">
       <div class="ftext">
         <div class="eyebrow-tag">XML</div>
         <h2>Os XMLs do mês, já nas pastas certas</h2>
         <p class="desc">NF-e e NFS-e emitidas e recebidas de cada cliente são capturadas e guardadas. Na hora de baixar, o ZIP já vem montado para a contabilidade.</p>
         <ul class="flist-new">
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Pasta por mês, por cliente (com CNPJ), emitidas e recebidas, NF-e e NFS-e</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Um cliente ou a carteira inteira num ZIP só</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Análise das notas com os itens e as retenções</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Filtro das notas novas, que ainda não foram baixadas</li>
+          <li><span class="chk"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor" opacity=".34"/><path d="M7.8 12.4l2.9 2.9 5.5-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Pasta por mês, por cliente (com CNPJ), emitidas e recebidas, NF-e e NFS-e</li>
+          <li><span class="chk"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor" opacity=".34"/><path d="M7.8 12.4l2.9 2.9 5.5-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Um cliente ou a carteira inteira num ZIP só</li>
+          <li><span class="chk"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor" opacity=".34"/><path d="M7.8 12.4l2.9 2.9 5.5-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Análise das notas com os itens e as retenções</li>
+          <li><span class="chk"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor" opacity=".34"/><path d="M7.8 12.4l2.9 2.9 5.5-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Filtro das notas novas, que ainda não foram baixadas</li>
         </ul>
         <div class="sol-actions">
-          <button type="button" class="btn btn-primary" onclick="openLeadModal('solucao_xml')">Testar 7 dias grátis</button>
-          <button type="button" class="sol-next" data-go="documentos">Próxima: Documentos e portal <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+          <button type="button" class="btn btn-primary" onclick="openLeadModal('solucao_xml')">Agendar demonstração</button>
         </div>
       </div>
-      <div class="fart" role="img" aria-label="Pastas de XML do mês organizadas por cliente e o ZIP da carteira pronto para baixar">
+      <div class="fart sy" role="img" aria-label="Tela de notas fiscais do sistema com captura automática e ZIP de XMLs pronto para baixar">
         <div class="fart-in" aria-hidden="true">
-
-          <div class="fa-card" style="left:6%;top:10%;width:55%">
-            <div class="fa-title"><span class="fa-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg></span>XMLs · julho/2026</div>
-            <div class="fa-row"><span class="fa-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg></span><div class="fa-grow"><b>Padaria Pão Dourado</b><span class="fa-mut">12.345.678/0001-90</span></div></div>
-            <div class="fa-row" style="padding-left:2.7em"><div class="fa-grow">Emitidas</div><span class="fa-pill ok">48</span></div>
-            <div class="fa-row" style="padding-left:2.7em"><div class="fa-grow">Recebidas</div><span class="fa-pill ok">112</span></div>
-            <div class="fa-row"><span class="fa-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg></span><div class="fa-grow"><b>Auto Peças Silva</b><span class="fa-mut">98.765.432/0001-10</span></div></div>
-          </div>
-          <div class="fa-card fa-float" style="left:63%;top:30%;width:31%;text-align:center">
-            <span class="fa-ic" style="width:3em;height:3em;margin:0 auto .6em;border-radius:.8em"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="5" rx="1"/><path d="M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg></span>
-            <b style="display:block">carteira-julho.zip</b>
-            <div class="fa-mut" style="margin:.2em 0 .7em">1.284 XMLs · NF-e e NFS-e</div>
-            <span class="fa-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Baixar</span>
-          </div>
-          <div class="fa-chip fa-float d2" style="right:6%;top:9%"><span class="fa-dot"></span>23 notas novas</div>
+          <div class="sy-scene"><div class="sy-l" style="left:0;top:0;width:46em"><div class="sy-win"><div class="sy-bar"><i></i><i></i><i></i><span>app.cubishub.com.br/notas</span></div><div class="sy-body"><div class="sy-side"><span class="lg"><b></b></span><span class="ni"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><circle cx="17" cy="9" r="3" fill="currentColor" opacity=".34"/><path d="M13.4 20.5H22c.6 0 1-.5.9-1.1-.5-2.6-2.8-4.2-5.9-4.2-.9 0-1.7.1-2.4.4z" fill="currentColor" opacity=".34"/><circle cx="9.2" cy="8.2" r="3.9" fill="currentColor"/><path d="M2.2 20.5c0-3.9 3.1-6.3 7-6.3s7 2.4 7 6.3z" fill="currentColor"/></svg></span><span class="ni"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><path d="M21.7 2.3L2.6 10.6c-.7.3-.7 1.3 0 1.6l7.5 2.6z" fill="currentColor" opacity=".34"/><path d="M21.7 2.3l-3.2 19.1c-.1.8-1.1 1-1.6.4l-6.8-6.6z" fill="currentColor"/></svg></span><span class="ni"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><rect x="2.6" y="3" width="5.4" height="18" rx="2.3" fill="currentColor" opacity=".34"/><rect x="9.3" y="3" width="5.4" height="12" rx="2.3" fill="currentColor"/><rect x="16" y="3" width="5.4" height="15.5" rx="2.3" fill="currentColor" opacity=".34"/></svg></span><span class="ni"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><rect x="2.5" y="4.5" width="19" height="17" rx="4.5" fill="currentColor" opacity=".34"/><path d="M2.5 9c0-2.5 2-4.5 4.5-4.5h10c2.5 0 4.5 2 4.5 4.5v1.2h-19z" fill="currentColor"/><rect x="6.4" y="1.8" width="2.6" height="5" rx="1.3" fill="currentColor"/><rect x="15" y="1.8" width="2.6" height="5" rx="1.3" fill="currentColor"/><circle cx="12" cy="16" r="2.6" fill="currentColor"/></svg></span><span class="ni"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><rect x="7.5" y="2.5" width="14.5" height="11.5" rx="4" fill="currentColor" opacity=".34"/><rect x="2" y="6.5" width="15" height="11.5" rx="4" fill="currentColor"/><path d="M6.4 16.6v5.2c0 .5.6.8 1 .5l4.3-3.6z" fill="currentColor"/></svg></span><span class="ni"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><rect x="4.6" y="11.2" width="2.5" height="6.4" rx=".7" fill="currentColor" opacity=".34"/><rect x="10.75" y="11.2" width="2.5" height="6.4" rx=".7" fill="currentColor" opacity=".34"/><rect x="16.9" y="11.2" width="2.5" height="6.4" rx=".7" fill="currentColor" opacity=".34"/><rect x="2.8" y="18.4" width="18.4" height="2.6" rx="1.1" fill="currentColor" opacity=".34"/><path d="M12 2.9 21.3 8c.5.3.4 1.1-.2 1.1H2.9c-.6 0-.7-.8-.2-1.1L12 2.9Z" fill="currentColor"/></svg></span><span class="ni on"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><rect x="3.4" y="1.8" width="13.4" height="18.6" rx="2.4" fill="currentColor" opacity=".34"/><rect x="6.2" y="6.2" width="7.8" height="1.8" rx=".9" fill="currentColor"/><rect x="6.2" y="9.8" width="7.8" height="1.8" rx=".9" fill="currentColor"/><rect x="6.2" y="13.4" width="4.8" height="1.8" rx=".9" fill="currentColor"/><circle cx="17.6" cy="17.6" r="5.1" fill="currentColor"/><path d="M15.5 17.7l1.4 1.4 2.9-3.2" stroke="currentColor" stroke-opacity=".34" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></span><span class="ni"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><rect x="10.8" y="1.6" width="2.4" height="4.4" rx="1.2" fill="currentColor"/><circle cx="12" cy="2.2" r="1.9" fill="currentColor"/><rect x="3.2" y="6.4" width="17.6" height="13.8" rx="4.6" fill="currentColor" opacity=".34"/><circle cx="8.6" cy="13.2" r="1.9" fill="currentColor"/><circle cx="15.4" cy="13.2" r="1.9" fill="currentColor"/></svg></span><span class="ni"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><path d="M12 1.8c-3.8 0-6.7 3-6.7 6.8v3.5l-1.8 4.1c-.4.9.2 1.9 1.2 1.9h14.6c1 0 1.6-1 1.2-1.9l-1.8-4.1V8.6c0-3.8-2.9-6.8-6.7-6.8z" fill="currentColor"/><path d="M9.3 19.6h5.4c0 1.5-1.2 2.6-2.7 2.6s-2.7-1.1-2.7-2.6z" fill="currentColor" opacity=".34"/></svg></span></div><div class="sy-main"><div class="sy-title"><span>Notas fiscais · outubro</span><span class="fa-pill ok"><span class="dot pulse"></span>Captura automática</span></div><div class="sy-kpis"><div class="sy-kpi"><div class="l">Capturadas</div><div class="v ">1.284</div></div><div class="sy-kpi"><div class="l">NF-e</div><div class="v ">932</div></div><div class="sy-kpi"><div class="l">NFS-e</div><div class="v ">352</div></div></div><div class="sy-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg> Buscar por emitente, CNPJ ou chave…</div><div class="sy-row "><span class="fa-pill info">NF-e</span><span class="gr b">Distribuidora Vale Sul</span><span class="w2 m">SP</span><span class="w7 r mono">R$ 18.420,00</span><span class="m" style="display:flex"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></span></div><div class="sy-row "><span class="fa-pill ok">NFS-e</span><span class="gr b">Clínica Bem Viver</span><span class="w2 m">PR</span><span class="w7 r mono">R$ 3.150,00</span><span class="m" style="display:flex"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></span></div><div class="sy-row "><span class="fa-pill info">NF-e</span><span class="gr b">Atacadão Serra Azul</span><span class="w2 m">MG</span><span class="w7 r mono">R$ 7.986,40</span><span class="m" style="display:flex"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></span></div><div class="sy-row "><span class="fa-pill ok">NFS-e</span><span class="gr b">Studio Arquitetura</span><span class="w2 m">RS</span><span class="w7 r mono">R$ 12.000,00</span><span class="m" style="display:flex"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></span></div><div class="sy-row "><span class="fa-pill info">NF-e</span><span class="gr b">Mercado Bom Preço</span><span class="w2 m">BA</span><span class="w7 r mono">R$ 2.317,85</span><span class="m" style="display:flex"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></span></div></div></div></div></div><div class="sy-l" style="left:30em;top:19em;width:18em"><div class="sy-card "><div style="display:flex;align-items:center;gap:.7em"><span class="fa-ic" style="width:2.4em;height:2.4em"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8v13H3V8"/><rect x="1" y="3" width="22" height="5"/><line x1="10" y1="12" x2="14" y2="12"/></svg></span><div><b style="font-size:.85em">XML_carteira_10-2026.zip</b><div class="m s">148 clientes · pronto para baixar</div></div></div></div></div><div class="sy-l" style="left:-2em;top:25em"><div class="sy-toast"><span class="dot"></span>Nova NFS-e capturada · Curitiba/PR<span class="m"> agora</span></div></div></div>
         </div>
       </div>
     </section>
-
-    <section class="sol-panel" id="documentos" role="tabpanel" aria-labelledby="tab-documentos">
-      <div class="ftext">
-        <div class="eyebrow-tag">Documentos e portal</div>
-        <h2>Cada arquivo no lugar, e o cliente vê sem pedir</h2>
-        <p class="desc">As pastas se montam sozinhas por setor, cliente e categoria. O cliente acessa o portal dele e encontra tudo o que foi enviado.</p>
-        <ul class="flist-new">
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Pastas montadas sozinhas, sem arrastar arquivo</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Portal do cliente com guias, notas e comunicados</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>O cliente marca a guia como paga ali mesmo</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Versões guardadas e envio em um clique</li>
-        </ul>
-        <div class="sol-actions">
-          <button type="button" class="btn btn-primary" onclick="openLeadModal('solucao_documentos')">Testar 7 dias grátis</button>
-          <button type="button" class="sol-next" data-go="atendimento">Próxima: Atendimento <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+      </div>
+      <div class="sg-cta">
+        <div class="sg-cta-t"><h3>Receba os XMLs da sua carteira sem pedir ao cliente</h3><p>Conheça os planos ou agende uma demonstração com a nossa equipe.</p></div>
+        <div class="sg-cta-b">
+          <a class="btn btn-primary" href="index.html#planos">Ver planos</a>
+          <button type="button" class="btn btn-line" onclick="openLeadModal('grupo_xml')">Agendar demonstração</button>
         </div>
       </div>
-      <div class="fart" role="img" aria-label="Portal do cliente mostrando guias, notas e comunicados, com a guia marcada como paga">
-        <div class="fart-in" aria-hidden="true">
-
-          <div class="fa-card" style="left:31%;top:7%;width:40%;bottom:-6%;padding-bottom:0">
-            <div class="fa-mut" style="font-weight:600">Portal do cliente</div>
-            <div class="fa-title" style="margin-top:.15em">Padaria Pão Dourado</div>
-            <div class="fa-tabs"><span class="on">Guias</span><span>Notas</span><span>Avisos</span></div>
-            <div class="fa-row"><div class="fa-grow"><b>DAS julho</b><span class="fa-mut">R$ 412,37 · vence 20/08</span></div><span class="fa-pill warn">Aberta</span></div>
-            <div style="padding:.1em 0 .6em"><span class="fa-btn" style="width:100%;justify-content:center"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar código de barras</span></div>
-            <div class="fa-row"><div class="fa-grow"><b>FGTS julho</b><span class="fa-mut">R$ 1.180,00</span></div><span class="fa-pill ok">Paga</span></div>
-            <div class="fa-row"><div class="fa-grow"><b>NFS-e nº 0142</b><span class="fa-mut">XML e PDF</span></div><span class="fa-pill">Nota</span></div>
-          </div>
-          <div class="fa-chip fa-float" style="left:4%;top:24%;flex-direction:column;align-items:flex-start;gap:.15em"><span style="display:flex;gap:.5em;align-items:center"><span class="fa-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg></span>Fiscal / Guias</span><span class="fa-mut">pasta montada sozinha</span></div>
-          <div class="fa-chip fa-float d2" style="right:4%;bottom:16%"><span class="fa-pill ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Cliente marcou<br>como paga</div>
+      <div class="sg-more"><span>Conheça também</span><div><a href="#g-envio" data-go="g-envio">Envio e avisos<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a><a href="#g-fiscal" data-go="g-fiscal">Fiscal no automático<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a><a href="#g-tarefas" data-go="g-tarefas">Tarefas e prazos<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a><a href="#g-automacoes" data-go="g-automacoes">Automações e notificações<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a><a href="#g-atendimento" data-go="g-atendimento">Atendimento, portal e clientes<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a><a href="#g-ia" data-go="g-ia">Inteligência artificial<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div></div>
+    </div>
+  </section>
+  <section class="sol-group alt" id="g-tarefas">
+    <div class="wrap">
+      <header class="sg-head">
+        <span class="sg-n" aria-hidden="true">04</span>
+        <div>
+          <div class="alabel">Tarefas e prazos</div>
+          <h2>A rotina do mês se cria sozinha</h2>
+          <p>Cada obrigação vira tarefa com prazo e responsável, e termina sozinha quando a guia é enviada.</p>
         </div>
-      </div>
-    </section>
-
-    <section class="sol-panel" id="atendimento" role="tabpanel" aria-labelledby="tab-atendimento">
-      <div class="ftext">
-        <div class="eyebrow-tag">Atendimento</div>
-        <h2>WhatsApp por setor, nada se perde</h2>
-        <p class="desc">Cada conversa vai para o setor responsável. O admin assume qualquer atendimento, transfere entre setores e acompanha tudo em tempo real.</p>
-        <ul class="flist-new">
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Organização por setor e status da conversa</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Texto, imagem, áudio e documento</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Resumo automático quando a conversa troca de setor</li>
-        </ul>
-        <div class="sol-actions">
-          <button type="button" class="btn btn-primary" onclick="openLeadModal('solucao_atendimento')">Testar 7 dias grátis</button>
-          <button type="button" class="sol-next" data-go="prazos">Próxima: Prazos e tarefas <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
-        </div>
-      </div>
-      <div class="fart" role="img" aria-label="Caixa de atendimento do WhatsApp separada por setor, com transferência e resumo automático">
-        <div class="fart-in" aria-hidden="true">
-
-          <div class="fa-card" style="left:5%;top:11%;width:56%">
-            <div class="fa-tabs"><span class="on">Fiscal 3</span><span>Pessoal 1</span><span>Contábil</span></div>
-            <div class="fa-row"><span class="fa-av g">MA</span><div class="fa-grow"><b>Marcos · Padaria</b><span class="fa-mut">me manda a guia de julho?</span></div><span class="fa-mut">09:14</span></div>
-            <div class="fa-row"><span class="fa-av p">AN</span><div class="fa-grow"><b>Ana · Clínica Bem Estar</b><span class="fa-mut" style="display:flex;gap:.3em;align-items:center"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/></svg> áudio 0:14</span></div><span class="fa-mut">09:02</span></div>
-            <div class="fa-row"><span class="fa-av b" style="font-size:.7em"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.9"/><path d="M16 3.1a4 4 0 0 1 0 7.8"/></svg></span><div class="fa-grow"><b>Grupo Auto Peças</b><span class="fa-mut">contrato-social.pdf</span></div><span class="fa-mut">08:47</span></div>
-          </div>
-          <div class="fa-card fa-float" style="left:57%;top:56%;width:38%">
-            <div class="fa-title"><span class="fa-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg></span>Transferida para Pessoal</div>
-            <div class="fa-mut" style="font-size:.84em;line-height:1.45"><b style="color:var(--ink);font-weight:600">Resumo:</b> cliente pediu a folha de agosto e o aviso de férias da Joana.</div>
-          </div>
-          <div class="fa-chip fa-float d2" style="right:6%;top:12%"><span class="fa-dot"></span>Admin acompanhando</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="sol-panel" id="prazos" role="tabpanel" aria-labelledby="tab-prazos">
+      </header>
+      <div class="sg-body">
+    <section class="sol-panel" id="prazos">
       <div class="ftext">
         <div class="eyebrow-tag">Prazos e tarefas</div>
         <h2>A rotina do mês se recria sozinha</h2>
         <p class="desc">Agenda de prazos com alerta para o setor responsável, quadro de tarefas com checklist e tarefas recorrentes que voltam todo mês.</p>
         <ul class="flist-new">
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Alertas para a equipe antes de cada prazo</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Tarefa que se conclui sozinha quando a guia é enviada</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Sincronização com o Google Agenda</li>
+          <li><span class="chk"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor" opacity=".34"/><path d="M7.8 12.4l2.9 2.9 5.5-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Alertas para a equipe antes de cada prazo</li>
+          <li><span class="chk"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor" opacity=".34"/><path d="M7.8 12.4l2.9 2.9 5.5-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Tarefa que se conclui sozinha quando a guia é enviada</li>
+          <li><span class="chk"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor" opacity=".34"/><path d="M7.8 12.4l2.9 2.9 5.5-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Sincronização com o Google Agenda</li>
         </ul>
         <div class="sol-actions">
-          <button type="button" class="btn btn-primary" onclick="openLeadModal('solucao_prazos')">Testar 7 dias grátis</button>
-          <button type="button" class="sol-next" data-go="clientes">Próxima: Clientes <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+          <button type="button" class="btn btn-primary" onclick="openLeadModal('solucao_prazos')">Agendar demonstração</button>
         </div>
       </div>
-      <div class="fart" role="img" aria-label="Quadro de tarefas do mês com tarefas recorrentes e tarefa concluída sozinha após o envio da guia">
+      <div class="fart sy" role="img" aria-label="Board de tarefas do sistema, com recorrência mensal e tarefa concluída após o envio da guia">
         <div class="fart-in" aria-hidden="true">
-
-          <div class="fa-card" style="left:5%;top:12%;right:5%;display:grid;grid-template-columns:repeat(3,1fr);gap:.6em">
-            <div class="fa-col"><span class="fa-mut">A fazer</span>
-              <div class="fa-task"><b>DCTFWeb agosto</b><span class="fa-mut">12 clientes · até 15/09</span><div style="margin-top:.45em"><span class="fa-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><path d="M20.5 15a9 9 0 1 1-2.1-9.4L23 10"/></svg>todo mês</span></div></div>
-              <div class="fa-task"><b>Parcelamentos</b><span class="fa-mut">até 30/09</span></div></div>
-            <div class="fa-col"><span class="fa-mut">Fazendo</span>
-              <div class="fa-task"><b>Folha de agosto</b><span class="fa-mut">checklist 4 de 6</span><div class="fa-bar" style="margin-top:.5em"><i style="width:66%"></i></div></div>
-              <div class="fa-task"><b>Balancete</b><span class="fa-mut">Contábil</span></div></div>
-            <div class="fa-col"><span class="fa-mut">Concluído</span>
-              <div class="fa-task"><b>Parcelamentos julho</b><span class="fa-mut">8 clientes</span></div>
-              <div class="fa-task" style="box-shadow:0 0 0 1.5px var(--green)"><b>Envio DAS julho</b><span class="fa-pill ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>fechou ao enviar</span></div></div>
-          </div>
-          <div class="fa-chip fa-float" style="left:8%;bottom:10%"><span class="fa-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span>Prazos no Google Agenda</div>
+          <div class="sy-scene"><div class="sy-l" style="left:0;top:0;width:48em"><div class="sy-win"><div class="sy-bar"><i></i><i></i><i></i><span>app.cubishub.com.br/board</span></div><div class="sy-body"><div class="sy-side"><span class="lg"><b></b></span><span class="ni"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><circle cx="17" cy="9" r="3" fill="currentColor" opacity=".34"/><path d="M13.4 20.5H22c.6 0 1-.5.9-1.1-.5-2.6-2.8-4.2-5.9-4.2-.9 0-1.7.1-2.4.4z" fill="currentColor" opacity=".34"/><circle cx="9.2" cy="8.2" r="3.9" fill="currentColor"/><path d="M2.2 20.5c0-3.9 3.1-6.3 7-6.3s7 2.4 7 6.3z" fill="currentColor"/></svg></span><span class="ni"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><path d="M21.7 2.3L2.6 10.6c-.7.3-.7 1.3 0 1.6l7.5 2.6z" fill="currentColor" opacity=".34"/><path d="M21.7 2.3l-3.2 19.1c-.1.8-1.1 1-1.6.4l-6.8-6.6z" fill="currentColor"/></svg></span><span class="ni on"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><rect x="2.6" y="3" width="5.4" height="18" rx="2.3" fill="currentColor" opacity=".34"/><rect x="9.3" y="3" width="5.4" height="12" rx="2.3" fill="currentColor"/><rect x="16" y="3" width="5.4" height="15.5" rx="2.3" fill="currentColor" opacity=".34"/></svg></span><span class="ni"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><rect x="2.5" y="4.5" width="19" height="17" rx="4.5" fill="currentColor" opacity=".34"/><path d="M2.5 9c0-2.5 2-4.5 4.5-4.5h10c2.5 0 4.5 2 4.5 4.5v1.2h-19z" fill="currentColor"/><rect x="6.4" y="1.8" width="2.6" height="5" rx="1.3" fill="currentColor"/><rect x="15" y="1.8" width="2.6" height="5" rx="1.3" fill="currentColor"/><circle cx="12" cy="16" r="2.6" fill="currentColor"/></svg></span><span class="ni"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><rect x="7.5" y="2.5" width="14.5" height="11.5" rx="4" fill="currentColor" opacity=".34"/><rect x="2" y="6.5" width="15" height="11.5" rx="4" fill="currentColor"/><path d="M6.4 16.6v5.2c0 .5.6.8 1 .5l4.3-3.6z" fill="currentColor"/></svg></span><span class="ni"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><rect x="4.6" y="11.2" width="2.5" height="6.4" rx=".7" fill="currentColor" opacity=".34"/><rect x="10.75" y="11.2" width="2.5" height="6.4" rx=".7" fill="currentColor" opacity=".34"/><rect x="16.9" y="11.2" width="2.5" height="6.4" rx=".7" fill="currentColor" opacity=".34"/><rect x="2.8" y="18.4" width="18.4" height="2.6" rx="1.1" fill="currentColor" opacity=".34"/><path d="M12 2.9 21.3 8c.5.3.4 1.1-.2 1.1H2.9c-.6 0-.7-.8-.2-1.1L12 2.9Z" fill="currentColor"/></svg></span><span class="ni"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><rect x="3.4" y="1.8" width="13.4" height="18.6" rx="2.4" fill="currentColor" opacity=".34"/><rect x="6.2" y="6.2" width="7.8" height="1.8" rx=".9" fill="currentColor"/><rect x="6.2" y="9.8" width="7.8" height="1.8" rx=".9" fill="currentColor"/><rect x="6.2" y="13.4" width="4.8" height="1.8" rx=".9" fill="currentColor"/><circle cx="17.6" cy="17.6" r="5.1" fill="currentColor"/><path d="M15.5 17.7l1.4 1.4 2.9-3.2" stroke="currentColor" stroke-opacity=".34" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></span><span class="ni"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><rect x="10.8" y="1.6" width="2.4" height="4.4" rx="1.2" fill="currentColor"/><circle cx="12" cy="2.2" r="1.9" fill="currentColor"/><rect x="3.2" y="6.4" width="17.6" height="13.8" rx="4.6" fill="currentColor" opacity=".34"/><circle cx="8.6" cy="13.2" r="1.9" fill="currentColor"/><circle cx="15.4" cy="13.2" r="1.9" fill="currentColor"/></svg></span><span class="ni"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><path d="M12 1.8c-3.8 0-6.7 3-6.7 6.8v3.5l-1.8 4.1c-.4.9.2 1.9 1.2 1.9h14.6c1 0 1.6-1 1.2-1.9l-1.8-4.1V8.6c0-3.8-2.9-6.8-6.7-6.8z" fill="currentColor"/><path d="M9.3 19.6h5.4c0 1.5-1.2 2.6-2.7 2.6s-2.7-1.1-2.7-2.6z" fill="currentColor" opacity=".34"/></svg></span></div><div class="sy-main"><div class="sy-title"><span>Board · Fechamento mensal</span><span class="fa-pill "><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><rect x="2.5" y="4.5" width="19" height="17" rx="4.5" fill="currentColor" opacity=".34"/><path d="M2.5 9c0-2.5 2-4.5 4.5-4.5h10c2.5 0 4.5 2 4.5 4.5v1.2h-19z" fill="currentColor"/><rect x="6.4" y="1.8" width="2.6" height="5" rx="1.3" fill="currentColor"/><rect x="15" y="1.8" width="2.6" height="5" rx="1.3" fill="currentColor"/><circle cx="12" cy="16" r="2.6" fill="currentColor"/></svg>Outubro 2026</span></div><div class="sy-cols"><div class="sy-col"><div class="sy-colh"><span>A fazer</span><span class="mono">8</span></div><div class="sy-task"><div class="sy-split"><b>Folha de pagamento</b><span class="ok" style="display:flex"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><path d="M21 12a9 9 0 1 1-3-6.7" stroke="currentColor" stroke-width="2.6" fill="none" stroke-linecap="round" opacity=".34"/><path d="M21 2.6V8h-5.4" stroke="currentColor" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".34"/><path d="M3 12a9 9 0 0 0 15.1 6.6" stroke="currentColor" stroke-width="2.6" fill="none" stroke-linecap="round"/><path d="M3 21.4V16h5.4" stroke="currentColor" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div><div class="m s2">Padaria Pão Dourado</div><div style="display:flex;align-items:center;gap:.5em"><span style="flex:1"><span class="fa-bar" style="display:block"><i style="width:0%"></i></span></span><span class="fa-av b">JS</span></div></div><div class="sy-task"><div class="sy-split"><b>Apuração do Simples</b><span class="ok" style="display:flex"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><path d="M21 12a9 9 0 1 1-3-6.7" stroke="currentColor" stroke-width="2.6" fill="none" stroke-linecap="round" opacity=".34"/><path d="M21 2.6V8h-5.4" stroke="currentColor" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".34"/><path d="M3 12a9 9 0 0 0 15.1 6.6" stroke="currentColor" stroke-width="2.6" fill="none" stroke-linecap="round"/><path d="M3 21.4V16h5.4" stroke="currentColor" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div><div class="m s2">Ótica Luz</div><div style="display:flex;align-items:center;gap:.5em"><span style="flex:1"><span class="fa-bar" style="display:block"><i style="width:0%"></i></span></span><span class="fa-av p">AM</span></div></div><div class="sy-task"><div class="sy-split"><b>Conciliação bancária</b></div><div class="m s2">TechCampo Agro</div><div style="display:flex;align-items:center;gap:.5em"><span style="flex:1"><span class="fa-bar" style="display:block"><i style="width:0%"></i></span></span><span class="fa-av o">RC</span></div></div></div><div class="sy-col"><div class="sy-colh"><span>Em andamento</span><span class="mono">5</span></div><div class="sy-task"><div class="sy-split"><b>DCTFWeb</b><span class="ok" style="display:flex"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><path d="M21 12a9 9 0 1 1-3-6.7" stroke="currentColor" stroke-width="2.6" fill="none" stroke-linecap="round" opacity=".34"/><path d="M21 2.6V8h-5.4" stroke="currentColor" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".34"/><path d="M3 12a9 9 0 0 0 15.1 6.6" stroke="currentColor" stroke-width="2.6" fill="none" stroke-linecap="round"/><path d="M3 21.4V16h5.4" stroke="currentColor" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div><div class="m s2">Mecânica Silveira</div><div style="display:flex;align-items:center;gap:.5em"><span style="flex:1"><span class="fa-bar" style="display:block"><i style="width:60%"></i></span></span><span class="fa-av p">AM</span></div></div><div class="sy-task"><div class="sy-split"><b>Envio do DAS</b><span class="ok" style="display:flex"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><path d="M21 12a9 9 0 1 1-3-6.7" stroke="currentColor" stroke-width="2.6" fill="none" stroke-linecap="round" opacity=".34"/><path d="M21 2.6V8h-5.4" stroke="currentColor" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".34"/><path d="M3 12a9 9 0 0 0 15.1 6.6" stroke="currentColor" stroke-width="2.6" fill="none" stroke-linecap="round"/><path d="M3 21.4V16h5.4" stroke="currentColor" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div><div class="m s2">Ateliê Flor de Lis</div><div style="display:flex;align-items:center;gap:.5em"><span style="flex:1"><span class="fa-bar" style="display:block"><i style="width:35%"></i></span></span><span class="fa-av b">JS</span></div></div></div><div class="sy-col"><div class="sy-colh"><span>Concluído</span><span class="mono">21</span></div><div class="sy-task"><div class="sy-split"><b>Envio do DAS</b><span class="ok" style="display:flex"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><path d="M21 12a9 9 0 1 1-3-6.7" stroke="currentColor" stroke-width="2.6" fill="none" stroke-linecap="round" opacity=".34"/><path d="M21 2.6V8h-5.4" stroke="currentColor" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".34"/><path d="M3 12a9 9 0 0 0 15.1 6.6" stroke="currentColor" stroke-width="2.6" fill="none" stroke-linecap="round"/><path d="M3 21.4V16h5.4" stroke="currentColor" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div><div class="m s2">Restaurante Brasa</div><div style="display:flex;align-items:center;gap:.5em"><span style="flex:1"><span class="fa-bar" style="display:block"><i style="width:100%"></i></span></span><span class="fa-av o">RC</span></div></div><div class="sy-task"><div class="sy-split"><b>Pró-labore</b><span class="ok" style="display:flex"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><path d="M21 12a9 9 0 1 1-3-6.7" stroke="currentColor" stroke-width="2.6" fill="none" stroke-linecap="round" opacity=".34"/><path d="M21 2.6V8h-5.4" stroke="currentColor" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".34"/><path d="M3 12a9 9 0 0 0 15.1 6.6" stroke="currentColor" stroke-width="2.6" fill="none" stroke-linecap="round"/><path d="M3 21.4V16h5.4" stroke="currentColor" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div><div class="m s2">Studio Arquitetura</div><div style="display:flex;align-items:center;gap:.5em"><span style="flex:1"><span class="fa-bar" style="display:block"><i style="width:100%"></i></span></span><span class="fa-av b">JS</span></div></div></div></div></div></div></div></div><div class="sy-l" style="left:33em;top:0;width:16em"><div class="sy-card "><div class="sy-ctitle"><span class="ok" style="display:flex"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><path d="M21 12a9 9 0 1 1-3-6.7" stroke="currentColor" stroke-width="2.6" fill="none" stroke-linecap="round" opacity=".34"/><path d="M21 2.6V8h-5.4" stroke="currentColor" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".34"/><path d="M3 12a9 9 0 0 0 15.1 6.6" stroke="currentColor" stroke-width="2.6" fill="none" stroke-linecap="round"/><path d="M3 21.4V16h5.4" stroke="currentColor" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Recorrência</div><div class="sy-kv"><span>Frequência</span><b>Mensal</b></div><div class="sy-kv"><span>Cria no dia</span><b class="mono">01</b></div><div class="sy-kv"><span>Prazo</span><b class="mono">dia 20</b></div></div></div><div class="sy-l" style="left:-2em;top:25em"><div class="sy-toast"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Tarefa concluída após o envio da guia</div></div></div>
         </div>
       </div>
     </section>
-
-    <section class="sol-panel" id="clientes" role="tabpanel" aria-labelledby="tab-clientes">
+      </div>
+      <div class="sg-cta">
+        <div class="sg-cta-t"><h3>Organize a rotina do seu escritório de uma vez</h3><p>Conheça os planos ou agende uma demonstração com a nossa equipe.</p></div>
+        <div class="sg-cta-b">
+          <a class="btn btn-primary" href="index.html#planos">Ver planos</a>
+          <button type="button" class="btn btn-line" onclick="openLeadModal('grupo_tarefas')">Agendar demonstração</button>
+        </div>
+      </div>
+      <div class="sg-more"><span>Conheça também</span><div><a href="#g-envio" data-go="g-envio">Envio e avisos<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a><a href="#g-fiscal" data-go="g-fiscal">Fiscal no automático<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a><a href="#g-xml" data-go="g-xml">XML e notas<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a><a href="#g-automacoes" data-go="g-automacoes">Automações e notificações<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a><a href="#g-atendimento" data-go="g-atendimento">Atendimento, portal e clientes<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a><a href="#g-ia" data-go="g-ia">Inteligência artificial<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div></div>
+    </div>
+  </section>
+  <section class="sol-group" id="g-automacoes">
+    <div class="wrap">
+      <header class="sg-head">
+        <span class="sg-n" aria-hidden="true">05</span>
+        <div>
+          <div class="alabel">Automações e notificações</div>
+          <h2>A plataforma trabalha antes de a equipe chegar</h2>
+          <p>Tarefas criadas, guias emitidas, clientes avisados e notas capturadas todo dia. O sino mostra o que pede a sua atenção.</p>
+        </div>
+      </header>
+      <div class="sg-auto">
+        <ol class="auto-rail"><li><time>03:00</time><h3>Tarefas do mês criadas</h3><p>As recorrentes nascem no board com checklist, prazo e responsável.</p></li><li><time>07:30</time><h3>Lembrete de prazo</h3><p>O responsável recebe no WhatsApp o que vence hoje e amanhã.</p></li><li><time>08:00</time><h3>Parcelamentos e Caixa Postal</h3><p>Pagamentos conferidos, guia emitida, mensagens do e-CAC verificadas.</p></li><li><time>08:15</time><h3>DAS e DCTFWeb</h3><p>Guias emitidas no dia escolhido e agendadas para envio.</p></li><li><time>08:20</time><h3>Pagamento conciliado</h3><p>A Receita confirma quem pagou e a cobrança para sozinha.</p></li><li><time>08:30</time><h3>Régua de cobrança</h3><p>WhatsApp e e-mail, só para quem ainda não pagou.</p></li><li><time>09:00</time><h3>Avisos de vencimento</h3><p>D-3, D-1 e D-0 chegam ao cliente, sempre em dia útil.</p></li><li><time>23:00</time><h3>Notas capturadas</h3><p>NF-e e NFS-e baixadas e organizadas por cliente.</p></li></ol>
+      </div>
+      <div class="sg-body">
+    <section class="sol-panel" id="notificacoes">
+      <div class="ftext">
+        <div class="eyebrow-tag">Notificações</div>
+        <h2>O sino avisa o que precisa de você, e o que vai sair</h2>
+        <p class="desc">Prazos, tarefas, envios e mensagens da Receita reunidos num lugar só. O que vai ser enviado ao cliente aparece antes, para você conferir.</p>
+        <ul class="flist-new">
+          <li><span class="chk"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor" opacity=".34"/><path d="M7.8 12.4l2.9 2.9 5.5-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Tarefa que vence hoje ou amanhã vai para o WhatsApp do responsável</li>
+          <li><span class="chk"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor" opacity=".34"/><path d="M7.8 12.4l2.9 2.9 5.5-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Aviso antecipado: "12 lembretes saem quinta", com tempo de corrigir ou cancelar</li>
+          <li><span class="chk"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor" opacity=".34"/><path d="M7.8 12.4l2.9 2.9 5.5-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Envio preso ou sem confirmação aparece no sino, com reenvio em um clique</li>
+          <li><span class="chk"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor" opacity=".34"/><path d="M7.8 12.4l2.9 2.9 5.5-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>A IA resume cada prazo em uma frase, para ler rápido</li>
+          <li><span class="chk"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor" opacity=".34"/><path d="M7.8 12.4l2.9 2.9 5.5-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Cada pessoa vê os avisos do seu setor</li>
+        </ul>
+        <div class="sol-actions">
+          <button type="button" class="btn btn-primary" onclick="openLeadModal('solucao_notificacoes')">Agendar demonstração</button>
+        </div>
+      </div>
+      <div class="fart" role="img" aria-label="Tela de notificações com intimação, lembretes que vão sair, prazo de tarefa e envios sem confirmação">
+        <div class="fart-in" aria-hidden="true">
+          <div class="fa-card" style="left:6%;top:8%;width:62%">
+            <div class="fa-title"><span class="fa-ic"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><path d="M12 1.8c-3.8 0-6.7 3-6.7 6.8v3.5l-1.8 4.1c-.4.9.2 1.9 1.2 1.9h14.6c1 0 1.6-1 1.2-1.9l-1.8-4.1V8.6c0-3.8-2.9-6.8-6.7-6.8z" fill="currentColor"/><path d="M9.3 19.6h5.4c0 1.5-1.2 2.6-2.7 2.6s-2.7-1.1-2.7-2.6z" fill="currentColor" opacity=".34"/></svg></span>Notificações<span class="fa-pill ok">4 novas</span></div>
+            <div class="fa-row"><span class="fa-ic" style="background:rgba(243,156,18,.16);color:#9A5B06"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><rect x="2.2" y="4.6" width="19.6" height="15" rx="3" fill="currentColor" opacity=".34"/><path d="M3.4 7.2 12 13.4l8.6-6.2" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div class="fa-grow"><b>Intimação na Caixa Postal</b><span class="fa-mut">Mecânica Silveira · agora</span></div></div>
+            <div class="fa-row"><span class="fa-ic"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><circle cx="12" cy="12" r="9.4" fill="currentColor" opacity=".34"/><path d="M12 6.8v5.6l3.6 2.1" stroke="currentColor" stroke-width="2.1" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div class="fa-grow"><b>12 lembretes de vencimento saem quinta, 22/10</b><span class="fa-mut">Confira ou cancele antes de sair</span></div><span class="fa-pill">Conferir</span></div>
+            <div class="fa-row"><span class="fa-ic"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><rect x="2.5" y="4.5" width="19" height="17" rx="4.5" fill="currentColor" opacity=".34"/><path d="M2.5 9c0-2.5 2-4.5 4.5-4.5h10c2.5 0 4.5 2 4.5 4.5v1.2h-19z" fill="currentColor"/><rect x="6.4" y="1.8" width="2.6" height="5" rx="1.3" fill="currentColor"/><rect x="15" y="1.8" width="2.6" height="5" rx="1.3" fill="currentColor"/><circle cx="12" cy="16" r="2.6" fill="currentColor"/></svg></span><div class="fa-grow"><b>DCTFWeb vence amanhã</b><span class="fa-mut">TechCampo Agro · responsável: Ana</span></div></div>
+            <div class="fa-row"><span class="fa-ic" style="background:rgba(217,48,37,.12);color:#B3261E"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><path d="M12 3.6L21 19.4H3L12 3.6Z" fill="currentColor" fill-opacity=".34" stroke="currentColor" stroke-opacity=".34" stroke-width="3" stroke-linejoin="round"/><path d="M12 9.4v4.3" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><circle cx="12" cy="16.6" r="1.35" fill="currentColor"/></svg></span><div class="fa-grow"><b>2 envios sem confirmação de entrega</b><span class="fa-mut">Reenvie com um clique</span></div></div>
+          </div>
+          <div class="fa-chip fa-float" style="right:5%;top:12%"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><path d="M12 1.8c-3.8 0-6.7 3-6.7 6.8v3.5l-1.8 4.1c-.4.9.2 1.9 1.2 1.9h14.6c1 0 1.6-1 1.2-1.9l-1.8-4.1V8.6c0-3.8-2.9-6.8-6.7-6.8z" fill="currentColor"/><path d="M9.3 19.6h5.4c0 1.5-1.2 2.6-2.7 2.6s-2.7-1.1-2.7-2.6z" fill="currentColor" opacity=".34"/></svg>Prazo de hoje, por IA, em uma frase</div>
+          <div class="fa-card" style="left:52%;top:62%;width:42%;padding:.8em 1em">
+            <div class="fa-title" style="margin-bottom:.4em"><span class="fa-av g" style="font-size:.7em">AN</span>WhatsApp da Ana</div>
+            <div class="fa-bub in" style="max-width:100%">Oi, Ana! Hoje vence: <b>DCTFWeb · TechCampo Agro</b>.<span class="fa-mut">07:31 ✓✓</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+      </div>
+      <div class="sg-cta">
+        <div class="sg-cta-t"><h3>Ligue as automações na sua carteira</h3><p>Conheça os planos ou agende uma demonstração com a nossa equipe.</p></div>
+        <div class="sg-cta-b">
+          <a class="btn btn-primary" href="index.html#planos">Ver planos</a>
+          <button type="button" class="btn btn-line" onclick="openLeadModal('grupo_automacoes')">Agendar demonstração</button>
+        </div>
+      </div>
+      <div class="sg-more"><span>Conheça também</span><div><a href="#g-envio" data-go="g-envio">Envio e avisos<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a><a href="#g-fiscal" data-go="g-fiscal">Fiscal no automático<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a><a href="#g-xml" data-go="g-xml">XML e notas<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a><a href="#g-tarefas" data-go="g-tarefas">Tarefas e prazos<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a><a href="#g-atendimento" data-go="g-atendimento">Atendimento, portal e clientes<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a><a href="#g-ia" data-go="g-ia">Inteligência artificial<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div></div>
+    </div>
+  </section>
+  <section class="sol-group alt" id="g-atendimento">
+    <div class="wrap">
+      <header class="sg-head">
+        <span class="sg-n" aria-hidden="true">06</span>
+        <div>
+          <div class="alabel">Atendimento, portal e clientes</div>
+          <h2>Cada cliente atendido no lugar certo, sem ligar para o escritório</h2>
+          <p>Conversas por setor, portal com a guia na mão do cliente e cadastro que se completa sozinho.</p>
+        </div>
+      </header>
+      <div class="sg-body">
+    <section class="sol-panel" id="atendimento">
+      <div class="ftext">
+        <div class="eyebrow-tag">Atendimento</div>
+        <h2>WhatsApp por setor, nada se perde</h2>
+        <p class="desc">Cada conversa vai para o setor responsável. O admin assume qualquer atendimento, transfere entre setores e acompanha tudo em tempo real.</p>
+        <ul class="flist-new">
+          <li><span class="chk"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor" opacity=".34"/><path d="M7.8 12.4l2.9 2.9 5.5-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Organização por setor e status da conversa</li>
+          <li><span class="chk"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor" opacity=".34"/><path d="M7.8 12.4l2.9 2.9 5.5-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Texto, imagem, áudio e documento</li>
+          <li><span class="chk"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor" opacity=".34"/><path d="M7.8 12.4l2.9 2.9 5.5-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Resumo automático quando a conversa troca de setor</li>
+        </ul>
+        <div class="sol-actions">
+          <button type="button" class="btn btn-primary" onclick="openLeadModal('solucao_atendimento')">Agendar demonstração</button>
+        </div>
+      </div>
+      <div class="fart sy" role="img" aria-label="Tela de atendimento do sistema: conversas de WhatsApp por setor, com áudio e transferência">
+        <div class="fart-in" aria-hidden="true">
+          <div class="sy-scene"><div class="sy-l" style="left:0;top:0;width:46em"><div class="sy-win"><div class="sy-bar"><i></i><i></i><i></i><span>app.cubishub.com.br/whatsapp</span></div><div class="sy-body"><div class="sy-side"><span class="lg"><b></b></span><span class="ni"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><circle cx="17" cy="9" r="3" fill="currentColor" opacity=".34"/><path d="M13.4 20.5H22c.6 0 1-.5.9-1.1-.5-2.6-2.8-4.2-5.9-4.2-.9 0-1.7.1-2.4.4z" fill="currentColor" opacity=".34"/><circle cx="9.2" cy="8.2" r="3.9" fill="currentColor"/><path d="M2.2 20.5c0-3.9 3.1-6.3 7-6.3s7 2.4 7 6.3z" fill="currentColor"/></svg></span><span class="ni"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><path d="M21.7 2.3L2.6 10.6c-.7.3-.7 1.3 0 1.6l7.5 2.6z" fill="currentColor" opacity=".34"/><path d="M21.7 2.3l-3.2 19.1c-.1.8-1.1 1-1.6.4l-6.8-6.6z" fill="currentColor"/></svg></span><span class="ni"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><rect x="2.6" y="3" width="5.4" height="18" rx="2.3" fill="currentColor" opacity=".34"/><rect x="9.3" y="3" width="5.4" height="12" rx="2.3" fill="currentColor"/><rect x="16" y="3" width="5.4" height="15.5" rx="2.3" fill="currentColor" opacity=".34"/></svg></span><span class="ni"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><rect x="2.5" y="4.5" width="19" height="17" rx="4.5" fill="currentColor" opacity=".34"/><path d="M2.5 9c0-2.5 2-4.5 4.5-4.5h10c2.5 0 4.5 2 4.5 4.5v1.2h-19z" fill="currentColor"/><rect x="6.4" y="1.8" width="2.6" height="5" rx="1.3" fill="currentColor"/><rect x="15" y="1.8" width="2.6" height="5" rx="1.3" fill="currentColor"/><circle cx="12" cy="16" r="2.6" fill="currentColor"/></svg></span><span class="ni on"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><rect x="7.5" y="2.5" width="14.5" height="11.5" rx="4" fill="currentColor" opacity=".34"/><rect x="2" y="6.5" width="15" height="11.5" rx="4" fill="currentColor"/><path d="M6.4 16.6v5.2c0 .5.6.8 1 .5l4.3-3.6z" fill="currentColor"/></svg></span><span class="ni"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><rect x="4.6" y="11.2" width="2.5" height="6.4" rx=".7" fill="currentColor" opacity=".34"/><rect x="10.75" y="11.2" width="2.5" height="6.4" rx=".7" fill="currentColor" opacity=".34"/><rect x="16.9" y="11.2" width="2.5" height="6.4" rx=".7" fill="currentColor" opacity=".34"/><rect x="2.8" y="18.4" width="18.4" height="2.6" rx="1.1" fill="currentColor" opacity=".34"/><path d="M12 2.9 21.3 8c.5.3.4 1.1-.2 1.1H2.9c-.6 0-.7-.8-.2-1.1L12 2.9Z" fill="currentColor"/></svg></span><span class="ni"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><rect x="3.4" y="1.8" width="13.4" height="18.6" rx="2.4" fill="currentColor" opacity=".34"/><rect x="6.2" y="6.2" width="7.8" height="1.8" rx=".9" fill="currentColor"/><rect x="6.2" y="9.8" width="7.8" height="1.8" rx=".9" fill="currentColor"/><rect x="6.2" y="13.4" width="4.8" height="1.8" rx=".9" fill="currentColor"/><circle cx="17.6" cy="17.6" r="5.1" fill="currentColor"/><path d="M15.5 17.7l1.4 1.4 2.9-3.2" stroke="currentColor" stroke-opacity=".34" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></span><span class="ni"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><rect x="10.8" y="1.6" width="2.4" height="4.4" rx="1.2" fill="currentColor"/><circle cx="12" cy="2.2" r="1.9" fill="currentColor"/><rect x="3.2" y="6.4" width="17.6" height="13.8" rx="4.6" fill="currentColor" opacity=".34"/><circle cx="8.6" cy="13.2" r="1.9" fill="currentColor"/><circle cx="15.4" cy="13.2" r="1.9" fill="currentColor"/></svg></span><span class="ni"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><path d="M12 1.8c-3.8 0-6.7 3-6.7 6.8v3.5l-1.8 4.1c-.4.9.2 1.9 1.2 1.9h14.6c1 0 1.6-1 1.2-1.9l-1.8-4.1V8.6c0-3.8-2.9-6.8-6.7-6.8z" fill="currentColor"/><path d="M9.3 19.6h5.4c0 1.5-1.2 2.6-2.7 2.6s-2.7-1.1-2.7-2.6z" fill="currentColor" opacity=".34"/></svg></span></div><div class="sy-main"><div style="display:flex;gap:.8em"><div style="width:14em;flex-shrink:0"><div style="display:flex;gap:.3em;margin-bottom:.6em"><span class="fa-pill ok">Fiscal</span><span class="fa-pill ">Pessoal</span><span class="fa-pill ">Contábil</span></div><div class="sy-ct on"><span class="fa-av b">MS</span><div class="gr"><b>Marcos Silveira</b><div class="m s2">Recebi a guia, obrigado!</div></div><span class="un">2</span></div><div class="sy-ct"><span class="fa-av o">AF</span><div class="gr"><b>Ana · Flor de Lis</b><div class="m s2">Áudio · 0:42</div></div></div><div class="sy-ct"><span class="fa-av g">PD</span><div class="gr"><b>Grupo Pão Dourado</b><div class="m s2">Vocês: Segue o DAS…</div></div></div><div class="sy-ct"><span class="fa-av p">TC</span><div class="gr"><b>TechCampo Agro</b><div class="m s2">Pode emitir a nota?</div></div><span class="un">1</span></div><div class="sy-ct"><span class="fa-av t">OL</span><div class="gr"><b>Ótica Luz</b><div class="m s2">Certo, até amanhã</div></div></div></div><div class="sy-conv"><div class="fa-bub in">Bom dia! A guia do Simples já saiu?</div><div class="fa-bub out">Saiu sim, Marcos! Enviei agora há pouco, vence dia 20.<span class="fa-mut">09:16 ✓✓</span></div><div class="fa-bub in">Recebi a guia, obrigado! 👍</div><div class="sy-input"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.4 11.1l-9.2 9.2a6 6 0 0 1-8.5-8.5l9.2-9.2a4 4 0 0 1 5.7 5.7l-9.2 9.2a2 2 0 0 1-2.8-2.8l8.5-8.5"/></svg> Digite uma mensagem…</div></div></div></div></div></div></div><div class="sy-l" style="left:31em;top:21em;width:17em"><div class="sy-audio"><span class="pl"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="7 4 20 12 7 20 7 4"/></svg></span><span class="wv"><i style="height:0.33em"></i><i style="height:0.66em"></i><i style="height:0.99em"></i><i style="height:0.55em"></i><i style="height:1.21em"></i><i style="height:0.77em"></i><i style="height:1.43em"></i><i style="height:0.88em"></i><i style="height:0.55em"></i><i style="height:1.10em"></i><i style="height:0.66em"></i><i style="height:1.32em"></i><i style="height:0.44em"></i><i style="height:0.99em"></i><i style="height:0.77em"></i><i style="height:0.55em"></i><i style="height:0.88em"></i><i style="height:0.44em"></i></span><span class="m mono s">0:42</span></div></div><div class="sy-l" style="left:-2em;top:-2em"><div class="sy-toast"><span class="ok" style="display:flex"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"/><line x1="3" y1="5" x2="21" y2="5"/><polyline points="7 23 3 19 7 15"/><line x1="21" y1="19" x2="3" y2="19"/></svg></span>Conversa transferida para <span class="ok">&nbsp;Fiscal</span></div></div></div>
+        </div>
+      </div>
+    </section>
+    <section class="sol-panel" id="documentos">
+      <div class="ftext">
+        <div class="eyebrow-tag">Documentos e portal</div>
+        <h2>Cada arquivo no lugar, e o cliente vê sem pedir</h2>
+        <p class="desc">As pastas se montam sozinhas por setor, cliente e categoria. O cliente acessa o portal dele e encontra tudo o que foi enviado.</p>
+        <ul class="flist-new">
+          <li><span class="chk"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor" opacity=".34"/><path d="M7.8 12.4l2.9 2.9 5.5-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Pastas montadas sozinhas, sem arrastar arquivo</li>
+          <li><span class="chk"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor" opacity=".34"/><path d="M7.8 12.4l2.9 2.9 5.5-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Portal do cliente com guias, notas e comunicados</li>
+          <li><span class="chk"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor" opacity=".34"/><path d="M7.8 12.4l2.9 2.9 5.5-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>O cliente marca a guia como paga ali mesmo</li>
+          <li><span class="chk"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor" opacity=".34"/><path d="M7.8 12.4l2.9 2.9 5.5-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Versões guardadas e envio em um clique</li>
+        </ul>
+        <div class="sol-actions">
+          <button type="button" class="btn btn-primary" onclick="openLeadModal('solucao_documentos')">Agendar demonstração</button>
+        </div>
+      </div>
+      <div class="fart sy" role="img" aria-label="Portal do cliente no computador e no celular, com guias, vencimentos e código de barras">
+        <div class="fart-in" aria-hidden="true">
+          <div class="sy-scene"><div class="sy-l" style="left:0;top:1em;width:44em"><div class="sy-win"><div class="sy-bar"><i></i><i></i><i></i><span>portal.silvacontabil.com.br</span></div><div style="padding:1.1em"><div style="display:flex;align-items:center;gap:.7em;margin-bottom:1em"><span class="fa-ic" style="background:#3C7FB8;color:#fff;width:2.2em;height:2.2em"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><rect x="13" y="8.4" width="8.4" height="13" rx="1.8" fill="currentColor" opacity=".34"/><rect x="2.6" y="2.4" width="12.2" height="19" rx="2" fill="currentColor"/><rect x="5.6" y="6" width="2.4" height="2.4" rx=".6" fill="#fff"/><rect x="9.4" y="6" width="2.4" height="2.4" rx=".6" fill="#fff"/><rect x="5.6" y="10.6" width="2.4" height="2.4" rx=".6" fill="#fff"/><rect x="9.4" y="10.6" width="2.4" height="2.4" rx=".6" fill="#fff"/><rect x="7.6" y="16" width="3" height="5.4" rx=".8" fill="#fff"/></svg></span><div><b>Silva Contabilidade</b><div class="m s2">Portal do cliente · Padaria Pão Dourado</div></div></div><div class="sy-kpis"><div class="sy-kpi"><div class="l">Guias do mês</div><div class="v ">4</div></div><div class="sy-kpi"><div class="l">A vencer</div><div class="v warn">1</div></div><div class="sy-kpi"><div class="l">Documentos</div><div class="v ">37</div></div></div><div class="sy-row "><span class="m" style="display:flex"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><rect x="3.4" y="1.8" width="13.4" height="18.6" rx="2.4" fill="currentColor" opacity=".34"/><rect x="6.2" y="6.2" width="7.8" height="1.8" rx=".9" fill="currentColor"/><rect x="6.2" y="9.8" width="7.8" height="1.8" rx=".9" fill="currentColor"/><rect x="6.2" y="13.4" width="4.8" height="1.8" rx=".9" fill="currentColor"/><circle cx="17.6" cy="17.6" r="5.1" fill="currentColor"/><path d="M15.5 17.7l1.4 1.4 2.9-3.2" stroke="currentColor" stroke-opacity=".34" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></span><span class="gr b">DAS 09/2026</span><span class="w8 m">Vence 20/10</span><span class="w6 r mono">R$ 412,37</span><span class="fa-pill warn">A vencer</span></div><div class="sy-row "><span class="m" style="display:flex"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><rect x="3.4" y="1.8" width="13.4" height="18.6" rx="2.4" fill="currentColor" opacity=".34"/><rect x="6.2" y="6.2" width="7.8" height="1.8" rx=".9" fill="currentColor"/><rect x="6.2" y="9.8" width="7.8" height="1.8" rx=".9" fill="currentColor"/><rect x="6.2" y="13.4" width="4.8" height="1.8" rx=".9" fill="currentColor"/><circle cx="17.6" cy="17.6" r="5.1" fill="currentColor"/><path d="M15.5 17.7l1.4 1.4 2.9-3.2" stroke="currentColor" stroke-opacity=".34" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></span><span class="gr b">FGTS 09/2026</span><span class="w8 m">Pago em 07/10</span><span class="w6 r mono">R$ 1.088,20</span><span class="fa-pill ok">Paga</span></div><div class="sy-row "><span class="m" style="display:flex"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><rect x="3.4" y="1.8" width="13.4" height="18.6" rx="2.4" fill="currentColor" opacity=".34"/><rect x="6.2" y="6.2" width="7.8" height="1.8" rx=".9" fill="currentColor"/><rect x="6.2" y="9.8" width="7.8" height="1.8" rx=".9" fill="currentColor"/><rect x="6.2" y="13.4" width="4.8" height="1.8" rx=".9" fill="currentColor"/><circle cx="17.6" cy="17.6" r="5.1" fill="currentColor"/><path d="M15.5 17.7l1.4 1.4 2.9-3.2" stroke="currentColor" stroke-opacity=".34" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></span><span class="gr b">INSS 09/2026</span><span class="w8 m">Pago em 15/10</span><span class="w6 r mono">R$ 963,51</span><span class="fa-pill ok">Paga</span></div><div class="sy-row "><span class="m" style="display:flex"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><rect x="3.4" y="1.8" width="13.4" height="18.6" rx="2.4" fill="currentColor" opacity=".34"/><rect x="6.2" y="6.2" width="7.8" height="1.8" rx=".9" fill="currentColor"/><rect x="6.2" y="9.8" width="7.8" height="1.8" rx=".9" fill="currentColor"/><rect x="6.2" y="13.4" width="4.8" height="1.8" rx=".9" fill="currentColor"/><circle cx="17.6" cy="17.6" r="5.1" fill="currentColor"/><path d="M15.5 17.7l1.4 1.4 2.9-3.2" stroke="currentColor" stroke-opacity=".34" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></span><span class="gr b">Honorários 10/2026</span><span class="w8 m">Pago em 05/10</span><span class="w6 r mono">R$ 650,00</span><span class="fa-pill ok">Paga</span></div></div></div></div><div class="sy-l" style="left:34em;top:6em;width:13em"><div class="sy-phone"><div class="nt"></div><div class="m s2">Olá, Marcos</div><b style="font-size:.85em;display:block;margin-bottom:.7em">Padaria Pão Dourado</b><div class="sy-due"><div class="warn s2">Vence em 4 dias</div><b class="mono">R$ 412,37</b><div class="m s2">DAS 09/2026</div><div class="sy-cta">Copiar código de barras</div></div><div class="sy-ic3"><span><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><rect x="3.4" y="1.8" width="13.4" height="18.6" rx="2.4" fill="currentColor" opacity=".34"/><rect x="6.2" y="6.2" width="7.8" height="1.8" rx=".9" fill="currentColor"/><rect x="6.2" y="9.8" width="7.8" height="1.8" rx=".9" fill="currentColor"/><rect x="6.2" y="13.4" width="4.8" height="1.8" rx=".9" fill="currentColor"/><circle cx="17.6" cy="17.6" r="5.1" fill="currentColor"/><path d="M15.5 17.7l1.4 1.4 2.9-3.2" stroke="currentColor" stroke-opacity=".34" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></span><span><svg class="wa-ic" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></span></div><div class="hb"></div></div></div></div>
+        </div>
+      </div>
+    </section>
+    <section class="sol-panel" id="clientes">
       <div class="ftext">
         <div class="eyebrow-tag">Clientes</div>
         <h2>Cadastro completo sem digitar</h2>
         <p class="desc">Digite o CNPJ e o cadastro se preenche. Traga a carteira inteira por planilha e organize em grupos para os envios.</p>
         <ul class="flist-new">
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Dados puxados direto pelo CNPJ</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Importação da carteira por planilha</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Grupos de clientes para envio e organização</li>
+          <li><span class="chk"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor" opacity=".34"/><path d="M7.8 12.4l2.9 2.9 5.5-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Dados puxados direto pelo CNPJ</li>
+          <li><span class="chk"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor" opacity=".34"/><path d="M7.8 12.4l2.9 2.9 5.5-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Importação da carteira por planilha</li>
+          <li><span class="chk"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor" opacity=".34"/><path d="M7.8 12.4l2.9 2.9 5.5-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Grupos de clientes para envio e organização</li>
         </ul>
         <div class="sol-actions">
-          <button type="button" class="btn btn-primary" onclick="openLeadModal('solucao_clientes')">Testar 7 dias grátis</button>
-          <button type="button" class="sol-next" data-go="agente">Próxima: Agente de IA <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+          <button type="button" class="btn btn-primary" onclick="openLeadModal('solucao_clientes')">Agendar demonstração</button>
         </div>
       </div>
       <div class="fart" role="img" aria-label="Cadastro de cliente preenchido a partir do CNPJ e importação da carteira por planilha">
@@ -1215,22 +1499,63 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
         </div>
       </div>
     </section>
-
-    <section class="sol-panel" id="agente" role="tabpanel" aria-labelledby="tab-agente">
+      </div>
+      <div class="sg-cta">
+        <div class="sg-cta-t"><h3>Leve o atendimento e o portal para os seus clientes</h3><p>Conheça os planos ou agende uma demonstração com a nossa equipe.</p></div>
+        <div class="sg-cta-b">
+          <a class="btn btn-primary" href="index.html#planos">Ver planos</a>
+          <button type="button" class="btn btn-line" onclick="openLeadModal('grupo_atendimento')">Agendar demonstração</button>
+        </div>
+      </div>
+      <div class="sg-more"><span>Conheça também</span><div><a href="#g-envio" data-go="g-envio">Envio e avisos<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a><a href="#g-fiscal" data-go="g-fiscal">Fiscal no automático<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a><a href="#g-xml" data-go="g-xml">XML e notas<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a><a href="#g-tarefas" data-go="g-tarefas">Tarefas e prazos<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a><a href="#g-automacoes" data-go="g-automacoes">Automações e notificações<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a><a href="#g-ia" data-go="g-ia">Inteligência artificial<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div></div>
+    </div>
+  </section>
+  <section class="sol-group" id="g-ia">
+    <div class="wrap">
+      <header class="sg-head">
+        <span class="sg-n" aria-hidden="true">07</span>
+        <div>
+          <div class="alabel">Inteligência artificial</div>
+          <h2>Um assistente que conhece o escritório e atende no WhatsApp</h2>
+          <p>Pergunte em voz alta e receba a resposta com os dados da carteira, enquanto outro agente entrega a guia ao cliente.</p>
+        </div>
+      </header>
+      <div class="sg-body">
+    <section class="sol-panel" id="assistente">
+      <div class="ftext">
+        <div class="eyebrow-tag">Assistente de IA e voz</div>
+        <h2>Pergunte em voz alta e receba a resposta com os dados da sua carteira</h2>
+        <p class="desc">Um assistente que conhece o seu escritório. Tire dúvidas de uso e de cálculo fiscal sem sair da plataforma e sem abrir outra ferramenta.</p>
+        <ul class="flist-new">
+          <li><span class="chk"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor" opacity=".34"/><path d="M7.8 12.4l2.9 2.9 5.5-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Pergunte sobre clientes, prazos, guias e documentos e receba a resposta com os dados reais da carteira</li>
+          <li><span class="chk"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor" opacity=".34"/><path d="M7.8 12.4l2.9 2.9 5.5-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Clique no cubo, fale em voz alta e ouça a resposta na hora; a conversa fica escrita no chat</li>
+          <li><span class="chk"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor" opacity=".34"/><path d="M7.8 12.4l2.9 2.9 5.5-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Especialistas de IA para Reforma Tributária, Simples e Fator R, guias, cálculos e situação fiscal</li>
+          <li><span class="chk"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor" opacity=".34"/><path d="M7.8 12.4l2.9 2.9 5.5-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Salve as respostas no Mural da equipe para consultar depois</li>
+        </ul>
+        <div class="sol-actions">
+          <button type="button" class="btn btn-primary" onclick="openLeadModal('solucao_assistente')">Agendar demonstração</button>
+        </div>
+      </div>
+      <div class="fart sy" role="img" aria-label="Assistente do sistema respondendo sobre prazos da carteira, com o botão para falar em voz alta">
+        <div class="fart-in" aria-hidden="true">
+          <div class="sy-scene"><div class="sy-l" style="left:0;top:0;width:46em"><div class="sy-win"><div class="sy-bar"><i></i><i></i><i></i><span>app.cubishub.com.br/prazos</span></div><div class="sy-body"><div class="sy-side"><span class="lg"><b></b></span><span class="ni"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><circle cx="17" cy="9" r="3" fill="currentColor" opacity=".34"/><path d="M13.4 20.5H22c.6 0 1-.5.9-1.1-.5-2.6-2.8-4.2-5.9-4.2-.9 0-1.7.1-2.4.4z" fill="currentColor" opacity=".34"/><circle cx="9.2" cy="8.2" r="3.9" fill="currentColor"/><path d="M2.2 20.5c0-3.9 3.1-6.3 7-6.3s7 2.4 7 6.3z" fill="currentColor"/></svg></span><span class="ni"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><path d="M21.7 2.3L2.6 10.6c-.7.3-.7 1.3 0 1.6l7.5 2.6z" fill="currentColor" opacity=".34"/><path d="M21.7 2.3l-3.2 19.1c-.1.8-1.1 1-1.6.4l-6.8-6.6z" fill="currentColor"/></svg></span><span class="ni"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><rect x="2.6" y="3" width="5.4" height="18" rx="2.3" fill="currentColor" opacity=".34"/><rect x="9.3" y="3" width="5.4" height="12" rx="2.3" fill="currentColor"/><rect x="16" y="3" width="5.4" height="15.5" rx="2.3" fill="currentColor" opacity=".34"/></svg></span><span class="ni on"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><rect x="2.5" y="4.5" width="19" height="17" rx="4.5" fill="currentColor" opacity=".34"/><path d="M2.5 9c0-2.5 2-4.5 4.5-4.5h10c2.5 0 4.5 2 4.5 4.5v1.2h-19z" fill="currentColor"/><rect x="6.4" y="1.8" width="2.6" height="5" rx="1.3" fill="currentColor"/><rect x="15" y="1.8" width="2.6" height="5" rx="1.3" fill="currentColor"/><circle cx="12" cy="16" r="2.6" fill="currentColor"/></svg></span><span class="ni"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><rect x="7.5" y="2.5" width="14.5" height="11.5" rx="4" fill="currentColor" opacity=".34"/><rect x="2" y="6.5" width="15" height="11.5" rx="4" fill="currentColor"/><path d="M6.4 16.6v5.2c0 .5.6.8 1 .5l4.3-3.6z" fill="currentColor"/></svg></span><span class="ni"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><rect x="4.6" y="11.2" width="2.5" height="6.4" rx=".7" fill="currentColor" opacity=".34"/><rect x="10.75" y="11.2" width="2.5" height="6.4" rx=".7" fill="currentColor" opacity=".34"/><rect x="16.9" y="11.2" width="2.5" height="6.4" rx=".7" fill="currentColor" opacity=".34"/><rect x="2.8" y="18.4" width="18.4" height="2.6" rx="1.1" fill="currentColor" opacity=".34"/><path d="M12 2.9 21.3 8c.5.3.4 1.1-.2 1.1H2.9c-.6 0-.7-.8-.2-1.1L12 2.9Z" fill="currentColor"/></svg></span><span class="ni"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><rect x="3.4" y="1.8" width="13.4" height="18.6" rx="2.4" fill="currentColor" opacity=".34"/><rect x="6.2" y="6.2" width="7.8" height="1.8" rx=".9" fill="currentColor"/><rect x="6.2" y="9.8" width="7.8" height="1.8" rx=".9" fill="currentColor"/><rect x="6.2" y="13.4" width="4.8" height="1.8" rx=".9" fill="currentColor"/><circle cx="17.6" cy="17.6" r="5.1" fill="currentColor"/><path d="M15.5 17.7l1.4 1.4 2.9-3.2" stroke="currentColor" stroke-opacity=".34" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></span><span class="ni"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><rect x="10.8" y="1.6" width="2.4" height="4.4" rx="1.2" fill="currentColor"/><circle cx="12" cy="2.2" r="1.9" fill="currentColor"/><rect x="3.2" y="6.4" width="17.6" height="13.8" rx="4.6" fill="currentColor" opacity=".34"/><circle cx="8.6" cy="13.2" r="1.9" fill="currentColor"/><circle cx="15.4" cy="13.2" r="1.9" fill="currentColor"/></svg></span><span class="ni"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><path d="M12 1.8c-3.8 0-6.7 3-6.7 6.8v3.5l-1.8 4.1c-.4.9.2 1.9 1.2 1.9h14.6c1 0 1.6-1 1.2-1.9l-1.8-4.1V8.6c0-3.8-2.9-6.8-6.7-6.8z" fill="currentColor"/><path d="M9.3 19.6h5.4c0 1.5-1.2 2.6-2.7 2.6s-2.7-1.1-2.7-2.6z" fill="currentColor" opacity=".34"/></svg></span></div><div class="sy-main"><div class="sy-title"><span>Prazos fiscais</span><span class="fa-pill "><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><rect x="2.5" y="4.5" width="19" height="17" rx="4.5" fill="currentColor" opacity=".34"/><path d="M2.5 9c0-2.5 2-4.5 4.5-4.5h10c2.5 0 4.5 2 4.5 4.5v1.2h-19z" fill="currentColor"/><rect x="6.4" y="1.8" width="2.6" height="5" rx="1.3" fill="currentColor"/><rect x="15" y="1.8" width="2.6" height="5" rx="1.3" fill="currentColor"/><circle cx="12" cy="16" r="2.6" fill="currentColor"/></svg>Esta semana</span></div><div class="sy-kpis"><div class="sy-kpi"><div class="l">Clientes ativos</div><div class="v ">148</div></div><div class="sy-kpi"><div class="l">Vencem na semana</div><div class="v warn">3</div></div><div class="sy-kpi"><div class="l">Guias enviadas</div><div class="v ok">128</div></div></div><div class="sy-row "><span class="fa-av b">MS</span><span class="gr b">Mecânica Silveira</span><span class="w8 m">FGTS 09/2026</span><span class="fa-pill warn">Amanhã</span></div><div class="sy-row "><span class="fa-av p">TC</span><span class="gr b">TechCampo Agro</span><span class="w8 m">DCTFWeb 09/2026</span><span class="fa-pill ">Quinta</span></div><div class="sy-row "><span class="fa-av t">OL</span><span class="gr b">Ótica Luz</span><span class="w8 m">DAS 09/2026</span><span class="fa-pill ">Sexta</span></div><div class="sy-row "><span class="fa-av g">PD</span><span class="gr b">Padaria Pão Dourado</span><span class="w8 m">DAS 09/2026</span><span class="fa-pill ok">Enviado</span></div></div></div></div></div><div class="sy-l" style="left:27em;top:6em;width:21em"><div class="sy-chat"><div class="sy-chat-h"><span class="fa-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.7l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.7l7 4a2 2 0 0 0 2 0l7-4a2 2 0 0 0 1-1.7z"/><polyline points="3.3 7 12 12 20.7 7"/><line x1="12" y1="22" x2="12" y2="12"/></svg></span><div class="gr"><b>Assistente</b><div class="m s2">Silva Contabilidade</div></div><span class="m" style="display:flex;gap:.5em"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><circle cx="12.5" cy="12.5" r="9.5" fill="currentColor" opacity=".34"/><path d="M12.5 7v5.8l4.3 2.5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M4.2 6.4 2.6 2l4.4 1.4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div><div class="sy-chat-b"><div class="q">Quais clientes têm prazo vencendo essa semana?</div><div class="a">Encontrei 3 prazos até sexta:<ul><li><b>FGTS</b> · Mecânica Silveira · amanhã</li><li><b>DCTFWeb</b> · TechCampo Agro · quinta</li><li><b>DAS</b> · Ótica Luz · sexta</li></ul></div><div class="m s" style="display:flex;gap:.9em"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="17" x2="12" y2="22"/><path d="M5 17h14v-1.8a2 2 0 0 0-1.1-1.8l-1.9-1V5h1V2H7v3h1v8.4l-1.9 1A2 2 0 0 0 5 15.2z"/></svg> Salvar</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Copiar</span></div></div><div class="sy-chat-f"><span class="gr">Escreva sua mensagem...</span><span class="snd"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><path d="M21.7 2.3L2.6 10.6c-.7.3-.7 1.3 0 1.6l7.5 2.6z" fill="currentColor" opacity=".34"/><path d="M21.7 2.3l-3.2 19.1c-.1.8-1.1 1-1.6.4l-6.8-6.6z" fill="currentColor"/></svg></span></div></div></div><div class="sy-l" style="left:-2em;top:25em"><div class="sy-toast"><span class="mc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/></svg></span>Falar com o assistente<span class="wv" style="margin-left:.3em"><i style="height:0.33em"></i><i style="height:0.66em"></i><i style="height:0.99em"></i><i style="height:0.55em"></i><i style="height:1.21em"></i><i style="height:0.77em"></i><i style="height:0.44em"></i></span></div></div></div>
+        </div>
+      </div>
+    </section>
+    <section class="sol-panel" id="agente">
       <div class="ftext">
         <div class="eyebrow-tag">Agente de IA</div>
         <h2>Um atendente no WhatsApp que entrega a guia</h2>
         <p class="desc">Com o agente ativo, quando o cliente pede a guia ele procura, informa o valor e o vencimento e envia o arquivo ali mesmo. As dúvidas frequentes ele responde e o resto passa para o setor certo.</p>
         <ul class="flist-new">
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Envia DAS, DARF, boletos e notas do próprio cliente, na conversa</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Nunca mostra documento de outro cliente nem material interno</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Responde com as regras do seu escritório</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Passa para uma pessoa a qualquer momento</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Configuração simples, sem código</li>
+          <li><span class="chk"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor" opacity=".34"/><path d="M7.8 12.4l2.9 2.9 5.5-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Envia DAS, DARF, boletos e notas do próprio cliente, na conversa</li>
+          <li><span class="chk"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor" opacity=".34"/><path d="M7.8 12.4l2.9 2.9 5.5-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Nunca mostra documento de outro cliente nem material interno</li>
+          <li><span class="chk"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor" opacity=".34"/><path d="M7.8 12.4l2.9 2.9 5.5-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Responde com as regras do seu escritório</li>
+          <li><span class="chk"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor" opacity=".34"/><path d="M7.8 12.4l2.9 2.9 5.5-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Passa para uma pessoa a qualquer momento</li>
+          <li><span class="chk"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor" opacity=".34"/><path d="M7.8 12.4l2.9 2.9 5.5-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Configuração simples, sem código</li>
         </ul>
         <div class="sol-actions">
-          <button type="button" class="btn btn-primary" onclick="openLeadModal('solucao_agente')">Testar 7 dias grátis</button>
-          <button type="button" class="sol-next" data-go="envio">Próxima: Envio em lote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+          <button type="button" class="btn btn-primary" onclick="openLeadModal('solucao_agente')">Agendar demonstração</button>
         </div>
       </div>
       <div class="fart" role="img" aria-label="Agente de IA no WhatsApp entregando a guia do próprio cliente na conversa">
@@ -1240,7 +1565,7 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
             <div class="fa-title"><span class="fa-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.7l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.7l7 4a2 2 0 0 0 2 0l7-4a2 2 0 0 0 1-1.7z"/><polyline points="3.3 7 12 12 20.7 7"/><line x1="12" y1="22" x2="12" y2="12"/></svg></span>Agente de IA<span class="fa-pill ok"><span class="fa-dot" style="width:.5em;height:.5em;box-shadow:none"></span>ativo</span></div>
             <div class="fa-bub in" style="margin-bottom:.55em">Oi, me manda o DAS desse mês?<span class="fa-mut">10:31</span></div>
             <div class="fa-bub out">Claro, Marcos! Segue o DAS de julho/2026: R$ 412,37, vence dia 20.
-              <div class="fa-att"><span class="fa-ic" style="background:rgba(217,48,37,.12);color:#B3261E"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></span>DAS-07-2026.pdf</div>
+              <div class="fa-att"><span class="fa-ic" style="background:rgba(217,48,37,.12);color:#B3261E"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><rect x="3.4" y="1.8" width="13.4" height="18.6" rx="2.4" fill="currentColor" opacity=".34"/><rect x="6.2" y="6.2" width="7.8" height="1.8" rx=".9" fill="currentColor"/><rect x="6.2" y="9.8" width="7.8" height="1.8" rx=".9" fill="currentColor"/><rect x="6.2" y="13.4" width="4.8" height="1.8" rx=".9" fill="currentColor"/><circle cx="17.6" cy="17.6" r="5.1" fill="currentColor"/><path d="M15.5 17.7l1.4 1.4 2.9-3.2" stroke="currentColor" stroke-opacity=".34" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></span>DAS-07-2026.pdf</div>
               <span class="fa-mut">10:31 ✓✓</span></div>
           </div>
           <div class="fa-chip fa-float" style="right:3%;top:70%"><span class="fa-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span>Só documentos<br>deste cliente</div>
@@ -1248,14 +1573,24 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
         </div>
       </div>
     </section>
-  </div>
+      </div>
+      <div class="sg-cta">
+        <div class="sg-cta-t"><h3>Coloque a IA para trabalhar com a sua equipe</h3><p>Conheça os planos ou agende uma demonstração com a nossa equipe.</p></div>
+        <div class="sg-cta-b">
+          <a class="btn btn-primary" href="index.html#planos">Ver planos</a>
+          <button type="button" class="btn btn-line" onclick="openLeadModal('grupo_ia')">Agendar demonstração</button>
+        </div>
+      </div>
+      <div class="sg-more"><span>Conheça também</span><div><a href="#g-envio" data-go="g-envio">Envio e avisos<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a><a href="#g-fiscal" data-go="g-fiscal">Fiscal no automático<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a><a href="#g-xml" data-go="g-xml">XML e notas<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a><a href="#g-tarefas" data-go="g-tarefas">Tarefas e prazos<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a><a href="#g-automacoes" data-go="g-automacoes">Automações e notificações<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a><a href="#g-atendimento" data-go="g-atendimento">Atendimento, portal e clientes<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div></div>
+    </div>
+  </section>
 </main>
 
 <section class="sol-cta">
   <div class="wrap">
     <h2>Quer ver isso com a sua carteira?</h2>
-    <p>Teste por 7 dias com os seus clientes, sem cartão.</p>
-    <button type="button" class="btn btn-primary" onclick="openLeadModal('solucoes_rodape')">Testar 7 dias grátis</button>
+    <p>Fale com a nossa equipe e veja tudo isso com a sua carteira.</p>
+    <button type="button" class="btn btn-primary" onclick="openLeadModal('solucoes_rodape')">Agendar demonstração</button>
   </div>
 </section>
 
@@ -1323,9 +1658,9 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
     </button>
 
     <div id="leadFormView">
-      <div class="lead-eyebrow">Teste grátis · 7 dias</div>
+      <div class="lead-eyebrow">Demonstração</div>
       <h3 id="leadModalTitle">Vamos começar?</h3>
-      <p class="lead-sub">Deixe seu contato. Em seguida você recebe uma mensagem no WhatsApp para liberar o acesso.</p>
+      <p class="lead-sub">Deixe seu contato e nossa equipe fala com você pelo WhatsApp para agendar uma demonstração.</p>
 
       <form id="leadForm" onsubmit="submitLeadForm(event)" novalidate>
         <div class="lead-field" id="leadFieldName">
@@ -1345,9 +1680,9 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
         </div>
 
         <button type="submit" class="btn btn-primary lead-submit" id="leadSubmitBtn">
-          <span id="leadSubmitLabel">Quero meu teste de 7 dias</span>
+          <span id="leadSubmitLabel">Quero agendar uma demonstração</span>
         </button>
-        <p class="lead-privacy">Sem cartão de crédito. Seus dados são usados apenas para contato sobre o teste grátis. Ao enviar, você concorda com o tratamento dos seus dados conforme a nossa <a href="https://cubishub.com.br/privacidade.html" target="_blank" rel="noopener">Política de Privacidade</a>.</p>
+        <p class="lead-privacy">Seus dados são usados apenas para contato sobre a demonstração. Ao enviar, você concorda com o tratamento dos seus dados conforme a nossa <a href="https://cubishub.com.br/privacidade.html" target="_blank" rel="noopener">Política de Privacidade</a>.</p>
       </form>
     </div>
 
@@ -1356,7 +1691,7 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
       </div>
       <h3>Recebemos seus dados!</h3>
-      <p class="lead-sub">Em instantes você recebe uma mensagem no WhatsApp para liberar seu teste grátis de 7 dias.</p>
+      <p class="lead-sub">Em breve nossa equipe entra em contato pelo WhatsApp para agendar.</p>
       <button type="button" class="btn btn-outline" style="width:100%" onclick="closeLeadModal()">Fechar</button>
     </div>
   </div>
@@ -1766,7 +2101,7 @@ function setPricing(mode) {
       alert('Não foi possível enviar seus dados agora. Tente novamente em instantes.');
     }).finally(function () {
       submitBtn.disabled = false;
-      submitLabel.textContent = 'Quero meu teste de 7 dias';
+      submitLabel.textContent = 'Quero agendar uma demonstração';
     });
   };
 })();
@@ -1831,42 +2166,42 @@ function setPricing(mode) {
 })();
 </script>
 <script>
-/* Abas da página de soluções: uma solução por vez, com link direto (#slug) */
+/* Soluções em abas: uma por vez. O hash pode ser da solução (#g-fiscal) ou de uma seção dela (#parcelamentos) */
 (function () {
   var tabs = Array.prototype.slice.call(document.querySelectorAll('.sol-tab'));
-  var panels = Array.prototype.slice.call(document.querySelectorAll('.sol-panel'));
+  var groups = Array.prototype.slice.call(document.querySelectorAll('.sol-group'));
   var bar = document.querySelector('.sol-tabs-bar');
-  if (!tabs.length) return;
-  function show(slug, scroll) {
-    var ok = panels.some(function (p) { return p.id === slug; });
-    if (!ok) slug = panels[0].id;
-    tabs.forEach(function (t) {
-      var on = t.getAttribute('data-slug') === slug;
-      t.setAttribute('aria-selected', on ? 'true' : 'false');
-      t.tabIndex = on ? 0 : -1;
-      if (on && t.scrollIntoView) { var r = t.parentNode; r.scrollLeft = t.offsetLeft - (r.clientWidth - t.offsetWidth) / 2; }
-    });
-    panels.forEach(function (p) { p.classList.toggle('on', p.id === slug); });
-    if (scroll && bar) { var y = bar.getBoundingClientRect().top + window.pageYOffset; if (window.pageYOffset > y) window.scrollTo(0, y); }
+  if (!tabs.length || !groups.length) return;
+  function groupOf(id) {
+    var el = id && document.getElementById(id);
+    if (!el) return null;
+    return el.classList.contains('sol-group') ? el : el.closest('.sol-group');
   }
-  function go(slug) { if (history.replaceState) history.replaceState(null, '', '#' + slug); show(slug, true); }
-  tabs.forEach(function (t, i) {
-    t.addEventListener('click', function () { go(t.getAttribute('data-slug')); });
-    t.addEventListener('keydown', function (e) {
-      var k = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
-      if (!k) return;
-      e.preventDefault();
-      var n = tabs[(i + k + tabs.length) % tabs.length];
-      n.focus(); go(n.getAttribute('data-slug'));
+  function show(id, scroll) {
+    var g = groupOf(id) || groups[0];
+    var el = (id && document.getElementById(id)) || g;
+    groups.forEach(function (x) { x.classList.toggle('on', x === g); });
+    tabs.forEach(function (t) {
+      var on = t.getAttribute('data-slug') === g.id;
+      t.classList.toggle('on', on);
+      t.setAttribute('aria-current', on ? 'true' : 'false');
+      if (on) { var r = t.parentNode; r.scrollLeft = t.offsetLeft - (r.clientWidth - t.offsetWidth) / 2; }
     });
+    if (scroll) {
+      var h = bar ? bar.offsetHeight : 0;
+      var y = el.getBoundingClientRect().top + window.pageYOffset - h - (el === g ? 0 : 8);
+      window.scrollTo(0, Math.max(0, y));
+    }
+  }
+  function go(id) { if (history.replaceState) history.replaceState(null, '', '#' + id); show(id, true); }
+  Array.prototype.slice.call(document.querySelectorAll('[data-slug], [data-go]')).forEach(function (a) {
+    a.addEventListener('click', function (e) { e.preventDefault(); go(a.getAttribute('data-slug') || a.getAttribute('data-go')); });
   });
-  document.querySelectorAll('.sol-next').forEach(function (b) {
-    b.addEventListener('click', function () { go(b.getAttribute('data-go')); });
-  });
-  window.addEventListener('hashchange', function () { show(location.hash.slice(1), false); });
+  window.addEventListener('hashchange', function () { show(location.hash.slice(1), true); });
   show(location.hash.slice(1), false);
-  if (location.hash && bar) setTimeout(function () { bar.scrollIntoView(); }, 0);
+  if (location.hash) setTimeout(function () { show(location.hash.slice(1), true); }, 0);
 })();
 </script>
+<script src="assets/motion.js" defer></script>
 </body>
 </html>

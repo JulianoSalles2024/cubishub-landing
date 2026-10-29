@@ -1,0 +1,28 @@
+/* Movimento da página: entrada dos blocos ao rolar e rolagem com inércia (ver motion.js).
+   Carregado depois dos estilos de cada página, então sobrepõe o .reveal antigo. */
+
+/* Entrada: sobe 32px e aparece, com os irmãos entrando em sequência (--rd vem do JS).
+   Usa a propriedade `translate` (e não `transform`) para não brigar com o hover dos cartões. */
+.reveal {
+  opacity: 0;
+  translate: 0 32px;
+  transform: none;
+  transition: opacity .9s cubic-bezier(.16, 1, .3, 1) var(--rd, 0s),
+              translate .9s cubic-bezier(.16, 1, .3, 1) var(--rd, 0s),
+              transform .25s ease, box-shadow .25s ease, border-color .25s ease, background .25s ease;
+  will-change: opacity, translate;
+}
+.reveal.in { opacity: 1; translate: none; transform: none; }
+/* Depois de entrar, solta o will-change e o atraso, para o hover responder na hora */
+.reveal.done { will-change: auto; transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease, background .25s ease, opacity .25s ease; }
+
+/* Rolagem com inércia ligada: a âncora nativa "smooth" brigaria com a do script */
+html.smooth-js { scroll-behavior: auto !important; }
+
+/* Ilustrações das soluções acompanham a rolagem com um leve deslocamento */
+.fart-in { will-change: transform; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; translate: none; transition: none; }
+  .fart-in { transform: none !important; }
+}
