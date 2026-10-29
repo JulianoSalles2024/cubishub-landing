@@ -407,6 +407,10 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
   .hero h1 .accent {
     color: #22c55e;
   }
+  .hero-pill { display: inline-flex; align-items: center; gap: 9px; font-size: 0.78rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: #7BE3A6; background: rgba(46,204,113,.10); border: 1px solid rgba(46,204,113,.30); padding: 8px 16px; border-radius: 999px; }
+  .hero-pill::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: #2ECC71; box-shadow: 0 0 0 4px rgba(46,204,113,.18); flex-shrink: 0; }
+  .hero-pill + h1 { margin-top: 26px; }
+  @media (max-width: 640px) { .hero-pill { font-size: .68rem; letter-spacing: .06em; padding: 7px 13px; } }
   .hero p.lead {
     font-size: 1.2rem; color: #C3D0CC; max-width: 600px; margin: 0 auto 34px; line-height: 1.6;
   }
@@ -1026,9 +1030,8 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
         <a href="solucoes.html">Soluções</a>
         <a href="#como-funciona">Como funciona</a>
         <a href="#fiscal">Fiscal</a>
-        <a href="#portal">Portal</a>
         <a href="#ia">IA</a>
-        <a href="#integracoes">Integrações</a>
+        <a href="#planos">Planos</a>
         <a href="#faq">FAQ</a>
       </div>
       <div class="nav-cta" style="display:none;">
@@ -1041,6 +1044,7 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
 
     <!-- Hero content -->
     <div class="hero-grid">
+      <span class="hero-pill">Ecossistema para escritórios de contabilidade</span>
       <h1>O escritório inteiro <span class="accent">em uma tela só</span></h1>
       <p class="lead">Guias emitidas pela Receita, enviadas em lote no WhatsApp e acompanhadas até o pagamento. Uma rotina que se cumpre sozinha, todo mês.</p>
 
@@ -1977,7 +1981,10 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
     if (cu.y > H - pad) { cu.y = H - pad; cu.vy = -Math.abs(cu.vy); }
   }
 
+  // Fundo de cubos só anima enquanto o hero está na tela (fora dele, só gastava rolagem)
+  var onScreen = true;
   function tick(ts) {
+    if (!onScreen) { raf = 0; return; }
     var W = canvas.width, H = canvas.height;
     ctx.clearRect(0, 0, W, H);
     for (var k = 0; k < cubes.length; k++) {
@@ -2016,6 +2023,12 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
   resize();
   window.addEventListener('resize', resize);
   raf = requestAnimationFrame(tick);
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function (entries) {
+      onScreen = entries[0].isIntersecting;
+      if (onScreen && !raf) raf = requestAnimationFrame(tick);
+    }).observe(canvas);
+  }
 })();
 
 /* �.��.��.��.��.��.��.��.��.��.��.��.� Pricing toggle �.��.��.��.��.��.��.��.��.��.��.��.� */
@@ -2070,8 +2083,21 @@ function setPricing(mode) {
   document.fonts.ready.then(function () {
     // Re-dispara o efeito toda vez que o headline volta pra viewport (sem loop contínuo).
     if (!('IntersectionObserver' in window)) { trigger(); return; }
+    // Só dispara com a rolagem parada: amostrar o texto e animar as partículas no meio da
+    // rolagem competia com ela e travava a subida até o hero.
+    var visible = false, lastScroll = 0, waiting = 0;
+    window.addEventListener('scroll', function () { lastScroll = performance.now(); }, { passive: true });
+    function whenIdle() {
+      waiting = 0;
+      if (!visible) return;
+      if (performance.now() - lastScroll < 180) { waiting = setTimeout(whenIdle, 90); return; }
+      trigger();
+    }
     var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (en) { if (en.isIntersecting) trigger(); });
+      entries.forEach(function (en) {
+        visible = en.isIntersecting;
+        if (visible && !waiting) waiting = setTimeout(whenIdle, 90);
+      });
     }, { threshold: 0.45 });
     io.observe(h1);
   });
@@ -2167,7 +2193,7 @@ function setPricing(mode) {
         if (alpha > 45) {
           particles.push({
             tx: px / dpr, ty: py / dpr,
-            r: data[idx], g: data[idx + 1], b: data[idx + 2], a: alpha / 255,
+            col: 'rgb(' + data[idx] + ',' + data[idx + 1] + ',' + data[idx + 2] + ')', a: alpha / 255,
           });
         }
       }
@@ -2200,6 +2226,7 @@ function setPricing(mode) {
     function tick(now) {
       var t = now - t0;
       ctx.clearRect(0, 0, w, h);
+      var lastCol = '';
       for (var j = 0; j < particles.length; j++) {
         var q = particles[j];
         var lt = t - q.delay;
@@ -2207,9 +2234,11 @@ function setPricing(mode) {
         var e = 1 - Math.pow(1 - prog, 3); // easeOutCubic
         var al = q.a * e;
         if (al <= 0.012) continue;
-        ctx.fillStyle = 'rgba(' + q.r + ',' + q.g + ',' + q.b + ',' + al + ')';
+        if (q.col !== lastCol) { ctx.fillStyle = q.col; lastCol = q.col; }
+        ctx.globalAlpha = al;
         ctx.fillRect(q.sx + (q.tx - q.sx) * e, q.sy + (q.ty - q.sy) * e, 1, 1);
       }
+      ctx.globalAlpha = 1;
       if (t < LIFE) requestAnimationFrame(tick);
       else { h1.classList.remove('vaporizing'); if (cv.parentNode) cv.parentNode.removeChild(cv); running = false; }
     }
