@@ -1196,11 +1196,46 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
         <span class="sg-n" aria-hidden="true">02</span>
         <div>
           <div class="alabel">Fiscal no automático</div>
-          <h2>Parcelamentos, DAS e Receita sem abrir portal por portal</h2>
+          <h2>Guias, parcelamentos e Receita sem abrir portal por portal</h2>
           <p>A plataforma confere, emite a guia e avisa. Você só acompanha o que precisa de decisão.</p>
         </div>
       </header>
       <div class="sg-body">
+    <section class="sol-panel" id="guias-automaticas">
+      <div class="ftext">
+        <div class="eyebrow-tag">DAS, DCTFWeb e DAS MEI no automático</div>
+        <h2>As guias do mês saem sozinhas, no dia que você escolher</h2>
+        <p class="desc">Você define os dias do mês e a plataforma emite o DAS do Simples, a guia da DCTFWeb e o DAS do MEI de cada cliente, agenda o envio e avisa antes do vencimento. A equipe só acompanha o que precisa de decisão.</p>
+        <ul class="flist-new">
+          <li><span class="chk"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor" opacity=".34"/><path d="M7.8 12.4l2.9 2.9 5.5-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Três automáticos, cada um com o seu painel: DAS do Simples (PGDAS-D), guia da DCTFWeb e DAS do MEI</li>
+          <li><span class="chk"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor" opacity=".34"/><path d="M7.8 12.4l2.9 2.9 5.5-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Você escolhe até 5 dias do mês para a emissão, e o responsável de cada cliente</li>
+          <li><span class="chk"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor" opacity=".34"/><path d="M7.8 12.4l2.9 2.9 5.5-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>A guia cai em Envios já agendada, para WhatsApp, e-mail e Telegram, no grupo do cliente ou individual</li>
+          <li><span class="chk"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor" opacity=".34"/><path d="M7.8 12.4l2.9 2.9 5.5-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Aviso de vencimento D-3, D-1 e D-0, com o texto que você definir</li>
+          <li><span class="chk"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor" opacity=".34"/><path d="M7.8 12.4l2.9 2.9 5.5-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Pagamento conferido na Receita, com aviso de atraso só para quem ainda não pagou</li>
+        </ul>
+        <div class="sol-actions">
+          <button type="button" class="btn btn-primary" onclick="openLeadModal('solucao_guias_automaticas')">Agendar demonstração</button>
+        </div>
+      </div>
+      <div class="fart" role="img" aria-label="Painel das guias do mês no automático, com DAS do Simples, guia da DCTFWeb e DAS do MEI emitidos e o envio agendado para as 10 horas">
+        <div class="fart-in" aria-hidden="true">
+          <div class="fa-card" style="left:5%;top:8%;width:57%">
+            <div class="fa-title"><span class="fa-ic"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><rect x="3.4" y="1.8" width="13.4" height="18.6" rx="2.4" fill="currentColor" opacity=".34"/><rect x="6.2" y="6.2" width="7.8" height="1.8" rx=".9" fill="currentColor"/><rect x="6.2" y="9.8" width="7.8" height="1.8" rx=".9" fill="currentColor"/><rect x="6.2" y="13.4" width="4.8" height="1.8" rx=".9" fill="currentColor"/><circle cx="17.6" cy="17.6" r="5.1" fill="currentColor"/><path d="M15.5 17.7l1.4 1.4 2.9-3.2" stroke="currentColor" stroke-opacity=".34" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></span>Guias do mês, no automático<span class="fa-pill ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Ligado</span></div>
+            <div class="fa-row"><span class="fa-av g">PD</span><div class="fa-grow"><b>Padaria Pão Dourado</b><span class="fa-mut">DAS do Simples · dia 8</span></div><span class="fa-pill ok">Emitida</span></div>
+            <div class="fa-row"><span class="fa-av b">MS</span><div class="fa-grow"><b>Mecânica Silveira</b><span class="fa-mut">Guia da DCTFWeb · dia 10</span></div><span class="fa-pill ok">Emitida</span></div>
+            <div class="fa-row"><span class="fa-av o">LM</span><div class="fa-grow"><b>Lucas Martins (MEI)</b><span class="fa-mut">DAS do MEI · dia 5</span></div><span class="fa-pill ok">Emitida</span></div>
+            <div class="fa-row"><span class="fa-av p">TC</span><div class="fa-grow"><b>TechCampo Agro</b><span class="fa-mut">DAS do Simples · dia 8</span></div><span class="fa-pill">Aguardando o dia</span></div>
+          </div>
+          <div class="fa-card" style="left:61%;top:52%;width:34%">
+            <div class="fa-title"><span class="fa-ic"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><rect x="3" y="4.4" width="14" height="9" rx="2.4" fill="currentColor" opacity=".34"/><rect x="7" y="10.6" width="14" height="9" rx="2.4" fill="currentColor"/><rect x="9.6" y="13.6" width="8.8" height="1.9" rx=".95" fill="#fff" opacity=".9"/><rect x="9.6" y="16.6" width="5" height="1.5" rx=".75" fill="#fff" opacity=".6"/></svg></span>Envio agendado</div>
+            <div class="fa-field"><span>Saída</span><span>hoje, 10:00</span></div>
+            <div class="fa-field"><span>Canal</span><span>WhatsApp</span></div>
+          </div>
+          <div class="fa-chip fa-float" style="left:5%;bottom:8%"><span class="fa-dot"></span>Aviso de vencimento: D-3, D-1 e D-0</div>
+          <div class="fa-chip fa-float d2" style="right:4%;top:24%"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><path d="M21.7 2.3L2.6 10.6c-.7.3-.7 1.3 0 1.6l7.5 2.6z" fill="currentColor" opacity=".34"/><path d="M21.7 2.3l-3.2 19.1c-.1.8-1.1 1-1.6.4l-6.8-6.6z" fill="currentColor"/></svg>Sem abrir o portal da Receita</div>
+        </div>
+      </div>
+    </section>
     <section class="sol-panel" id="parcelamentos">
       <div class="ftext">
         <div class="eyebrow-tag">Parcelamentos e DAS no automático</div>
@@ -1403,11 +1438,11 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
         <div>
           <div class="alabel">Automações e notificações</div>
           <h2>A plataforma trabalha antes de a equipe chegar</h2>
-          <p>Tarefas criadas, guias emitidas, clientes avisados e notas capturadas todo dia. O sino mostra o que pede a sua atenção.</p>
+          <p>Tarefas criadas, guias emitidas, honorários cobrados, clientes avisados e notas capturadas todo dia. O sino mostra o que pede a sua atenção.</p>
         </div>
       </header>
       <div class="sg-auto">
-        <ol class="auto-rail"><li><time>03:00</time><h3>Tarefas do mês criadas</h3><p>As recorrentes nascem no board com checklist, prazo e responsável.</p></li><li><time>07:30</time><h3>Lembrete de prazo</h3><p>O responsável recebe no WhatsApp o que vence hoje e amanhã.</p></li><li><time>08:00</time><h3>Parcelamentos e Caixa Postal</h3><p>Pagamentos conferidos, guia emitida, mensagens do e-CAC verificadas.</p></li><li><time>08:15</time><h3>DAS e DCTFWeb</h3><p>Guias emitidas no dia escolhido e agendadas para envio.</p></li><li><time>08:20</time><h3>Pagamento conciliado</h3><p>A Receita confirma quem pagou e a cobrança para sozinha.</p></li><li><time>08:30</time><h3>Régua de cobrança</h3><p>WhatsApp e e-mail, só para quem ainda não pagou.</p></li><li><time>09:00</time><h3>Avisos de vencimento</h3><p>D-3, D-1 e D-0 chegam ao cliente, sempre em dia útil.</p></li><li><time>23:00</time><h3>Notas capturadas</h3><p>NF-e e NFS-e baixadas e organizadas por cliente.</p></li></ol>
+        <ol class="auto-rail"><li><time>03:00</time><h3>Tarefas do mês criadas</h3><p>As recorrentes nascem no board com checklist, prazo e responsável.</p></li><li><time>07:30</time><h3>Lembrete de prazo</h3><p>O responsável recebe no WhatsApp o que vence hoje e amanhã.</p></li><li><time>08:00</time><h3>Parcelamentos e Caixa Postal</h3><p>Pagamentos conferidos, guia emitida, mensagens do e-CAC verificadas.</p></li><li><time>08:15</time><h3>DAS, DCTFWeb e DAS MEI</h3><p>Guias emitidas no dia escolhido e agendadas para envio.</p></li><li><time>08:20</time><h3>Pagamento conciliado</h3><p>A Receita confirma quem pagou e a cobrança para sozinha.</p></li><li><time>08:30</time><h3>Honorários e cobrança</h3><p>Boleto e Pix gerados, e a régua segue só para quem ainda não pagou.</p></li><li><time>09:00</time><h3>Avisos de vencimento</h3><p>D-3, D-1 e D-0 chegam ao cliente, sempre em dia útil.</p></li><li><time>23:00</time><h3>Notas capturadas</h3><p>NF-e e NFS-e baixadas e organizadas por cliente.</p></li></ol>
       </div>
       <div class="sg-body">
     <section class="sol-panel" id="notificacoes">
@@ -1440,6 +1475,40 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
             <div class="fa-title" style="margin-bottom:.4em"><span class="fa-av g" style="font-size:.7em">AN</span>WhatsApp da Ana</div>
             <div class="fa-bub in" style="max-width:100%">Oi, Ana! Hoje vence: <b>DCTFWeb · TechCampo Agro</b>.<span class="fa-mut">07:31 ✓✓</span></div>
           </div>
+        </div>
+      </div>
+    </section>
+    <section class="sol-panel" id="honorarios">
+      <div class="ftext">
+        <div class="eyebrow-tag">Honorários</div>
+        <h2>O honorário do mês sai sozinho, com boleto e Pix</h2>
+        <p class="desc">Você cadastra o honorário de cada cliente uma vez. Todo mês a plataforma gera o boleto na conta Asaas do escritório, envia pelo WhatsApp e dá baixa quando o pagamento é confirmado.</p>
+        <ul class="flist-new">
+          <li><span class="chk"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor" opacity=".34"/><path d="M7.8 12.4l2.9 2.9 5.5-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Valor e vencimento por cliente, e o boleto é gerado alguns dias antes, no prazo que você escolher</li>
+          <li><span class="chk"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor" opacity=".34"/><path d="M7.8 12.4l2.9 2.9 5.5-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Boleto com Pix, só Pix ou link em que o cliente escolhe como pagar</li>
+          <li><span class="chk"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor" opacity=".34"/><path d="M7.8 12.4l2.9 2.9 5.5-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>A mensagem leva o link, o Pix copia e cola e o código de barras, com o PDF do boleto junto</li>
+          <li><span class="chk"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor" opacity=".34"/><path d="M7.8 12.4l2.9 2.9 5.5-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Avisos antes, no dia e depois do vencimento, só enquanto o boleto estiver em aberto</li>
+          <li><span class="chk"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor" opacity=".34"/><path d="M7.8 12.4l2.9 2.9 5.5-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Baixa automática quando o Asaas confirma o pagamento, e o dinheiro cai direto na conta do escritório</li>
+        </ul>
+        <div class="sol-actions">
+          <button type="button" class="btn btn-primary" onclick="openLeadModal('solucao_honorarios')">Agendar demonstração</button>
+        </div>
+      </div>
+      <div class="fart" role="img" aria-label="Painel de honorários do mês com boletos pagos, enviados e em atraso, e a mensagem de cobrança no WhatsApp com o link do boleto e do Pix">
+        <div class="fart-in" aria-hidden="true">
+          <div class="fa-card" style="left:4%;top:8%;width:53%">
+            <div class="fa-title"><span class="fa-ic"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><rect x="2.4" y="5.2" width="19.2" height="13.6" rx="3.6" fill="currentColor" opacity=".34"/><circle cx="12" cy="12" r="3.6" fill="currentColor"/><circle cx="6.4" cy="12" r="1.1" fill="currentColor"/><circle cx="17.6" cy="12" r="1.1" fill="currentColor"/></svg></span>Honorários de novembro</div>
+            <div class="fa-row"><span class="fa-av g">PD</span><div class="fa-grow"><b>Padaria Pão Dourado</b><span class="fa-mut">R$ 650,00 · vence dia 10</span></div><span class="fa-pill ok">Pago</span></div>
+            <div class="fa-row"><span class="fa-av b">MS</span><div class="fa-grow"><b>Mecânica Silveira</b><span class="fa-mut">R$ 890,00 · vence dia 10</span></div><span class="fa-pill info">Boleto enviado</span></div>
+            <div class="fa-row"><span class="fa-av o">AF</span><div class="fa-grow"><b>Ateliê Flor de Lis</b><span class="fa-mut">R$ 480,00 · venceu dia 5</span></div><span class="fa-pill warn">Em atraso</span></div>
+            <div class="fa-row"><span class="fa-av p">TC</span><div class="fa-grow"><b>TechCampo Agro</b><span class="fa-mut">R$ 1.200,00 · gera dia 30</span></div><span class="fa-pill">Aguardando</span></div>
+          </div>
+          <div class="fa-card" style="left:59%;top:14%;width:37%;padding:.8em 1em">
+            <div class="fa-title" style="margin-bottom:.4em"><span class="fa-av g" style="font-size:.7em">MS</span>WhatsApp da Mecânica Silveira</div>
+            <div class="fa-bub in" style="max-width:100%">Olá! O honorário de novembro: <b>R$ 890,00</b>, vence dia 10. Boleto e Pix copia e cola no link.<span class="fa-mut">09:00 ✓✓</span></div>
+          </div>
+          <div class="fa-chip fa-float" style="left:5%;bottom:8%"><span class="fa-dot"></span>Pagamento confirmado: baixa automática</div>
+          <div class="fa-chip fa-float d2" style="right:4%;bottom:8%"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><path d="M21.7 2.3L2.6 10.6c-.7.3-.7 1.3 0 1.6l7.5 2.6z" fill="currentColor" opacity=".34"/><path d="M21.7 2.3l-3.2 19.1c-.1.8-1.1 1-1.6.4l-6.8-6.6z" fill="currentColor"/></svg>Boleto e Pix no seu Asaas</div>
         </div>
       </div>
     </section>
@@ -1503,6 +1572,40 @@ function trackConversion(gaEventName, params, fbEventName, fbCustom) {
       <div class="fart sy" role="img" aria-label="Portal do cliente no computador e no celular, com guias, vencimentos e código de barras">
         <div class="fart-in" aria-hidden="true">
           <div class="sy-scene"><div class="sy-l" style="left:0;top:1em;width:44em"><div class="sy-win"><div class="sy-bar"><i></i><i></i><i></i><span>portal.silvacontabil.com.br</span></div><div style="padding:1.1em"><div style="display:flex;align-items:center;gap:.7em;margin-bottom:1em"><span class="fa-ic" style="background:#3C7FB8;color:#fff;width:2.2em;height:2.2em"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><rect x="13" y="8.4" width="8.4" height="13" rx="1.8" fill="currentColor" opacity=".34"/><rect x="2.6" y="2.4" width="12.2" height="19" rx="2" fill="currentColor"/><rect x="5.6" y="6" width="2.4" height="2.4" rx=".6" fill="#fff"/><rect x="9.4" y="6" width="2.4" height="2.4" rx=".6" fill="#fff"/><rect x="5.6" y="10.6" width="2.4" height="2.4" rx=".6" fill="#fff"/><rect x="9.4" y="10.6" width="2.4" height="2.4" rx=".6" fill="#fff"/><rect x="7.6" y="16" width="3" height="5.4" rx=".8" fill="#fff"/></svg></span><div><b>Silva Contabilidade</b><div class="m s2">Portal do cliente · Padaria Pão Dourado</div></div></div><div class="sy-kpis"><div class="sy-kpi"><div class="l">Guias do mês</div><div class="v ">4</div></div><div class="sy-kpi"><div class="l">A vencer</div><div class="v warn">1</div></div><div class="sy-kpi"><div class="l">Documentos</div><div class="v ">37</div></div></div><div class="sy-row "><span class="m" style="display:flex"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><rect x="3.4" y="1.8" width="13.4" height="18.6" rx="2.4" fill="currentColor" opacity=".34"/><rect x="6.2" y="6.2" width="7.8" height="1.8" rx=".9" fill="currentColor"/><rect x="6.2" y="9.8" width="7.8" height="1.8" rx=".9" fill="currentColor"/><rect x="6.2" y="13.4" width="4.8" height="1.8" rx=".9" fill="currentColor"/><circle cx="17.6" cy="17.6" r="5.1" fill="currentColor"/><path d="M15.5 17.7l1.4 1.4 2.9-3.2" stroke="currentColor" stroke-opacity=".34" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></span><span class="gr b">DAS 09/2026</span><span class="w8 m">Vence 20/10</span><span class="w6 r mono">R$ 412,37</span><span class="fa-pill warn">A vencer</span></div><div class="sy-row "><span class="m" style="display:flex"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><rect x="3.4" y="1.8" width="13.4" height="18.6" rx="2.4" fill="currentColor" opacity=".34"/><rect x="6.2" y="6.2" width="7.8" height="1.8" rx=".9" fill="currentColor"/><rect x="6.2" y="9.8" width="7.8" height="1.8" rx=".9" fill="currentColor"/><rect x="6.2" y="13.4" width="4.8" height="1.8" rx=".9" fill="currentColor"/><circle cx="17.6" cy="17.6" r="5.1" fill="currentColor"/><path d="M15.5 17.7l1.4 1.4 2.9-3.2" stroke="currentColor" stroke-opacity=".34" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></span><span class="gr b">FGTS 09/2026</span><span class="w8 m">Pago em 07/10</span><span class="w6 r mono">R$ 1.088,20</span><span class="fa-pill ok">Paga</span></div><div class="sy-row "><span class="m" style="display:flex"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><rect x="3.4" y="1.8" width="13.4" height="18.6" rx="2.4" fill="currentColor" opacity=".34"/><rect x="6.2" y="6.2" width="7.8" height="1.8" rx=".9" fill="currentColor"/><rect x="6.2" y="9.8" width="7.8" height="1.8" rx=".9" fill="currentColor"/><rect x="6.2" y="13.4" width="4.8" height="1.8" rx=".9" fill="currentColor"/><circle cx="17.6" cy="17.6" r="5.1" fill="currentColor"/><path d="M15.5 17.7l1.4 1.4 2.9-3.2" stroke="currentColor" stroke-opacity=".34" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></span><span class="gr b">INSS 09/2026</span><span class="w8 m">Pago em 15/10</span><span class="w6 r mono">R$ 963,51</span><span class="fa-pill ok">Paga</span></div><div class="sy-row "><span class="m" style="display:flex"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><rect x="3.4" y="1.8" width="13.4" height="18.6" rx="2.4" fill="currentColor" opacity=".34"/><rect x="6.2" y="6.2" width="7.8" height="1.8" rx=".9" fill="currentColor"/><rect x="6.2" y="9.8" width="7.8" height="1.8" rx=".9" fill="currentColor"/><rect x="6.2" y="13.4" width="4.8" height="1.8" rx=".9" fill="currentColor"/><circle cx="17.6" cy="17.6" r="5.1" fill="currentColor"/><path d="M15.5 17.7l1.4 1.4 2.9-3.2" stroke="currentColor" stroke-opacity=".34" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></span><span class="gr b">Honorários 10/2026</span><span class="w8 m">Pago em 05/10</span><span class="w6 r mono">R$ 650,00</span><span class="fa-pill ok">Paga</span></div></div></div></div><div class="sy-l" style="left:34em;top:6em;width:13em"><div class="sy-phone"><div class="nt"></div><div class="m s2">Olá, Marcos</div><b style="font-size:.85em;display:block;margin-bottom:.7em">Padaria Pão Dourado</b><div class="sy-due"><div class="warn s2">Vence em 4 dias</div><b class="mono">R$ 412,37</b><div class="m s2">DAS 09/2026</div><div class="sy-cta">Copiar código de barras</div></div><div class="sy-ic3"><span><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><rect x="3.4" y="1.8" width="13.4" height="18.6" rx="2.4" fill="currentColor" opacity=".34"/><rect x="6.2" y="6.2" width="7.8" height="1.8" rx=".9" fill="currentColor"/><rect x="6.2" y="9.8" width="7.8" height="1.8" rx=".9" fill="currentColor"/><rect x="6.2" y="13.4" width="4.8" height="1.8" rx=".9" fill="currentColor"/><circle cx="17.6" cy="17.6" r="5.1" fill="currentColor"/><path d="M15.5 17.7l1.4 1.4 2.9-3.2" stroke="currentColor" stroke-opacity=".34" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></span><span><svg class="wa-ic" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></span></div><div class="hb"></div></div></div></div>
+        </div>
+      </div>
+    </section>
+    <section class="sol-panel" id="portal-emissao">
+      <div class="ftext">
+        <div class="eyebrow-tag">Emissão de nota pelo cliente</div>
+        <h2>O cliente emite a própria nota, e você continua no controle</h2>
+        <p class="desc">No Portal do Cliente, quem você liberar emite a NFS-e sozinho, só dos serviços que você definiu. Cada nota é confirmada por um código no WhatsApp, e a nota emitida já aparece para a equipe.</p>
+        <ul class="flist-new">
+          <li><span class="chk"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor" opacity=".34"/><path d="M7.8 12.4l2.9 2.9 5.5-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Você liga por cliente e escolhe quais serviços ele pode emitir</li>
+          <li><span class="chk"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor" opacity=".34"/><path d="M7.8 12.4l2.9 2.9 5.5-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>O cliente informa tomador, descrição e valor, e confere o resumo antes de emitir</li>
+          <li><span class="chk"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor" opacity=".34"/><path d="M7.8 12.4l2.9 2.9 5.5-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Um código de 6 dígitos no WhatsApp autoriza cada nota; se o valor ou o tomador mudar, o código deixa de valer</li>
+          <li><span class="chk"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor" opacity=".34"/><path d="M7.8 12.4l2.9 2.9 5.5-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Usa o certificado digital que o escritório já guarda do cliente, para MEI, ME e EPP do Simples Nacional</li>
+          <li><span class="chk"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor" opacity=".34"/><path d="M7.8 12.4l2.9 2.9 5.5-6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>PDF e XML ficam no portal do cliente, e a lista de Notas do escritório marca quem emitiu</li>
+        </ul>
+        <div class="sol-actions">
+          <button type="button" class="btn btn-primary" onclick="openLeadModal('solucao_portal_emissao')">Agendar demonstração</button>
+        </div>
+      </div>
+      <div class="fart" role="img" aria-label="Tela do portal do cliente para emitir uma NFS-e e a mensagem do WhatsApp com o código de autorização">
+        <div class="fart-in" aria-hidden="true">
+          <div class="fa-card" style="left:5%;top:8%;width:56%">
+            <div class="fa-title"><span class="fa-ic"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><path d="M12 1.4 3 4.8v6.4c0 6 3.9 9.7 9 10.9 5.1-1.2 9-4.9 9-10.9V4.8z" fill="currentColor" opacity=".34"/><rect x="8.6" y="10.4" width="6.8" height="6.2" rx="1.6" fill="currentColor"/><path d="M9.8 10.4V8.6a2.2 2.2 0 1 1 4.4 0v1.8" stroke="currentColor" stroke-width="1.9" fill="none" stroke-linecap="round"/></svg></span>Emitir nota<span class="fa-pill ok">Liberado</span></div>
+            <div class="fa-field"><span>Serviço</span><span>Reparo de máquinas</span></div>
+            <div class="fa-field"><span>Tomador</span><span>Clínica Bem Viver</span></div>
+            <div class="fa-field"><span>Valor</span><span>R$ 1.200,00</span></div>
+            <div style="margin-top:.7em"><span class="fa-btn">Emitir nota</span></div>
+          </div>
+          <div class="fa-card" style="left:50%;top:54%;width:45%;padding:.8em 1em">
+            <div class="fa-title" style="margin-bottom:.4em"><span class="fa-av g" style="font-size:.7em">WA</span>WhatsApp do cliente</div>
+            <div class="fa-bub in" style="max-width:100%"><b>Código para autorizar a nota fiscal</b><br>Nota de R$ 1.200,00 para Clínica Bem Viver<br>Seu código: <b>482913</b><span class="fa-mut">14:02 ✓✓</span></div>
+          </div>
+          <div class="fa-chip fa-float" style="left:5%;bottom:8%"><span class="fa-dot"></span>Nota autorizada, PDF e XML no portal</div>
+          <div class="fa-chip fa-float d2" style="left:5%;top:68%"><svg class="pi" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="2"><path d="M21.7 2.3L2.6 10.6c-.7.3-.7 1.3 0 1.6l7.5 2.6z" fill="currentColor" opacity=".34"/><path d="M21.7 2.3l-3.2 19.1c-.1.8-1.1 1-1.6.4l-6.8-6.6z" fill="currentColor"/></svg>Só os serviços que você liberou</div>
         </div>
       </div>
     </section>
