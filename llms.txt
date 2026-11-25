@@ -41,9 +41,9 @@ O escritório contábil gasta boa parte do mês em tarefa repetida: abrir o e-CA
 
 Todos os planos têm a plataforma inteira; muda o tamanho (clientes, equipe, números de WhatsApp, envios e créditos de IA).
 
-- Essencial: R$ 179/mês, até 300 clientes, 5 membros, 5 números de WhatsApp, 300 envios em massa/mês, 150 créditos de IA/mês
-- Scale: R$ 397/mês, até 500 clientes, 10 membros, 10 números de WhatsApp, 600 envios em massa/mês, 300 créditos de IA/mês
-- Pro: R$ 697/mês, até 1500 clientes, 20 membros, 20 números de WhatsApp, 1800 envios em massa/mês, 900 créditos de IA/mês
+- Essencial: R$ 249/mês, até 300 clientes, 5 membros, 5 números de WhatsApp, 500 envios em massa/mês, 150 créditos de IA/mês
+- Scale: R$ 497/mês, até 500 clientes, 10 membros, 10 números de WhatsApp, 1000 envios em massa/mês, 350 créditos de IA/mês
+- Pro: R$ 797/mês, até 1500 clientes, 20 membros, 20 números de WhatsApp, 2000 envios em massa/mês, 700 créditos de IA/mês
 
 Créditos de IA são consumidos pelo assistente, pelos agentes e pelos relatórios de IA. As consultas e emissões no SERPRO são cobradas pelo próprio SERPRO, não pelo Cubis.Hub.
 
